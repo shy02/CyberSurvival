@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,6 +8,7 @@ public class Player : MonoBehaviour
     public int hp = 100;
     public int power = 10;
     private bool isLeft = false;
+    private bool isRolling = false;
 
     public GameObject WeaponHand;
     public GameObject CrossHair;
@@ -24,7 +26,11 @@ public class Player : MonoBehaviour
     {
         HandleKeyboard();
         HandleMousePosition();
-        FireBullet();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
     }
 
     private void HandleKeyboard()
@@ -43,17 +49,19 @@ public class Player : MonoBehaviour
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
-    }
 
-    private void FireBullet()
-    {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isRolling)
         {
-            CreateBullet();
+            FireBullet();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isRolling)
+        {
+            Avoide();
         }
     }
 
-    private void CreateBullet()
+    private void FireBullet()
     {
         GameObject bulletInstance = Instantiate(MyBullet, LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
@@ -63,9 +71,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Damage(int attack)
+    private void Avoide()
     {
-        hp -= attack;
+        StartCoroutine(RollAnimation());
     }
 
     private void HandleMousePosition()
@@ -96,15 +104,34 @@ public class Player : MonoBehaviour
         CrossHair.transform.position = mousePosition;
     }
 
+    public void Damage(int attack)
+    {
+        hp -= attack;
+    }
+
     private void SetWalkingAnimation(float moveX, float moveY)
     {
         if (moveX != 0 || moveY != 0)
         {
-            MyAnimator.SetBool("isWalking", true);
+            MyAnimator.SetBool(Strings.isWalking, true);
         }
         else
         {
-            MyAnimator.SetBool("isWalking", false);
+            MyAnimator.SetBool(Strings.isWalking, false);
         }
     }
+    IEnumerator RollAnimation()
+    {
+        isRolling = true;
+        MyAnimator.SetBool(Strings.isRolling, true);
+        WeaponHand.SetActive(false);
+
+        float animationLength = MyAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animationLength);
+
+        isRolling = false;
+        MyAnimator.SetBool(Strings.isRolling, false);
+        WeaponHand.SetActive(true);
+    }
+
 }

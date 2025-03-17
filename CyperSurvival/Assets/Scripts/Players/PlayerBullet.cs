@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
@@ -8,6 +9,14 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Monster"))
+        {
+            // EnemyDamage.GetDamage();
+        }
     }
 
     void Update()
