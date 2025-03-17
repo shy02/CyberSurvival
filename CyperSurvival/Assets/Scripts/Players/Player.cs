@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
         }
 
         CrossHair.transform.position = mousePosition;
+        //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
     public void Damage(int attack)
@@ -120,6 +121,7 @@ public class Player : MonoBehaviour
             MyAnimator.SetBool(Strings.isWalking, false);
         }
     }
+
     IEnumerator RollAnimation()
     {
         isRolling = true;

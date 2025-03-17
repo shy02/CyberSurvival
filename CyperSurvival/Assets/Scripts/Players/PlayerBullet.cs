@@ -13,10 +13,10 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Monster"))
-        {
-            // EnemyDamage.GetDamage();
-        }
+        //if (collision.CompareTag("Monster"))
+        //{
+        //    // EnemyDamage.GetDamage();
+        //}
     }
 
     void Update()
