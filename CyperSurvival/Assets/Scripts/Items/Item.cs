@@ -1,16 +1,47 @@
 using UnityEngine;
 
+public enum Effect
+{
+    HP,
+    POWER,
+    DEFENCE
+}
+
 public class Item : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Effect effect;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Player"))
+        {
+            Player player = collision.GetComponent<Player>();
+
+            switch (effect)
+            {
+                case Effect.HP:
+                    player.GainHpItem();
+                    break;
+                case Effect.POWER:
+                    player.GainPowerItem();
+                    break;
+                case Effect.DEFENCE:
+                    player.GainDefenceItem();
+                    break;
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }

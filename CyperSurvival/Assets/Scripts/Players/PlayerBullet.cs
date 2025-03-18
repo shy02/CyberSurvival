@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerBullet : MonoBehaviour
 {
     public float bulletSpeed = 10.0f;
+    public int playwerPower = 0;
     public Vector3 fireDirection;
 
     void Start()
@@ -11,17 +12,25 @@ public class PlayerBullet : MonoBehaviour
         
     }
 
+    void Update()
+    {
+        transform.position += fireDirection * bulletSpeed * Time.deltaTime;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.CompareTag("Monster"))
         //{
-        //    // EnemyDamage.GetDamage();
+        //    Attack(collision);
         //}
+
+        Destroy(gameObject);
     }
 
-    void Update()
+    private void Attack(Collider2D collision)
     {
-        transform.position += fireDirection * bulletSpeed * Time.deltaTime;
+        int attack = 100 * playwerPower;
+        // EnemyDamage.GetDamage();
     }
 
     private void OnBecameInvisible()

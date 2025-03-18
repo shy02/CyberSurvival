@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2693687215614391550}
   - component: {fileID: 5247105760670553561}
   - component: {fileID: 4131263254546031322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PBullet1
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,4 +189,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 10
+  playwerPower: 0
   fireDirection: {x: 0, y: 0, z: 0}

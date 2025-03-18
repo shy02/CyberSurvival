@@ -4,9 +4,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Animator MyAnimator;
+
+    public static int DEAULT_POWER = 100;
+
     public float moveSpeed = 5f;
-    public int hp = 100;
+    public int hp = 1000;
     public int power = 1;
+    public int defence = 0;
     private bool isLeft = false;
     private bool isRolling = false;
 
@@ -59,6 +63,7 @@ public class Player : MonoBehaviour
         GameObject bulletInstance = Instantiate(MyBullet[power-1], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
+        bulletScript.playwerPower = power;
         StartCoroutine(ShowMuzzle());
     }
 
@@ -96,9 +101,9 @@ public class Player : MonoBehaviour
         //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
-    public void TakeDamage(int attack)
+    public void TakeDamage(int monsterAttack)
     {
-        hp -= attack;
+        hp -= monsterAttack * (100-defence);
         HitAnimation();
     }
 
@@ -112,6 +117,26 @@ public class Player : MonoBehaviour
         {
             MyAnimator.SetBool(Strings.isWalking, false);
         }
+    }
+
+    public void GainHpItem()
+    {
+        hp += 10;
+        print($"player hp : {hp}");
+    }
+
+    public void GainPowerItem()
+    {
+        GameManager.Instance.AddGainedPowerItem();
+        power++;
+        print($"player power : {power}");
+    }
+
+    public void GainDefenceItem()
+    {
+        GameManager.Instance.AddGainedDefenceItem();
+        defence += 10;
+        print($"player defence : {defence}");
     }
 
     IEnumerator RollAnimation()

@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject MainWeapon;
-    public GameObject BackWeapon;
-    public GameObject HeadWeapon;
+    public GameObject MyWeapon;
 
     void Start()
     {
