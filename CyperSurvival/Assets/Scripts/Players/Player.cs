@@ -6,14 +6,14 @@ public class Player : MonoBehaviour
     public Animator MyAnimator;
     public float moveSpeed = 5f;
     public int hp = 100;
-    public int power = 10;
+    public int power = 1;
     private bool isLeft = false;
     private bool isRolling = false;
 
     public GameObject Muzzle;
     public GameObject WeaponHand;
     public GameObject CrossHair;
-    public GameObject MyBullet;
+    public GameObject[] MyBullet;
     public Transform LauncherPos;
     public Vector3 fireDirection;
     public Vector3 mousePosition;
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject bulletInstance = Instantiate(MyBullet, LauncherPos.position, Quaternion.identity);
+        GameObject bulletInstance = Instantiate(MyBullet[power-1], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
         StartCoroutine(ShowMuzzle());
