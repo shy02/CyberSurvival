@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject MainWeapon;
+    public GameObject BackWeapon;
+    public GameObject HeadWeapon;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
