@@ -43,15 +43,6 @@ public class Player : MonoBehaviour
         transform.position = newPosition;
         SetWalkingAnimation(moveX, moveY);
 
-        if (moveX < 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (moveX > 0)
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-
         if (Input.GetMouseButtonDown(0) && !isRolling)
         {
             FireBullet();
@@ -105,9 +96,10 @@ public class Player : MonoBehaviour
         //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
-    public void Damage(int attack)
+    public void TakeDamage(int attack)
     {
         hp -= attack;
+        HitAnimation();
     }
 
     private void SetWalkingAnimation(float moveX, float moveY)
@@ -134,6 +126,16 @@ public class Player : MonoBehaviour
         isRolling = false;
         MyAnimator.SetBool(Strings.isRolling, false);
         WeaponHand.SetActive(true);
+    }
+
+    IEnumerator HitAnimation()
+    {
+        MyAnimator.SetBool(Strings.isHit, true);
+
+        float animationLength = MyAnimator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animationLength);
+
+        MyAnimator.SetBool(Strings.isHit, false);
     }
 
     IEnumerator ShowMuzzle()
