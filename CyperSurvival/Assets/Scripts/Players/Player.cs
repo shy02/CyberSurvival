@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private bool isLeft = false;
     private bool isRolling = false;
 
+    public GameObject Muzzle;
     public GameObject WeaponHand;
     public GameObject CrossHair;
     public GameObject MyBullet;
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         MyAnimator = GetComponent<Animator>();
+        Muzzle.SetActive(false);
     }
 
     void Update()
@@ -65,10 +67,8 @@ public class Player : MonoBehaviour
     {
         GameObject bulletInstance = Instantiate(MyBullet, LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
-        if (bulletScript != null)
-        {
-            bulletScript.fireDirection = fireDirection;
-        }
+        bulletScript.fireDirection = fireDirection;
+        StartCoroutine(ShowMuzzle());
     }
 
     private void Avoide()
@@ -81,8 +81,6 @@ public class Player : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
         isLeft = mousePosition.x < transform.position.x;
-
-        // 플레이어의 방향 업데이트
         if (isLeft)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -92,11 +90,8 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
-        // 마우스 방향 계산
         fireDirection = (mousePosition - WeaponHand.transform.position).normalized;
         float angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
-
-        // WeaponHand 회전 업데이트
         if (isLeft)
         {
             WeaponHand.transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
@@ -106,20 +101,8 @@ public class Player : MonoBehaviour
             WeaponHand.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
-        // LauncherPos 위치 보정
-        if (isLeft)
-        {
-            // 플레이어가 뒤집혔을 때 LauncherPos의 위치를 보정
-            LauncherPos.localPosition = new Vector3(-Mathf.Abs(LauncherPos.localPosition.x), LauncherPos.localPosition.y, LauncherPos.localPosition.z);
-        }
-        else
-        {
-            // 플레이어가 원래 방향일 때 LauncherPos의 위치를 보정
-            LauncherPos.localPosition = new Vector3(Mathf.Abs(LauncherPos.localPosition.x), LauncherPos.localPosition.y, LauncherPos.localPosition.z);
-        }
-
-        // CrossHair 위치 업데이트
         CrossHair.transform.position = mousePosition;
+        //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
     public void Damage(int attack)
@@ -151,6 +134,13 @@ public class Player : MonoBehaviour
         isRolling = false;
         MyAnimator.SetBool(Strings.isRolling, false);
         WeaponHand.SetActive(true);
+    }
+
+    IEnumerator ShowMuzzle()
+    {
+        Muzzle.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        Muzzle.SetActive(false);
     }
 
 }
