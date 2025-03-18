@@ -81,6 +81,8 @@ public class Player : MonoBehaviour
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f;
         isLeft = mousePosition.x < transform.position.x;
+
+        // 플레이어의 방향 업데이트
         if (isLeft)
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
@@ -90,8 +92,11 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
 
+        // 마우스 방향 계산
         fireDirection = (mousePosition - WeaponHand.transform.position).normalized;
         float angle = Mathf.Atan2(fireDirection.y, fireDirection.x) * Mathf.Rad2Deg;
+
+        // WeaponHand 회전 업데이트
         if (isLeft)
         {
             WeaponHand.transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f);
@@ -101,8 +106,20 @@ public class Player : MonoBehaviour
             WeaponHand.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
+        // LauncherPos 위치 보정
+        if (isLeft)
+        {
+            // 플레이어가 뒤집혔을 때 LauncherPos의 위치를 보정
+            LauncherPos.localPosition = new Vector3(-Mathf.Abs(LauncherPos.localPosition.x), LauncherPos.localPosition.y, LauncherPos.localPosition.z);
+        }
+        else
+        {
+            // 플레이어가 원래 방향일 때 LauncherPos의 위치를 보정
+            LauncherPos.localPosition = new Vector3(Mathf.Abs(LauncherPos.localPosition.x), LauncherPos.localPosition.y, LauncherPos.localPosition.z);
+        }
+
+        // CrossHair 위치 업데이트
         CrossHair.transform.position = mousePosition;
-        //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
     public void Damage(int attack)
