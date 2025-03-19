@@ -161,21 +161,21 @@ public class Player : MonoBehaviour
     public void GainHpItem()
     {
         hp += 10;
-        print($"player hp : {hp}");
+        print($"player hp : {hp} (+10)");
     }
 
     public void GainPowerItem()
     {
         GameManager.Instance.AddGainedPowerItem();
         power++;
-        print($"player power : {power}");
+        print($"player power : {power} (+1)");
     }
 
     public void GainDefenceItem()
     {
         GameManager.Instance.AddGainedDefenceItem();
         defence += 10;
-        print($"player defence : {defence}");
+        print($"player defence : {defence} (+10)");
     }
 
     IEnumerator RollAnimation()
