@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     float y;
     Vector3 moveDir = Vector3.zero;
     public float moveSpeed = 3;
+    int HP = 100;
 
      void Start()
     {
@@ -23,4 +24,11 @@ public class Player : MonoBehaviour
         transform.Translate(moveDir * moveSpeed * Time.deltaTime);
 
     }
+
+    public void GetDamage(int damage)
+    {
+        HP -= damage;
+        Debug.Log("HP : " + HP);
+    }
+
 }

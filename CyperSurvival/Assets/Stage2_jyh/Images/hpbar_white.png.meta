@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b25688f418cdf740b198e2c3cea07b5
+guid: dec4783ae78f5bb4590e3611b624e8b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6142374563283994760
-    second: crosshair_0
+      213: -6092313075528410591
+    second: hpbar_white_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: crosshair_0
+      name: hpbar_white_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 62
-        height: 62
+        x: 0
+        y: 0
+        width: 149
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 877ff0ed0e6e1caa0800000000000000
-      internalID: -6142374563283994760
+      spriteID: 12a59a84981c37ba0800000000000000
+      internalID: -6092313075528410591
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      crosshair_0: -6142374563283994760
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
