@@ -17,8 +17,8 @@ public class Player : MonoBehaviour
     public GameObject Muzzle;
     public GameObject WeaponHand;
     public GameObject CrossHair;
-    public GameObject[] MyBullet;
-    public GameObject MyUltimate;
+    public GameObject[] MyBullets;
+    public GameObject[] MyUltimates;
     public Transform LauncherPos;
     public Vector3 fireDirection;
     public Vector3 mousePosition;
@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject bulletInstance = Instantiate(MyBullet[power-1], LauncherPos.position, Quaternion.identity);
+        GameObject bulletInstance = Instantiate(MyBullets[power-1], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
         bulletScript.playwerPower = power;
@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         uValue += Time.deltaTime;
         if (uValue >= 0.1)
         {
-            GameObject ultimate = Instantiate(MyUltimate, mousePosition, Quaternion.identity);
+            GameObject ultimate = Instantiate(MyUltimates[power-1], mousePosition, Quaternion.identity);
             Destroy(ultimate, 0.1f);
             uValue = 0;
         }
