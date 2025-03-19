@@ -18,9 +18,11 @@ public class Player : MonoBehaviour
     public GameObject WeaponHand;
     public GameObject CrossHair;
     public GameObject[] MyBullet;
+    public GameObject MyUltimate;
     public Transform LauncherPos;
     public Vector3 fireDirection;
     public Vector3 mousePosition;
+    public float uValue = 0;
 
     void Start()
     {
@@ -50,6 +52,14 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isRolling)
         {
             FireBullet();
+        } else if (Input.GetMouseButton(1) && !isRolling && GameManager.Instance.isBossGroggy)
+        {
+            FireUltimate();
+        }
+        else
+        {
+            uValue -= Time.deltaTime;
+            uValue = (uValue <= 0.1f) ? 0.1f : uValue;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && !isRolling)
@@ -67,9 +77,15 @@ public class Player : MonoBehaviour
         StartCoroutine(ShowMuzzle());
     }
 
-    private void Avoide()
+    private void FireUltimate()
     {
-        StartCoroutine(RollAnimation());
+        uValue += Time.deltaTime;
+        if (uValue >= 0.1)
+        {
+            GameObject ultimate = Instantiate(MyUltimate, mousePosition, Quaternion.identity);
+            Destroy(ultimate, 0.1f);
+            uValue = 0;
+        }
     }
 
     private void HandleMousePosition()
@@ -101,10 +117,18 @@ public class Player : MonoBehaviour
         //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
+    private void Avoide()
+    {
+        StartCoroutine(RollAnimation());
+    }
+
     public void TakeDamage(int monsterAttack)
     {
-        hp -= monsterAttack * (100-defence);
-        HitAnimation();
+        if (!isRolling)
+        {
+            hp -= monsterAttack * (100 - defence);
+            HitAnimation();
+        }
     }
 
     private void SetWalkingAnimation(float moveX, float moveY)

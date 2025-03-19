@@ -10,4 +10,9 @@ public class Strings
     public static string roll = "Roll";
     public static string Hit = "Hit";
     public static string Die = "Die";
+
+    // Tag
+    public static string tagPlayer = "Player";
+    public static string tagMonster = "Monster";
+    public static string tagBoss = "Boss";
 }

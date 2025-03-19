@@ -1,20 +1,12 @@
-using System.Threading;
 using UnityEngine;
 
-public class PlayerBullet : MonoBehaviour
+public class Ultimate : MonoBehaviour
 {
-    public float bulletSpeed = 10.0f;
     public int playwerPower = 0;
-    public Vector3 fireDirection;
 
     void Start()
     {
         
-    }
-
-    void Update()
-    {
-        transform.position += fireDirection * bulletSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,8 +15,6 @@ public class PlayerBullet : MonoBehaviour
         //{
         //    Attack(collision);
         //}
-
-        Destroy(gameObject);
     }
 
     private void Attack(Collider2D collision)
