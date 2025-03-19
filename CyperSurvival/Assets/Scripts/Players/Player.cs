@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     public Vector3 mousePosition;
     public float uValue = 0;
 
+    public GameObject AfterImagePrefab;
+    public float afterImageInterval = 0.1f;
+    private float afterImageTimer;
+
     void Start()
     {
         MyAnimator = GetComponent<Animator>();
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        HandleKeyboard();
+        HandleUserInput();
         HandleMousePosition();
     }
 
@@ -41,7 +45,7 @@ public class Player : MonoBehaviour
         
     }
 
-    private void HandleKeyboard()
+    private void HandleUserInput()
     {
         float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
         float moveY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
@@ -49,10 +53,21 @@ public class Player : MonoBehaviour
         transform.position = newPosition;
         SetWalkingAnimation(moveX, moveY);
 
+        if (moveX != 0 || moveY != 0)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0)
+            {
+                CreateAfterImage();
+                afterImageTimer = afterImageInterval;
+            }
+        }
+
         if (Input.GetMouseButtonDown(0) && !isRolling)
         {
             FireBullet();
-        } else if (Input.GetMouseButton(1) && !isRolling && GameManager.Instance.isBossGroggy)
+        } 
+        else if (Input.GetMouseButton(1) && !isRolling && GameManager.Instance.isBossGroggy)
         {
             FireUltimate();
         }
@@ -83,7 +98,7 @@ public class Player : MonoBehaviour
         if (uValue >= 0.1)
         {
             GameObject ultimate = Instantiate(MyUltimates[power-1], mousePosition, Quaternion.identity);
-            Destroy(ultimate, 0.1f);
+            Destroy(ultimate, 0.15f);
             uValue = 0;
         }
     }
@@ -192,6 +207,17 @@ public class Player : MonoBehaviour
         Muzzle.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         Muzzle.SetActive(false);
+    }
+
+    private void CreateAfterImage()
+    {
+        GameObject afterimage = Instantiate(AfterImagePrefab);
+        afterimage.GetComponent<AfterImage>().Initialize(
+        GetComponent<SpriteRenderer>().sprite, transform.position);
+
+        Vector3 scale = afterimage.transform.localScale;
+        scale.x = isLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+        afterimage.transform.localScale = scale;
     }
 
 }
