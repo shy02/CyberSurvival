@@ -33,7 +33,7 @@ public class BossPattern : MonoBehaviour
     //패턴3 회전 부메랑
     public GameObject bumerang;
     float attackcool3 = 10;
-    int bucount = 15;
+    int bucount = 10;
 
 
     void Start()
@@ -90,10 +90,23 @@ public class BossPattern : MonoBehaviour
 
     void Attack3()
     {
-        for(int i = 0; i < bucount; i++)
+        float radius = 5f; // 부메랑이 소환될 반지름 거리
+        Vector3 center = transform.position; // 보스의 위치를 중심으로 설정
+
+        for (int i = 0; i < bucount; i++)
         {
-            GameObject go = Instantiate(bumerang, transform.position, Quaternion.Euler(0, i * (360 / bucount), 0));
-            //GameObject go = Instantiate(bumerang, transform.position, Quaternion.identity);
+            float angle = i * (360f / bucount);
+            float radian = angle * Mathf.Deg2Rad;
+            Vector3 spawnPosition = new Vector3(
+                center.x + radius * Mathf.Cos(radian),
+                center.y + radius * Mathf.Sin(radian),
+                center.z
+            );
+
+            GameObject go = Instantiate(bumerang, spawnPosition, Quaternion.identity);
+            Bumerang bumerangScript = go.GetComponent<Bumerang>();
+            bumerangScript.bossTransform = transform; // 보스의 Transform을 설정
+            bumerangScript.SetInitialAngle(radian); // 초기 각도를 설정
         }
 
         Invoke("Attack3", attackcool3);
