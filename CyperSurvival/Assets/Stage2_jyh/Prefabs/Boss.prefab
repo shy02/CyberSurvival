@@ -501,3 +501,4 @@ MonoBehaviour:
   sniper: {fileID: 7859892351083881486, guid: 6f86b96425ab36c46ad1254c423b71ad, type: 3}
   sniperEffect: {fileID: 1157783763206809015, guid: 704dbb4a2e2ca0d46a6ebe7d638b62ea, type: 3}
   bumerang: {fileID: 5867658287936591752, guid: 05f281fbc2878864e8c57cc2f63f83f4, type: 3}
+  laser: {fileID: 1043215178069346741, guid: 2a76c85d382b5d04c9f98e25701b85a1, type: 3}

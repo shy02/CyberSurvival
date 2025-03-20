@@ -11548,8 +11548,8 @@ TextureImporter:
         y: 113
         width: 49
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -11568,10 +11568,10 @@ TextureImporter:
         serializedVersion: 2
         x: 307
         y: 116
-        width: 94
+        width: 47
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -14000,6 +14000,28 @@ TextureImporter:
       bones: []
       spriteID: 532891c0ddd2cc842b5dad3e7be3b88b
       internalID: -1730960063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_Fire_Bullet_Pixel_16x16_555
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 116
+        width: 47
+        height: 8
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e596842b1687b14dbcedc451e60e005
+      internalID: -1971822536
       vertices: []
       indices: 
       edges: []
