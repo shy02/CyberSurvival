@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Image HpBarImage;
+    public Image PowerBarImage;
+    public Image DefenceBarImage;
 
     public static int MAX_HP = 1000;
     public static int MAX_GAINED_ITEM = 2;
@@ -30,7 +32,7 @@ public class GameManager : MonoBehaviour
         get { return _gainedPowerItem; }
         set { 
             _gainedPowerItem = Math.Min(value, MAX_GAINED_ITEM);
-            SetPowerImage();
+            SetPowerBarImage();
         }
     }
 
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour
         get { return _gainedDefenceItem; }
         set {
             _gainedDefenceItem = Math.Min(value, MAX_GAINED_ITEM);
-            SetDefenceImage();
+            SetDefenceBarImage();
         }
     }
 
@@ -66,6 +68,9 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        SetHpBarImage();
+        SetPowerBarImage();
+        SetDefenceBarImage();
     }
 
     public void SetHp(int hp)
@@ -93,19 +98,21 @@ public class GameManager : MonoBehaviour
 
     private void SetHpBarImage()
     {
-        float hpImage = (float)playerHp / MAX_HP; 
+        float hpImage = (float) playerHp / MAX_HP; 
         HpBarImage.fillAmount = hpImage;
         print($"HPBar Image {hpImage}");
     }
 
-    private void SetPowerImage()
+    private void SetPowerBarImage()
     {
-
+        float powerImage = (float) (gainedPowerItem + 1) / (MAX_GAINED_ITEM + 1);
+        PowerBarImage.fillAmount = powerImage;
     }
 
-    private void SetDefenceImage()
+    private void SetDefenceBarImage()
     {
-
+        float defenceImage = (float)(gainedDefenceItem + 1) / (MAX_GAINED_ITEM + 1);
+        DefenceBarImage.fillAmount = defenceImage;
     }
 
     private void ShowGameOver()
