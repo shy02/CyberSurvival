@@ -92,7 +92,8 @@ public class BossPattern : MonoBehaviour
     {
         for(int i = 0; i < bucount; i++)
         {
-            GameObject go = Instantiate(bumerang, transform.position, Quaternion.identity);
+            GameObject go = Instantiate(bumerang, transform.position, Quaternion.Euler(0, i * (360 / bucount), 0));
+            //GameObject go = Instantiate(bumerang, transform.position, Quaternion.identity);
         }
 
         Invoke("Attack3", attackcool3);
