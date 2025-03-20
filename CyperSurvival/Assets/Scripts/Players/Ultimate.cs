@@ -19,7 +19,7 @@ public class Ultimate : MonoBehaviour
 
     private void Attack(Collider2D collision)
     {
-        int attack = 100 * playwerPower;
+        int damage = GameManager.DEAULT_POWER + (playwerPower * 10);
         // EnemyDamage.GetDamage();
     }
 

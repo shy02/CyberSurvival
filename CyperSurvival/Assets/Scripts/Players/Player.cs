@@ -5,11 +5,11 @@ public class Player : MonoBehaviour
 {
     public Animator MyAnimator;
 
-    public static int DEAULT_POWER = 100;
+    private int monsterAttackTest = 100; // Test
 
     public float moveSpeed = 5f;
     public int hp = 1000;
-    public int power = 1;
+    public int power = 0;
     public int defence = 0;
     private bool isLeft = false;
     private bool isRolling = false;
@@ -32,17 +32,24 @@ public class Player : MonoBehaviour
     {
         MyAnimator = GetComponent<Animator>();
         Muzzle.SetActive(false);
+
+        //InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
     }
 
     void Update()
     {
+        if (!GameManager.Instance.isGameRunning)
+        {
+            return;
+        }
+
         HandleUserInput();
         HandleMousePosition();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
     }
 
     private void HandleUserInput()
@@ -66,7 +73,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isRolling)
         {
             FireBullet();
-        } 
+        }
         else if (Input.GetMouseButton(1) && !isRolling && GameManager.Instance.isBossGroggy)
         {
             FireUltimate();
@@ -85,7 +92,7 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject bulletInstance = Instantiate(MyBullets[power-1], LauncherPos.position, Quaternion.identity);
+        GameObject bulletInstance = Instantiate(MyBullets[power], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
         bulletScript.playwerPower = power;
@@ -97,7 +104,7 @@ public class Player : MonoBehaviour
         uValue += Time.deltaTime;
         if (uValue >= 0.1)
         {
-            GameObject ultimate = Instantiate(MyUltimates[power-1], mousePosition, Quaternion.identity);
+            GameObject ultimate = Instantiate(MyUltimates[power], mousePosition, Quaternion.identity);
             Destroy(ultimate, 0.15f);
             uValue = 0;
         }
@@ -129,7 +136,6 @@ public class Player : MonoBehaviour
         }
 
         CrossHair.transform.position = mousePosition;
-        //Debug.Log("CrossHair : " + CrossHair.transform.position);
     }
 
     private void Avoide()
@@ -141,10 +147,14 @@ public class Player : MonoBehaviour
     {
         if (!isRolling)
         {
-            hp -= monsterAttack * (100 - defence);
+            int damage = monsterAttack * (100 - defence) / 100;
+            hp -= damage;
             HitAnimation();
+            print($"Player hp : {hp} (-{damage})");
+            GameManager.Instance.SetHp(hp);
         }
     }
+
 
     private void SetWalkingAnimation(float moveX, float moveY)
     {
@@ -160,22 +170,35 @@ public class Player : MonoBehaviour
 
     public void GainHpItem()
     {
+        if (hp >= GameManager.MAX_HP)
+        {
+            return;
+        }
         hp += 10;
         print($"player hp : {hp} (+10)");
+        GameManager.Instance.SetHp(hp);
     }
 
     public void GainPowerItem()
     {
-        GameManager.Instance.AddGainedPowerItem();
+        if (power >= 2)
+        {
+            return;
+        }
         power++;
         print($"player power : {power} (+1)");
+        GameManager.Instance.AddGainedPowerItem();
     }
 
     public void GainDefenceItem()
     {
-        GameManager.Instance.AddGainedDefenceItem();
+        if (defence >= 20)
+        {
+            return;
+        }
         defence += 10;
         print($"player defence : {defence} (+10)");
+        GameManager.Instance.AddGainedDefenceItem();
     }
 
     IEnumerator RollAnimation()
@@ -192,14 +215,9 @@ public class Player : MonoBehaviour
         WeaponHand.SetActive(true);
     }
 
-    IEnumerator HitAnimation()
+    private void HitAnimation()
     {
-        MyAnimator.SetBool(Strings.isHit, true);
-
-        float animationLength = MyAnimator.GetCurrentAnimatorStateInfo(0).length;
-        yield return new WaitForSeconds(animationLength);
-
-        MyAnimator.SetBool(Strings.isHit, false);
+        MyAnimator.SetTrigger(Strings.Hit);
     }
 
     IEnumerator ShowMuzzle()
@@ -220,4 +238,21 @@ public class Player : MonoBehaviour
         afterimage.transform.localScale = scale;
     }
 
+    public void TakeDamageTest() // Test
+    {
+        if (!isRolling)
+        {
+            int damage = monsterAttackTest * (100 - defence) / 100;
+            hp -= damage;
+            HitAnimation();
+            print($"Player hp : {hp} (-{damage})");
+            GameManager.Instance.SetHp(hp);
+
+            if (hp <= 0)
+            {
+                MyAnimator.SetTrigger(Strings.Dead);
+                GameManager.Instance.isGameRunning = false;
+            }
+        }
+    }
 }

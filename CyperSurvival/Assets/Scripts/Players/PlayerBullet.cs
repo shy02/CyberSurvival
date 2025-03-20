@@ -29,7 +29,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void Attack(Collider2D collision)
     {
-        int attack = 100 * playwerPower;
+        int attack = GameManager.DEAULT_POWER + (playwerPower*10);
         // EnemyDamage.GetDamage();
     }
 
