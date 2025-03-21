@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         MyAnimator = GetComponent<Animator>();
         Muzzle.SetActive(false);
 
-        //InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
+        InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
     }
 
     void Update()
@@ -175,7 +175,7 @@ public class Player : MonoBehaviour
             return;
         }
         hp += 10;
-        print($"player hp : {hp} (+10)");
+        //print($"player hp : {hp} (+10)");
         GameManager.Instance.SetHp(hp);
     }
 
@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
             return;
         }
         power++;
-        print($"player power : {power} (+1)");
+        //print($"player power : {power} (+1)");
         GameManager.Instance.AddGainedPowerItem();
     }
 
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
             return;
         }
         defence += 10;
-        print($"player defence : {defence} (+10)");
+        //print($"player defence : {defence} (+10)");
         GameManager.Instance.AddGainedDefenceItem();
     }
 
@@ -251,7 +251,8 @@ public class Player : MonoBehaviour
             if (hp <= 0)
             {
                 MyAnimator.SetTrigger(Strings.Dead);
-                GameManager.Instance.isGameRunning = false;
+                WeaponHand.SetActive(false);
+                GameManager.Instance.FinishGame();
             }
         }
     }
