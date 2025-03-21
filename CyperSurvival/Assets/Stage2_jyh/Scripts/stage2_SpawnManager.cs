@@ -2,10 +2,14 @@ using UnityEngine;
 
 public class stage2_SpawnManager : MonoBehaviour
 {
+
+    [Header("보스 스폰")]
     public Transform Bosspos;
     public GameObject BossPrefab;
+    [Header("기본몬스터 스폰")]
     public GameObject[] EnemyPrefab;
     public Transform[] Spawners;
+    public GameObject SpawnEffect;
 
     //기본 적 소환
     public float spawnTime = 0.2f;
@@ -42,6 +46,8 @@ public class stage2_SpawnManager : MonoBehaviour
             if (EnemyPrefab[random] != null && Spawners[randomSpawner] != null)
             {
                 Instantiate(EnemyPrefab[random], Spawners[randomSpawner].position, Quaternion.identity);
+                GameObject effect = Instantiate(SpawnEffect, Spawners[randomSpawner].position, Quaternion.identity);
+                Destroy(effect, 0.5f);
                 break;
             }
 
