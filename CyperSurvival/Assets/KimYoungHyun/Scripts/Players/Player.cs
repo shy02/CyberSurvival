@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -14,10 +14,16 @@ public class Player : MonoBehaviour
     public GameObject CrossHair;
     public GameObject[] MyBullets;
     public GameObject[] MyUltimates;
+    public GameObject UltimateSkill;
     public Transform LauncherPos;
     public Vector3 fireDirection;
     public Vector3 mousePosition;
     public float uValue = 0;
+    public float ultimateCooldown = 5f; // Ultimate 쿨타임
+    public float ultimateMaxDuration = 10f; // Ultimate 최대 지속 시간
+    private float ultimateCooldownTimer = 0f; // Ultimate 쿨타임 타이머
+    private float ultimateDurationTimer = 0f; // Ultimate 지속 시간 타이머
+    private bool isUltimateActive = false; // Ultimate가 활성화되었는지 여부
 
     public GameObject AfterImagePrefab;
     public float afterImageInterval = 0.1f;
@@ -28,7 +34,7 @@ public class Player : MonoBehaviour
         MyAnimator = GetComponent<Animator>();
         Muzzle.SetActive(false);
 
-        InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
+        //InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
     }
 
     void Update()
@@ -40,6 +46,32 @@ public class Player : MonoBehaviour
 
         HandleUserInput();
         HandleMousePosition();
+
+
+        // Ultimate 쿨타임 관리
+        if (ultimateCooldownTimer > 0)
+        {
+            ultimateCooldownTimer -= Time.deltaTime;
+        }
+
+        // Ultimate 지속 시간 관리
+        if (isUltimateActive)
+        {
+            ultimateDurationTimer -= Time.deltaTime;
+            if (ultimateDurationTimer <= 0 || !Input.GetMouseButton(1)) // 키다운을 멈추거나 최대 지속 시간을 초과하면 종료
+            {
+                EndUltimate();
+            }
+        }
+
+        if (ultimateCooldownTimer <= 0 && !isUltimateActive)
+        {
+            UltimateSkill.SetActive(true); // 쿨타임이 없고 Ultimate가 활성화되지 않았을 때 보이기
+        }
+        else
+        {
+            UltimateSkill.SetActive(false); // 쿨타임이 있거나 Ultimate가 활성화되었을 때 숨기기
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,13 +128,31 @@ public class Player : MonoBehaviour
 
     private void FireUltimate()
     {
-        uValue += Time.deltaTime;
-        if (uValue >= 0.1)
+        if (ultimateCooldownTimer <= 0 && !isUltimateActive)
         {
-            GameObject ultimate = Instantiate(MyUltimates[GameManager.Instance.PlayerPower], mousePosition, Quaternion.identity);
-            Destroy(ultimate, 0.15f);
-            uValue = 0;
+            isUltimateActive = true;
+            ultimateDurationTimer = ultimateMaxDuration; // 최대 지속 시간 초기화
+            UltimateSkill.SetActive(false); // Ultimate 발동 시 숨기기
         }
+
+        if (isUltimateActive)
+        {
+            uValue += Time.deltaTime;
+            if (uValue >= 0.1)
+            {
+                GameObject ultimate = Instantiate(MyUltimates[GameManager.Instance.PlayerPower], mousePosition, Quaternion.identity);
+                Destroy(ultimate, 0.15f);
+                uValue = 0;
+            }
+        }
+    }
+
+    private void EndUltimate()
+    {
+        isUltimateActive = false;
+        ultimateDurationTimer = 0f;
+        ultimateCooldownTimer = ultimateCooldown; // 쿨타임 시작
+        UltimateSkill.SetActive(false); // Ultimate 종료 시 숨기기
     }
 
     private void HandleMousePosition()
