@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bumerang : MonoBehaviour
+public class stage2_Bumerang : MonoBehaviour
 {
     public float speed = 1f;
     public Transform bossTransform; // 보스의 Transform을 참조
@@ -30,22 +30,21 @@ public class Bumerang : MonoBehaviour
         angle = initialAngle;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (other.CompareTag("Player") && spriteRenderer.color.a > 0)
+        if (collider.CompareTag("Player") && spriteRenderer.color.a > 0)
         {
-            Player player = other.GetComponent<Player>();
-            player.GetDamage(10);
+            collider.GetComponent<stage2_Player>().GetDamage(10);
         }
-        if (other.CompareTag("Wall"))
+        if (collider.CompareTag("Wall"))
         {
             SetTransparency(0f); // 투명하게 설정
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D collider)
     {
-        if (other.CompareTag("Wall"))
+        if (collider.CompareTag("Wall"))
         {
             SetTransparency(1f); // 다시 보이게 설정
         }

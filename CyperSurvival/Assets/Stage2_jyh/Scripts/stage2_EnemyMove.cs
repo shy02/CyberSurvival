@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyMove : MonoBehaviour
+public class stage2_EnemyMove : MonoBehaviour
 {
     GameObject player = null;
 

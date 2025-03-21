@@ -1,7 +1,7 @@
 using System.Data;
 using UnityEngine;
 
-public class BossBullet : MonoBehaviour
+public class stage2_BossBullet : MonoBehaviour
 {
     GameObject player;
     Vector3 moveDir = Vector3.zero;
@@ -42,8 +42,7 @@ public class BossBullet : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Player cs = player.GetComponent<Player>();
-            cs.GetDamage(Damage);
+            player.GetComponent<stage2_Player>().GetDamage(Damage);
 
             Destroy(gameObject);
         }

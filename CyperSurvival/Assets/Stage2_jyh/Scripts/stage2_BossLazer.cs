@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class BossLazer : MonoBehaviour
+public class stage2_BossLazer : MonoBehaviour
 {
     private Transform playerTransform;
     private Transform bossTransform;
@@ -24,7 +24,7 @@ public class BossLazer : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        transform.localScale = new Vector3(direction.magnitude / 2.7f, 1, 1);
+        transform.localScale = new Vector3(direction.magnitude / 3f, 1, 1);
     }
 
     public void SetDirection(Vector3 player, Vector3 Boss)
@@ -36,7 +36,7 @@ public class BossLazer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().GetDamage(10);
+            collision.GetComponent<stage2_Player>().GetDamage(10);
         }
     }
 
