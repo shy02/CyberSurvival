@@ -1,88 +1,79 @@
 fileFormatVersion: 2
-guid: e9c23c983c81b1d47a4358a25be6b371
+guid: db12212a2a2493742bb419a31be46e4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8246688713972945545
-    second: neo_zero_char_01_0
+      213: 62336315857941925
+    second: ui x3_0
   - first:
-      213: 2586919033579786021
-    second: neo_zero_char_01_1
+      213: 1179806444095864618
+    second: ui x3_1
   - first:
-      213: -843583947042256871
-    second: neo_zero_char_01_2
+      213: -2626958480575286333
+    second: ui x3_2
   - first:
-      213: -2397742988852019497
-    second: neo_zero_char_01_3
+      213: -3636480489530656937
+    second: ui x3_3
   - first:
-      213: -6016299085786118420
-    second: neo_zero_char_01_4
+      213: 4956906407087141168
+    second: ui x3_4
   - first:
-      213: -8946216974945763455
-    second: neo_zero_char_01_5
+      213: 527958574931713626
+    second: ui x3_5
   - first:
-      213: -8926277445291186105
-    second: neo_zero_char_01_6
+      213: -6780147777282436725
+    second: ui x3_6
   - first:
-      213: 1942856248426375686
-    second: neo_zero_char_01_7
+      213: 7288474766852541511
+    second: ui x3_7
   - first:
-      213: 8253747534336774487
-    second: neo_zero_char_01_8
+      213: 208325798095328611
+    second: ui x3_8
   - first:
-      213: -6684006216625864522
-    second: neo_zero_char_01_9
+      213: -3374573903835008113
+    second: ui x3_9
   - first:
-      213: -4068788831943055058
-    second: neo_zero_char_01_10
+      213: -170478352488640554
+    second: ui x3_10
   - first:
-      213: -2778732663519216648
-    second: neo_zero_char_01_11
+      213: -1462484837984988227
+    second: ui x3_11
   - first:
-      213: -8178291022126925516
-    second: neo_zero_char_01_12
+      213: 3300932387328059265
+    second: ui x3_12
   - first:
-      213: -893376412710804130
-    second: neo_zero_char_01_13
+      213: -3092928465108991836
+    second: ui x3_13
   - first:
-      213: -1585778067511213779
-    second: neo_zero_char_01_14
+      213: 1953203733521563598
+    second: ui x3_14
   - first:
-      213: 4496720222424486111
-    second: neo_zero_char_01_15
+      213: -7869121856160791673
+    second: ui x3_15
   - first:
-      213: 410372656548190708
-    second: neo_zero_char_01_16
+      213: 6662466343548354787
+    second: ui x3_16
   - first:
-      213: 2471820516647042581
-    second: neo_zero_char_01_17
+      213: 2291918003757690922
+    second: ui x3_17
   - first:
-      213: 8528094157530541501
-    second: neo_zero_char_01_18
+      213: 756654495209226163
+    second: ui x3_18
   - first:
-      213: -2694857660209894695
-    second: neo_zero_char_01_19
+      213: -7853494562400875006
+    second: ui x3_19
   - first:
-      213: 7655988990714935506
-    second: neo_zero_char_01_20
+      213: 3305169045369569131
+    second: ui x3_20
   - first:
-      213: -6311354619597495519
-    second: neo_zero_char_01_21
+      213: 6155055175875440689
+    second: ui x3_21
   - first:
-      213: 2696301584117039639
-    second: neo_zero_char_01_22
+      213: -123740387955072767
+    second: ui x3_22
   - first:
-      213: -5105119602808067916
-    second: neo_zero_char_01_23
-  - first:
-      213: -886651498809025490
-    second: neo_zero_char_01_24
-  - first:
-      213: 8845912839701497094
-    second: neo_zero_char_01_25
-  - first:
-      213: 8778266027356069617
-    second: neo_zero_char_01_26
+      213: -8416674837347157428
+    second: ui x3_23
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -129,7 +120,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 21
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -150,10 +141,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -204,13 +195,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: neo_zero_char_01_0
+      name: ui x3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 32
-        height: 32
+        x: 8
+        y: 1010
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 982949941bf127270800000000000000
-      internalID: 8246688713972945545
+      spriteID: 5a5b15b8c867dd000800000000000000
+      internalID: 62336315857941925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_1
+      name: ui x3_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 256
-        width: 32
-        height: 32
+        x: 104
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,20 +232,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52f483ba72596e320800000000000000
-      internalID: 2586919033579786021
+      spriteID: a2ffc04c5b38f5010800000000000000
+      internalID: 1179806444095864618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_2
+      name: ui x3_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
-        width: 32
-        height: 32
+        x: 200
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +254,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9180352aedcfa44f0800000000000000
-      internalID: -843583947042256871
+      spriteID: 3c33c9d1e2b2b8bd0800000000000000
+      internalID: -2626958480575286333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_3
+      name: ui x3_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
-        width: 32
-        height: 32
+        x: 296
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7debac6947189bed0800000000000000
-      internalID: -2397742988852019497
+      spriteID: 757f2ecf240a88dc0800000000000000
+      internalID: -3636480489530656937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_4
+      name: ui x3_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 224
-        width: 32
-        height: 32
+        x: 392
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,20 +298,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce606317bdfc18ca0800000000000000
-      internalID: -6016299085786118420
+      spriteID: 031794b4d187ac440800000000000000
+      internalID: 4956906407087141168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_5
+      name: ui x3_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 224
-        width: 32
-        height: 32
+        x: 488
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18fb9c47f07a8d380800000000000000
-      internalID: -8946216974945763455
+      spriteID: a5e1de2d68fa35700800000000000000
+      internalID: 527958574931713626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_6
+      name: ui x3_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 32
+        x: 584
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,20 +342,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74866daf4fd7f1480800000000000000
-      internalID: -8926277445291186105
+      spriteID: b811d62f48318e1a0800000000000000
+      internalID: -6780147777282436725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_7
+      name: ui x3_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 32
+        x: 680
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,20 +364,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60a2a19d67966fa10800000000000000
-      internalID: 1942856248426375686
+      spriteID: 74cc4a83f2dd52560800000000000000
+      internalID: 7288474766852541511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_8
+      name: ui x3_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
+        x: 776
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,20 +386,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75156e9f6a33b8270800000000000000
-      internalID: 8253747534336774487
+      spriteID: 3659509a53f14e200800000000000000
+      internalID: 208325798095328611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_9
+      name: ui x3_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
+        x: 872
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,20 +408,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b0438562c3ad33a0800000000000000
-      internalID: -6684006216625864522
+      spriteID: f837c99e9ea1b21d0800000000000000
+      internalID: -3374573903835008113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_10
+      name: ui x3_10
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
+        x: 968
+        y: 998
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,20 +430,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2925fd5d12c887c0800000000000000
-      internalID: -4068788831943055058
+      spriteID: 6df450677d652adf0800000000000000
+      internalID: -170478352488640554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_11
+      name: ui x3_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 8
+        y: 986
+        width: 80
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,20 +452,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fb79296d55ff69d0800000000000000
-      internalID: -2778732663519216648
+      spriteID: db39286d9c534bbe0800000000000000
+      internalID: -1462484837984988227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_12
+      name: ui x3_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
+        x: 11
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,20 +474,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 439bb5455afd08e80800000000000000
-      internalID: -8178291022126925516
+      spriteID: 187654664844fcd20800000000000000
+      internalID: 3300932387328059265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_13
+      name: ui x3_13
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
+        x: 35
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,20 +496,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e55e8adc2e61a93f0800000000000000
-      internalID: -893376412710804130
+      spriteID: 4a00c71b2f5b315d0800000000000000
+      internalID: -3092928465108991836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_14
+      name: ui x3_14
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
+        x: 59
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,20 +518,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d218369df3f2ef9e0800000000000000
-      internalID: -1585778067511213779
+      spriteID: ecff486727c2b1b10800000000000000
+      internalID: 1953203733521563598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_15
+      name: ui x3_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
+        x: 107
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,20 +540,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd05de7b73f876e30800000000000000
-      internalID: 4496720222424486111
+      spriteID: 783064d3d534bc290800000000000000
+      internalID: -7869121856160791673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_16
+      name: ui x3_16
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
+        x: 131
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,20 +562,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f99613c1cfe1b500800000000000000
-      internalID: 410372656548190708
+      spriteID: 3e0023717d5d57c50800000000000000
+      internalID: 6662466343548354787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_17
+      name: ui x3_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
+        x: 155
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,20 +584,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51ef443e9abad4220800000000000000
-      internalID: 2471820516647042581
+      spriteID: a20bc4408478ecf10800000000000000
+      internalID: 2291918003757690922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_18
+      name: ui x3_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 203
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,20 +606,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbd21b6d370e95670800000000000000
-      internalID: 8528094157530541501
+      spriteID: 3bff5a4214d208a00800000000000000
+      internalID: 756654495209226163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_19
+      name: ui x3_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 227
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,20 +628,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9dae2fa6c31f99ad0800000000000000
-      internalID: -2694857660209894695
+      spriteID: 20e42aa1e48c20390800000000000000
+      internalID: -7853494562400875006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_20
+      name: ui x3_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 251
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,20 +650,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d87dd38c698f3a60800000000000000
-      internalID: 7655988990714935506
+      spriteID: b6fbed73cb15edd20800000000000000
+      internalID: 3305169045369569131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_21
+      name: ui x3_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 299
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,20 +672,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 123ee5799609968a0800000000000000
-      internalID: -6311354619597495519
+      spriteID: 1303cf252162b6550800000000000000
+      internalID: 6155055175875440689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_22
+      name: ui x3_22
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 323
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,20 +694,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7128e9051003b6520800000000000000
-      internalID: 2696301584117039639
+      spriteID: 101a193d5c2684ef0800000000000000
+      internalID: -123740387955072767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: neo_zero_char_01_23
+      name: ui x3_23
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 347
+        y: 902
+        width: 23
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,74 +716,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b8edb2f4c8f629b0800000000000000
-      internalID: -5105119602808067916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: neo_zero_char_01_24
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2c9be5d82bf1b3f0800000000000000
-      internalID: -886651498809025490
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: neo_zero_char_01_25
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 605897c2cdef2ca70800000000000000
-      internalID: 8845912839701497094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: neo_zero_char_01_26
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fe1070517aa2d970800000000000000
-      internalID: 8778266027356069617
+      spriteID: c4a34f134d6f13b80800000000000000
+      internalID: -8416674837347157428
       vertices: []
       indices: 
       edges: []
@@ -801,7 +726,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 33aaef95614b06e469785895d1e21a00
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -810,34 +735,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      neo_zero_char_01_0: 8246688713972945545
-      neo_zero_char_01_1: 2586919033579786021
-      neo_zero_char_01_10: -4068788831943055058
-      neo_zero_char_01_11: -2778732663519216648
-      neo_zero_char_01_12: -8178291022126925516
-      neo_zero_char_01_13: -893376412710804130
-      neo_zero_char_01_14: -1585778067511213779
-      neo_zero_char_01_15: 4496720222424486111
-      neo_zero_char_01_16: 410372656548190708
-      neo_zero_char_01_17: 2471820516647042581
-      neo_zero_char_01_18: 8528094157530541501
-      neo_zero_char_01_19: -2694857660209894695
-      neo_zero_char_01_2: -843583947042256871
-      neo_zero_char_01_20: 7655988990714935506
-      neo_zero_char_01_21: -6311354619597495519
-      neo_zero_char_01_22: 2696301584117039639
-      neo_zero_char_01_23: -5105119602808067916
-      neo_zero_char_01_24: -886651498809025490
-      neo_zero_char_01_25: 8845912839701497094
-      neo_zero_char_01_26: 8778266027356069617
-      neo_zero_char_01_3: -2397742988852019497
-      neo_zero_char_01_4: -6016299085786118420
-      neo_zero_char_01_5: -8946216974945763455
-      neo_zero_char_01_6: -8926277445291186105
-      neo_zero_char_01_7: 1942856248426375686
-      neo_zero_char_01_8: 8253747534336774487
-      neo_zero_char_01_9: -6684006216625864522
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
