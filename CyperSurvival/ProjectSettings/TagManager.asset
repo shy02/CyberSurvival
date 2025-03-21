@@ -8,6 +8,8 @@ TagManager:
   - Boss
   - Wall
   - Spawner
+  - PlayerBullet
+  
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - PlayerBullet
+  - Item
   - 
   - 
   - 
