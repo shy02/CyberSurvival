@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Edge
+  - Obstacle
+  - Monster_1
   layers:
   - Default
   - TransparentFX
