@@ -44,4 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b346dbdf634df848b0cedebe4e151a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 0}
+  HpBarImage: {fileID: 0}
+  PowerBarImage: {fileID: 0}
+  DefenceBarImage: {fileID: 0}
   isBossGroggy: 1

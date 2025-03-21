@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         MyAnimator = GetComponent<Animator>();
         Muzzle.SetActive(false);
 
-        InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
+        //InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
     }
 
     void Update()

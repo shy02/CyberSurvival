@@ -7,14 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameObject UIBackground;
-    public Button PlayButton;
     public GameObject GameOver;
 
     public Image HpBarImage;
-    public Image PowerImage;
     public Image PowerBarImage;
-    public Image DefenceImage;
     public Image DefenceBarImage;
 
     public static int MAX_HP = 1000;
@@ -53,7 +49,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private bool _isGameRunning = false;
+    private bool _isGameRunning = true;
     public bool isGameRunning
     {
         get { return _isGameRunning; }
@@ -74,10 +70,14 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
         SetUI();
-
         SetHpBarImage();
         SetPowerBarImage();
         SetDefenceBarImage();
@@ -85,23 +85,7 @@ public class GameManager : MonoBehaviour
 
     private void SetUI()
     {
-        UIBackground.SetActive(true);
-        PlayButton.gameObject.SetActive(true);
         GameOver.SetActive(false);
-
-        HpBarImage.gameObject.SetActive(false);
-        PowerImage.gameObject.SetActive(false);
-        DefenceImage.gameObject.SetActive(false);
-
-        if (PlayButton == null)
-        {
-            Debug.LogError("PlayButton is not assigned in the Inspector!");
-        }
-        else
-        {
-            PlayButton.onClick.AddListener(StartGame);
-            Debug.Log("PlayButton is assigned and active: " + PlayButton.gameObject.activeSelf);
-        }
     }
 
     public void SetHp(int hp)
@@ -145,20 +129,6 @@ public class GameManager : MonoBehaviour
     {
         float defenceImage = (float)(gainedDefenceItem + 1) / (MAX_GAINED_ITEM + 1);
         DefenceBarImage.fillAmount = defenceImage;
-    }
-
-    public void StartGame()
-    {
-        UIBackground.SetActive(false);
-        PlayButton.gameObject.SetActive(false);
-        GameOver.SetActive(false);
-
-        HpBarImage.gameObject.SetActive(true);
-        PowerImage.gameObject.SetActive(true);
-        DefenceImage.gameObject.SetActive(true);
-
-        isGameRunning = true;
-        print("Game Start!");
     }
 
     public void FinishGame()
