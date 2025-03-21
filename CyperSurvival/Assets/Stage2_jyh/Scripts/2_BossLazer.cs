@@ -1,9 +1,11 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class BossLazer : MonoBehaviour
 {
     private Transform playerTransform;
     private Transform bossTransform;
+    Vector3 direction = Vector3.zero;
 
     void Start()
     {
@@ -19,16 +21,20 @@ public class BossLazer : MonoBehaviour
 
     void RotateTowardsPlayer()
     {
-        Vector3 direction = playerTransform.position - bossTransform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-        transform.localScale = new Vector3(direction.magnitude / 2.5f, 1, 1);
+        transform.localScale = new Vector3(direction.magnitude / 2.7f, 1, 1);
+    }
+
+    public void SetDirection(Vector3 player, Vector3 Boss)
+    {
+        direction = player - Boss;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             collision.GetComponent<Player>().GetDamage(10);
         }

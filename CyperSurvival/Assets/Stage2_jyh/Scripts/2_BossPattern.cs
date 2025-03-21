@@ -53,11 +53,11 @@ public class BossPattern : MonoBehaviour
         lineRenderer.endColor = Color.red;
         lineRenderer.enabled = false;
 
-        Invoke("Attack1", attackcool1);
+        //Invoke("Attack1", attackcool1);
 
-        Invoke("Attack2", attackcool2);
+        //Invoke("Attack2", attackcool2);
 
-        Invoke("Attack3", attackcool3);
+        //Invoke("Attack3", attackcool3);
 
         Invoke("Attack4", attackcool4);
     }
@@ -134,8 +134,8 @@ public class BossPattern : MonoBehaviour
 
     IEnumerator ShowLaserWarning()
     {
-        float blinkDuration = 3f;
-        float blinkInterval = 0.2f;
+        float blinkDuration = 1f;
+        float blinkInterval = 0.1f;
         float elapsedTime = 0f;
 
         while (elapsedTime < blinkDuration)
@@ -157,9 +157,10 @@ public class BossPattern : MonoBehaviour
         Vector3 finalEndPosition = player.transform.position;
         Vector3 dir = finalEndPosition - finalStartPosition;
         
-
+        //스폰
         GameObject go = Instantiate(laser, finalStartPosition + dir.normalized, Quaternion.identity);
-
+        //발사위치 설정
+        go.GetComponent<BossLazer>().SetDirection(finalEndPosition, finalStartPosition);
         Destroy(go, 0.5f);
 
         Invoke("Attack4", attackcool4);
