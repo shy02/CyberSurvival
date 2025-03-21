@@ -27,6 +27,7 @@ public class level1Spawn_1 : MonoBehaviour
         if (enemyCount >= maxEnemies)
         {
             CancelInvoke("SpawnEnemy"); // 더 이상 몬스터 생성하지 않음
+            Destroy(gameObject); // 스포너 객체 삭제
             return;
         }
 
