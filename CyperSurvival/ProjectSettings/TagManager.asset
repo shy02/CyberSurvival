@@ -7,6 +7,12 @@ TagManager:
   - Edge
   - Obstacle
   - Monster_1
+  - Enemy
+  - Boss
+  - Wall
+  - Spawner
+  - PlayerBullet
+  
   layers:
   - Default
   - TransparentFX
@@ -14,8 +20,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - PlayerBullet
+  - Item
   - 
   - 
   - 
