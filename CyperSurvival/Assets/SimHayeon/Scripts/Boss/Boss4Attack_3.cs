@@ -102,6 +102,8 @@ public class Boss4Attack_3 : MonoBehaviour
 
         RushArea.transform.localScale = nowscale;//크기 초기화
 
+        gameObject.GetComponent<Animator>().SetBool("Rush", true);
+
         float add = 0;//범위 표시 어디까지 할까
         while(Distance/7 >= add)
         {
@@ -122,11 +124,12 @@ public class Boss4Attack_3 : MonoBehaviour
         {
             Debug.Log("실행");
             //transform.Translate(moveGaol.normalized * 300 *Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, Goalpos, 300 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Goalpos, 200 * Time.deltaTime);
             yield return new WaitForSeconds(0.01f);
             
-
         } //돌진!!!!!!
+
+        gameObject.GetComponent<Animator>().SetBool("Rush", false);
 
         yield return new WaitForSeconds(1f);
         GetComponent<EnemyMovement_3>().enabled = true;//1초뒤에 다시 다가가는 함수 실행

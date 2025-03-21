@@ -94,7 +94,7 @@ public class SpawnManager_s_3 : MonoBehaviour
             StopAllCoroutines();
             Boss.GetComponent<BossAttackManager_3>().StartAttack();
             //보스 소환
-            //Boss.GetComponent<Animator>().SetTrigger("Apear");
+            Boss.GetComponent<Animator>().SetBool("TurnOn", true);
         }
     }
 }
