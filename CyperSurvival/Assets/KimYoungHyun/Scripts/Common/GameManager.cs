@@ -17,48 +17,67 @@ public class GameManager : MonoBehaviour
     public static int MAX_GAINED_ITEM = 2;
     public static int DEAULT_POWER = 100;
 
-    private int _playerHp = 1000; // 최대 HP 1000
-    public int playerHp
+    private int _playerHp = 1000;
+    public int PlayerHp
     {
-
-        get { return _playerHp; }
-        set { 
+        get => _playerHp;
+        set
+        {
             _playerHp = Math.Min(value, MAX_HP);
             SetHpBarImage();
+            if (_playerHp <= 0)
+            {
+                FinishGame();
+            }
         }
     }
 
-    private int _gainedPowerItem = 0; // 아이템 2개까지만 먹을 수 있게, 다 먹었으면 더이상 드랍X
-    public int gainedPowerItem
+    private int _gainedPowerItem = 0;
+    public int GainedPowerItem
     {
-
-        get { return _gainedPowerItem; }
-        set { 
+        get => _gainedPowerItem;
+        set
+        {
             _gainedPowerItem = Math.Min(value, MAX_GAINED_ITEM);
             SetPowerBarImage();
         }
     }
 
-    private int _gainedDefenceItem = 0; // 아이템 2개까지만 먹을 수 있게, 다 먹었으면 더이상 드랍X
-    public int gainedDefenceItem
+    private int _playerPower = 0;
+    public int PlayerPower
     {
-        get { return _gainedDefenceItem; }
-        set {
+        get => _playerPower;
+        set => _playerPower = Math.Min(value, MAX_GAINED_ITEM); 
+    }
+
+    private int _gainedDefenceItem = 0;
+    public int GainedDefenceItem
+    {
+        get => _gainedDefenceItem;
+        set
+        {
             _gainedDefenceItem = Math.Min(value, MAX_GAINED_ITEM);
             SetDefenceBarImage();
         }
     }
 
-    private bool _isGameRunning = true;
-    public bool isGameRunning
+    private int _playerDefence = 0;
+    public int PlayerDefence
     {
-        get { return _isGameRunning; }
+        get => _playerDefence;
+        set => _playerDefence = Math.Min(value, 20); 
+    }
+
+    private bool _isGameRunning = true;
+    public bool IsGameRunning
+    {
+        get => _isGameRunning;
         set
         {
             _isGameRunning = value;
             if (!_isGameRunning)
             {
-
+                // Game Over
             }
         }
     }
@@ -90,50 +109,53 @@ public class GameManager : MonoBehaviour
 
     public void SetHp(int hp)
     {
-        playerHp = hp;
+        PlayerHp += hp;
+        print($"Player hp: {PlayerHp} (+{hp})");
     }
 
     public void AddGainedPowerItem()
     {
-        if (gainedPowerItem >= MAX_GAINED_ITEM)
+        if (GainedPowerItem >= MAX_GAINED_ITEM)
         {
             return;
         }
-        gainedPowerItem += 1;
-        print($"Gained power item!");
+        GainedPowerItem += 1;
+        PlayerPower += 1;
+        print($"Gained power item! Player power : {PlayerPower}");
     }
 
     public void AddGainedDefenceItem()
     {
-        if (gainedDefenceItem >= MAX_GAINED_ITEM)
+        if (GainedDefenceItem >= MAX_GAINED_ITEM)
         {
             return;
         }
-        gainedDefenceItem += 1;
-        print($"Gained defence item!");
+        GainedDefenceItem += 1;
+        PlayerDefence += 10;
+        print($"Gained defence item! Player dfence : {PlayerDefence}");
     }
 
     private void SetHpBarImage()
     {
-        float hpImage = (float) playerHp / MAX_HP; 
+        float hpImage = (float) PlayerHp / MAX_HP; 
         HpBarImage.fillAmount = hpImage;
     }
 
     private void SetPowerBarImage()
     {
-        float powerImage = (float) (gainedPowerItem + 1) / (MAX_GAINED_ITEM + 1);
+        float powerImage = (float) (GainedPowerItem + 1) / (MAX_GAINED_ITEM + 1);
         PowerBarImage.fillAmount = powerImage;
     }
 
     private void SetDefenceBarImage()
     {
-        float defenceImage = (float)(gainedDefenceItem + 1) / (MAX_GAINED_ITEM + 1);
+        float defenceImage = (float)(GainedDefenceItem + 1) / (MAX_GAINED_ITEM + 1);
         DefenceBarImage.fillAmount = defenceImage;
     }
 
     public void FinishGame()
     {
         GameOver.SetActive(true);
-        isGameRunning = false;
+        IsGameRunning = false;
     }
 }

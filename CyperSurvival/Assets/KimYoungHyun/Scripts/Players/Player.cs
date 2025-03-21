@@ -5,12 +5,7 @@ public class Player : MonoBehaviour
 {
     public Animator MyAnimator;
 
-    private int monsterAttackTest = 100; // Test
-
     public float moveSpeed = 5f;
-    public int hp = 1000;
-    public int power = 0;
-    public int defence = 0;
     private bool isLeft = false;
     private bool isRolling = false;
 
@@ -33,12 +28,12 @@ public class Player : MonoBehaviour
         MyAnimator = GetComponent<Animator>();
         Muzzle.SetActive(false);
 
-        //InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
+        InvokeRepeating("TakeDamageTest", 0f, 1f); // Test
     }
 
     void Update()
     {
-        if (!GameManager.Instance.isGameRunning)
+        if (!GameManager.Instance.IsGameRunning)
         {
             return;
         }
@@ -58,7 +53,7 @@ public class Player : MonoBehaviour
         float moveY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
         Vector3 newPosition = transform.position + new Vector3(moveX, moveY, 0);
         transform.position = newPosition;
-        SetWalkingAnimation(moveX, moveY);
+        WalkingAnimation(moveX, moveY);
 
         if (moveX != 0 || moveY != 0)
         {
@@ -92,10 +87,10 @@ public class Player : MonoBehaviour
 
     private void FireBullet()
     {
-        GameObject bulletInstance = Instantiate(MyBullets[power], LauncherPos.position, Quaternion.identity);
+        GameObject bulletInstance = Instantiate(MyBullets[GameManager.Instance.PlayerPower], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
-        bulletScript.playwerPower = power;
+        bulletScript.playwerPower = GameManager.Instance.PlayerPower;
         StartCoroutine(ShowMuzzle());
     }
 
@@ -104,7 +99,7 @@ public class Player : MonoBehaviour
         uValue += Time.deltaTime;
         if (uValue >= 0.1)
         {
-            GameObject ultimate = Instantiate(MyUltimates[power], mousePosition, Quaternion.identity);
+            GameObject ultimate = Instantiate(MyUltimates[GameManager.Instance.PlayerPower], mousePosition, Quaternion.identity);
             Destroy(ultimate, 0.15f);
             uValue = 0;
         }
@@ -143,20 +138,44 @@ public class Player : MonoBehaviour
         StartCoroutine(RollAnimation());
     }
 
-    public void TakeDamage(int monsterAttack)
+    //public void TakeDamage(int monsterAttack)
+    //{
+    //    if (!isRolling)
+    //    {
+    //        int damage = monsterAttack * (100 - defence) / 100;
+    //        hp -= damage;
+    //        HitAnimation();
+    //        print($"Player hp : {hp} (-{damage})");
+    //        GameManager.Instance.SetHp(hp);
+    //    }
+    //}
+
+    public void TakeDamage(int damage)
     {
-        if (!isRolling)
-        {
-            int damage = monsterAttack * (100 - defence) / 100;
-            hp -= damage;
-            HitAnimation();
-            print($"Player hp : {hp} (-{damage})");
-            GameManager.Instance.SetHp(hp);
-        }
+        int finalDamage = damage * (100 - GameManager.Instance.PlayerDefence) / 100;
+        GameManager.Instance.SetHp(-finalDamage);
     }
 
+    public void GainHpItem()
+    {
+        if (GameManager.Instance.PlayerHp >= GameManager.MAX_HP)
+        {
+            return;
+        }
+        GameManager.Instance.SetHp(100);
+    }
 
-    private void SetWalkingAnimation(float moveX, float moveY)
+    public void GainPowerItem()
+    {
+        GameManager.Instance.AddGainedPowerItem();
+    }
+
+    public void GainDefenceItem()
+    {
+        GameManager.Instance.AddGainedDefenceItem();
+    }
+
+    private void WalkingAnimation(float moveX, float moveY)
     {
         if (moveX != 0 || moveY != 0)
         {
@@ -166,39 +185,6 @@ public class Player : MonoBehaviour
         {
             MyAnimator.SetBool(Strings.isWalking, false);
         }
-    }
-
-    public void GainHpItem()
-    {
-        if (hp >= GameManager.MAX_HP)
-        {
-            return;
-        }
-        hp += 10;
-        //print($"player hp : {hp} (+10)");
-        GameManager.Instance.SetHp(hp);
-    }
-
-    public void GainPowerItem()
-    {
-        if (power >= 2)
-        {
-            return;
-        }
-        power++;
-        //print($"player power : {power} (+1)");
-        GameManager.Instance.AddGainedPowerItem();
-    }
-
-    public void GainDefenceItem()
-    {
-        if (defence >= 20)
-        {
-            return;
-        }
-        defence += 10;
-        //print($"player defence : {defence} (+10)");
-        GameManager.Instance.AddGainedDefenceItem();
     }
 
     IEnumerator RollAnimation()
@@ -238,17 +224,15 @@ public class Player : MonoBehaviour
         afterimage.transform.localScale = scale;
     }
 
-    public void TakeDamageTest() // Test
+    private void TakeDamageTest() // Test
     {
         if (!isRolling)
         {
-            int damage = monsterAttackTest * (100 - defence) / 100;
-            hp -= damage;
+            int damage = 50 * (100 - GameManager.Instance.PlayerDefence) / 100;
+            GameManager.Instance.SetHp(-damage);
             HitAnimation();
-            print($"Player hp : {hp} (-{damage})");
-            GameManager.Instance.SetHp(hp);
 
-            if (hp <= 0)
+            if (GameManager.Instance.PlayerHp <= 0)
             {
                 MyAnimator.SetTrigger(Strings.Dead);
                 WeaponHand.SetActive(false);
