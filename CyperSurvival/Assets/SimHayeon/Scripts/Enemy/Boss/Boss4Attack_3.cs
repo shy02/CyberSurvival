@@ -33,6 +33,7 @@ public class Boss4Attack_3 : MonoBehaviour
 
     [Header("Pattern 1 : ART REF&Settings")]
     [SerializeField] GameObject Artbullet;
+    GameObject RushEffect;
     #region 패턴2
     [Header("Pattern 2 : RushToPlayer REF&Settings")]
     [SerializeField] GameObject RushArea;
@@ -59,6 +60,9 @@ public class Boss4Attack_3 : MonoBehaviour
                 Target = StageManager_3.instance.player;
             }
         }
+
+        RushEffect = transform.GetChild(1).gameObject;
+        RushEffect.SetActive(false);
 
         //EightBulletLuncher = transform.GetChild(0).GetChild(0);//패턴 1 런처
     }
@@ -99,11 +103,12 @@ public class Boss4Attack_3 : MonoBehaviour
         Vector3 nowpos = new Vector3(-0.3f, 0.2f,0);
 
         GetComponent<EnemyMovement_3>().enabled = false;//일단 따라가는 거 멈추기
+        Stage3SoundManager.instace.StopWalkSound();
 
         RushArea.transform.localScale = nowscale;//크기 초기화
 
         gameObject.GetComponent<Animator>().SetBool("Rush", true);
-
+        Stage3SoundManager.instace.PlayBeforeRush();
         float add = 0;//범위 표시 어디까지 할까
         while(Distance/7 >= add)
         {
@@ -111,7 +116,7 @@ public class Boss4Attack_3 : MonoBehaviour
             nowscale.x = add;
             RushArea.transform.localScale = nowscale;
             RushArea.transform.localPosition = new Vector3(nowpos.x - add, nowpos.y, nowpos.z);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.05f);
         }//돌진 범위 표시
 
         Vector3 Goalpos = RushArea.transform.GetChild(0).position;//돌진 어디까지 할까요
@@ -120,16 +125,20 @@ public class Boss4Attack_3 : MonoBehaviour
 
         Vector3 moveGaol = Goalpos - transform.position;//돌진 위치를 바라보는 벡터
 
+        RushEffect.SetActive(true);
+        Stage3SoundManager.instace.PlayRushing();
         while (Vector3.Distance(transform.position, Goalpos) > 0.5f)
         {
             Debug.Log("실행");
             //transform.Translate(moveGaol.normalized * 300 *Time.deltaTime);
-            transform.position = Vector3.MoveTowards(transform.position, Goalpos, 200 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, Goalpos, 100 * Time.deltaTime);
             yield return new WaitForSeconds(0.01f);
             
         } //돌진!!!!!!
-
+        Stage3SoundManager.instace.PlayRushBoom();
         gameObject.GetComponent<Animator>().SetBool("Rush", false);
+
+        RushEffect.SetActive(false);
 
         yield return new WaitForSeconds(1f);
         GetComponent<EnemyMovement_3>().enabled = true;//1초뒤에 다시 다가가는 함수 실행

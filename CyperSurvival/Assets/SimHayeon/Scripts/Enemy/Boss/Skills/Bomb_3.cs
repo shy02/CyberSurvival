@@ -13,10 +13,12 @@ public class Bomb_3 : MonoBehaviour
     private void Start()
     {
         Invoke("StartBomb",CountDown);
+        Stage3SoundManager.instace.FallingBomb();
     }
 
     private void StartBomb()
     {
+        Stage3SoundManager.instace.Bomb_Boom();
         Instantiate(Bomb_effect, transform.position, Quaternion.identity);
 
         //여기서 플레이어 데미지
