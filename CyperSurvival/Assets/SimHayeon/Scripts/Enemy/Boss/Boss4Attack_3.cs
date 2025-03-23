@@ -37,6 +37,7 @@ public class Boss4Attack_3 : MonoBehaviour
     #region 패턴2
     [Header("Pattern 2 : RushToPlayer REF&Settings")]
     [SerializeField] GameObject RushArea;
+    bool CanRushDamage = false;
     #endregion
     #region 패턴3
     [Header("Pattern 3 : CycleAttack REF&Settings")]
@@ -110,14 +111,24 @@ public class Boss4Attack_3 : MonoBehaviour
         gameObject.GetComponent<Animator>().SetBool("Rush", true);
         Stage3SoundManager.instace.PlayBeforeRush();
         float add = 0;//범위 표시 어디까지 할까
+        RushDirObject area = RushArea.transform.GetChild(0).GetComponent<RushDirObject>();
+        area.StartDrawRushArea();
         while(Distance/7 >= add)
         {
-            add += 0.1f;
-            nowscale.x = add;
-            RushArea.transform.localScale = nowscale;
-            RushArea.transform.localPosition = new Vector3(nowpos.x - add, nowpos.y, nowpos.z);
-            yield return new WaitForSeconds(0.05f);
+            if (area.GetComponent<RushDirObject>().Cango)
+            {
+                add += 0.1f;
+                nowscale.x = add;
+                RushArea.transform.localScale = nowscale;
+                RushArea.transform.localPosition = new Vector3(nowpos.x - add, nowpos.y, nowpos.z);
+                yield return new WaitForSeconds(0.05f);
+            }
+            else
+            {
+                break;
+            }
         }//돌진 범위 표시
+        area.startdraw = false;
 
         Vector3 Goalpos = RushArea.transform.GetChild(0).position;//돌진 어디까지 할까요
 
@@ -127,6 +138,8 @@ public class Boss4Attack_3 : MonoBehaviour
 
         RushEffect.SetActive(true);
         Stage3SoundManager.instace.PlayRushing();
+        //여기서 데미지 키기
+        CanRushDamage = true;
         while (Vector3.Distance(transform.position, Goalpos) > 0.5f)
         {
             Debug.Log("실행");
@@ -143,6 +156,13 @@ public class Boss4Attack_3 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         GetComponent<EnemyMovement_3>().enabled = true;//1초뒤에 다시 다가가는 함수 실행
     }//완료
+    private void OnTriggerEnter2D(Collider2D collision)//러쉬 데미지 주는
+    {
+        if(collision.CompareTag("Player") && CanRushDamage)
+        {
+            collision.GetComponent<Player>().TakeDamage(30);
+        }
+    }
     //패턴3
     IEnumerator CycleAttack()
     {
@@ -155,6 +175,7 @@ public class Boss4Attack_3 : MonoBehaviour
 
         while (attackRate >= 1)
         {
+            Stage3SoundManager.instace.CircleShot();
             for (int i = 0; i < count; i++)
             {
                 GameObject clone = Instantiate(CycleBullet, transform.position, Quaternion.identity);
@@ -202,6 +223,7 @@ public class Boss4Attack_3 : MonoBehaviour
             (1, -1, -10, -10, false), (1, -1, -10, -10, true),
         };
 
+        Stage3SoundManager.instace.PlayArtShot();
         while (duration > 0)
         {
             foreach (var (Mx, My, UX, UY, flip) in attackPatterns)
@@ -212,35 +234,36 @@ public class Boss4Attack_3 : MonoBehaviour
             duration -= 0.5f;
             yield return new WaitForSeconds(spawnInterval);
         }
-    /*float sencond = 60f;//30초
-    while(sencond > 0){
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, 0, -10, true, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, 0, -10, false, transform);
+        Stage3SoundManager.instace.StopArtShot();
+        /*float sencond = 60f;//30초
+        while(sencond > 0){
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, 0, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, 0, -10, false, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, -1, -10, -10, false, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, -1, -10, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, -1, -10, -10, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, -1, -10, -10, true, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, 0, true, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, 0, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, 0, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, 0, false, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, -10, false, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, -10, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(-1, 1, -10, -10, true, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, 0, -10, true, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, 0, -10, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, 0, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, 0, -10, false, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, -10, false, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, -10, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, -10, true, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, 0, true, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, 0, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, 0, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, 1, -10, 0, false, transform);
 
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, -10, -10, false, transform);
-        Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, -10, -10, true, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, -10, -10, false, transform);
+            Instantiate(testbullet, transform.position, Quaternion.identity).GetComponent<LongLineAttack>().StartAttack(1, -1, -10, -10, true, transform);
 
-        sencond -= 0.5f;
-        yield return new WaitForSeconds(0.05f);
-    }*/
+            sencond -= 0.5f;
+            yield return new WaitForSeconds(0.05f);
+        }*/
     } // 얘를 패턴 1로 탕탕탕
     void SpawnBullet(float Mx, float My, float UX, float UY, bool flip)
     {
@@ -250,8 +273,6 @@ public class Boss4Attack_3 : MonoBehaviour
     }
     //한개 더 추가할지도?
     #endregion // 완료
-
-
 
     #region ForUI
     public void Pattern1() { StartCoroutine(LongLineAttack());}

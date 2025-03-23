@@ -19,41 +19,25 @@ public class Stage3SoundManager : MonoBehaviour
     public void StopWalkSound() { sounds[0].GetComponent<AudioSource>().Stop(); }
 
     //µ¹Áø±â
-    public void PlayBeforeRush()
-    {
-        GameObject sound = Instantiate(sounds[1], transform);
-        sound.GetComponent<AudioSource>().Play();
-        Destroy(sound, 5f);
-    }
+    public void PlayBeforeRush() { PlaySound(sounds[1], 3f); }
 
-    public void PlayRushing()
-    {
-        GameObject sound = Instantiate(sounds[2], transform);
-        sound.GetComponent<AudioSource>().Play();
-        Destroy(sound, 4f);
-    } 
+    public void PlayRushing(){ PlaySound(sounds[2], 4f); }
 
-    public void PlayRushBoom()
-    {
-        GameObject sound = Instantiate(sounds[3], transform);
-        sound.GetComponent<AudioSource>().Play();
-        Destroy(sound, 4f);
-
-    }
+    public void PlayRushBoom() { PlaySound(sounds[3], 4f); }
 
     //¶³¾îÁö´Â ÆøÅº
-    public void FallingBomb()
-    {
-        GameObject sound = Instantiate(sounds[4], transform);
-        sound.GetComponent<AudioSource>().Play();
-        Destroy(sound, 2f);
+    public void FallingBomb() { PlaySound(sounds[4], 2f); }
 
-    }
+    public void Bomb_Boom() { PlaySound(sounds[5], 7f); }
 
-    public void Bomb_Boom()
+    public void PlayArtShot() { sounds[6].GetComponent<AudioSource>().Play(); }
+    public void StopArtShot() { sounds[6].GetComponent<AudioSource>().Stop(); }
+    public void CircleShot() { PlaySound(sounds[7], 1f); }
+
+    private void PlaySound(GameObject sound_prefab, float destroyTime)
     {
-        GameObject sound = Instantiate(sounds[5], transform);
+        GameObject sound = Instantiate(sound_prefab, transform);
         sound.GetComponent<AudioSource>().Play();
-        Destroy(sound, 7f);
+        Destroy(sound, destroyTime);
     }
 }
