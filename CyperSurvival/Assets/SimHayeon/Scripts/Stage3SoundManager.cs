@@ -33,6 +33,7 @@ public class Stage3SoundManager : MonoBehaviour
     public void PlayArtShot() { sounds[6].GetComponent<AudioSource>().Play(); }
     public void StopArtShot() { sounds[6].GetComponent<AudioSource>().Stop(); }
     public void CircleShot() { PlaySound(sounds[7], 1f); }
+    public void electiric() { PlaySound(sounds[8], 1.3f); }
 
     private void PlaySound(GameObject sound_prefab, float destroyTime)
     {

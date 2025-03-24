@@ -12,6 +12,7 @@ public class Boss4Attack_3 : MonoBehaviour
 
     Transform Target;//플레이어
     Transform Luncher;
+    Transform bulletCage;
     /*float rotateSpeed = 1f;
     #region 패턴1
     //8자 모양 만드는건 총알 건들고 부채모양 부터
@@ -49,6 +50,8 @@ public class Boss4Attack_3 : MonoBehaviour
     [SerializeField] int bombCount = 5;
     [SerializeField] float bombSetDelay = 0.7f;
     #endregion
+    [Header("When Play Down")]
+    [SerializeField] GameObject DownEffect;
 
     private void Start()
     {
@@ -64,6 +67,8 @@ public class Boss4Attack_3 : MonoBehaviour
 
         RushEffect = transform.GetChild(1).gameObject;
         RushEffect.SetActive(false);
+
+        bulletCage = GetComponent<BossAttackManager_3>().bullet;
 
         //EightBulletLuncher = transform.GetChild(0).GetChild(0);//패턴 1 런처
     }
@@ -178,7 +183,7 @@ public class Boss4Attack_3 : MonoBehaviour
             Stage3SoundManager.instace.CircleShot();
             for (int i = 0; i < count; i++)
             {
-                GameObject clone = Instantiate(CycleBullet, transform.position, Quaternion.identity);
+                GameObject clone = Instantiate(CycleBullet, transform.position, Quaternion.identity,bulletCage);
                 float angle = (attackRate%2 == 0) ? weightAngle + intervalAngle * i : weightAngle + intervalAngle * i + 90;
 
                 float x = Mathf.Cos(angle * Mathf.Deg2Rad);
@@ -198,7 +203,7 @@ public class Boss4Attack_3 : MonoBehaviour
         for (int i = 0; i < bombCount; i++)
         {
             //플레이어 밑에 빨간 발판 소환
-            Instantiate(Redfield, Target.position, Quaternion.identity);
+            Instantiate(Redfield, Target.position, Quaternion.identity,bulletCage);
             //몇번 반복
             yield return new WaitForSeconds(bombSetDelay);
         }
@@ -267,13 +272,23 @@ public class Boss4Attack_3 : MonoBehaviour
     } // 얘를 패턴 1로 탕탕탕
     void SpawnBullet(float Mx, float My, float UX, float UY, bool flip)
     {
-        var bullet = Instantiate(Artbullet, transform.position, Quaternion.identity)
+        var bullet = Instantiate(Artbullet, transform.position, Quaternion.identity, bulletCage)
                      .GetComponent<LongLineAttack>();
         bullet.StartAttack(Mx, My, UX, UY, flip, transform);
     }
     //한개 더 추가할지도?
     #endregion // 완료
 
+    public void StopAllPattern()
+    {
+        StopAllCoroutines();
+        Instantiate(DownEffect, transform.position, Quaternion.identity);
+        Stage3SoundManager.instace.electiric();
+        RushArea.SetActive(false);
+        gameObject.GetComponent<Animator>().SetBool("Rush", false);
+        RushEffect.SetActive(false);
+        Stage3SoundManager.instace.StopArtShot();
+    }
     #region ForUI
     public void Pattern1() { StartCoroutine(LongLineAttack());}
     public void Pattern2() { StartCoroutine(RushToPlayer()); }

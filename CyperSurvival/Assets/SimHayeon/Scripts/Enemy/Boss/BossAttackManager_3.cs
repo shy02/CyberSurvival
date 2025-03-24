@@ -6,9 +6,14 @@ public class BossAttackManager_3 : MonoBehaviour
 {
     [SerializeField] float AttackDelay = 3f;
     [SerializeField] float DistanceToPlayer = 5f;
+    [SerializeField] float DownTime = 100f;//기절해 있는 시간
+    [SerializeField] Transform cores;
+    public Transform bullet;
 
     Boss4Attack_3 bossAttack;
     public Transform Player = null;
+
+    bool CanAttack = false;
 
     private void Start()
     {
@@ -25,16 +30,60 @@ public class BossAttackManager_3 : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        int count = 0;
+        for (int i = 0; i < cores.childCount; i++)
+        {
+            if (!cores.GetChild(i).gameObject.activeSelf)
+            {
+                count++;
+            }
+        }
+
+        if (count == cores.childCount && CanAttack)
+        {
+            StopAttack();
+        }
+    }
+
     public void StartAttack()
     {
+        CanAttack = true;
+        ActiveCores();
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
+        GetComponent<Boss4Attack_3>().enabled = true;
         StartCoroutine(UseBossSkill());
+    }
+
+    private void StopAttack()
+    {
+        CanAttack = false;
+        GetComponent<EnemyMovement_3>().enabled = false;
+        GetComponent<Enemy2_Shot_3>().enabled = false;
+        GetComponent<Boss4Attack_3>().StopAllPattern();
+        GetComponent<Boss4Attack_3>().enabled = false;
+        StopAllCoroutines();
+        foreach (Transform child in bullet)
+        {
+            Destroy(child.gameObject);
+        }
+        Invoke("StartAttack", DownTime);
+    }
+
+    private void ActiveCores()
+    {
+        for(int i = 0; i < cores.childCount; i++)
+        {
+            cores.GetChild(i).gameObject.SetActive(true);
+            cores.GetChild(i).GetComponent<Boss3Core>().resetCore();
+        }
     }
 
     IEnumerator UseBossSkill()
     {
-        while (true)
+        while (CanAttack)
         {
             int index = Random.Range(0, 3);
 
@@ -55,7 +104,8 @@ public class BossAttackManager_3 : MonoBehaviour
             {
                 bossAttack.Pattern2();
             }
-            yield return new WaitForSeconds(AttackDelay);
+            if (CanAttack) yield return new WaitForSeconds(AttackDelay);
+            else break;
         }
 
     }
