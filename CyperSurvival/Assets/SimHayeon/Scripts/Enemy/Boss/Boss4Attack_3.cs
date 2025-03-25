@@ -145,12 +145,15 @@ public class Boss4Attack_3 : MonoBehaviour
         Stage3SoundManager.instace.PlayRushing();
         //여기서 데미지 키기
         CanRushDamage = true;
+        float Timer = 0f;
         while (Vector3.Distance(transform.position, Goalpos) > 0.5f)
         {
+            if (Timer > 4f) break;
             Debug.Log("실행");
             //transform.Translate(moveGaol.normalized * 300 *Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, Goalpos, 100 * Time.deltaTime);
             yield return new WaitForSeconds(0.01f);
+            Timer += 0.01f;
             
         } //돌진!!!!!!
         Stage3SoundManager.instace.PlayRushBoom();

@@ -646,6 +646,7 @@ MonoBehaviour:
   Redfield: {fileID: 2385702499490556837, guid: 945a5e8d76d0ee04990d83467568ff26, type: 3}
   bombCount: 5
   bombSetDelay: 0.7
+  DownEffect: {fileID: 1141330259687333427, guid: 6718dc24203da53468af9ada8fef7d6d, type: 3}
 --- !u!114 &4936707509843217192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,6 +663,7 @@ MonoBehaviour:
   DistanceToPlayer: 15
   DownTime: 5
   cores: {fileID: 9110200703334474485}
+  bullet: {fileID: 0}
   Player: {fileID: 0}
 --- !u!114 &4258156035021634068
 MonoBehaviour:
@@ -827,8 +829,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5198882677150047129, guid: ebd09b38cd27d764aaa0e5ff9bf96e10, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7707510523364887919}
   m_SourcePrefab: {fileID: 100100000, guid: ebd09b38cd27d764aaa0e5ff9bf96e10, type: 3}
+--- !u!1 &5398178185886598126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5198882677150047129, guid: ebd09b38cd27d764aaa0e5ff9bf96e10, type: 3}
+  m_PrefabInstance: {fileID: 201547308565616759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &7707510523364887919
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398178185886598126}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0000019073486, y: 0.00000023841858}
+  m_Radius: 0.5
 --- !u!4 &6598325996581197756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6439580932064137163, guid: ebd09b38cd27d764aaa0e5ff9bf96e10, type: 3}
