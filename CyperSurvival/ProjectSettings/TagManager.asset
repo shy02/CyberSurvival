@@ -12,7 +12,7 @@ TagManager:
   - Wall
   - Spawner
   - PlayerBullet
-  
+  - Monster_2
   layers:
   - Default
   - TransparentFX

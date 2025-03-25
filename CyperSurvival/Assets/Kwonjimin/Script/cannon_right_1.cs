@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class cannon__1 : MonoBehaviour
+public class cannon_right_1 : MonoBehaviour
 {
-    public GameObject bulletPrefab; // ÃÑ¾Ë ÇÁ¸®ÆÕ
-    public Transform firePoint; // ¹ß»ç À§Ä¡ (»¡°£ Á¡)
-    public float fireRate = 1f; // ¹ß»ç °£°İ
+    public GameObject bulletPrefab; // ì´ì•Œ í”„ë¦¬íŒ¹
+    public Transform pos; // ë°œì‚¬ ìœ„ì¹˜ (ìì‹ ì˜¤ë¸Œì íŠ¸)
+    public float fireRate = 1f; // ë°œì‚¬ ê°„ê²©
     private float nextFireTime = 0f;
 
-    private GameObject player; // ÇÃ·¹ÀÌ¾î ÂüÁ¶ º¯¼ö
-    private Animator animator; // Animator ÄÄÆ÷³ÍÆ®
+    private GameObject player; // í”Œë ˆì´ì–´ ì°¸ì¡° ë³€ìˆ˜
+    private Animator animator; // ì• ë‹ˆë©”ì´í„°
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); // ì• ë‹ˆë©”ì´í„° ê°€ì ¸ì˜¤ê¸°
     }
 
     void Update()
@@ -24,13 +24,14 @@ public class cannon__1 : MonoBehaviour
             if (player == null) return;
         }
 
-        // ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ Á¶Á¤
-        animator.speed = 0.5f;
+        // ğŸ¯ ì• ë‹ˆë©”ì´ì…˜ ì†ë„ ì¡°ì •
+        if (animator != null)
+            animator.speed = 0.5f;
 
-        // ÇÃ·¹ÀÌ¾î¸¦ ÇâÇØ È¸Àü
+        // ğŸ¯ ì´ì•Œ ë°œì‚¬ ë°©í–¥ìœ¼ë¡œ íšŒì „
         RotateTowardsPlayer();
 
-        // ÁÖ±âÀûÀ¸·Î ÃÑ¾ËÀ» ¹ß»ç
+        // ğŸ¯ ì¼ì • ê°„ê²©ë§ˆë‹¤ ì´ì•Œ ë°œì‚¬
         if (Time.time >= nextFireTime)
         {
             FireBullet();
@@ -38,34 +39,25 @@ public class cannon__1 : MonoBehaviour
         }
     }
 
-    // ÃÑ¾ËÀÌ ³ª°¡´Â ¹æÇâ°ú µ¿ÀÏÇÏ°Ô È¸Àü
+    // ğŸ¯ í”Œë ˆì´ì–´ ë°©í–¥ìœ¼ë¡œ íšŒì „
     void RotateTowardsPlayer()
     {
-        // firePoint¿¡¼­ player ¹æÇâÀ¸·Î °è»ê
-        Vector3 direction = player.transform.position - firePoint.position;
-
-        // ¹æÇâ º¤ÅÍÀÇ °¢µµ¸¦ °è»ê (¶óµğ¾È -> °¢µµ º¯È¯)
+        Vector3 direction = player.transform.position - transform.position; // ğŸ”¹ ë¶€ëª¨ ì˜¤ë¸Œì íŠ¸(cannon_right_1) ê¸°ì¤€
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        // °¢µµ¸¦ -90µµ¿¡¼­ 90µµ »çÀÌ·Î Á¦ÇÑ (À§¾Æ·¡ 180µµ¸¸ È¸Àü)
-        angle = Mathf.Clamp(angle, -90f, 90f);
-
-        // ¿ÀºêÁ§Æ®¿Í ¹ß»ç À§Ä¡(firePoint)¸¦ µ¿ÀÏÇÑ ¹æÇâÀ¸·Î È¸Àü
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        // ğŸ”¹ Unityì˜ ê¸°ë³¸ ë°©í–¥ì´ ì˜¤ë¥¸ìª½(â†’)ì´ë¯€ë¡œ 180ë„ ì¶”ê°€í•˜ì—¬ ë°˜ëŒ€ ë°©í–¥ ë³´ì •
+        transform.rotation = Quaternion.Euler(0, 0, angle + 180f);
     }
 
-    // ÃÑ¾Ë ¹ß»ç ÇÔ¼ö
+    // ğŸ¯ ì´ì•Œ ë°œì‚¬ í•¨ìˆ˜
     void FireBullet()
     {
         if (player == null) return;
 
-        // firePoint¿¡¼­ ÇÃ·¹ÀÌ¾î ¹æÇâÀ¸·Î ÃÑ¾ËÀ» ¹ß»ç
-        Vector3 direction = (player.transform.position - firePoint.position).normalized;
+        // ğŸ”¹ posì—ì„œ í”Œë ˆì´ì–´ ë°©í–¥ìœ¼ë¡œ ì´ì•Œ ë°œì‚¬
+        Vector3 direction = (player.transform.position - pos.position).normalized;
+        GameObject bullet = Instantiate(bulletPrefab, pos.position, Quaternion.identity);
 
-        // ÃÑ¾ËÀ» firePoint À§Ä¡¿¡¼­ ¹ß»ç
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-
-        // ÃÑ¾Ë ½ºÅ©¸³Æ®¿¡ ¹æÇâ ¼³Á¤
         if (bullet.TryGetComponent<enemyBullet_1>(out var bulletScript))
         {
             bulletScript.SetDirection(direction);
