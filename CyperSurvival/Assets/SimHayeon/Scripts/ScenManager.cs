@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ScenManager : MonoBehaviour
 {
     public List<string> SceneName = new List<string>();
-    int nowStage = 0; //0 = title
+    int nowStage = 1; //0 = title
 
     public static ScenManager instance;
 
@@ -13,6 +13,11 @@ public class ScenManager : MonoBehaviour
     {
         if (instance == null) instance = this;
         else { Destroy(gameObject); }
+    }
+    private void Start()
+    {
+
+        SceneManager.LoadScene("TitleScene");
     }
 
     public void GoNextStage()//다음 스테이지로 가는 함수
