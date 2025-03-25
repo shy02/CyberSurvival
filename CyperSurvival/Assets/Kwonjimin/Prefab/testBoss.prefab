@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5438651512929975332}
   m_Layer: 0
   m_Name: testBoss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,13 +139,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  moveSpeed: 2
-  bulletPrefab: {fileID: 4006932114679212066, guid: ba10159ea733db34da2c61fd33a6fa82, type: 3}
-  attackWarningPrefab: {fileID: 4006932114679212066, guid: ba10159ea733db34da2c61fd33a6fa82, type: 3}
-  explosionPrefab: {fileID: 4006932114679212066, guid: ba10159ea733db34da2c61fd33a6fa82, type: 3}
-  bulletSpeed: 5
+  portalPositions: []
+  shockwavePrefab: {fileID: 0}
+  missilePrefab: {fileID: 0}
+  homingMissilePrefab: {fileID: 0}
+  bossObject: {fileID: 0}
+  speed: 3
   attackCooldown: 3
-  explosionCooldown: 5
 --- !u!114 &5438651512929975332
 MonoBehaviour:
   m_ObjectHideFlags: 0
