@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2541981559421411679}
   - component: {fileID: 54830590793726370}
   - component: {fileID: 3685257571101593354}
+  - component: {fileID: 1653238728168008360}
   m_Layer: 0
   m_Name: E_Bullet_3
   m_TagString: Untagged
@@ -101,7 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 100cd1a0ff72db047b076bfc63e14c5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
   Speed: 5
 --- !u!58 &3685257571101593354
 CircleCollider2D:
@@ -139,3 +139,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.16666667
+--- !u!114 &1653238728168008360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776579751338540161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68acf7768bae41d44a8b2a83a4fbe121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 5

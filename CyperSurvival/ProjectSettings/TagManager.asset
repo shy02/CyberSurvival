@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Edge
+  - Obstacle
+  - Monster_1
   - Enemy
   - Boss
   - Wall
   - Spawner
   - PlayerBullet
-  
   layers:
   - Default
   - TransparentFX
@@ -19,11 +21,11 @@ TagManager:
   - UI
   - PlayerBullet
   - Item
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Boss
+  - blockCollider
+  - Wall
+  - RushCheck
+  - Effect
   - 
   - 
   - 

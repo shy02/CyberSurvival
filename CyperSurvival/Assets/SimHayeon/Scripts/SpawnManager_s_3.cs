@@ -20,6 +20,7 @@ public class SpawnManager_s_3 : MonoBehaviour
     [SerializeField] GameObject enemy3;
     [Tooltip("시간이 모두 지나고 풀려나는 보스")]
     [SerializeField] GameObject Boss;
+    [SerializeField] GameObject BossUI;
 
     [Tooltip("보스가 풀려나기까지 남은 시간")]
     [SerializeField] float LimitedTime = 300f;//초단위
@@ -94,7 +95,8 @@ public class SpawnManager_s_3 : MonoBehaviour
             StopAllCoroutines();
             Boss.GetComponent<BossAttackManager_3>().StartAttack();
             //보스 소환
-            //Boss.GetComponent<Animator>().SetTrigger("Apear");
+            BossUI.SetActive(true);
+            Boss.GetComponent<Animator>().SetBool("TurnOn", true);
         }
     }
 }
