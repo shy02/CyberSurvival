@@ -99,4 +99,9 @@ public class SpawnManager_s_3 : MonoBehaviour
             Boss.GetComponent<Animator>().SetBool("TurnOn", true);
         }
     }
+
+    public void BossTime()
+    {
+        LimitedTime = 0f;
+    }
 }
