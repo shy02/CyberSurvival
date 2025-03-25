@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &268217072
 AudioListener:
   m_ObjectHideFlags: 0
@@ -216,11 +216,11 @@ Transform:
   m_GameObject: {fileID: 268217071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.4600002, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7668066205392224677}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &303081818
 PrefabInstance:
@@ -1605,10 +1605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 1107982578455455164, guid: 6c7e9207a9abcda4a92aaa087d74d344, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 268217074}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7e9207a9abcda4a92aaa087d74d344, type: 3}
 --- !u!114 &8619613962269417693
@@ -1649,4 +1646,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1629546562}
+  - {fileID: 268217074}
   - {fileID: 7155738115330912557}
