@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class stage2_BossPattern : MonoBehaviour
+public class BossPattern_2 : MonoBehaviour
 {
     GameObject player;
     float distance = 0;
@@ -56,7 +56,7 @@ public class stage2_BossPattern : MonoBehaviour
     void Attack1()
     {
         GameObject go = Instantiate(bullet, shootPos.position, Quaternion.identity);
-        stage2_BossBullet bossbullet = go.GetComponent<stage2_BossBullet>();
+        BossBullet_2 bossbullet = go.GetComponent<BossBullet_2>();
         bossbullet.SetDamage(Damage);
         Invoke("Attack1", attackcool1);
     }
@@ -75,7 +75,7 @@ public class stage2_BossPattern : MonoBehaviour
         GameObject go = Instantiate(sniperEffect, player.transform.position, Quaternion.identity);
         Destroy(go, 0.25f);
 
-        player.GetComponent<stage2_Player>().GetDamage(10);
+        player.GetComponent<Player_2>().GetDamage(10);
         Invoke("ZoomSniper", attackcool2);  //5초 후 다시 조준
     }
 
@@ -95,7 +95,7 @@ public class stage2_BossPattern : MonoBehaviour
             );
 
             GameObject go = Instantiate(bumerang, spawnPosition, Quaternion.identity);
-            stage2_Bumerang bumerangScript = go.GetComponent<stage2_Bumerang>();
+            Bumerang_2 bumerangScript = go.GetComponent<Bumerang_2>();
             bumerangScript.bossTransform = transform; // 보스의 Transform을 설정
             bumerangScript.SetInitialAngle(radian); // 초기 각도를 설정
         }
@@ -149,7 +149,7 @@ public class stage2_BossPattern : MonoBehaviour
         //스폰
         GameObject go = Instantiate(laser, startPosition + dir.normalized, Quaternion.identity);
         //발사위치 설정
-        go.GetComponent<stage2_BossLazer>().SetDirection(endPosition, startPosition);
+        go.GetComponent<BossLazer_2>().SetDirection(endPosition, startPosition);
         Destroy(go, 0.3f);
 
         Invoke("Attack4", attackcool4);

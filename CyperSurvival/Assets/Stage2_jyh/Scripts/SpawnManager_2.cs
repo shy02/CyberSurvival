@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class stage2_SpawnManager : MonoBehaviour
+public class SpawnManager_2 : MonoBehaviour
 {
 
     [Header("보스 스폰")]

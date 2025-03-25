@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class stage2_Player : MonoBehaviour
+public class Player_2 : MonoBehaviour
 {
     float x;
     float y;
@@ -10,15 +10,15 @@ public class stage2_Player : MonoBehaviour
 
     //스포너 데미지 주기
     GameObject[] gameObjects;
-    stage2_Spawner[] spawners;
+    Spawner_2[] spawners;
 
     void Start()
     {
         gameObjects = GameObject.FindGameObjectsWithTag("Spawner");
-        spawners = new stage2_Spawner[gameObjects.Length];
+        spawners = new Spawner_2[gameObjects.Length];
         for (int i = 0; i < spawners.Length; i++)
         {
-            spawners[i] = gameObjects[i].GetComponent<stage2_Spawner>();
+            spawners[i] = gameObjects[i].GetComponent<Spawner_2>();
         }
     }
 

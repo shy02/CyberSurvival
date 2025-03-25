@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class stage2_Bumerang : MonoBehaviour
+public class Bumerang_2 : MonoBehaviour
 {
     public float speed = 1f;
     public Transform bossTransform; // 보스의 Transform을 참조
@@ -34,7 +34,7 @@ public class stage2_Bumerang : MonoBehaviour
     {
         if (collider.CompareTag("Player") && spriteRenderer.color.a > 0)
         {
-            collider.GetComponent<stage2_Player>().GetDamage(10);
+            collider.GetComponent<Player_2>().GetDamage(10);
         }
         if (collider.CompareTag("Wall"))
         {

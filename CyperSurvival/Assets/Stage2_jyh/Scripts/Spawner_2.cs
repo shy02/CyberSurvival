@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class stage2_Spawner : MonoBehaviour
+public class Spawner_2 : MonoBehaviour
 {
     public Image hpBar;
     int MaxHp = 100;

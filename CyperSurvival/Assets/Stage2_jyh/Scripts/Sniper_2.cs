@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class stage2_Sniper : MonoBehaviour
+public class Sniper_2 : MonoBehaviour
 {
     //색상 전환에 걸리는 시간
     [SerializeField]

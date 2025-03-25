@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class stage2_EnemyTank : MonoBehaviour
+public class EnemyTank_2 : MonoBehaviour
 {
     GameObject player = null;
 

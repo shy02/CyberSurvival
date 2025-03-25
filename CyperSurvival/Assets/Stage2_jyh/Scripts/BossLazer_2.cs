@@ -1,7 +1,7 @@
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class stage2_BossLazer : MonoBehaviour
+public class BossLazer_2 : MonoBehaviour
 {
     private Transform playerTransform;
     private Transform bossTransform;
@@ -36,7 +36,7 @@ public class stage2_BossLazer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<stage2_Player>().GetDamage(10);
+            collision.GetComponent<Player_2>().GetDamage(10);
         }
     }
 
