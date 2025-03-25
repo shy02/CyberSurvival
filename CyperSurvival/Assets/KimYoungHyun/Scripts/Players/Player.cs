@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     public GameObject Muzzle;
     public GameObject WeaponHand;
-    public GameObject CrossHair;
+    //public GameObject CrossHair;
     public GameObject[] MyBullets;
     public GameObject[] MyUltimates;
     public AudioSource[] FireSounds;
@@ -187,7 +187,7 @@ public class Player : MonoBehaviour
             WeaponHand.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
 
-        CrossHair.transform.position = mousePosition;
+        //CrossHair.transform.position = mousePosition;
     }
 
     private void Avoide()
