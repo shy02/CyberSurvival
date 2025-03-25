@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 16192157140654930}
   - component: {fileID: 6675990073544438910}
   - component: {fileID: 1578112627937530487}
-  - component: {fileID: 6957538385848027277}
+  - component: {fileID: 6413795354468687466}
   m_Layer: 0
   m_Name: Lv2monster
   m_TagString: Monster_2
@@ -182,7 +182,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.682267, y: 6.326271}
   m_EdgeRadius: 0
---- !u!114 &6957538385848027277
+--- !u!114 &6413795354468687466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -191,10 +191,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1453335492744949314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0dfe2dbad72b74468c74e5ffeedd002, type: 3}
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 1500
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &1773520776590478678
 GameObject:
   m_ObjectHideFlags: 0

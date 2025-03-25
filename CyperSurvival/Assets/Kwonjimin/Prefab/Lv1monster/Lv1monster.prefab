@@ -44,7 +44,8 @@ GameObject:
   - component: {fileID: 3497610134604083430}
   - component: {fileID: 5296057159033806039}
   - component: {fileID: 9052648832253139294}
-  - component: {fileID: 2925359713051537928}
+  - component: {fileID: 5480031504504850751}
+  - component: {fileID: 3602676974351142166}
   m_Layer: 0
   m_Name: Lv1monster
   m_TagString: Monster_1
@@ -197,7 +198,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.22081533}
   m_Radius: 2.7648082
---- !u!114 &2925359713051537928
+--- !u!114 &5480031504504850751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +207,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 6068790295217821219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0dfe2dbad72b74468c74e5ffeedd002, type: 3}
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 1000
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
+--- !u!114 &3602676974351142166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068790295217821219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30

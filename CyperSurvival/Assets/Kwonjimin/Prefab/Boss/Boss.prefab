@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2953324161702410791}
   - component: {fileID: 3796995560312649564}
   - component: {fileID: 619524826970809658}
+  - component: {fileID: 2376185530841434872}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4711520723927674112, guid: 115b0088cb632b842af740623e32eb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -185,3 +186,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.91, y: 5.42}
   m_EdgeRadius: 0
+--- !u!114 &2376185530841434872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7037097665149301061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 2000
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
