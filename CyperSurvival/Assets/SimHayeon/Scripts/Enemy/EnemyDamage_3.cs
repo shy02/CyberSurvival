@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class EnemyDamage_3 : MonoBehaviour
@@ -7,6 +8,8 @@ public class EnemyDamage_3 : MonoBehaviour
     [SerializeField] GameObject DeathEffect;
     [SerializeField] Image HpUI;
     [SerializeField] Slider BossHP;
+    [SerializeField] List<GameObject> Items = new List<GameObject>();
+    [SerializeField] int ItemDropRate = 30;
     public void GetDamage(int dmg) { Hp -= (float)dmg; }
     public void GetDamage(float dmg) { Hp -= dmg; }
 
@@ -20,9 +23,19 @@ public class EnemyDamage_3 : MonoBehaviour
     {
         if(Hp <= 0 && !death)
         {
-            death = true;
-            Instantiate(DeathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            if (transform.name == "Boss")
+            {
+                death = true;
+                ScenManager.instance.GoNextStage();
+            }
+            else
+            {
+                death = true;
+                Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                int rate = Random.Range(0, 100);
+                if(rate <= ItemDropRate) CreateItem();
+                Destroy(gameObject);
+            }
         }
 
         if (transform.name == "Boss") BossHP.value = Hp / maxHP;
@@ -30,5 +43,9 @@ public class EnemyDamage_3 : MonoBehaviour
 
     }
 
-
+    private void CreateItem()
+    {
+        int rand = Random.Range(0, Items.Count);
+        Instantiate(Items[rand], transform.position, Quaternion.identity);
+    }
 }

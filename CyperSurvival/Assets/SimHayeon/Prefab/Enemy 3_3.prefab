@@ -297,6 +297,12 @@ MonoBehaviour:
   maxHP: 300
   DeathEffect: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5, type: 3}
   HpUI: {fileID: 1032902743220314333}
+  BossHP: {fileID: 0}
+  Items:
+  - {fileID: 1330644934093387674, guid: 671cb23a4af24414dbcfd89631f7a650, type: 3}
+  - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
+  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
+  ItemDropRate: 30
 --- !u!61 &4033405454482529985
 BoxCollider2D:
   m_ObjectHideFlags: 0
