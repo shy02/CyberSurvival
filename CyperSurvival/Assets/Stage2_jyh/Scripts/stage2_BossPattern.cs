@@ -4,7 +4,6 @@ using UnityEngine;
 public class stage2_BossPattern : MonoBehaviour
 {
     GameObject player;
-    float distance = 0;
 
     //보스 공격력
     public int Damage = 10;
