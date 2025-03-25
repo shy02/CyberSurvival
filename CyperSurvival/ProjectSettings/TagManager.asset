@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Edge
   - Obstacle
-  - Monster_1
   - Enemy
   - Boss
   - Wall

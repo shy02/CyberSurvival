@@ -46,9 +46,10 @@ GameObject:
   - component: {fileID: 9052648832253139294}
   - component: {fileID: 5480031504504850751}
   - component: {fileID: 3602676974351142166}
+  - component: {fileID: 3458116692274792094}
   m_Layer: 0
   m_Name: Lv1monster
-  m_TagString: Monster_1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,11 +211,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  DeathEffect: {fileID: 0}
-  HpUI: {fileID: 0}
+  maxHP: 1000
+  DeathEffect: {fileID: 5426075827790170437, guid: 767fd7b944f6033438ce77b160ad107b, type: 3}
+  HpUI: {fileID: 7168630022273539042, guid: e10ed64f4f9844d4bacc3ea02510487b, type: 3}
   BossHP: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 1330644934093387674, guid: 671cb23a4af24414dbcfd89631f7a650, type: 3}
+  - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
+  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   ItemDropRate: 30
 --- !u!114 &3602676974351142166
 MonoBehaviour:
@@ -228,9 +232,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  DeathEffect: {fileID: 0}
-  HpUI: {fileID: 0}
+  maxHP: 1000
+  DeathEffect: {fileID: 5426075827790170437, guid: 767fd7b944f6033438ce77b160ad107b, type: 3}
+  HpUI: {fileID: 7168630022273539042, guid: e10ed64f4f9844d4bacc3ea02510487b, type: 3}
   BossHP: {fileID: 0}
-  Items: []
+  Items:
+  - {fileID: 1330644934093387674, guid: 671cb23a4af24414dbcfd89631f7a650, type: 3}
+  - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
+  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   ItemDropRate: 30
+--- !u!114 &3458116692274792094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068790295217821219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a4ba225cb60c8b4983a3a48a7738e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

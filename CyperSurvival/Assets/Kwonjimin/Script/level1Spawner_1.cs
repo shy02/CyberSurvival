@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class level1Spawn_1 : MonoBehaviour
+public class Level1Spawner_1 : MonoBehaviour
 {
     public GameObject enemyPrefab; // 소환할 몬스터 프리팹
     public float spawnInterval = 3f; // 몬스터 소환 간격

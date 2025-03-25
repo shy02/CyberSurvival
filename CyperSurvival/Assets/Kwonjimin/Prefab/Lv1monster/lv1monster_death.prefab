@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2287992299458881539}
   - component: {fileID: 8005783281907585808}
   - component: {fileID: 6999111659640580527}
+  - component: {fileID: 8316017137284630094}
   m_Layer: 0
   m_Name: lv1monster_death
   m_TagString: Untagged
@@ -157,3 +158,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.35, y: 7.48}
   m_EdgeRadius: 0
+--- !u!114 &8316017137284630094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426075827790170437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5db6d8fff04734c8ce9a8244e56da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 1
