@@ -9,5 +9,7 @@ public class DontDestroyOnLoad : MonoBehaviour
     {
         if(instance == null) { instance = this; }
         else { Destroy(gameObject); }
+
+        DontDestroyOnLoad(gameObject);
     }
 }

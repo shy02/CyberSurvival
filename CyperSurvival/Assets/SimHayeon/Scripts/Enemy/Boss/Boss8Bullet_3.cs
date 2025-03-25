@@ -4,7 +4,6 @@ using UnityEngine;
 public class Boss8Bullet_3 : MonoBehaviour
 {
     [SerializeField] float Speed = 1f;
-    [SerializeField] float Height = 1f;
     [SerializeField] int flipY;
 
     float StartTime;
