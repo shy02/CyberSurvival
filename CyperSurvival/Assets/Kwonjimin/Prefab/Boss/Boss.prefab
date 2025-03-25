@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7037097665149301061
+--- !u!1 &6798646182717220961
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3004321086671275531}
-  - component: {fileID: 9013575127419297388}
-  - component: {fileID: 2953324161702410791}
-  - component: {fileID: 3796995560312649564}
-  - component: {fileID: 619524826970809658}
+  - component: {fileID: 3017075769872502451}
+  - component: {fileID: 6944525058365012789}
+  - component: {fileID: 7698681779936508021}
+  - component: {fileID: 353024210240986780}
+  - component: {fileID: 5454103928756135731}
+  - component: {fileID: 8992567668348307357}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -20,28 +21,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3004321086671275531
+--- !u!4 &3017075769872502451
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037097665149301061}
+  m_GameObject: {fileID: 6798646182717220961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.19, y: 0, z: 0}
+  m_LocalPosition: {x: 3.95, y: 0, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9013575127419297388
+--- !u!212 &6944525058365012789
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037097665149301061}
+  m_GameObject: {fileID: 6798646182717220961}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,29 +79,29 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 4711520723927674112, guid: 115b0088cb632b842af740623e32eb48, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -403770504023266034, guid: eb1432b4f2733e84ea84110b8ef1e06a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.91, y: 5.42}
+  m_Size: {x: 3.96, y: 5.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2953324161702410791
+--- !u!95 &7698681779936508021
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037097665149301061}
+  m_GameObject: {fileID: 6798646182717220961}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0aa0efb5e7a16174b89ec0f679841fe9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6e8ff744413323641a28585de6843f22, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -112,40 +113,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3796995560312649564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037097665149301061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cad9d6ed34a43d4a90b9259e6df7dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  portalPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  missilePrefab: {fileID: 1380642173916467761, guid: 073259e01624c124ba081927dc920aa0, type: 3}
-  homingMissilePrefab: {fileID: 638482521502481816, guid: e3a70520e05bc724ea00f2668131c931, type: 3}
-  bossObject: {fileID: 7037097665149301061}
-  level2Spawner: {fileID: 0}
-  speed: 3
-  homingMissileCooldown: 5
-  portalMissileCooldown: 3
-  portalShotDelay: 0.3
-  missileCount: 3
---- !u!61 &619524826970809658
+--- !u!61 &353024210240986780
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037097665149301061}
+  m_GameObject: {fileID: 6798646182717220961}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -177,11 +151,58 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.91, y: 5.42}
-    newSize: {x: 3.91, y: 5.42}
+    oldSize: {x: 3.96, y: 5.38}
+    newSize: {x: 3.96, y: 5.38}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.91, y: 5.42}
+  m_Size: {x: 3.96, y: 5.38}
   m_EdgeRadius: 0
+--- !u!114 &5454103928756135731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798646182717220961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cad9d6ed34a43d4a90b9259e6df7dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  portalPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  missilePrefab: {fileID: 1380642173916467761, guid: 073259e01624c124ba081927dc920aa0, type: 3}
+  homingMissilePrefab: {fileID: 638482521502481816, guid: e3a70520e05bc724ea00f2668131c931, type: 3}
+  bossObject: {fileID: 6798646182717220961}
+  speed: 3
+  homingMissileCooldown: 5
+  portalMissileCooldown: 3
+  portalShotDelay: 0.3
+  missileCount: 3
+--- !u!114 &8992567668348307357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798646182717220961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 2000
+  DeathEffect: {fileID: 6808247520197353046, guid: de4a080120b6d95489d5c05316e8da61, type: 3}
+  HpUI: {fileID: 7168630022273539042, guid: e10ed64f4f9844d4bacc3ea02510487b, type: 3}
+  BossHP: {fileID: 0}
+  Items:
+  - {fileID: 1330644934093387674, guid: 671cb23a4af24414dbcfd89631f7a650, type: 3}
+  - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
+  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
+  ItemDropRate: 30
