@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 9052648832253139294}
   m_Layer: 0
   m_Name: lv1monster
-  m_TagString: Monster_1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

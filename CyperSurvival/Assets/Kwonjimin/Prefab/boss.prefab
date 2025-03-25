@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6560760902635495054}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   shockwavePrefab: {fileID: 7944540254134533520, guid: 209f19ce8dcafb242b091ad56c6e4645, type: 3}
   missilePrefab: {fileID: 1380642173916467761, guid: 073259e01624c124ba081927dc920aa0, type: 3}
   homingMissilePrefab: {fileID: 4863194161914414082, guid: c662067de7762214892f7ca996cf8d80, type: 3}
+  bossObject: {fileID: 0}
   speed: 3
   attackCooldown: 1
 --- !u!58 &6791506695603783075

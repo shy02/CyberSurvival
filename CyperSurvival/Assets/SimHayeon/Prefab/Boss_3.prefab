@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 3448632885298077910}
   m_Layer: 0
   m_Name: Boss_3
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,6 +681,8 @@ MonoBehaviour:
   DeathEffect: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   HpUI: {fileID: 0}
   BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!50 &3448632885298077910
 Rigidbody2D:
   serializedVersion: 5

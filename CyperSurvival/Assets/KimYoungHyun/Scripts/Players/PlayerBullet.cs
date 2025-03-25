@@ -19,7 +19,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(Strings.tagBoss))
+        if (collision.CompareTag(Strings.tagBoss) || collision.CompareTag(Strings.tagEnemy))
         {
             Attack(collision);
         }
