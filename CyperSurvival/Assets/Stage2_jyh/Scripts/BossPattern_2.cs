@@ -30,6 +30,9 @@ public class BossPattern_2 : MonoBehaviour
     float attackcool4 = 3;
     private LineRenderer lineRenderer;
 
+    //오디오
+    public AudioClip[] sounds;  //0번 기본공격, 1번 스나이퍼, 2번 레이저
+
 
     void Start()
     {
@@ -55,6 +58,7 @@ public class BossPattern_2 : MonoBehaviour
 
     void Attack1()
     {
+        SoundMgr_2.instance.OneShot(sounds[0]);    //기본공격
         GameObject go = Instantiate(bullet, shootPos.position, Quaternion.identity);
         BossBullet_2 bossbullet = go.GetComponent<BossBullet_2>();
         bossbullet.SetDamage(Damage);
@@ -72,6 +76,7 @@ public class BossPattern_2 : MonoBehaviour
 
     void ShootSniper()  //발사
     {
+        SoundMgr_2.instance.OneShot(sounds[1]);    //스나이퍼
         GameObject go = Instantiate(sniperEffect, player.transform.position, Quaternion.identity);
         Destroy(go, 0.25f);
 
@@ -146,6 +151,8 @@ public class BossPattern_2 : MonoBehaviour
         
         Vector3 dir = endPosition - startPosition;
 
+        //오디오 스폰
+        SoundMgr_2.instance.OneShot(sounds[2]);    //레이저
         //스폰
         GameObject go = Instantiate(laser, startPosition + dir.normalized, Quaternion.identity);
         //발사위치 설정

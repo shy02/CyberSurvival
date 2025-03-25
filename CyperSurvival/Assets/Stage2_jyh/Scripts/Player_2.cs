@@ -56,7 +56,28 @@ public class Player_2 : MonoBehaviour
                 spawners[random].TakeDamage(10);
                 break;
             }
+
+            if (SpawnerCheck() == false)    //모든 스포너가 없을때
+            {
+                break;
+            }
         }
+    }
+
+    bool SpawnerCheck()
+    {
+        bool is_spawner = false;
+
+        for (int i = 0; i < spawners.Length; i++)
+        {
+            if (spawners[i] != null)
+            {
+                is_spawner = true;
+            }
+        }
+
+        return is_spawner;
+
     }
 
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManager_2 : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class SpawnManager_2 : MonoBehaviour
     [Header("보스 스폰")]
     public Transform Bosspos;
     public GameObject BossPrefab;
+    public Text WarningText;
+
     [Header("기본몬스터 스폰")]
     public GameObject[] EnemyPrefab;
     public Transform[] Spawners;
@@ -54,6 +57,7 @@ public class SpawnManager_2 : MonoBehaviour
             if (SpawnerCheck() == false)    //모든 스포너가 없을때
             {
                 isBossSpawn = true;
+                TextWarning();
                 Invoke("BossSpawn", 5f);    //5초 후 보스 소환
                 break;
             }
@@ -83,5 +87,18 @@ public class SpawnManager_2 : MonoBehaviour
 
         Instantiate(BossPrefab, Bosspos.position, Quaternion.identity);
     }
+
+    //소환전 텍스트
+    void TextWarning()
+    {
+        WarningText.gameObject.SetActive(true);
+        Invoke("TextWarningOff", 5f);
+
+    }
+    void TextWarningOff()
+    {
+        WarningText.gameObject.SetActive(false);
+    }
+
 
 }

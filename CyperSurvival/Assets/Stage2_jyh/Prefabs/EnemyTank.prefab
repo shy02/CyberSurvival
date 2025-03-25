@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2265552201117297881}
   - component: {fileID: 2324327926183876261}
   - component: {fileID: 7319240445743162207}
+  - component: {fileID: 4149273877633986886}
   m_Layer: 0
   m_Name: EnemyTank
   m_TagString: Enemy
@@ -189,3 +190,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4149273877633986886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456937568155985304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd76090d35ff98242970d02e9329b8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 0
