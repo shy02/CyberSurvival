@@ -159,12 +159,13 @@ public class Boss4Attack_3 : MonoBehaviour
         Stage3SoundManager.instace.PlayRushBoom();
         gameObject.GetComponent<Animator>().SetBool("Rush", false);
 
+        CanRushDamage = false;
         RushEffect.SetActive(false);
 
         yield return new WaitForSeconds(1f);
         GetComponent<EnemyMovement_3>().enabled = true;//1초뒤에 다시 다가가는 함수 실행
     }//완료
-    private void OnTriggerEnter2D(Collider2D collision)//러쉬 데미지 주는
+    private void OnTriggerStay2D(Collider2D collision)//러쉬 데미지 주는
     {
         if(collision.CompareTag("Player") && CanRushDamage)
         {
