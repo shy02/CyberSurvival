@@ -8,18 +8,9 @@ public class Player_2 : MonoBehaviour
     public float moveSpeed = 3;
     int HP = 100;
 
-    //스포너 데미지 주기
-    GameObject[] gameObjects;
-    Spawner_2[] spawners;
-
     void Start()
     {
-        gameObjects = GameObject.FindGameObjectsWithTag("Spawner");
-        spawners = new Spawner_2[gameObjects.Length];
-        for (int i = 0; i < spawners.Length; i++)
-        {
-            spawners[i] = gameObjects[i].GetComponent<Spawner_2>();
-        }
+
     }
 
     void Update()
@@ -32,11 +23,6 @@ public class Player_2 : MonoBehaviour
 
         transform.Translate(moveDir * moveSpeed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            DamageSpawner();
-        }
-
     }
 
     public void GetDamage(int damage)
@@ -44,41 +30,5 @@ public class Player_2 : MonoBehaviour
         HP -= damage;
         Debug.Log("player : " + HP);
     }
-
-    void DamageSpawner()
-    {
-        while (true)
-        {
-            int random = Random.Range(0, spawners.Length);
-
-            if (spawners[random] != null)
-            {
-                spawners[random].TakeDamage(10);
-                break;
-            }
-
-            if (SpawnerCheck() == false)    //모든 스포너가 없을때
-            {
-                break;
-            }
-        }
-    }
-
-    bool SpawnerCheck()
-    {
-        bool is_spawner = false;
-
-        for (int i = 0; i < spawners.Length; i++)
-        {
-            if (spawners[i] != null)
-            {
-                is_spawner = true;
-            }
-        }
-
-        return is_spawner;
-
-    }
-
 
 }

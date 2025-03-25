@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2148178332929282967}
   - component: {fileID: 3310349627388532663}
   m_Layer: 0
-  m_Name: BossLazer
+  m_Name: BossLazer_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

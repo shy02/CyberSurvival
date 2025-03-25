@@ -80,7 +80,6 @@ public class BossPattern_2 : MonoBehaviour
         GameObject go = Instantiate(sniperEffect, player.transform.position, Quaternion.identity);
         Destroy(go, 0.25f);
 
-        player.GetComponent<Player_2>().GetDamage(10);
         Invoke("ZoomSniper", attackcool2);  //5초 후 다시 조준
     }
 

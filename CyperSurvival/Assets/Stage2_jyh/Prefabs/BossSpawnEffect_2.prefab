@@ -5013,7 +5013,7 @@ GameObject:
   - component: {fileID: 120545599739591775}
   - component: {fileID: 467243042399220777}
   m_Layer: 0
-  m_Name: BossSpawnEffect
+  m_Name: BossSpawnEffect_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

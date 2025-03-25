@@ -10779,9 +10779,10 @@ GameObject:
   - component: {fileID: 96663341}
   - component: {fileID: 96663339}
   - component: {fileID: 96663343}
+  - component: {fileID: 96663344}
   m_Layer: 0
   m_Name: Spawner_6
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10943,6 +10944,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &96663344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96663337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &133088421
 GameObject:
   m_ObjectHideFlags: 0
@@ -11028,9 +11042,10 @@ GameObject:
   - component: {fileID: 172651800}
   - component: {fileID: 172651803}
   - component: {fileID: 172651804}
+  - component: {fileID: 172651805}
   m_Layer: 0
   m_Name: Spawner_3
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11192,6 +11207,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &172651805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172651798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &179890940
 GameObject:
   m_ObjectHideFlags: 0
@@ -14497,9 +14525,10 @@ GameObject:
   - component: {fileID: 725345220}
   - component: {fileID: 725345223}
   - component: {fileID: 725345224}
+  - component: {fileID: 725345225}
   m_Layer: 0
   m_Name: Spawner_4
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14661,6 +14690,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &725345225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725345218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &727259676
 GameObject:
   m_ObjectHideFlags: 0
@@ -14749,9 +14791,10 @@ GameObject:
   - component: {fileID: 858893060}
   - component: {fileID: 858893063}
   - component: {fileID: 858893064}
+  - component: {fileID: 858893065}
   m_Layer: 0
   m_Name: Spawner_1
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14913,6 +14956,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &858893065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858893058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &866986560
 GameObject:
   m_ObjectHideFlags: 0
@@ -14998,9 +15054,10 @@ GameObject:
   - component: {fileID: 869252814}
   - component: {fileID: 869252817}
   - component: {fileID: 869252818}
+  - component: {fileID: 869252819}
   m_Layer: 0
   m_Name: Spawner_5
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15162,6 +15219,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &869252819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869252812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &870964270
 GameObject:
   m_ObjectHideFlags: 0
@@ -15319,9 +15389,10 @@ GameObject:
   - component: {fileID: 1083291702}
   - component: {fileID: 1083291705}
   - component: {fileID: 1083291706}
+  - component: {fileID: 1083291707}
   m_Layer: 0
   m_Name: Spawner_2
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15483,6 +15554,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1083291707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083291700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &1087326959
 GameObject:
   m_ObjectHideFlags: 0
@@ -15602,9 +15686,10 @@ GameObject:
   - component: {fileID: 1196404882}
   - component: {fileID: 1196404884}
   - component: {fileID: 1196404885}
+  - component: {fileID: 1196404886}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Spawner
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15766,6 +15851,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1196404886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196404879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 100
 --- !u!1 &1211500134
 GameObject:
   m_ObjectHideFlags: 0

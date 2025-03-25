@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 1754917592444867674}
   - component: {fileID: -3405713502074572250}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: Boss_2
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5645714326941280566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd76090d35ff98242970d02e9329b8e0, type: 3}
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 0
+  Hp: 1000
