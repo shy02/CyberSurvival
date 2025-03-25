@@ -3,48 +3,83 @@ using UnityEngine;
 
 public class Boss_1 : MonoBehaviour
 {
-    public GameObject player; // 플레이어 객체
-    public Transform[] portalPositions; // 미사일 발사 포탈 위치들
-    public GameObject shockwavePrefab; // 충격파 프리팹
-    public GameObject missilePrefab; // 미사일 프리팹
-    public GameObject homingMissilePrefab; // 추적 미사일 프리팹
-    public GameObject bossObject; // 보스 객체
+    public GameObject player;
+    public Transform[] portalPositions;
+    public GameObject missilePrefab;
+    public GameObject homingMissilePrefab;
+    public GameObject bossObject;
+    public GameObject level2Spawner;  // level2Spawner를 위한 변수
 
-    public float speed = 3f; // 보스 속도
-    public float attackCooldown = 1f; // 공격 쿨타임
-    private float nextAttackTime = 0f;
+    public float speed = 3f;
+    public float homingMissileCooldown = 5f;
+    private float nextHomingMissileTime = 0f;
 
-    private enum AttackPattern { Shockwave, PortalMissile, HomingMissile };
-    private AttackPattern[] attackPatterns;
-    private int currentPatternIndex = 0;
+    public float portalMissileCooldown = 3f;
+    private float nextPortalMissileTime = 0f;
+
+    public float portalShotDelay = 0.3f;
+    public int missileCount = 3;
+
+    private Animator animator;
 
     void Start()
     {
-        // 공격 패턴을 랜덤화
-        attackPatterns = (AttackPattern[])System.Enum.GetValues(typeof(AttackPattern));
-        ShuffleAttackPatterns();
-        bossObject.SetActive(false); // 보스 초기에는 숨겨 놓기
+        // 애니메이터 컴포넌트 가져오기
+        animator = bossObject.GetComponent<Animator>();
+
+        // level2Spawner가 삭제되었을 때 보스와 포탈 활성화
+        StartCoroutine(WaitForLevel2SpawnerDeletion());
     }
 
     void Update()
     {
-        // 플레이어를 따라가는 코드
         FollowPlayer();
 
-        // 공격 패턴 실행
-        if (Time.time > nextAttackTime)
+        if (Time.time > nextPortalMissileTime)
         {
-            ExecuteAttackPattern();
-            nextAttackTime = Time.time + attackCooldown; // 쿨타임 설정
+            StartCoroutine(FirePortalMissiles());
+            nextPortalMissileTime = Time.time + portalMissileCooldown;
         }
 
-        // Monster_1 태그를 가진 오브젝트가 0개인지 확인
-        CheckMonstersAndSpawnBoss();
+        if (Time.time > nextHomingMissileTime)
+        {
+            LaunchHomingMissile();
+            nextHomingMissileTime = Time.time + homingMissileCooldown;
+        }
+
+        // 플레이어와의 상대적인 x축 위치에 따라 보스의 방향을 바꿔줌
+        FlipTowardsPlayer();
+    }
+
+    IEnumerator WaitForLevel2SpawnerDeletion()
+    {
+        // level2Spawner가 null이 될 때까지 기다림
+        while (level2Spawner != null)
+        {
+            yield return null;  // 매 프레임마다 level2Spawner가 삭제되었는지 체크
+        }
+
+        // level2Spawner가 사라지면 보스와 포탈을 활성화
+        ActivateBossAndPortals();
+    }
+
+    void ActivateBossAndPortals()
+    {
+        // 보스를 활성화
+        bossObject.SetActive(true);
+
+        // 포탈을 모두 활성화
+        foreach (Transform portal in portalPositions)
+        {
+            portal.gameObject.SetActive(true);
+        }
+
+        // 기본 애니메이션 실행
+        animator.SetBool("Run", true);
     }
 
     void FollowPlayer()
     {
-        // 플레이어 방향으로 보스를 이동시킴
         if (player != null)
         {
             Vector3 direction = (player.transform.position - transform.position).normalized;
@@ -52,78 +87,67 @@ public class Boss_1 : MonoBehaviour
         }
     }
 
-    void ExecuteAttackPattern()
+    IEnumerator FirePortalMissiles()
     {
-        // 현재 공격 패턴에 맞는 공격을 실행
-        switch (attackPatterns[currentPatternIndex])
+        for (int i = 0; i < missileCount; i++)
         {
-            case AttackPattern.Shockwave:
-                LaunchShockwave();
-                break;
-            case AttackPattern.PortalMissile:
-                FirePortalMissiles();
-                break;
-            case AttackPattern.HomingMissile:
-                LaunchHomingMissile();
-                break;
+            foreach (Transform portal in portalPositions)
+            {
+                if (portal == null) continue;
+
+                GameObject missile = Instantiate(missilePrefab, portal.position, Quaternion.identity);
+                missile_1 missileScript = missile.GetComponent<missile_1>();
+
+                if (missileScript != null)
+                    missileScript.SetDirection(player.transform.position);
+                else
+                    Debug.LogError("미사일 프리팹에 missile_1 스크립트가 없습니다!");
+
+                yield return new WaitForSeconds(portalShotDelay);
+            }
         }
-
-        // 다음 공격 패턴으로 이동
-        currentPatternIndex = (currentPatternIndex + 1) % attackPatterns.Length;
-    }
-
-    void LaunchShockwave()
-    {
-        GameObject shockwave = Instantiate(shockwavePrefab, transform.position, Quaternion.identity);
-        shockwave.transform.localScale = new Vector3(1f, 1f, 1f); // 충격파 크기
-        Destroy(shockwave, 2f); // 충격파 2초 후 제거
-    }
-
-    void FirePortalMissiles()
-    {
-        foreach (Transform portal in portalPositions)
-        {
-            GameObject missile = Instantiate(missilePrefab, portal.position, Quaternion.identity); // 포탈에서 미사일 발사
-
-            // 플레이어 방향 계산
-            Vector3 direction = (player.transform.position - portal.position).normalized;
-
-            // 미사일의 방향을 플레이어를 향하도록 설정
-            missile.transform.up = direction; // 미사일이 플레이어를 향해 회전하도록 설정
-
-            // 미사일 스크립트 추가
-            missile.AddComponent<missile_1>(); // 충돌 처리를 위한 미사일 스크립트 추가
-        }
+        yield return new WaitForSeconds(3f);
     }
 
     void LaunchHomingMissile()
     {
+        // 공격 애니메이션 실행
+        animator.SetBool("attack", true);
+
+        // 호밍 미사일 발사
         GameObject missile = Instantiate(homingMissilePrefab, transform.position, Quaternion.identity);
-        missile.GetComponent<HomingMissile>().SetTarget(player); // 플레이어를 추적하도록 설정
+        missile.GetComponent<HomingMissile>().SetTarget(player);
+
+        // 미사일 발사 후 attack 애니메이션을 종료
+        Invoke("StopAttackAnimation", 0.2f); // 공격 애니메이션이 0.2초 후에 종료되도록 설정
     }
 
-    void CheckMonstersAndSpawnBoss()
+    void StopAttackAnimation()
     {
-        // "Monster_1" 태그를 가진 오브젝트들을 찾아서, 없으면 보스 생성
-        if (GameObject.FindGameObjectsWithTag("Monster_1").Length == 0)
+        // attack 애니메이션 종료
+        animator.SetBool("attack", false);
+    }
+
+    void FlipTowardsPlayer()
+    {
+        // 보스의 x축이 플레이어의 x축보다 작으면 보스가 반전하도록 설정
+        if (player != null)
         {
-            // 보스 오브젝트를 활성화
-            if (bossObject != null && !bossObject.activeInHierarchy)
+            Vector3 playerPos = player.transform.position;
+
+            // 보스의 위치와 플레이어의 위치를 비교하여 방향을 변경
+            if (transform.position.x < playerPos.x)
             {
-                bossObject.SetActive(true);
+                // 플레이어가 오른쪽에 있으면, 오른쪽으로 보스가 보이도록 설정
+                if (transform.localScale.x < 0)
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
-        }
-    }
-
-    // 공격 패턴 순서를 랜덤화하는 함수
-    void ShuffleAttackPatterns()
-    {
-        for (int i = 0; i < attackPatterns.Length; i++)
-        {
-            AttackPattern temp = attackPatterns[i];
-            int randomIndex = Random.Range(i, attackPatterns.Length);
-            attackPatterns[i] = attackPatterns[randomIndex];
-            attackPatterns[randomIndex] = temp;
+            else
+            {
+                // 플레이어가 왼쪽에 있으면, 왼쪽으로 보스가 보이도록 설정
+                if (transform.localScale.x > 0)
+                    transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            }
         }
     }
 }

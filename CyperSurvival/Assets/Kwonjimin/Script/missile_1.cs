@@ -2,19 +2,29 @@ using UnityEngine;
 
 public class missile_1 : MonoBehaviour
 {
-    public float speed = 5f; // 미사일 속도
-    private Vector3 direction;
+    public float speed = 3f;
+    private Vector3 direction; // 이동 방향
 
-    void Start()
+    // 미사일이 플레이어 방향을 향하도록 설정
+    public void SetDirection(Vector3 dir)
     {
-        // 발사된 미사일의 초기 방향 설정 (플레이어를 향해 이동)
-        direction = transform.up; // 미사일의 위 방향이 플레이어를 향하도록 설정됨
+        direction = (dir - transform.position).normalized; // 방향을 플레이어 위치로 설정
+
+        // z축만 회전: x, y는 고정, z만 회전하도록 설정
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // 플레이어와의 방향을 angle로 계산
+        transform.rotation = Quaternion.Euler(0, 0, angle); // x, y는 0으로 고정하고 z만 회전
     }
 
     void Update()
     {
-        // 미사일이 계속해서 방향을 따라 이동
+        // 미사일 이동
         transform.position += direction * speed * Time.deltaTime;
+    }
+
+    private void OnBecameInvisible()
+    {
+        // 미사일이 화면 밖으로 나가면 제거
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
