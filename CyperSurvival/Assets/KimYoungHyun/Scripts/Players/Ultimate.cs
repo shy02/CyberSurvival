@@ -15,6 +15,11 @@ public class Ultimate : MonoBehaviour
         //{
         //    Attack(collision);
         //}
+
+        //if (!collision.CompareTag(Strings.tagPlayer))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     private void Attack(Collider2D collision)

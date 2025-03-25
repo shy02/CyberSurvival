@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public GameObject CrossHair;
     public GameObject[] MyBullets;
     public GameObject[] MyUltimates;
+    public AudioSource[] FireSounds;
     public GameObject UltimateSkill;
     public Transform LauncherPos;
     public Vector3 fireDirection;
@@ -46,32 +47,7 @@ public class Player : MonoBehaviour
 
         HandleUserInput();
         HandleMousePosition();
-
-
-        // Ultimate 쿨타임 관리
-        if (ultimateCooldownTimer > 0)
-        {
-            ultimateCooldownTimer -= Time.deltaTime;
-        }
-
-        // Ultimate 지속 시간 관리
-        if (isUltimateActive)
-        {
-            ultimateDurationTimer -= Time.deltaTime;
-            if (ultimateDurationTimer <= 0 || !Input.GetMouseButton(1)) // 키다운을 멈추거나 최대 지속 시간을 초과하면 종료
-            {
-                EndUltimate();
-            }
-        }
-
-        if (ultimateCooldownTimer <= 0 && !isUltimateActive)
-        {
-            UltimateSkill.SetActive(true); // 쿨타임이 없고 Ultimate가 활성화되지 않았을 때 보이기
-        }
-        else
-        {
-            UltimateSkill.SetActive(false); // 쿨타임이 있거나 Ultimate가 활성화되었을 때 숨기기
-        }
+        ManageUltimate();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -117,12 +93,42 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void ManageUltimate()
+    {
+        // Ultimate 쿨타임 관리
+        if (ultimateCooldownTimer > 0)
+        {
+            ultimateCooldownTimer -= Time.deltaTime;
+        }
+
+        // Ultimate 지속 시간 관리
+        if (isUltimateActive)
+        {
+            ultimateDurationTimer -= Time.deltaTime;
+            if (ultimateDurationTimer <= 0 || !Input.GetMouseButton(1)) // 키다운을 멈추거나 최대 지속 시간을 초과하면 종료
+            {
+                EndUltimate();
+            }
+        }
+
+        if (ultimateCooldownTimer <= 0 && !isUltimateActive)
+        {
+            UltimateSkill.SetActive(true); // 쿨타임이 없고 Ultimate가 활성화되지 않았을 때 보이기
+        }
+        else
+        {
+            UltimateSkill.SetActive(false); // 쿨타임이 있거나 Ultimate가 활성화되었을 때 숨기기
+        }
+    }
+
     private void FireBullet()
     {
+        Debug.DrawLine(LauncherPos.position, mousePosition, Color.red, 1f);
         GameObject bulletInstance = Instantiate(MyBullets[GameManager.Instance.PlayerPower], LauncherPos.position, Quaternion.identity);
         PlayerBullet bulletScript = bulletInstance.GetComponent<PlayerBullet>();
         bulletScript.fireDirection = fireDirection;
         bulletScript.playwerPower = GameManager.Instance.PlayerPower;
+        FireSounds[GameManager.Instance.PlayerPower].Play();
         StartCoroutine(ShowMuzzle());
     }
 
@@ -142,6 +148,7 @@ public class Player : MonoBehaviour
             {
                 GameObject ultimate = Instantiate(MyUltimates[GameManager.Instance.PlayerPower], mousePosition, Quaternion.identity);
                 Destroy(ultimate, 0.15f);
+                FireSounds[GameManager.Instance.PlayerPower].Play();
                 uValue = 0;
             }
         }
@@ -188,22 +195,18 @@ public class Player : MonoBehaviour
         StartCoroutine(RollAnimation());
     }
 
-    //public void TakeDamage(int monsterAttack)
-    //{
-    //    if (!isRolling)
-    //    {
-    //        int damage = monsterAttack * (100 - defence) / 100;
-    //        hp -= damage;
-    //        HitAnimation();
-    //        print($"Player hp : {hp} (-{damage})");
-    //        GameManager.Instance.SetHp(hp);
-    //    }
-    //}
-
     public void TakeDamage(int damage)
     {
         int finalDamage = damage * (100 - GameManager.Instance.PlayerDefence) / 100;
         GameManager.Instance.SetHp(-finalDamage);
+        HitAnimation();
+
+        if (GameManager.Instance.PlayerHp <= 0)
+        {
+            MyAnimator.SetTrigger(Strings.Dead);
+            WeaponHand.SetActive(false);
+            GameManager.Instance.FinishGame();
+        }
     }
 
     public void GainHpItem()
