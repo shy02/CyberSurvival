@@ -50,6 +50,7 @@ public class BossAttackManager_3 : MonoBehaviour
     public void StartAttack()
     {
         CanAttack = true;
+        cores.gameObject.SetActive(true);
         ActiveCores();
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
