@@ -17,24 +17,9 @@ public class EnemyMove_2 : MonoBehaviour
 
     void Update()
     {
+        Vector3 vec = player.transform.position - transform.position;
+        moveDir = vec.normalized;
 
-        if (this.gameObject.tag == "Boss")
-        {
-            Vector3 vec = player.transform.position - transform.position;
-
-            if (vec.magnitude > 6)
-            {
-                moveDir = vec.normalized;
-                transform.Translate(moveDir * moveSpeed * Time.deltaTime);
-            }
-        }
-        else
-        {
-            Vector3 vec = player.transform.position - transform.position;
-            moveDir = vec.normalized;
-
-            transform.Translate(moveDir * moveSpeed * Time.deltaTime);
-        }
-
+        transform.Translate(moveDir * moveSpeed * Time.deltaTime);
     }
 }

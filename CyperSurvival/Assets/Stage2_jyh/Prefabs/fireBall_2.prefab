@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8217416358672306633}
   - component: {fileID: 1718761338936725439}
   m_Layer: 0
-  m_Name: bossBullet_2
+  m_Name: fireBall_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,12 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5453786990186888239, guid: d6fb9879f6d9cd049a2d44211cba2beb, type: 3}
+  m_Sprite: {fileID: -1682938865495416637, guid: d6fb9879f6d9cd049a2d44211cba2beb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.18, y: 0.07}
+  m_Size: {x: 1.625, y: 0.9375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 8463077970449754266}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7bf5f482e86f1e845aa3c762e51b750f, type: 2}
+  m_Controller: {fileID: 9100000, guid: f06e563af3d8b4243b1de114a06404c6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -147,7 +147,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.4, y: 0.5}
+  m_Size: {x: 1.7, y: 0.8}
   m_Direction: 1
 --- !u!114 &1718761338936725439
 MonoBehaviour:
@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b547d330cc4ed5b4eb6b9c08f500e6b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50

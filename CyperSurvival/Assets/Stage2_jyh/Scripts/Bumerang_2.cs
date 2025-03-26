@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Bumerang_2 : MonoBehaviour
 {
+    [SerializeField] private int damage;
+
     public float speed = 1f;
     public Transform bossTransform; // 보스의 Transform을 참조
     private float angle = 0f;
@@ -30,11 +32,13 @@ public class Bumerang_2 : MonoBehaviour
         angle = initialAngle;
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+
+
+    void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.CompareTag("Player") && spriteRenderer.color.a > 0)
         {
-            collider.GetComponent<Player>().TakeDamage(10);
+            collider.GetComponent<Player>().TakeDamage(damage);
         }
         if (collider.CompareTag("Wall"))
         {

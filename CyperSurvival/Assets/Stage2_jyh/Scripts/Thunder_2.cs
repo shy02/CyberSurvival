@@ -1,8 +1,10 @@
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class BossLazer_2 : MonoBehaviour
+public class Thunder_2 : MonoBehaviour
 {
+    [SerializeField] private int damage;
+
     private Transform playerTransform;
     private Transform bossTransform;
     Vector3 direction = Vector3.zero;
@@ -36,7 +38,7 @@ public class BossLazer_2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().TakeDamage(10);
+            collision.GetComponent<Player>().TakeDamage(damage);
         }
     }
 
