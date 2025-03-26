@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     public static int DEAULT_POWER = 15;
     public static int DEFAULT_ULTIMATE_POWER = 5;
 
-    public bool nowGameOver = false;
-
     private int _playerHp = 1000;
     public int PlayerHp
     {
@@ -67,7 +65,6 @@ public class GameManager : MonoBehaviour
             if (!_isGameRunning)
             {
                 // Game Over
-                GameOver.GetComponent<GameOverUI>().GameOver();
             }
         }
     }
@@ -94,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     private void SetUI()
     {
-        //게임오버 UI뜨는 부분
+        GameOver.SetActive(false);
     }
 
     public void SetHp(int hp)
@@ -145,9 +142,7 @@ public class GameManager : MonoBehaviour
 
     public void FinishGame()
     {
-        //GameOver.SetActive(true);
-        GameOver.GetComponent<GameOverUI>().GameOver();
-        nowGameOver = true;
+        GameOver.SetActive(true);
         IsGameRunning = false;
     }
 }
