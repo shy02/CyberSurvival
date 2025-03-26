@@ -29,7 +29,8 @@ public class EnemyDamage_3 : MonoBehaviour
         if (Hp <= 0 && !death)
         {
             death = true;
-            if (transform.name == "Boss")
+            Debug.Log(transform.name);
+            if (transform.CompareTag("Boss"))
             {
                 ScenManager.instance.GoNextStage();
             }
@@ -50,7 +51,7 @@ public class EnemyDamage_3 : MonoBehaviour
             }
         }
 
-        if (transform.name == "Boss" && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
+        if (transform.CompareTag("Boss") && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
         else if (HpUI != null) HpUI.fillAmount = Hp / maxHP; //체력바 있어야 적용
     }
 
