@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class SpawnManager_s_3 : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class SpawnManager_s_3 : MonoBehaviour
 
     List<Transform> Spawnposes = new List<Transform>();
 
+
     private void Start()
     {
         LimitedTime_Max = LimitedTime;
@@ -45,7 +47,7 @@ public class SpawnManager_s_3 : MonoBehaviour
     }
     IEnumerator StartMobSpawn()
     {
-        while (true)
+        while (!GameManager.Instance.nowGameOver)
         {
             yield return new WaitForSeconds(MobSpawnDelay);
             if (LimitedTime <= LimitedTime_Max / 3)//게임 후반
@@ -84,7 +86,7 @@ public class SpawnManager_s_3 : MonoBehaviour
 
     IEnumerator StartTimerCount()
     {
-        if (LimitedTime > 0)
+        if (LimitedTime > 0 && !GameManager.Instance.nowGameOver)
         {
             yield return new WaitForSeconds(1f);
             LimitedTime--;
@@ -92,11 +94,14 @@ public class SpawnManager_s_3 : MonoBehaviour
         }
         else
         {
-            StopAllCoroutines();
-            Boss.GetComponent<BossAttackManager_3>().StartAttack();
-            //보스 소환
-            BossUI.SetActive(true);
-            Boss.GetComponent<Animator>().SetBool("TurnOn", true);
+            if (!GameManager.Instance.nowGameOver)
+            {
+                StopAllCoroutines();
+                Boss.GetComponent<BossAttackManager_3>().StartAttack();
+                //보스 소환
+                BossUI.SetActive(true);
+                Boss.GetComponent<Animator>().SetBool("TurnOn", true);
+            }
         }
     }
 

@@ -45,6 +45,11 @@ public class BossAttackManager_3 : MonoBehaviour
         {
             StopAttack();
         }
+
+        if (GameManager.Instance.nowGameOver)
+        {
+            StopAttack();
+        }
     }
 
     public void StartAttack()
@@ -66,10 +71,12 @@ public class BossAttackManager_3 : MonoBehaviour
         GetComponent<Boss4Attack_3>().StopAllPattern();
         GetComponent<Boss4Attack_3>().enabled = false;
         StopAllCoroutines();
+
         foreach (Transform child in bullet)
         {
             Destroy(child.gameObject);
         }
+
         Invoke("StartAttack", DownTime);
     }
 
@@ -84,7 +91,7 @@ public class BossAttackManager_3 : MonoBehaviour
 
     IEnumerator UseBossSkill()
     {
-        while (CanAttack)
+        while (CanAttack && !GameManager.Instance.nowGameOver)
         {
             int index = Random.Range(0, 3);
 

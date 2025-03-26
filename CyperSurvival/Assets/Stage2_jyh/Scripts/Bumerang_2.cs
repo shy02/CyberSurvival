@@ -34,7 +34,7 @@ public class Bumerang_2 : MonoBehaviour
     {
         if (collider.CompareTag("Player") && spriteRenderer.color.a > 0)
         {
-            collider.GetComponent<Player_2>().GetDamage(10);
+            collider.GetComponent<Player>().TakeDamage(10);
         }
         if (collider.CompareTag("Wall"))
         {
