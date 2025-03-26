@@ -171,12 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cad9d6ed34a43d4a90b9259e6df7dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  portalPositions:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   missilePrefab: {fileID: 1380642173916467761, guid: 073259e01624c124ba081927dc920aa0, type: 3}
   homingMissilePrefab: {fileID: 638482521502481816, guid: e3a70520e05bc724ea00f2668131c931, type: 3}
   bossObject: {fileID: 6798646182717220961}
@@ -197,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 2000
+  maxHP: 1000
   DeathEffect: {fileID: 6808247520197353046, guid: de4a080120b6d95489d5c05316e8da61, type: 3}
   HpUI: {fileID: 7168630022273539042, guid: e10ed64f4f9844d4bacc3ea02510487b, type: 3}
   BossHP: {fileID: 0}
