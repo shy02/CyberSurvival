@@ -1,19 +1,64 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class BossSpawner_1 : MonoBehaviour
 {
-    public GameObject bossPrefab; // º¸½º ÇÁ¸®ÆÕ
-    public GameObject player; // ÇÃ·¹ÀÌ¾î
-    public Transform[] portalPositions; // Æ÷Å» À§Ä¡
+    public GameObject bossPrefab; // ë³´ìŠ¤ í”„ë¦¬íŒ¹
+    public GameObject player; // í”Œë ˆì´ì–´
+    public Transform[] portalPositions = new Transform[3]; // í¬íƒˆ ìœ„ì¹˜ (3ê°œë¡œ ì„¤ì •)
+    public AudioClip bossSpawnSound; // ë³´ìŠ¤ ìŠ¤í° íš¨ê³¼ìŒ
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        // í”Œë ˆì´ì–´ íƒœê·¸ë¡œ ìë™ìœ¼ë¡œ í”Œë ˆì´ì–´ ì˜¤ë¸Œì íŠ¸ë¥¼ ì°¾ìŒ
+        player = GameObject.FindWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.LogError("Player íƒœê·¸ë¥¼ ê°€ì§„ ì˜¤ë¸Œì íŠ¸ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+        }
+
+        // ğŸ”¹ AudioSource ì¶”ê°€ ë° ì„¤ì •
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = bossSpawnSound;
+        audioSource.playOnAwake = false;
+        audioSource.spatialBlend = 0f; // 2D ì‚¬ìš´ë“œ (ì „ì—­ì ìœ¼ë¡œ ë“¤ë¦¬ë„ë¡ ì„¤ì •)
+    }
+
+    // í¬íƒˆ í™œì„±í™” í•¨ìˆ˜
+    public void ActivatePortals()
+    {
+        for (int i = 0; i < portalPositions.Length; i++)
+        {
+            if (portalPositions[i] != null)
+            {
+                portalPositions[i].gameObject.SetActive(true); // í¬íƒˆ í™œì„±í™”
+
+                // Rendererê°€ ë¹„í™œì„±í™”ë˜ì–´ ìˆë‹¤ë©´ í™œì„±í™”
+                Renderer portalRenderer = portalPositions[i].GetComponent<Renderer>();
+                if (portalRenderer != null)
+                {
+                    portalRenderer.enabled = true; // Renderer í™œì„±í™”
+                }
+            }
+        }
+    }
 
     public void SpawnBoss()
     {
         if (bossPrefab != null && player != null && portalPositions.Length > 0)
         {
-            // º¸½º °´Ã¼ »ı¼º
+            // ë³´ìŠ¤ ê°ì²´ ìƒì„±
             GameObject boss = Instantiate(bossPrefab, transform.position, Quaternion.identity);
 
-            // º¸½º¿¡ µ¥ÀÌÅÍ¸¦ Àü´Ş (ÇÃ·¹ÀÌ¾î¿Í Æ÷Å» À§Ä¡¸¦ ¼³Á¤)
+            // ğŸ”¥ ë³´ìŠ¤ ìŠ¤í° íš¨ê³¼ìŒ ì¬ìƒ
+            if (audioSource != null && bossSpawnSound != null)
+            {
+                audioSource.Play();
+            }
+
+            // ë³´ìŠ¤ì— ë°ì´í„°ë¥¼ ì „ë‹¬ (í”Œë ˆì´ì–´ì™€ í¬íƒˆ ìœ„ì¹˜ë¥¼ ì„¤ì •)
             Boss_1 bossScript = boss.GetComponent<Boss_1>();
             if (bossScript != null)
             {
@@ -21,12 +66,15 @@ public class BossSpawner_1 : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Boss_1 ½ºÅ©¸³Æ®°¡ º¸½º ÇÁ¸®ÆÕ¿¡ ¾ø½À´Ï´Ù.");
+                Debug.LogError("Boss_1 ìŠ¤í¬ë¦½íŠ¸ê°€ ë³´ìŠ¤ í”„ë¦¬íŒ¹ì— ì—†ìŠµë‹ˆë‹¤.");
             }
+
+            // í¬íƒˆ í™œì„±í™”
+            ActivatePortals();
         }
         else
         {
-            Debug.LogError("ÇÊ¼ö º¯¼öµé(bossPrefab, player, portalPositions)ÀÌ ¼³Á¤µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+            Debug.LogError("í•„ìˆ˜ ë³€ìˆ˜ë“¤(bossPrefab, player, portalPositions)ì´ ì„¤ì •ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
         }
     }
 }

@@ -127,13 +127,13 @@ public class GameManager : MonoBehaviour
 
     private void SetHpBarImage()
     {
-        float hpImage = (float) PlayerHp / MAX_HP; 
+        float hpImage = (float)PlayerHp / MAX_HP;
         HpBarImage.fillAmount = hpImage;
     }
 
     private void SetPowerBarImage()
     {
-        float powerImage = (float) (PlayerPower + 1) / (MAX_GAINED_ITEM + 1);
+        float powerImage = (float)(PlayerPower + 1) / (MAX_GAINED_ITEM + 1);
         PowerBarImage.fillAmount = powerImage;
     }
 
