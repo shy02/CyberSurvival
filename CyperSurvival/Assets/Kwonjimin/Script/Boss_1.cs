@@ -3,12 +3,9 @@ using UnityEngine;
 
 public class Boss_1 : MonoBehaviour
 {
-    public GameObject player;
-    public Transform[] portalPositions;
     public GameObject missilePrefab;
     public GameObject homingMissilePrefab;
     public GameObject bossObject;
-    public GameObject level2Spawner;  // level2Spawner를 위한 변수
 
     public float speed = 3f;
     public float homingMissileCooldown = 5f;
@@ -22,17 +19,25 @@ public class Boss_1 : MonoBehaviour
 
     private Animator animator;
 
+    private GameObject player;
+    private Transform[] portalPositions;
+
     void Start()
     {
         // 애니메이터 컴포넌트 가져오기
         animator = bossObject.GetComponent<Animator>();
 
-        // level2Spawner가 삭제되었을 때 보스와 포탈 활성화
-        StartCoroutine(WaitForLevel2SpawnerDeletion());
+        // 이 스크립트는 이제 받지 않음. BossSpawn_1에서 설정
+        // player와 portalPositions는 BossSpawn_1에서 할당될 것입니다.
     }
 
     void Update()
     {
+        if (player == null || portalPositions == null || portalPositions.Length == 0)
+        {
+            return; // 플레이어나 포탈이 없다면 더 이상 실행하지 않음
+        }
+
         FollowPlayer();
 
         if (Time.time > nextPortalMissileTime)
@@ -47,35 +52,13 @@ public class Boss_1 : MonoBehaviour
             nextHomingMissileTime = Time.time + homingMissileCooldown;
         }
 
-        // 플레이어와의 상대적인 x축 위치에 따라 보스의 방향을 바꿔줌
         FlipTowardsPlayer();
     }
 
-    IEnumerator WaitForLevel2SpawnerDeletion()
+    public void SetBossData(GameObject player, Transform[] portalPositions)
     {
-        // level2Spawner가 null이 될 때까지 기다림
-        while (level2Spawner != null)
-        {
-            yield return null;  // 매 프레임마다 level2Spawner가 삭제되었는지 체크
-        }
-
-        // level2Spawner가 사라지면 보스와 포탈을 활성화
-        ActivateBossAndPortals();
-    }
-
-    void ActivateBossAndPortals()
-    {
-        // 보스를 활성화
-        bossObject.SetActive(true);
-
-        // 포탈을 모두 활성화
-        foreach (Transform portal in portalPositions)
-        {
-            portal.gameObject.SetActive(true);
-        }
-
-        // 기본 애니메이션 실행
-        animator.SetBool("Run", true);
+        this.player = player;
+        this.portalPositions = portalPositions;
     }
 
     void FollowPlayer()

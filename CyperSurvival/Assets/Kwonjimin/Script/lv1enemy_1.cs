@@ -9,12 +9,10 @@ public class lv1enemy_1 : MonoBehaviour
 
     private Transform player; // 플레이어의 Transform
     private Animator animator;
-    private EnemyDamage_1 enemyDamage; // HP 관리 스크립트 참조
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        enemyDamage = GetComponent<EnemyDamage_1>(); // HP 스크립트 가져오기
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         Invoke("CreateBullet", delay);
     }
