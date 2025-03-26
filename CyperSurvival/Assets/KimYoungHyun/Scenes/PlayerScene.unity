@@ -1626,7 +1626,7 @@ MonoBehaviour:
   SceneName:
   - TitleScene
   - Stage1
-  - jyhSceene
+  - Stage2
   - Stage3
   - Stage4
 --- !u!4 &9129628289125811600
