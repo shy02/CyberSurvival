@@ -1,36 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections;
 
 public class Spawner_1 : MonoBehaviour
 {
-    // ·¹º§ 1 °ü·Ã
-    public GameObject level1MonsterPrefab; // ·¹º§ 1 ¸ó½ºÅÍ ÇÁ¸®ÆÕ
-    public int level1MonsterCount = 10; // ·¹º§ 1¿¡¼­ »ı¼ºÇÒ ¸ó½ºÅÍ ¼ö
+    // ë ˆë²¨ 1 ê´€ë ¨
+    public GameObject level1MonsterPrefab;
+    public int level1MonsterCount = 10;
 
-    // ·¹º§ 2 °ü·Ã
-    public GameObject level2MonsterPrefab; // ·¹º§ 2 ¸ó½ºÅÍ ÇÁ¸®ÆÕ
-    public Transform[] level2SpawnPoints; // ·¹º§ 2 ¸ó½ºÅÍ ½ºÆù À§Ä¡µé
-    public int level2MonsterCount = 7; // ·¹º§ 2¿¡¼­ »ı¼ºÇÒ ¸ó½ºÅÍ ¼ö
+    // ë ˆë²¨ 2 ê´€ë ¨
+    public GameObject level2MonsterPrefab;
+    public Transform[] level2SpawnPoints;
+    public int level2MonsterCount = 7;
 
-    // ·¹º§ 2 ¸ó½ºÅÍ°¡ ½ºÆùµÈ Ä«¿îÆ®
     private int spawnedLevel2MonsterCount = 0;
 
-    // ·¹º§ 1 ½ºÆù À§Ä¡ °ü·Ã º¯¼ö
     private float minX = -0.6f, maxX = 7.2f;
     private float minY = -14f, maxY = -5f;
     private float zPos = 1f;
     private Transform[] level1SpawnPoints;
 
+    // ğŸµ ëª¬ìŠ¤í„° ìƒì„± íš¨ê³¼ìŒ (ë ˆë²¨ 1, 2 ê³µí†µ)
+    public AudioClip spawnSound;
+    private AudioSource audioSource; // AudioSource ì¶”ê°€
+
     void Start()
     {
-        // ·¹º§ 1 ½ºÆù Æ÷ÀÎÆ® »ı¼º
-        GenerateLevel1SpawnPoints();
+        // AudioSource ì»´í¬ë„ŒíŠ¸ ì¶”ê°€
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = spawnSound; // ì˜¤ë””ì˜¤ í´ë¦½ ì„¤ì •
+        audioSource.playOnAwake = false; // ê²Œì„ ì‹œì‘ ì‹œ ìë™ìœ¼ë¡œ ì¬ìƒë˜ì§€ ì•Šë„ë¡ ì„¤ì •
 
-        // ·¹º§ 1 ¸ó½ºÅÍ »ı¼º ½ÃÀÛ
+        GenerateLevel1SpawnPoints();
         StartCoroutine(SpawnLevel1Monsters());
     }
 
-    // ·¹º§ 1 ½ºÆù Æ÷ÀÎÆ® »ı¼º
     void GenerateLevel1SpawnPoints()
     {
         level1SpawnPoints = new Transform[level1MonsterCount];
@@ -38,49 +41,64 @@ public class Spawner_1 : MonoBehaviour
         {
             GameObject spawnPointObj = new GameObject("Level1SpawnPoint_" + i);
             Vector3 spawnPosition = new Vector3(
-                Random.Range(minX, maxX), // X ÁÂÇ¥ ·£´ı °ª
-                Random.Range(minY, maxY), // Y ÁÂÇ¥ ·£´ı °ª
-                zPos                     // Z ÁÂÇ¥ °íÁ¤ (1)
+                Random.Range(minX, maxX),
+                Random.Range(minY, maxY),
+                zPos
             );
             spawnPointObj.transform.position = spawnPosition;
             level1SpawnPoints[i] = spawnPointObj.transform;
         }
     }
 
-    // ·¹º§ 1 ¸ó½ºÅÍ »ı¼º
     IEnumerator SpawnLevel1Monsters()
     {
         for (int i = 0; i < level1MonsterCount; i++)
         {
             Transform spawnPoint = level1SpawnPoints[i];
             Instantiate(level1MonsterPrefab, spawnPoint.position, Quaternion.identity);
-            yield return new WaitForSeconds(2f); // 2ÃÊ °£°İÀ¸·Î ¸ó½ºÅÍ ¼ÒÈ¯
+
+            // ğŸµ ëª¬ìŠ¤í„° ìƒì„± íš¨ê³¼ìŒ ì¬ìƒ (ë ˆë²¨ 1)
+            PlaySpawnSound(spawnPoint.position);
+
+            yield return new WaitForSeconds(2f);
         }
 
-        // ·¹º§ 1 ¸ó½ºÅÍµéÀÌ ´Ù Á×¾úÀ¸¸é ·¹º§ 2 ¸ó½ºÅÍ »ı¼º
         StartCoroutine(SpawnLevel2Monsters());
     }
 
-    // ·¹º§ 2 ¸ó½ºÅÍ »ı¼º
     IEnumerator SpawnLevel2Monsters()
     {
         for (int i = 0; i < level2MonsterCount; i++)
         {
             Transform spawnPoint = level2SpawnPoints[Random.Range(0, level2SpawnPoints.Length)];
             Instantiate(level2MonsterPrefab, spawnPoint.position, Quaternion.identity);
-            spawnedLevel2MonsterCount++; // ¸ó½ºÅÍ°¡ ½ºÆùµÇ¸é Ä«¿îÆ® Áõ°¡
-            yield return new WaitForSeconds(3f); // 3ÃÊ °£°İÀ¸·Î ¸ó½ºÅÍ ¼ÒÈ¯
+            spawnedLevel2MonsterCount++;
+
+            // ğŸµ ëª¬ìŠ¤í„° ìƒì„± íš¨ê³¼ìŒ ì¬ìƒ (ë ˆë²¨ 2)
+            PlaySpawnSound(spawnPoint.position);
+
+            yield return new WaitForSeconds(3f);
         }
 
-        // ·¹º§ 2 ¸ó½ºÅÍ°¡ 7¸¶¸®°¡ ½ºÆùµÇ¸é º¸½º ½ºÆù
         if (spawnedLevel2MonsterCount >= 7)
         {
-            // º¸½º ½ºÆù ÄÚµå È£Ãâ
             GameObject bossSpawner = GameObject.Find("BossSpawner");
             if (bossSpawner != null)
             {
                 bossSpawner.GetComponent<BossSpawner_1>().SpawnBoss();
             }
+        }
+    }
+
+    // ğŸµ ëª¬ìŠ¤í„° ìƒì„± íš¨ê³¼ìŒ ì¬ìƒ í•¨ìˆ˜
+    void PlaySpawnSound(Vector3 position)
+    {
+        if (spawnSound != null && audioSource != null)
+        {
+            // ìœ„ì¹˜ ì§€ì • ë° ë³¼ë¥¨ ì„¤ì • (ë³¼ë¥¨ì„ 4ë°°ë¡œ ì„¤ì •)
+            audioSource.volume = 4.0f;
+            audioSource.transform.position = position;  // ì†Œë¦¬ ìœ„ì¹˜ ì„¤ì •
+            audioSource.Play();  // ì¬ìƒ
         }
     }
 }

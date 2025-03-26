@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2461451449371726594}
   - component: {fileID: 7341878362458727333}
   m_Layer: 0
-  m_Name: lv1monster
+  m_Name: Lv1monster
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.03, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2695466130459250862}
