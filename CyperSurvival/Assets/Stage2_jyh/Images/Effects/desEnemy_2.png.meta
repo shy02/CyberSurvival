@@ -1,0 +1,2946 @@
+fileFormatVersion: 2
+guid: 3a27838a70dd17140a8318665b6383ca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3597751775406234760
+    second: 474_0
+  - first:
+      213: 9096686833103409805
+    second: 474_1
+  - first:
+      213: -9193977167797781323
+    second: 474_2
+  - first:
+      213: -5945767124294058271
+    second: 474_3
+  - first:
+      213: -8751968326972857097
+    second: 474_4
+  - first:
+      213: 8377524463464976481
+    second: 474_5
+  - first:
+      213: 6630994097641851405
+    second: 474_6
+  - first:
+      213: -1457308759237196879
+    second: 474_7
+  - first:
+      213: 5128460891188959278
+    second: 474_8
+  - first:
+      213: 3868638456317867944
+    second: 474_9
+  - first:
+      213: -1925753883121639290
+    second: 474_10
+  - first:
+      213: 9036802470436142316
+    second: 474_11
+  - first:
+      213: 8401049949875395925
+    second: 474_12
+  - first:
+      213: -6611152071075034707
+    second: 474_13
+  - first:
+      213: 5004101088082160533
+    second: 474_14
+  - first:
+      213: -751878630196271260
+    second: 474_15
+  - first:
+      213: 951127493640659136
+    second: 474_16
+  - first:
+      213: 9060473956152377958
+    second: 474_17
+  - first:
+      213: 7202711436058157255
+    second: 474_18
+  - first:
+      213: 919638437522944271
+    second: 474_19
+  - first:
+      213: -7231556388307280851
+    second: 474_20
+  - first:
+      213: -4509536929280986958
+    second: 474_21
+  - first:
+      213: -2725597285576280313
+    second: 474_22
+  - first:
+      213: 5745897842790480307
+    second: 474_23
+  - first:
+      213: 6396111427711907947
+    second: 474_24
+  - first:
+      213: 1514216714732224956
+    second: 474_25
+  - first:
+      213: 487292402872875101
+    second: 474_26
+  - first:
+      213: 8117144574920175260
+    second: 474_27
+  - first:
+      213: -6247862832291795472
+    second: 474_28
+  - first:
+      213: 8662512987437554498
+    second: 474_29
+  - first:
+      213: 4744361380545709403
+    second: 474_30
+  - first:
+      213: 4324315785350386640
+    second: 474_31
+  - first:
+      213: 215790214589262249
+    second: 474_32
+  - first:
+      213: 5592795736349652565
+    second: 474_33
+  - first:
+      213: 5035646092031006231
+    second: 474_34
+  - first:
+      213: 7486640550558781569
+    second: 474_35
+  - first:
+      213: 7400324980636753900
+    second: 474_36
+  - first:
+      213: 220718451173940277
+    second: 474_37
+  - first:
+      213: -3338800631183170993
+    second: 474_38
+  - first:
+      213: 4993697581275891433
+    second: 474_39
+  - first:
+      213: -5574686317603657667
+    second: 474_40
+  - first:
+      213: -2094339235392521421
+    second: 474_41
+  - first:
+      213: 1617378600577860396
+    second: 474_42
+  - first:
+      213: -2008203974582657910
+    second: 474_43
+  - first:
+      213: -3768873694094931987
+    second: 474_44
+  - first:
+      213: -4084029881626360682
+    second: 474_45
+  - first:
+      213: 6563982384137177143
+    second: 474_46
+  - first:
+      213: -3996808095728079418
+    second: 474_47
+  - first:
+      213: -8234269193045458735
+    second: 474_48
+  - first:
+      213: -7800256864885082157
+    second: 474_49
+  - first:
+      213: 3261360344210660939
+    second: 474_50
+  - first:
+      213: -8093459373462863881
+    second: 474_51
+  - first:
+      213: -205495008048001111
+    second: 474_52
+  - first:
+      213: 2622627735091035704
+    second: 474_53
+  - first:
+      213: -2201814386860900935
+    second: 474_54
+  - first:
+      213: -4603399681798990949
+    second: 474_55
+  - first:
+      213: 5146668970192955037
+    second: 474_56
+  - first:
+      213: -6697262161038101460
+    second: 474_57
+  - first:
+      213: 1898847425066796354
+    second: 474_58
+  - first:
+      213: -5195971437303837054
+    second: 474_59
+  - first:
+      213: 5601089126319607066
+    second: 474_60
+  - first:
+      213: 5407179612593628700
+    second: 474_61
+  - first:
+      213: -7090224947907057958
+    second: 474_62
+  - first:
+      213: 4860211387823174213
+    second: 474_63
+  - first:
+      213: -3339665708945224972
+    second: 474_64
+  - first:
+      213: 1995660346484629083
+    second: 474_65
+  - first:
+      213: -5408826002367036196
+    second: 474_66
+  - first:
+      213: 8939394737475237432
+    second: 474_67
+  - first:
+      213: 8582375868556431812
+    second: 474_68
+  - first:
+      213: -8074808128864869060
+    second: 474_69
+  - first:
+      213: 8097104037319955604
+    second: 474_70
+  - first:
+      213: -2192299115533844915
+    second: 474_71
+  - first:
+      213: 665061945028845182
+    second: 474_72
+  - first:
+      213: -6842810533083583745
+    second: 474_73
+  - first:
+      213: -34280226435256942
+    second: 474_74
+  - first:
+      213: -1162390081745350629
+    second: 474_75
+  - first:
+      213: -1114862082729686547
+    second: 474_76
+  - first:
+      213: -336888978368343701
+    second: 474_77
+  - first:
+      213: -493172159710271256
+    second: 474_78
+  - first:
+      213: -220067757113175511
+    second: 474_79
+  - first:
+      213: 5385081882834301867
+    second: 474_80
+  - first:
+      213: 237553893549506322
+    second: 474_81
+  - first:
+      213: -5893625530916978643
+    second: 474_82
+  - first:
+      213: -7506109130587490002
+    second: 474_83
+  - first:
+      213: -5047276189681350770
+    second: 474_84
+  - first:
+      213: 6408474285926032598
+    second: 474_85
+  - first:
+      213: -8719828708916302045
+    second: 474_86
+  - first:
+      213: -3303151937984035211
+    second: 474_87
+  - first:
+      213: -8367252813803081406
+    second: 474_88
+  - first:
+      213: -4250365665552578558
+    second: 474_89
+  - first:
+      213: 3635796854625475612
+    second: 474_90
+  - first:
+      213: 2787857579093404781
+    second: 474_91
+  - first:
+      213: 8240453835376050161
+    second: 474_92
+  - first:
+      213: 2701718865915058453
+    second: 474_93
+  - first:
+      213: 6997911446034939630
+    second: 474_94
+  - first:
+      213: 3490036251970984792
+    second: 474_95
+  - first:
+      213: -8941488611690289790
+    second: 474_96
+  - first:
+      213: -6498995657415243676
+    second: 474_97
+  - first:
+      213: -7102337627799846541
+    second: 474_98
+  - first:
+      213: 8953956848022076348
+    second: 474_99
+  - first:
+      213: 8792208539502358625
+    second: 474_100
+  - first:
+      213: -579444930629826029
+    second: 474_101
+  - first:
+      213: 8199033209769403932
+    second: 474_102
+  - first:
+      213: 1887425901729734285
+    second: 474_103
+  - first:
+      213: -8777716379561072016
+    second: 474_104
+  - first:
+      213: -6551631037753973583
+    second: 474_105
+  - first:
+      213: -393879049671641960
+    second: 474_106
+  - first:
+      213: 81680504684055323
+    second: 474_107
+  - first:
+      213: -2500552077175939479
+    second: 474_108
+  - first:
+      213: 3514095230268696373
+    second: 474_109
+  - first:
+      213: -7255814315616738533
+    second: 474_110
+  - first:
+      213: -8618080597908696062
+    second: 474_111
+  - first:
+      213: -6544824717735670305
+    second: 474_112
+  - first:
+      213: 7770006566710107418
+    second: 474_113
+  - first:
+      213: 5703961956342503525
+    second: 474_114
+  - first:
+      213: 5296843583721590434
+    second: 474_115
+  - first:
+      213: 1688733256459563559
+    second: 474_116
+  - first:
+      213: -5516473539955710682
+    second: 474_117
+  - first:
+      213: -7995786162212979652
+    second: 474_118
+  - first:
+      213: 718293898493679787
+    second: 474_119
+  - first:
+      213: 5434336524991280930
+    second: 474_120
+  - first:
+      213: -8783891926535468731
+    second: 474_121
+  - first:
+      213: -2883580707857605854
+    second: 474_122
+  - first:
+      213: 774053212452863231
+    second: 474_123
+  - first:
+      213: -1670618946256497745
+    second: 474_124
+  - first:
+      213: 1951934123815301371
+    second: 474_125
+  - first:
+      213: -6944076245927880939
+    second: 474_126
+  - first:
+      213: -7896413398539228976
+    second: 474_127
+  - first:
+      213: 2894027736470089805
+    second: 474_128
+  - first:
+      213: 320321768818067396
+    second: 474_129
+  - first:
+      213: 6086438222133971421
+    second: 474_130
+  - first:
+      213: 5782498791816929410
+    second: 474_131
+  - first:
+      213: -1733246902074312272
+    second: 474_132
+  - first:
+      213: 7230781059786960953
+    second: 474_133
+  - first:
+      213: 5936739830687529450
+    second: 474_134
+  - first:
+      213: -6167618163052154115
+    second: 474_135
+  - first:
+      213: -6987952717454699933
+    second: 474_136
+  - first:
+      213: -4078463972812847062
+    second: 474_137
+  - first:
+      213: -2354051986457601206
+    second: 474_138
+  - first:
+      213: 1411779715951513646
+    second: 474_139
+  - first:
+      213: -4366854640696090365
+    second: 474_140
+  - first:
+      213: 357974194541940894
+    second: 474_141
+  - first:
+      213: -875349641499559621
+    second: 474_142
+  - first:
+      213: -3897144534679348151
+    second: 474_143
+  - first:
+      213: 7337993670373033837
+    second: 474_144
+  - first:
+      213: 8267087440837075408
+    second: 474_145
+  - first:
+      213: -2381491527929159803
+    second: 474_146
+  - first:
+      213: -2884434327792666068
+    second: 474_147
+  - first:
+      213: -8446418955343357472
+    second: 474_148
+  - first:
+      213: 7652839803298094891
+    second: 474_149
+  - first:
+      213: -8856730338090959529
+    second: 474_150
+  - first:
+      213: -2117312102349391128
+    second: 474_151
+  - first:
+      213: 6773284215676093883
+    second: 474_152
+  - first:
+      213: 1226741581973467119
+    second: 474_153
+  - first:
+      213: -2365244026276376700
+    second: 474_154
+  - first:
+      213: 8411865778128884119
+    second: 474_155
+  - first:
+      213: -7069087360563346288
+    second: 474_156
+  - first:
+      213: -7724919724308320365
+    second: 474_157
+  - first:
+      213: 5992975572893550297
+    second: 474_158
+  - first:
+      213: -7782792697896758637
+    second: 474_159
+  - first:
+      213: -1263234183956080139
+    second: 474_160
+  - first:
+      213: 2744261428380225517
+    second: 474_161
+  - first:
+      213: 7292258211491239616
+    second: 474_162
+  - first:
+      213: 16179527163931467
+    second: 474_163
+  - first:
+      213: 5518713410248071208
+    second: 474_164
+  - first:
+      213: 5391934968476205918
+    second: 474_165
+  - first:
+      213: -1315961847128113683
+    second: 474_166
+  - first:
+      213: -3496290900448177148
+    second: 474_167
+  - first:
+      213: -8752287894596094155
+    second: 474_168
+  - first:
+      213: 6969768836342265277
+    second: 474_169
+  - first:
+      213: -4975221570588564406
+    second: 474_170
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: desEnemy_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543b1b31839846a449938d67eb4cf2b0
+      internalID: -1687912701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fe650c3ba76cd4b850e5c74b00b1de
+      internalID: 1663732919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfcf46aa99aa1b64dbc66cfdacc4fe17
+      internalID: 317391891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b189bc280368184d92229c481615cff
+      internalID: -212778657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f77f3a741252bf4e8638c1f94612113
+      internalID: 1665039285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823ec7c4ed349bd4c865cd06afe8aba6
+      internalID: -1780085552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7999573f093dec7409cdff2e6dd8220e
+      internalID: 512304373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4817b73c9badacb4884b5f227e8495dc
+      internalID: -1390664630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ea704f162b79a4d863a4cddcb58771
+      internalID: -1309691227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d595e978adb74df419f512b7536d6828
+      internalID: 6138795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d1687235e00b646b84880513b89bca
+      internalID: 2115803381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3e7416c56b2b443bd9ed7b11b5fcf7
+      internalID: -139101269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7f8e4944275994a809bfbb0eab16cd
+      internalID: 2118858302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c5e61c1675c424cba2bf3d6e250268
+      internalID: -1848865297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254b7f2593265fa4e96f093be57113e7
+      internalID: 2104508939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_15
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e02a1ddeb9c074c95ed5978b3b0096
+      internalID: 894779493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_16
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577adfeeaa8fb9c4fb519e396c9ea05f
+      internalID: 669101670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf806916b0e3ea43b8c6dbc85ec57a4
+      internalID: -762636650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_18
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf2ce4962428d94baf656f439593a61
+      internalID: 721242416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039c639a30d204641843fae6c48c8cf4
+      internalID: -1127064686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_20
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c6fa4a590c79184faa9f4ca426481f7
+      internalID: -1276763329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_21
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4487f37e8c6544eb83d27cf96380f8
+      internalID: -1625435744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f85b44b49a000f43930ec480fe8dfbe
+      internalID: 2111173281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b969352b54cfbd43bc8cbfb093d39bd
+      internalID: 1806397591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181f8934343b8e043a0917cbd9a1be72
+      internalID: 177466188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97784db2f0657804f92eca55f5f5ce86
+      internalID: 1306878150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18747dcda7767084abdb2c52c3a83696
+      internalID: -184360255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a75a664d7416047a3c213856f9e8f9
+      internalID: -906953910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a072140eaa52816448ef952ca6be58de
+      internalID: 1061209974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02f8169835d14d48bfbbc07f7c756cb
+      internalID: 1702165854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_30
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f60bcd3673b1748b2984932e87ce07
+      internalID: 1998449661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944ea825cdc425949aadd3d853f450c6
+      internalID: 1033287161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_32
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7110bf59a650841badc61c6f7c2162
+      internalID: 213098053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec3076a49245ab4db7689b772499548
+      internalID: 1825477824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef0d9b802ba45a4f827db1ac9fe53f9
+      internalID: 1870960268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c9c29d0b49f884ebfeb2f9035933a5
+      internalID: 1460047265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507295417a76b324e9d8be2a83cffacd
+      internalID: -954505528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_37
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b00e05a91699c4cb36d73a7fe9d010
+      internalID: 671122454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_38
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5878fc1d272af004886f45c0f4f00b45
+      internalID: -1108872740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_39
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1498c5774cf9e0d4489e664727d5f0dd
+      internalID: 447358031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab1a146b2c223a4698c64213d0d1034
+      internalID: -70182997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a29956105e666f42a46052d299d5c84
+      internalID: -454094931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_42
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1e576cb03d83446a7a91a9467b142a
+      internalID: 1363487864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa4f607a293fa04e92bfacd59677e74
+      internalID: 549635628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158b4bb6d074dbb4797c20a6d20f212e
+      internalID: -533423434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aef6bca8fdb93408d2007465034352
+      internalID: 1977699375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0b0a56c5931f648bc29a77ecd4928b
+      internalID: -594750932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403691393bcc39a49b3c25d1701e3fde
+      internalID: 1393456765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb09076f636e0b4cab29f459b211d87
+      internalID: 1464946774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7855cfc9da8a6140b2e892db8c5f367
+      internalID: 219955597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c155b632a3e7ac64293b6a51f0c3b5d4
+      internalID: 149210195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_51
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed7ddf7069554e4d8b8b2d7b08f41ee
+      internalID: 823680893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f1f6026ae2d404d91c3cad8e86b358
+      internalID: -2068245533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef0fc027cc5aa348a0e41b05a449825
+      internalID: -466994521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_54
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d1877d42b9c484caba79cd16896930
+      internalID: -2024931049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d322ac228d622144a9bf53d89a83b22
+      internalID: 126753902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9997a382a84863541b7309e6d0fd1b44
+      internalID: -1740602617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409880abd40967844af8062d79b6b38b
+      internalID: 1018792218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f545b3c3bedeced4196ea4847ce91eb4
+      internalID: -1935601038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ecfa0995cc825478a2d2448e65bf2a
+      internalID: 488773745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_60
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b58f0664810de34f9fc3c38bc9f0fc4
+      internalID: 353384221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_61
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a78e19f6d99274c8347a997a4a9ca0
+      internalID: 2028834319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53626d75799a9143af6c250ae9ffe05
+      internalID: -121552818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_63
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a16c70bf37b78284ebe3f6f8dd779ede
+      internalID: -191403478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3439ec914b50b4588253efb5efb356
+      internalID: 1793113572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd14bfc446dfa0448127a232e539aa7
+      internalID: 739523706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bcdfc53a4d22c4d8310eb7cdc4bcdd
+      internalID: 920683721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_67
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd584c82bf234344a20000b9284a554
+      internalID: -1239388209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532f99b3f0d6eb64d8bc1a14912c3485
+      internalID: -821418698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb62f6d75fc3b4c479c10cf996a3453d
+      internalID: -155566109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_70
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb519ded5fe8fe24da8933938c4cfc47
+      internalID: -888014432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_71
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431729d369e6cbe45a76f85efffa057f
+      internalID: 580251676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1cfec82f11b9cd4dbe2a27cf5ac673c
+      internalID: 413584061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_73
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76954c02c689974990b121cce87f974
+      internalID: 548734969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_74
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d804aa6f92bd3428b3835540df03ba
+      internalID: -1961976184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_75
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b701846fbc23445943cb893b7dac1e
+      internalID: 1691522886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_76
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e02a3efbc70521644b9c2145d823dc24
+      internalID: 193694963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17963656aafe0ae47bd37a51c4f728e8
+      internalID: -869795168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_78
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a01bbd96dba7f341bd23b050c1168e6
+      internalID: -1491764194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb099f6bab9940d428848f136edb8141
+      internalID: -136672278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b405f01597e884d8ac66b8fa8e55c1
+      internalID: -1187655310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6de23b6e67d6d459b9ab8ecab4a66b
+      internalID: -101197992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_82
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05421d71d23b444faf887e399d00203
+      internalID: 59978962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06c3588ea36039469912e687eacaadd
+      internalID: 307707531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f443e03df6a45374eb75990a8aabccac
+      internalID: 1545973490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_85
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b00c0de315f4c4385a66c905e49011
+      internalID: 465184232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_86
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a671b3a4e5ceb46a10a24cd24d0852
+      internalID: -622874288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_87
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa623261f031df42be0e14fbd3779a1
+      internalID: -1609875897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48ad395aaa91214890fd1d939aad4ca
+      internalID: 680001981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_89
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7351b3d2697652c4b8ec14c0a90e3787
+      internalID: 659387920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_90
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a73cd0de3692d4cb3cf7ea5d28d14d
+      internalID: 793947215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_91
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6323bc8434e42f4f946fa2bca7b4d17
+      internalID: 1568465122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_92
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d591553906719741ba459352fd29a96
+      internalID: 342137817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_93
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315cf8090274ab348a8b3efd2c7a3b38
+      internalID: 685398309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_94
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fccee21b9181cc84c9f40bf4f5190d72
+      internalID: -1444226007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_95
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bc52cc7de3721c4ba6382def26e964c
+      internalID: 1206801710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_96
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69227302d69f9843a82a01e457461d7
+      internalID: -149876270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_97
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4e8c31eec96f84c8560f0d4c434ddf
+      internalID: 1259476976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desEnemy_2_98
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd627b9376b2844581d2901974875af
+      internalID: -1141305966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9ecdf4cbdfc523f43a0a7eb3a962cc20
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      desEnemy_2_0: -1687912701
+      desEnemy_2_1: 1663732919
+      desEnemy_2_10: 2115803381
+      desEnemy_2_11: -139101269
+      desEnemy_2_12: 2118858302
+      desEnemy_2_13: -1848865297
+      desEnemy_2_14: 2104508939
+      desEnemy_2_15: 894779493
+      desEnemy_2_16: 669101670
+      desEnemy_2_17: -762636650
+      desEnemy_2_18: 721242416
+      desEnemy_2_19: -1127064686
+      desEnemy_2_2: 317391891
+      desEnemy_2_20: -1276763329
+      desEnemy_2_21: -1625435744
+      desEnemy_2_22: 2111173281
+      desEnemy_2_23: 1806397591
+      desEnemy_2_24: 177466188
+      desEnemy_2_25: 1306878150
+      desEnemy_2_26: -184360255
+      desEnemy_2_27: -906953910
+      desEnemy_2_28: 1061209974
+      desEnemy_2_29: 1702165854
+      desEnemy_2_3: -212778657
+      desEnemy_2_30: 1998449661
+      desEnemy_2_31: 1033287161
+      desEnemy_2_32: 213098053
+      desEnemy_2_33: 1825477824
+      desEnemy_2_34: 1870960268
+      desEnemy_2_35: 1460047265
+      desEnemy_2_36: -954505528
+      desEnemy_2_37: 671122454
+      desEnemy_2_38: -1108872740
+      desEnemy_2_39: 447358031
+      desEnemy_2_4: 1665039285
+      desEnemy_2_40: -70182997
+      desEnemy_2_41: -454094931
+      desEnemy_2_42: 1363487864
+      desEnemy_2_43: 549635628
+      desEnemy_2_44: -533423434
+      desEnemy_2_45: 1977699375
+      desEnemy_2_46: -594750932
+      desEnemy_2_47: 1393456765
+      desEnemy_2_48: 1464946774
+      desEnemy_2_49: 219955597
+      desEnemy_2_5: -1780085552
+      desEnemy_2_50: 149210195
+      desEnemy_2_51: 823680893
+      desEnemy_2_52: -2068245533
+      desEnemy_2_53: -466994521
+      desEnemy_2_54: -2024931049
+      desEnemy_2_55: 126753902
+      desEnemy_2_56: -1740602617
+      desEnemy_2_57: 1018792218
+      desEnemy_2_58: -1935601038
+      desEnemy_2_59: 488773745
+      desEnemy_2_6: 512304373
+      desEnemy_2_60: 353384221
+      desEnemy_2_61: 2028834319
+      desEnemy_2_62: -121552818
+      desEnemy_2_63: -191403478
+      desEnemy_2_64: 1793113572
+      desEnemy_2_65: 739523706
+      desEnemy_2_66: 920683721
+      desEnemy_2_67: -1239388209
+      desEnemy_2_68: -821418698
+      desEnemy_2_69: -155566109
+      desEnemy_2_7: -1390664630
+      desEnemy_2_70: -888014432
+      desEnemy_2_71: 580251676
+      desEnemy_2_72: 413584061
+      desEnemy_2_73: 548734969
+      desEnemy_2_74: -1961976184
+      desEnemy_2_75: 1691522886
+      desEnemy_2_76: 193694963
+      desEnemy_2_77: -869795168
+      desEnemy_2_78: -1491764194
+      desEnemy_2_79: -136672278
+      desEnemy_2_8: -1309691227
+      desEnemy_2_80: -1187655310
+      desEnemy_2_81: -101197992
+      desEnemy_2_82: 59978962
+      desEnemy_2_83: 307707531
+      desEnemy_2_84: 1545973490
+      desEnemy_2_85: 465184232
+      desEnemy_2_86: -622874288
+      desEnemy_2_87: -1609875897
+      desEnemy_2_88: 680001981
+      desEnemy_2_89: 659387920
+      desEnemy_2_9: 6138795
+      desEnemy_2_90: 793947215
+      desEnemy_2_91: 1568465122
+      desEnemy_2_92: 342137817
+      desEnemy_2_93: 685398309
+      desEnemy_2_94: -1444226007
+      desEnemy_2_95: 1206801710
+      desEnemy_2_96: -149876270
+      desEnemy_2_97: 1259476976
+      desEnemy_2_98: -1141305966
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

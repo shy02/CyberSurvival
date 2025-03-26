@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        int finalDamage = damage * (100 - GameManager.Instance.PlayerDefence) / 100;
+        int finalDamage = damage * (100 - GameManager.Instance.PlayerDefence * 10) / 100;
         GameManager.Instance.SetHp(-finalDamage);
         HitAnimation();
 
