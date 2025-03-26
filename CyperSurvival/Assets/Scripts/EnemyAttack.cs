@@ -16,6 +16,9 @@ public class EnemyAttack : MonoBehaviour
             case EnemyAI.EnemyType.Bike:
                 BikeAttack();
                 break;
+            case EnemyAI.EnemyType.Boss:
+                BossAttack();
+                break;
         }
     }
 
@@ -32,5 +35,11 @@ public class EnemyAttack : MonoBehaviour
     public void BikeAttack()
     {
         gameObject.GetComponent<ChordMovement>().StartMovement();
+    }
+    public void BossAttack()
+    {
+        
+
+
     }
 }

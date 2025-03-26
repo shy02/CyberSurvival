@@ -11,8 +11,8 @@ public class ShotgunAttack : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        FireShotgun();
     }
-
     public void FireShotgun()
     {
         if (player == null) return;
@@ -31,12 +31,18 @@ public class ShotgunAttack : MonoBehaviour
 
     private Vector2 GetBulletDirection(float angle)
     {
-        
-        float angleInRadians = angle * Mathf.Deg2Rad;
+        Vector2 baseDirection = (player.position - transform.position).normalized;
+
+        float baseAngle = Mathf.Atan2(baseDirection.y, baseDirection.x) * Mathf.Rad2Deg;
+        float finalAngle = baseAngle + angle;
+
+        float angleInRadians = finalAngle * Mathf.Deg2Rad;
         float x = Mathf.Cos(angleInRadians);
         float y = Mathf.Sin(angleInRadians);
-        return new Vector2(x, y).normalized; 
+
+        return new Vector2(x, y).normalized;
     }
+
 
     private void ShootBullet(Vector2 direction)
     {

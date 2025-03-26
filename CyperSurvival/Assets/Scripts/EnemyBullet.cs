@@ -5,13 +5,17 @@ public class EnemyBullet : MonoBehaviour
     public int damage = 1;
     public float speed = 6.0f;
 
+    [SerializeField] private bool isGuided = false;
     private Transform player;
     private Vector2 moveDirection;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        moveDirection = (player.position - transform.position).normalized;
+        if (isGuided) 
+        { 
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+            moveDirection = (player.position - transform.position).normalized;
+        }
 
     }
     private void Update()
