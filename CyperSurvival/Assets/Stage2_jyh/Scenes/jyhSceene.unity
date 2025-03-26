@@ -10956,7 +10956,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 1087326961}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &133088421
 GameObject:
   m_ObjectHideFlags: 0
@@ -11219,7 +11224,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 1221694789}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &179890940
 GameObject:
   m_ObjectHideFlags: 0
@@ -14702,7 +14712,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 727259678}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &727259676
 GameObject:
   m_ObjectHideFlags: 0
@@ -14968,7 +14983,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 571657135}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &866986560
 GameObject:
   m_ObjectHideFlags: 0
@@ -15231,7 +15251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 1277858967}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &870964270
 GameObject:
   m_ObjectHideFlags: 0
@@ -15566,7 +15591,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 1324716691}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &1087326959
 GameObject:
   m_ObjectHideFlags: 0
@@ -15863,7 +15893,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 100
+  maxHP: 100
+  DeathEffect: {fileID: 0}
+  HpUI: {fileID: 329330326}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
 --- !u!1 &1211500134
 GameObject:
   m_ObjectHideFlags: 0
