@@ -16,7 +16,7 @@ public class Stage3SoundManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.nowGameOver)
+        if (GameManager.Instance.nowGameOver || GameManager.Instance.nowNextStage)
         {
             transform.GetChild(0).GetComponent<AudioSource>().Stop();
             sounds[0].GetComponent<AudioSource>().Stop();

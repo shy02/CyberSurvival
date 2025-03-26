@@ -46,7 +46,7 @@ public class BossAttackManager_3 : MonoBehaviour
             StopAttack();
         }
 
-        if (GameManager.Instance.nowGameOver)
+        if (GameManager.Instance.nowGameOver || GameManager.Instance.nowNextStage)
         {
             StopAttack();
         }
@@ -91,7 +91,7 @@ public class BossAttackManager_3 : MonoBehaviour
 
     IEnumerator UseBossSkill()
     {
-        while (CanAttack && !GameManager.Instance.nowGameOver)
+        while (CanAttack && !GameManager.Instance.nowGameOver && !GameManager.Instance.nowNextStage)
         {
             int index = Random.Range(0, 3);
 

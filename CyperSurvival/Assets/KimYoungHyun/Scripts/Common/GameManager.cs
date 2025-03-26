@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public static int DEFAULT_ULTIMATE_POWER = 5;
 
     public bool nowGameOver = false;
+    public bool nowNextStage = false;
 
     private int _playerHp = 1000;
     public int PlayerHp
