@@ -6,6 +6,17 @@ public class BossSpawner_1 : MonoBehaviour
     public GameObject player; // 플레이어
     public Transform[] portalPositions; // 포탈 위치
 
+    void Start()
+    {
+        // 플레이어 태그로 자동으로 플레이어 오브젝트를 찾음
+        player = GameObject.FindWithTag("Player");
+
+        if (player == null)
+        {
+            Debug.LogError("Player 태그를 가진 오브젝트를 찾을 수 없습니다.");
+        }
+    }
+
     public void SpawnBoss()
     {
         if (bossPrefab != null && player != null && portalPositions.Length > 0)
