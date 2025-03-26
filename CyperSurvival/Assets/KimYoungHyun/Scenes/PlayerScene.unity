@@ -1593,7 +1593,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4258676859193551728, guid: 6c7e9207a9abcda4a92aaa087d74d344, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5473485898055469324, guid: 6c7e9207a9abcda4a92aaa087d74d344, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6604687646287388347, guid: 6c7e9207a9abcda4a92aaa087d74d344, type: 3}
       propertyPath: UltimateSkill

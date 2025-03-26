@@ -213,7 +213,7 @@ MonoBehaviour:
   enemy3: {fileID: 6108359954774739865, guid: f49a6c0160a59354da67df47121bad49, type: 3}
   Boss: {fileID: 1555975894}
   BossUI: {fileID: 1835864599}
-  LimitedTime: 60
+  LimitedTime: 10
   MobSpawnDelay: 5
 --- !u!1 &242876938
 GameObject:

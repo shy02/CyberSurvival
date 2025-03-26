@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
 
     public static int MAX_HP = 1000;
     public static int MAX_GAINED_ITEM = 2;
-    public static int DEAULT_POWER = 100;
+    public static int DEAULT_POWER = 30;
+    public static int DEFAULT_ULTIMATE_POWER = 3;
 
     private int _playerHp = 1000;
     public int PlayerHp

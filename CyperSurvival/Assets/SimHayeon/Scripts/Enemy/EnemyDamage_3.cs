@@ -23,23 +23,27 @@ public class EnemyDamage_3 : MonoBehaviour
     {
         if(Hp <= 0 && !death)
         {
+            death = true;
             if (transform.name == "Boss")
             {
-                death = true;
                 ScenManager.instance.GoNextStage();
             }
             else
             {
-                death = true;
-                Instantiate(DeathEffect, transform.position, Quaternion.identity);
-                int rate = Random.Range(0, 100);
-                if(rate <= ItemDropRate) CreateItem();
+                if(DeathEffect != null) Instantiate(DeathEffect, transform.position, Quaternion.identity); // 죽은 효과 있을때만 실행
+
+                if (Items.Count > 1)//아이템 리스트에 아이템 있어야 실행
+                {
+                    int rate = Random.Range(0, 100);
+                    if (rate <= ItemDropRate) CreateItem();
+                }
+
                 Destroy(gameObject);
             }
-        }
+        }//체력이 0보다 작은데 죽지 않았을때
 
-        if (transform.name == "Boss") BossHP.value = Hp / maxHP;
-        else HpUI.fillAmount = Hp / maxHP;
+        if (transform.name == "Boss" && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
+        else if(HpUI != null) HpUI.fillAmount = Hp / maxHP; //체력바 있어야 적용
 
     }
 
