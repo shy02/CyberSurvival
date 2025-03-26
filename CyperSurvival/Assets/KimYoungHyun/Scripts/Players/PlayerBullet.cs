@@ -27,7 +27,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void Attack(Collider2D collision)
     {
-        int damage = GameManager.DEAULT_POWER + (playwerPower*10);
+        int damage = GameManager.DEAULT_POWER + (playwerPower*2);
         collision.gameObject.GetComponent<EnemyDamage_3>().GetDamage(damage);
         Destroy(gameObject);
     }

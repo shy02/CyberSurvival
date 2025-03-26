@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
 
     public static int MAX_HP = 1000;
     public static int MAX_GAINED_ITEM = 2;
-    public static int DEAULT_POWER = 30;
-    public static int DEFAULT_ULTIMATE_POWER = 3;
+    public static int DEAULT_POWER = 15;
+    public static int DEFAULT_ULTIMATE_POWER = 5;
 
     private int _playerHp = 1000;
     public int PlayerHp
@@ -33,32 +33,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int _gainedPowerItem = 0;
-    public int GainedPowerItem
-    {
-        get => _gainedPowerItem;
-        set
-        {
-            _gainedPowerItem = Math.Min(value, MAX_GAINED_ITEM);
-            SetPowerBarImage();
-        }
-    }
-
     private int _playerPower = 0;
     public int PlayerPower
     {
         get => _playerPower;
-        set => _playerPower = Math.Min(value, MAX_GAINED_ITEM); 
-    }
-
-    private int _gainedDefenceItem = 0;
-    public int GainedDefenceItem
-    {
-        get => _gainedDefenceItem;
         set
         {
-            _gainedDefenceItem = Math.Min(value, MAX_GAINED_ITEM);
-            SetDefenceBarImage();
+            _playerPower = Math.Min(value, MAX_GAINED_ITEM);
+            SetPowerBarImage();
         }
     }
 
@@ -66,7 +48,11 @@ public class GameManager : MonoBehaviour
     public int PlayerDefence
     {
         get => _playerDefence;
-        set => _playerDefence = Math.Min(value, 20); 
+        set
+        {
+            _playerDefence = Math.Min(value, 20);
+            SetDefenceBarImage();
+        }
     }
 
     private bool _isGameRunning = true;
@@ -116,23 +102,23 @@ public class GameManager : MonoBehaviour
 
     public void AddGainedPowerItem()
     {
-        if (GainedPowerItem >= MAX_GAINED_ITEM)
+        if (PlayerPower >= MAX_GAINED_ITEM)
         {
             return;
         }
-        GainedPowerItem += 1;
+        //GainedPowerItem += 1;
         PlayerPower += 1;
         print($"Gained power item! Player power : {PlayerPower}");
     }
 
     public void AddGainedDefenceItem()
     {
-        if (GainedDefenceItem >= MAX_GAINED_ITEM)
+        if (PlayerDefence >= MAX_GAINED_ITEM)
         {
             return;
         }
-        GainedDefenceItem += 1;
-        PlayerDefence += 10;
+        //GainedDefenceItem += 1;
+        PlayerDefence += 1;
         print($"Gained defence item! Player dfence : {PlayerDefence}");
     }
 
@@ -144,13 +130,13 @@ public class GameManager : MonoBehaviour
 
     private void SetPowerBarImage()
     {
-        float powerImage = (float) (GainedPowerItem + 1) / (MAX_GAINED_ITEM + 1);
+        float powerImage = (float) (PlayerPower + 1) / (MAX_GAINED_ITEM + 1);
         PowerBarImage.fillAmount = powerImage;
     }
 
     private void SetDefenceBarImage()
     {
-        float defenceImage = (float)(GainedDefenceItem + 1) / (MAX_GAINED_ITEM + 1);
+        float defenceImage = (float)(PlayerDefence + 1) / (MAX_GAINED_ITEM + 1);
         DefenceBarImage.fillAmount = defenceImage;
     }
 
