@@ -35,14 +35,14 @@ public class BossBullet_2 : MonoBehaviour
 
     void Update()
     {
-        transform.position +=moveDir * moveSpeed * Time.deltaTime;
+        transform.position += moveDir * moveSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            player.GetComponent<Player_2>().GetDamage(Damage);
+            player.GetComponent<Player>().TakeDamage(Damage);
 
             Destroy(gameObject);
         }

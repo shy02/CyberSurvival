@@ -10776,7 +10776,6 @@ GameObject:
   m_Component:
   - component: {fileID: 96663338}
   - component: {fileID: 96663342}
-  - component: {fileID: 96663341}
   - component: {fileID: 96663339}
   - component: {fileID: 96663343}
   - component: {fileID: 96663344}
@@ -10830,19 +10829,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &96663341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96663337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 1087326961}
 --- !u!212 &96663342
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10957,7 +10943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 1087326961}
   BossHP: {fileID: 0}
   Items: []
@@ -11044,7 +11030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 172651799}
   - component: {fileID: 172651801}
-  - component: {fileID: 172651800}
   - component: {fileID: 172651803}
   - component: {fileID: 172651804}
   - component: {fileID: 172651805}
@@ -11071,19 +11056,6 @@ Transform:
   - {fileID: 2124131573}
   m_Father: {fileID: 179890941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &172651800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172651798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 1221694789}
 --- !u!212 &172651801
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11225,7 +11197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 1221694789}
   BossHP: {fileID: 0}
   Items: []
@@ -11391,7 +11363,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &361503772
 AudioListener:
   m_ObjectHideFlags: 0
@@ -14441,6 +14413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646774202}
   - component: {fileID: 646774201}
+  - component: {fileID: 646774203}
   m_Layer: 0
   m_Name: SoundMgr
   m_TagString: Untagged
@@ -14475,6 +14448,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &646774203
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646774200}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &681075178
 GameObject:
   m_ObjectHideFlags: 0
@@ -14532,7 +14602,6 @@ GameObject:
   m_Component:
   - component: {fileID: 725345219}
   - component: {fileID: 725345221}
-  - component: {fileID: 725345220}
   - component: {fileID: 725345223}
   - component: {fileID: 725345224}
   - component: {fileID: 725345225}
@@ -14559,19 +14628,6 @@ Transform:
   - {fileID: 1707874410}
   m_Father: {fileID: 179890941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &725345220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725345218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 727259678}
 --- !u!212 &725345221
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14713,7 +14769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 727259678}
   BossHP: {fileID: 0}
   Items: []
@@ -14803,7 +14859,6 @@ GameObject:
   m_Component:
   - component: {fileID: 858893059}
   - component: {fileID: 858893061}
-  - component: {fileID: 858893060}
   - component: {fileID: 858893063}
   - component: {fileID: 858893064}
   - component: {fileID: 858893065}
@@ -14830,19 +14885,6 @@ Transform:
   - {fileID: 2125266172}
   m_Father: {fileID: 179890941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &858893060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858893058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 571657135}
 --- !u!212 &858893061
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14984,7 +15026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 571657135}
   BossHP: {fileID: 0}
   Items: []
@@ -15071,7 +15113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869252813}
   - component: {fileID: 869252815}
-  - component: {fileID: 869252814}
   - component: {fileID: 869252817}
   - component: {fileID: 869252818}
   - component: {fileID: 869252819}
@@ -15098,19 +15139,6 @@ Transform:
   - {fileID: 549610020}
   m_Father: {fileID: 179890941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &869252814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869252812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 1277858967}
 --- !u!212 &869252815
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15252,7 +15280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 1277858967}
   BossHP: {fileID: 0}
   Items: []
@@ -15411,7 +15439,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1083291701}
   - component: {fileID: 1083291703}
-  - component: {fileID: 1083291702}
   - component: {fileID: 1083291705}
   - component: {fileID: 1083291706}
   - component: {fileID: 1083291707}
@@ -15438,19 +15465,6 @@ Transform:
   - {fileID: 430607571}
   m_Father: {fileID: 179890941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1083291702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1083291700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 1324716691}
 --- !u!212 &1083291703
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15592,7 +15606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 1324716691}
   BossHP: {fileID: 0}
   Items: []
@@ -15713,7 +15727,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1196404880}
   - component: {fileID: 1196404881}
-  - component: {fileID: 1196404882}
   - component: {fileID: 1196404884}
   - component: {fileID: 1196404885}
   - component: {fileID: 1196404886}
@@ -15795,19 +15808,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1196404882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196404879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a409dbe1e5aee42b4cdb90cf0f05a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 329330326}
 --- !u!50 &1196404884
 Rigidbody2D:
   serializedVersion: 5
@@ -15894,7 +15894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 31767363535424859, guid: 287b80bc112da884ea26ada583f81108, type: 3}
   HpUI: {fileID: 329330326}
   BossHP: {fileID: 0}
   Items: []
@@ -16270,7 +16270,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1851918952}
+    TrackingTarget: {fileID: 0}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:

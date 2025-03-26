@@ -49,6 +49,10 @@ public class EnemyDamage_3 : MonoBehaviour
 
     private void CreateItem()
     {
+        //스포너 아이템 생성X
+        if (transform.name.Contains("Spawner"))
+            return;
+
         int rand = Random.Range(0, Items.Count);
         Instantiate(Items[rand], transform.position, Quaternion.identity);
     }

@@ -36,7 +36,7 @@ public class BossLazer_2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player_2>().GetDamage(10);
+            collision.GetComponent<Player>().TakeDamage(10);
         }
     }
 
