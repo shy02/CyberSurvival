@@ -57,6 +57,7 @@ public class BossAttackManager_3 : MonoBehaviour
         CanAttack = true;
         cores.gameObject.SetActive(true);
         ActiveCores();
+        GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
         GetComponent<Boss4Attack_3>().enabled = true;

@@ -550,7 +550,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9050880375603687014}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -683,6 +683,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!50 &3448632885298077910
 Rigidbody2D:
   serializedVersion: 5
