@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: -7152898837320957042}
   - component: {fileID: 2313262459800461356}
   m_Layer: 0
-  m_Name: EnemySpeed_2
+  m_Name: SpeedEnemy_2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -400,7 +400,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.87058824, y: 1.4588236}
+  m_Size: {x: 1.35, y: 1.08}
   m_EdgeRadius: 0
 --- !u!50 &4179933032489239376
 Rigidbody2D:
@@ -450,6 +450,8 @@ MonoBehaviour:
   - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
   - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!95 &2313262459800461356
 Animator:
   serializedVersion: 7

@@ -10948,6 +10948,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &133088421
 GameObject:
   m_ObjectHideFlags: 0
@@ -11202,6 +11204,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &179890940
 GameObject:
   m_ObjectHideFlags: 0
@@ -11255,10 +11259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bosspos: {fileID: 1105451585}
-  BossPrefab: {fileID: 5645714326941280566, guid: 4977bc79665e4394bad3c6fd29535f6c, type: 3}
+  BossPrefab: {fileID: 4290885007723579032, guid: 4977bc79665e4394bad3c6fd29535f6c, type: 3}
   WarningText: {fileID: 467961749}
   EnemyPrefab:
   - {fileID: 7598835729919502457, guid: a321da1ad4f553f4b8665097b7a2447b, type: 3}
+  - {fileID: 881415692251600379, guid: 86d16030c3de5d241b01ad0e56146215, type: 3}
   - {fileID: 1456937568155985304, guid: fe4ce37520b970d4fb982e475348cac4, type: 3}
   Spawners:
   - {fileID: 1196404880}
@@ -14461,7 +14466,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14774,6 +14779,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &727259676
 GameObject:
   m_ObjectHideFlags: 0
@@ -15031,6 +15038,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &866986560
 GameObject:
   m_ObjectHideFlags: 0
@@ -15285,6 +15294,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &870964270
 GameObject:
   m_ObjectHideFlags: 0
@@ -15611,6 +15622,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &1087326959
 GameObject:
   m_ObjectHideFlags: 0
@@ -15711,7 +15724,7 @@ Transform:
   m_GameObject: {fileID: 1105451584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -21, z: 0}
+  m_LocalPosition: {x: 6, y: -20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15899,6 +15912,8 @@ MonoBehaviour:
   BossHP: {fileID: 0}
   Items: []
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &1211500134
 GameObject:
   m_ObjectHideFlags: 0

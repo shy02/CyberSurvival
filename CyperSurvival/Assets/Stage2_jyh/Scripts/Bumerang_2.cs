@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Bumerang_2 : MonoBehaviour
 {
-    public float speed = 1f;
+    [SerializeField] private int damage;
+    [SerializeField] private float speed = 1f;
+
     public Transform bossTransform; // 보스의 Transform을 참조
     private float angle = 0f;
     private SpriteRenderer spriteRenderer;
@@ -32,15 +34,20 @@ public class Bumerang_2 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Player") && spriteRenderer.color.a > 0)
-        {
-            collider.GetComponent<Player>().TakeDamage(10);
-        }
         if (collider.CompareTag("Wall"))
         {
             SetTransparency(0f); // 투명하게 설정
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<Player>().TakeDamage(damage);
+        }
+    }
+
 
     void OnTriggerExit2D(Collider2D collider)
     {

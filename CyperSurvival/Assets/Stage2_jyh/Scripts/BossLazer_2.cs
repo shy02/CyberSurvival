@@ -3,14 +3,12 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class BossLazer_2 : MonoBehaviour
 {
-    private Transform playerTransform;
-    private Transform bossTransform;
+    [SerializeField] private int damage;
+
     Vector3 direction = Vector3.zero;
 
     void Start()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        bossTransform = GameObject.FindGameObjectWithTag("Boss").transform;
         RotateTowardsPlayer();
     }
 
@@ -36,7 +34,7 @@ public class BossLazer_2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player>().TakeDamage(10);
+            collision.GetComponent<Player>().TakeDamage(damage);
         }
     }
 

@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class BossBullet_2 : MonoBehaviour
 {
+    [SerializeField] private int damage;
+
     GameObject player;
     Vector3 moveDir = Vector3.zero;
     Vector3 rotation = Vector3.zero;
     float angle = 0;
     float moveSpeed = 7;
-    int Damage = 10;
 
     private void Start()
     {
@@ -32,18 +33,12 @@ public class BossBullet_2 : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.GetComponent<Player>().TakeDamage(Damage);
+            player.GetComponent<Player>().TakeDamage(damage);
 
             Destroy(gameObject);
         }
         if (collision.CompareTag("Wall"))
             Destroy(gameObject);
     }
-
-    public void SetDamage(int damage)
-    {
-        Damage = damage;
-    }
-
 
 }

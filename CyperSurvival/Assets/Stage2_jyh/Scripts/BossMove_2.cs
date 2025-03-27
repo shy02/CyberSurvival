@@ -7,13 +7,14 @@ public class BossMove_2 : MonoBehaviour
     //이동
     [SerializeField] private float moveSpeed = 1;
     Vector3 moveDir = Vector3.zero;
-
+    Animator anim;
 
     void Start()
     {
         if (player == null)
             player = GameObject.FindWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -21,6 +22,7 @@ public class BossMove_2 : MonoBehaviour
         Vector3 vec = player.transform.position - transform.position;
         moveDir = vec.normalized;
 
+        //보스가 플레이어를 바라보게 하기
         if (vec.x < 0)
         {
             spriteRenderer.flipX = true;
@@ -30,6 +32,17 @@ public class BossMove_2 : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+        //이동
+        if(vec.magnitude > 5f)  //5f보다 멀면 이동
+        {
+            anim.SetBool("isMove", true);
+            transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            anim.SetBool("isMove", false);
+        }
+
+        
     }
 }

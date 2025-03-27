@@ -8,26 +8,26 @@ public class BossPattern_2 : MonoBehaviour
     //보스 공격력
     public int Damage = 10;
 
-    //패턴1 기본 총알 발사
-    public Transform shootPos;
-    public GameObject bullet;
-    float attackcool1 = 1;
-
-
-    //패턴2 스나이퍼 타이밍에 맞춰서 구르기로 피해야함
-    public GameObject sniper;
-    public GameObject sniperEffect;
-    float attackcool2 = 5;
-
-    //패턴3 회전 부메랑
-    public GameObject bumerang;
-    float attackcool3 = 7;
-    int bucount = 10;
-
-    //패턴4 레이저 발사
-    public GameObject laser;
-    float attackcool4 = 3;
     private LineRenderer lineRenderer;
+
+    [Header("보스 패턴 쿨타임")]
+    [SerializeField] private float attackcool1 = 1f;
+    [SerializeField] private float attackcool2 = 3f;
+    [SerializeField] private float sniperzoom = 2f;
+    [SerializeField] private float attackcool3 = 5f;
+    [SerializeField] private float attackcool4 = 10f;
+
+    [Header("보스 패턴 참조")]
+    [Header("패턴 1 (기본 공격)")]
+    [SerializeField] private GameObject bullet;
+    [Header("패턴 2 (스나이퍼)")]
+    [SerializeField] private GameObject sniper;
+    [SerializeField] private GameObject sniperEffect;
+    [Header("패턴 3 (부메랑)")]
+    [SerializeField] private GameObject bumerang;
+    [SerializeField] private int bumerangCount = 10;
+    [Header("패턴 4 (레이저)")]
+    [SerializeField] private GameObject laser;
 
     //오디오
     public AudioClip[] sounds;  //0번 기본공격, 1번 스나이퍼, 2번 레이저
@@ -58,9 +58,8 @@ public class BossPattern_2 : MonoBehaviour
     void Attack1()
     {
         SoundMgr_2.instance.OneShot(sounds[0]);    //기본공격
-        GameObject go = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        GameObject go = Instantiate(bullet, transform.position, Quaternion.identity);
         BossBullet_2 bossbullet = go.GetComponent<BossBullet_2>();
-        bossbullet.SetDamage(Damage);
         Invoke("Attack1", attackcool1);
     }
 
@@ -69,8 +68,8 @@ public class BossPattern_2 : MonoBehaviour
         GameObject go = Instantiate(sniper, player.transform.position, Quaternion.identity);
         go.transform.parent = player.transform;
 
-        Destroy(go, 3);
-        Invoke("ShootSniper", 3);   //3초 후 발사
+        Destroy(go, sniperzoom);
+        Invoke("ShootSniper", sniperzoom);   //3초 후 발사
     }
 
     void ShootSniper()  //발사
@@ -87,15 +86,11 @@ public class BossPattern_2 : MonoBehaviour
         float radius = 5f; // 부메랑이 소환될 반지름 거리
         Vector3 center = transform.position; // 보스의 위치를 중심으로 설정
 
-        for (int i = 0; i < bucount; i++)
+        for (int i = 0; i < bumerangCount; i++)
         {
-            float angle = i * (360f / bucount);
-            float radian = angle * Mathf.Deg2Rad;
-            Vector3 spawnPosition = new Vector3(
-                center.x + radius * Mathf.Cos(radian),
-                center.y + radius * Mathf.Sin(radian),
-                center.z
-            );
+            float angle = i * (360f / bumerangCount);   //각각의 각도
+            float radian = angle * Mathf.Deg2Rad;   
+            Vector3 spawnPosition = transform.position + new Vector3(Mathf.Cos(radian) * radius, Mathf.Sin(radian) * radius, 0);
 
             GameObject go = Instantiate(bumerang, spawnPosition, Quaternion.identity);
             Bumerang_2 bumerangScript = go.GetComponent<Bumerang_2>();
