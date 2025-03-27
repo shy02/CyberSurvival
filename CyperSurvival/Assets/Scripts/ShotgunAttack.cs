@@ -11,7 +11,6 @@ public class ShotgunAttack : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        FireShotgun();
     }
     public void FireShotgun()
     {

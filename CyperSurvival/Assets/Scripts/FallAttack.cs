@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class FallAttack : MonoBehaviour
 {
-    public float riseHeight = 5f;  // 솟구치는 높이
-    public float riseSpeed = 10f;  // 상승 속도
-    public float fallSpeed = 15f;  // 하강 속도
-    public float shadowFollowDuration = 2f;  // 그림자 유도 시간
-    public float damageRadius = 1.5f;  // 충돌 감지 범위
-    public GameObject shadowPrefab;  // 그림자 오브젝트 프리팹
-    public int damageAmount = 3;  // 플레이어에게 줄 대미지
+    public float riseHeight = 5f;
+    public float riseSpeed = 10f;
+    public float fallSpeed = 15f;
+    public float shadowFollowDuration = 2f;
+    public float damageRadius = 1.5f;
+    public GameObject shadowPrefab;
+    public int damageAmount = 3;
 
-    private Vector3 originalPosition;  // 원래 위치
-    private Vector3 shadowTargetPosition;  // 그림자 위치 (하강 목표)
+    private Vector3 originalPosition;
+    private Vector3 shadowTargetPosition;
     private GameObject shadowObject;
     private bool isFalling = false;
 
@@ -20,6 +20,7 @@ public class FallAttack : MonoBehaviour
     {
         StartCoroutine(PerformFallAttack(shadowFollowDuration));
     }
+
     public void FallingAttack(float duration)
     {
         StartCoroutine(PerformFallAttack(duration));
@@ -30,7 +31,7 @@ public class FallAttack : MonoBehaviour
         // 1. 위로 솟구치기
         originalPosition = transform.position;
         Vector3 riseTarget = originalPosition + Vector3.up * riseHeight;
-        GetComponent<Collider2D>().enabled = false;  // 충돌 비활성화
+        GetComponent<Collider2D>().enabled = false;
         while (Vector3.Distance(transform.position, riseTarget) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, riseTarget, riseSpeed * Time.deltaTime);
@@ -51,7 +52,6 @@ public class FallAttack : MonoBehaviour
         if (shadowObject)
         {
             shadowTargetPosition = shadowObject.transform.position;
-            Destroy(shadowObject);  // 그림자 제거
         }
 
         isFalling = true;
@@ -61,10 +61,17 @@ public class FallAttack : MonoBehaviour
             yield return null;
         }
 
+        Destroy(shadowObject);
+
         // 5. 착지 후 충돌 활성화 및 대미지 처리
         GetComponent<Collider2D>().enabled = true;
         ApplyDamageAndKnockback();
 
+        CameraShake cameraShake = FindObjectOfType<CameraShake>();
+        if (cameraShake != null)
+        {
+            cameraShake.Shake(0.1f, 0.3f);
+        }
     }
 
     private IEnumerator FollowPlayer(GameObject shadow, float duration)
@@ -77,17 +84,16 @@ public class FallAttack : MonoBehaviour
 
         float maxAlpha = 0.7f;
 
-        while (timer < shadowFollowDuration)
+        while (timer < duration)
         {
             shadow.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
-            shadowColor.a = Mathf.Lerp(0f, maxAlpha, timer / shadowFollowDuration);
+            shadowColor.a = Mathf.Lerp(0f, maxAlpha, timer / duration);
             sr.color = shadowColor;
 
             timer += Time.deltaTime;
             yield return null;
         }
     }
-
 
     private void ApplyDamageAndKnockback()
     {

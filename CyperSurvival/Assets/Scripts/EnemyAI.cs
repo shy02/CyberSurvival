@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
     private bool isAttacking = false;   // 공격 중인지 확인
     private EnemyAttack enemyAttack;
+    private Rigidbody2D rb;
 
     public enum EnemyType { Melee, Ranged, Bike, Boss } // 몹 타입
     public EnemyType enemyType;
@@ -19,11 +20,12 @@ public class EnemyAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         enemyAttack = GetComponent<EnemyAttack>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        if (player == null) return;
+        if (player == null || rb.bodyType == RigidbodyType2D.Kinematic) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
 

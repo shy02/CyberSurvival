@@ -14557,10 +14557,16 @@ GameObject:
   m_Component:
   - component: {fileID: 710049733}
   - component: {fileID: 710049732}
+  - component: {fileID: 710049736}
+  - component: {fileID: 710049737}
   - component: {fileID: 710049731}
   - component: {fileID: 710049730}
-  - component: {fileID: 710049729}
+  - component: {fileID: 710049740}
+  - component: {fileID: 710049735}
   - component: {fileID: 710049734}
+  - component: {fileID: 710049729}
+  - component: {fileID: 710049739}
+  - component: {fileID: 710049738}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -14580,10 +14586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8be36b56a0eb6742ba2b1adad677eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  attackRange: 5
-  attackMaxRange: 7
-  attackInterval: 2
+  moveSpeed: 1.5
+  attackRange: 3
+  attackMaxRange: 16
+  attackInterval: 5
   enemyType: 3
 --- !u!114 &710049730
 MonoBehaviour:
@@ -14597,8 +14603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4321739e794433243a3c535ff1d16677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8067650518155624719, guid: 47af5c33899d7c242801a20dbbfffee9, type: 3}
-  fireDuration: 6
+  bulletPrefab: {fileID: 8067650518155624719, guid: 9aae54dc93b2a4442bbfae011d0104ce, type: 3}
+  fireDuration: 4
   fireRate: 0.1
 --- !u!114 &710049731
 MonoBehaviour:
@@ -14612,9 +14618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3d1772f2ed6f34da13cfe6a6b578a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8067650518155624719, guid: 47af5c33899d7c242801a20dbbfffee9, type: 3}
+  bulletPrefab: {fileID: 8067650518155624719, guid: 78ba4462984170e44946b366b0e66f5a, type: 3}
   numberOfBullets: 9
-  spreadAngle: 20
+  spreadAngle: 10
 --- !u!212 &710049732
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14698,6 +14704,128 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackEffect: {fileID: 8067650518155624719, guid: 47af5c33899d7c242801a20dbbfffee9, type: 3}
+--- !u!114 &710049735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a53c5061508b647b0800d380543699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  riseHeight: 20
+  riseSpeed: 30
+  fallSpeed: 30
+  shadowFollowDuration: 2
+  damageRadius: 2.21
+  shadowPrefab: {fileID: 2220430785408033098, guid: 9a47fb69c8782d0498f35b99263a3e17, type: 3}
+  damageAmount: 20
+--- !u!58 &710049736
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.49999997
+--- !u!50 &710049737
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &710049738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d853c2b70537f540a0ca4f868691447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 137
+--- !u!114 &710049739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c672bbd2cc2f8194caef32067ea84512, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RageHealth: 250
+--- !u!114 &710049740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710049728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0439b4748fe19d48bb063922bbe2c70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 19
+  dashDuration: 0.3
 --- !u!1 &746747001
 GameObject:
   m_ObjectHideFlags: 0
@@ -14761,7 +14889,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14800,7 +14928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2872764d19200f444a092d903e9b7f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hp: 10
+  Hp: 100000
 --- !u!50 &746747005
 Rigidbody2D:
   serializedVersion: 5
@@ -14912,7 +15040,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1033470957
 MonoBehaviour:
   m_ObjectHideFlags: 0
