@@ -5,39 +5,29 @@ public class BossPattern_2 : MonoBehaviour
 {
     GameObject player;
 
+    //보스 공격력
+    public int Damage = 10;
+
     //패턴1 기본 총알 발사
-    
+    public Transform shootPos;
+    public GameObject bullet;
+    float attackcool1 = 1;
 
 
     //패턴2 스나이퍼 타이밍에 맞춰서 구르기로 피해야함
-    
-
+    public GameObject sniper;
+    public GameObject sniperEffect;
+    float attackcool2 = 5;
 
     //패턴3 회전 부메랑
-    
-
+    public GameObject bumerang;
+    float attackcool3 = 7;
     int bucount = 10;
 
     //패턴4 레이저 발사
-    
-
+    public GameObject laser;
+    float attackcool4 = 3;
     private LineRenderer lineRenderer;
-
-    [Header("공격 발사 오브젝트")]
-    public GameObject fireBall;
-    public GameObject sniper;
-    public GameObject sniperEffect;
-    public GameObject bumerang;
-    public GameObject thunder;
-
-    [Header("공격 쿨타임")]
-    [SerializeField] private float attackcool1 = 1;
-    [SerializeField] private float attackcool2 = 1;
-    [SerializeField] private float attackcool3 = 1;
-    [SerializeField] private float attackcool4 = 1;
-
-    //보스 공격 애니메이션
-    Animator anim;
 
     //오디오
     public AudioClip[] sounds;  //0번 기본공격, 1번 스나이퍼, 2번 레이저
@@ -46,8 +36,6 @@ public class BossPattern_2 : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-
-        anim = GetComponent<Animator>();
 
         LineRendererSet();
 
@@ -59,26 +47,21 @@ public class BossPattern_2 : MonoBehaviour
 
     }
 
-    void AttackAnim()
-    {
-        anim.SetTrigger("Attack");
-    }
-
     void StartAttack()
     {
-        //Invoke("fireBall", attackcool1);
-        //Invoke("ZoomSniper", attackcool2);
-        //Invoke("Attack3", attackcool3);
-        Invoke("Thunder", attackcool4);
+        Invoke("Attack1", attackcool1);
+        Invoke("ZoomSniper", attackcool2);
+        Invoke("Attack3", attackcool3);
+        Invoke("Attack4", attackcool4);
     }
 
-    void FireBall()
+    void Attack1()
     {
         SoundMgr_2.instance.OneShot(sounds[0]);    //기본공격
-        GameObject go = Instantiate(fireBall, transform.position, Quaternion.identity);
-        FireBall_2 fireball = go.GetComponent<FireBall_2>();
-        AttackAnim();
-        Invoke("fireBall", attackcool1);
+        GameObject go = Instantiate(bullet, shootPos.position, Quaternion.identity);
+        BossBullet_2 bossbullet = go.GetComponent<BossBullet_2>();
+        bossbullet.SetDamage(Damage);
+        Invoke("Attack1", attackcool1);
     }
 
     void ZoomSniper()   //조즌
@@ -119,11 +102,11 @@ public class BossPattern_2 : MonoBehaviour
             bumerangScript.bossTransform = transform; // 보스의 Transform을 설정
             bumerangScript.SetInitialAngle(radian); // 초기 각도를 설정
         }
-        AttackAnim();
+
         Invoke("Attack3", attackcool3);
     }
 
-    void Thunder()
+    void Attack4()
     {
         StartCoroutine(ShowLaserWarning());
     }
@@ -167,14 +150,14 @@ public class BossPattern_2 : MonoBehaviour
         Vector3 dir = endPosition - startPosition;
 
         //오디오 스폰
-        SoundMgr_2.instance.OneShot(sounds[2]);    //Thunder
+        SoundMgr_2.instance.OneShot(sounds[2]);    //레이저
         //스폰
-        GameObject go = Instantiate(thunder, startPosition + dir.normalized, Quaternion.identity);
+        GameObject go = Instantiate(laser, startPosition + dir.normalized, Quaternion.identity);
         //발사위치 설정
-        go.GetComponent<Thunder_2>().SetDirection(endPosition, startPosition);
+        go.GetComponent<BossLazer_2>().SetDirection(endPosition, startPosition);
         Destroy(go, 0.3f);
 
-        Invoke("Thunder", attackcool4);
+        Invoke("Attack4", attackcool4);
     }
 
 

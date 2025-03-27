@@ -1,10 +1,8 @@
 using System.Data;
 using UnityEngine;
 
-public class FireBall_2 : MonoBehaviour
+public class BossBullet_2 : MonoBehaviour
 {
-    [SerializeField] private int damage;
-
     GameObject player;
     Vector3 moveDir = Vector3.zero;
     Vector3 rotation = Vector3.zero;
