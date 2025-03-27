@@ -8,6 +8,8 @@ public class ScenManager : MonoBehaviour
     int nowStage = 1; //0 = title
 
     public static ScenManager instance;
+    [SerializeField] Transform player;
+    [SerializeField] Vector3 Startpos;
 
     private void Awake()
     {
@@ -24,5 +26,6 @@ public class ScenManager : MonoBehaviour
     {
         nowStage++;
         SceneManager.LoadScene(SceneName[nowStage]);
+        player.position = Startpos;
     }
 }
