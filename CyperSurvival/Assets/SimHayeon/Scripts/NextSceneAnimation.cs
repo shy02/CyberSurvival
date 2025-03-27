@@ -9,6 +9,7 @@ public class NextSceneAnimation : MonoBehaviour
 
     public void StartAnime()
     {
+        transform.GetComponent<AudioSource>().Play();
         transform.GetChild(0).GetComponent<Animator>().SetBool("start", true);
     }
 

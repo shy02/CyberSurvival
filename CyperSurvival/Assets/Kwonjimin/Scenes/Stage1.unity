@@ -2803,7 +2803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4863194161914414082, guid: d2ac8ff8285dc5840b51cc65092e6a8a, type: 3}
   pos: {fileID: 1076748947}
-  fireRate: 2
+  fireRate: 1.5
 --- !u!61 &542953090
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3512,7 +3512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4863194161914414082, guid: d2ac8ff8285dc5840b51cc65092e6a8a, type: 3}
   pos: {fileID: 1760939993}
-  fireRate: 2
+  fireRate: 1.5
 --- !u!61 &877642147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10967,7 +10967,6 @@ MonoBehaviour:
   - {fileID: 1282477753}
   - {fileID: 328142497}
   bossSpawnSound: {fileID: 8300000, guid: 5203dcad1496d744199e8c306ed84ac0, type: 3}
-  bossUI: {fileID: 8571961889499059977, guid: cd17de983bbb4ed4eb4ecd2ad4b1fcdb, type: 3}
 --- !u!4 &1607691300
 Transform:
   m_ObjectHideFlags: 0

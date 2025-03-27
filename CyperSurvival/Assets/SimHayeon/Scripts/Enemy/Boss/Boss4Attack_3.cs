@@ -286,7 +286,7 @@ public class Boss4Attack_3 : MonoBehaviour
     public void StopAllPattern()
     {
         StopAllCoroutines();
-        if (!GameManager.Instance.nowGameOver || !GameManager.Instance.nowNextStage)
+        if (!GameManager.Instance.nowGameOver)
         {
             Instantiate(DownEffect, transform.position, Quaternion.identity);
             Stage3SoundManager.instace.electiric();
