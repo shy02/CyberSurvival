@@ -286,8 +286,11 @@ public class Boss4Attack_3 : MonoBehaviour
     public void StopAllPattern()
     {
         StopAllCoroutines();
-        Instantiate(DownEffect, transform.position, Quaternion.identity);
-        Stage3SoundManager.instace.electiric();
+        if (!GameManager.Instance.nowGameOver || !GameManager.Instance.nowNextStage)
+        {
+            Instantiate(DownEffect, transform.position, Quaternion.identity);
+            Stage3SoundManager.instace.electiric();
+        }
         RushArea.SetActive(false);
         gameObject.GetComponent<Animator>().SetBool("Rush", false);
         RushEffect.SetActive(false);

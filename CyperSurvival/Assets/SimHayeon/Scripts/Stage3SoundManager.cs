@@ -14,6 +14,19 @@ public class Stage3SoundManager : MonoBehaviour
 
     [SerializeField] List<GameObject> sounds = new List<GameObject>();
 
+    private void Update()
+    {
+        if (GameManager.Instance.nowGameOver || GameManager.Instance.nowNextStage)
+        {
+            transform.GetChild(0).GetComponent<AudioSource>().Stop();
+            sounds[0].GetComponent<AudioSource>().Stop();
+            sounds[6].GetComponent<AudioSource>().Stop();
+            while(transform.childCount <= 0)
+            {
+                Destroy(transform.GetChild(0).gameObject);
+            }
+        }
+    }
     //걸음관련
     public void PlayWalkSound() { sounds[0].GetComponent<AudioSource>().Play(); }
     public void StopWalkSound() { sounds[0].GetComponent<AudioSource>().Stop(); }

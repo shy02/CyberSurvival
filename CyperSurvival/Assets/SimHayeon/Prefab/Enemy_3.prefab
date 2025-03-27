@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8616137347450500818}
   - component: {fileID: 4071308055035306407}
   - component: {fileID: 1565771191765839129}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 2463903419594639056}
   - component: {fileID: 4907495450112885304}
   - component: {fileID: 5662208261969953518}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 725644311990314129}
   - component: {fileID: -430915710184879556}
   - component: {fileID: 660936091782042656}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy_3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 7925403922410217123}
   - component: {fileID: 6579826818935045670}
   - component: {fileID: 7657800729969244253}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}

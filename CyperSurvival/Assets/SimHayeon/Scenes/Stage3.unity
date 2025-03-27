@@ -53788,6 +53788,14 @@ PrefabInstance:
       propertyPath: BossHP
       value: 
       objectReference: {fileID: 713586896}
+    - target: {fileID: 4258156035021634068, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
+      propertyPath: perfect
+      value: Excellent!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258156035021634068, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
+      propertyPath: NextSceneUI
+      value: 
+      objectReference: {fileID: 116443141034323046, guid: e638a0437833a8542a7864b3e2686185, type: 3}
     - target: {fileID: 4936707509843217192, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
       propertyPath: bullet
       value: 
