@@ -6,8 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/KimYoungHyun/Scenes/PlayerScene.unity
+    guid: 01dd0c67258e02c42b971f73b4a15c4f
+  - enabled: 1
+    path: Assets/Kwonjimin/Scenes/Stage1.unity
+    guid: 1decb91f59545e547a1278866060e904
+  - enabled: 1
+    path: Assets/SimHayeon/Scenes/TitleScene.unity
+    guid: bb6c57ab5ba16e643a9cca4312da9af3
+  - enabled: 1
+    path: Assets/Stage2_jyh/Scenes/Stage2.unity
+    guid: c69ad97237ac2f441aaaa7d0c83e91b4
+  - enabled: 1
+    path: Assets/SimHayeon/Scenes/Stage3.unity
+    guid: 4718de3068fc1bd4391a5d9460076a7f
+  - enabled: 1
+    path: Assets/SimHayeon/Scenes/Stage 4.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/KimYoungHyun/Scenes/GameStartScene.unity
+    guid: f4166cde511ddc4429133cf9ba3c20c6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

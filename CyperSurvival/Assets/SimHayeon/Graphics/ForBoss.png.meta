@@ -1,0 +1,4194 @@
+fileFormatVersion: 2
+guid: b2fe6c55c8a6e7c49823e59b75b2d856
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8498834678840234408
+    second: All_Fire_Bullet_Pixel_16x16_0
+  - first:
+      213: 4531520220380605973
+    second: All_Fire_Bullet_Pixel_16x16_1
+  - first:
+      213: 6827536176453463348
+    second: All_Fire_Bullet_Pixel_16x16_2
+  - first:
+      213: -2294469935059465670
+    second: All_Fire_Bullet_Pixel_16x16_3
+  - first:
+      213: 5107955289525269410
+    second: All_Fire_Bullet_Pixel_16x16_4
+  - first:
+      213: -6265940188444593843
+    second: All_Fire_Bullet_Pixel_16x16_5
+  - first:
+      213: -2352705742078901275
+    second: All_Fire_Bullet_Pixel_16x16_6
+  - first:
+      213: -2677917479865065245
+    second: All_Fire_Bullet_Pixel_16x16_7
+  - first:
+      213: 7594177924539236386
+    second: All_Fire_Bullet_Pixel_16x16_8
+  - first:
+      213: -7955937412573973826
+    second: All_Fire_Bullet_Pixel_16x16_9
+  - first:
+      213: 551329453910566566
+    second: All_Fire_Bullet_Pixel_16x16_10
+  - first:
+      213: 8905259141293818742
+    second: All_Fire_Bullet_Pixel_16x16_11
+  - first:
+      213: -6915689132380291693
+    second: All_Fire_Bullet_Pixel_16x16_12
+  - first:
+      213: -2382753107538773931
+    second: All_Fire_Bullet_Pixel_16x16_13
+  - first:
+      213: -2538533088345170897
+    second: All_Fire_Bullet_Pixel_16x16_14
+  - first:
+      213: -7075816244877370056
+    second: All_Fire_Bullet_Pixel_16x16_15
+  - first:
+      213: 1269855917760545907
+    second: All_Fire_Bullet_Pixel_16x16_16
+  - first:
+      213: -241762737687467352
+    second: All_Fire_Bullet_Pixel_16x16_17
+  - first:
+      213: 8203552579289556354
+    second: All_Fire_Bullet_Pixel_16x16_18
+  - first:
+      213: 6876143568938509417
+    second: All_Fire_Bullet_Pixel_16x16_19
+  - first:
+      213: -7283693823935693119
+    second: All_Fire_Bullet_Pixel_16x16_20
+  - first:
+      213: -4413026254869814276
+    second: All_Fire_Bullet_Pixel_16x16_21
+  - first:
+      213: -7506240092323590529
+    second: All_Fire_Bullet_Pixel_16x16_22
+  - first:
+      213: -6263551433005435037
+    second: All_Fire_Bullet_Pixel_16x16_23
+  - first:
+      213: -5873836111955825672
+    second: All_Fire_Bullet_Pixel_16x16_24
+  - first:
+      213: -5647238394880618061
+    second: All_Fire_Bullet_Pixel_16x16_25
+  - first:
+      213: 3415418506352872695
+    second: All_Fire_Bullet_Pixel_16x16_26
+  - first:
+      213: -896006717163298277
+    second: All_Fire_Bullet_Pixel_16x16_27
+  - first:
+      213: -2542711810399125239
+    second: All_Fire_Bullet_Pixel_16x16_28
+  - first:
+      213: -5290698675731817167
+    second: All_Fire_Bullet_Pixel_16x16_29
+  - first:
+      213: 5143909290475658752
+    second: All_Fire_Bullet_Pixel_16x16_30
+  - first:
+      213: -2869674602438185269
+    second: All_Fire_Bullet_Pixel_16x16_31
+  - first:
+      213: 2158035185391984445
+    second: All_Fire_Bullet_Pixel_16x16_32
+  - first:
+      213: -1854957218292279766
+    second: All_Fire_Bullet_Pixel_16x16_33
+  - first:
+      213: 5022546032188493514
+    second: All_Fire_Bullet_Pixel_16x16_34
+  - first:
+      213: 577112849211652205
+    second: All_Fire_Bullet_Pixel_16x16_35
+  - first:
+      213: -1330354432517073150
+    second: All_Fire_Bullet_Pixel_16x16_36
+  - first:
+      213: -3302539432334079641
+    second: All_Fire_Bullet_Pixel_16x16_37
+  - first:
+      213: -475045212002460361
+    second: All_Fire_Bullet_Pixel_16x16_38
+  - first:
+      213: -1353930842504328020
+    second: All_Fire_Bullet_Pixel_16x16_39
+  - first:
+      213: -3030620071703472835
+    second: All_Fire_Bullet_Pixel_16x16_40
+  - first:
+      213: 6114220903548764819
+    second: All_Fire_Bullet_Pixel_16x16_41
+  - first:
+      213: -3356592189902544753
+    second: All_Fire_Bullet_Pixel_16x16_42
+  - first:
+      213: -1364172249507401474
+    second: All_Fire_Bullet_Pixel_16x16_43
+  - first:
+      213: -5921367544282448704
+    second: All_Fire_Bullet_Pixel_16x16_44
+  - first:
+      213: 2405823247696271281
+    second: All_Fire_Bullet_Pixel_16x16_45
+  - first:
+      213: 6626872914165354635
+    second: All_Fire_Bullet_Pixel_16x16_46
+  - first:
+      213: 2523107955566501285
+    second: All_Fire_Bullet_Pixel_16x16_47
+  - first:
+      213: 8932017765009833675
+    second: All_Fire_Bullet_Pixel_16x16_48
+  - first:
+      213: 7824437121532359311
+    second: All_Fire_Bullet_Pixel_16x16_49
+  - first:
+      213: -7579335290482219661
+    second: All_Fire_Bullet_Pixel_16x16_50
+  - first:
+      213: 7183701166023393377
+    second: All_Fire_Bullet_Pixel_16x16_51
+  - first:
+      213: -8962924444451606327
+    second: All_Fire_Bullet_Pixel_16x16_52
+  - first:
+      213: 9072401825151262578
+    second: All_Fire_Bullet_Pixel_16x16_53
+  - first:
+      213: -5173766173237339400
+    second: All_Fire_Bullet_Pixel_16x16_54
+  - first:
+      213: 9010093232298781415
+    second: All_Fire_Bullet_Pixel_16x16_55
+  - first:
+      213: 5264267682637413318
+    second: All_Fire_Bullet_Pixel_16x16_56
+  - first:
+      213: 7835223375729790073
+    second: All_Fire_Bullet_Pixel_16x16_57
+  - first:
+      213: 2592258522901077099
+    second: All_Fire_Bullet_Pixel_16x16_58
+  - first:
+      213: -6838380179497864869
+    second: All_Fire_Bullet_Pixel_16x16_59
+  - first:
+      213: 7576081425985055482
+    second: All_Fire_Bullet_Pixel_16x16_60
+  - first:
+      213: -5435058331444253740
+    second: All_Fire_Bullet_Pixel_16x16_61
+  - first:
+      213: -1160437419388215662
+    second: All_Fire_Bullet_Pixel_16x16_62
+  - first:
+      213: 2125507840339134190
+    second: All_Fire_Bullet_Pixel_16x16_63
+  - first:
+      213: 4859964101332424821
+    second: All_Fire_Bullet_Pixel_16x16_64
+  - first:
+      213: 1688355219738289728
+    second: All_Fire_Bullet_Pixel_16x16_65
+  - first:
+      213: 5453786990186888239
+    second: All_Fire_Bullet_Pixel_16x16_66
+  - first:
+      213: -742581815241168195
+    second: All_Fire_Bullet_Pixel_16x16_67
+  - first:
+      213: -5595035227352388712
+    second: All_Fire_Bullet_Pixel_16x16_68
+  - first:
+      213: -8037807614316808847
+    second: All_Fire_Bullet_Pixel_16x16_69
+  - first:
+      213: -5773749331223679437
+    second: All_Fire_Bullet_Pixel_16x16_70
+  - first:
+      213: -28736273280738773
+    second: All_Fire_Bullet_Pixel_16x16_71
+  - first:
+      213: -5169966082830426636
+    second: All_Fire_Bullet_Pixel_16x16_72
+  - first:
+      213: 3432062046987880990
+    second: All_Fire_Bullet_Pixel_16x16_73
+  - first:
+      213: -7876818665736872052
+    second: All_Fire_Bullet_Pixel_16x16_74
+  - first:
+      213: 5048227182081257594
+    second: All_Fire_Bullet_Pixel_16x16_75
+  - first:
+      213: 8801738983352846825
+    second: All_Fire_Bullet_Pixel_16x16_76
+  - first:
+      213: 4992721668905699031
+    second: All_Fire_Bullet_Pixel_16x16_77
+  - first:
+      213: 7404967838779147008
+    second: All_Fire_Bullet_Pixel_16x16_78
+  - first:
+      213: -1045764560643393138
+    second: All_Fire_Bullet_Pixel_16x16_79
+  - first:
+      213: -3452114855137254151
+    second: All_Fire_Bullet_Pixel_16x16_80
+  - first:
+      213: 6844104733786733274
+    second: All_Fire_Bullet_Pixel_16x16_81
+  - first:
+      213: -7415370184550275155
+    second: All_Fire_Bullet_Pixel_16x16_82
+  - first:
+      213: 8029702116965651039
+    second: All_Fire_Bullet_Pixel_16x16_83
+  - first:
+      213: 8964318151402063192
+    second: All_Fire_Bullet_Pixel_16x16_84
+  - first:
+      213: 827992424795542833
+    second: All_Fire_Bullet_Pixel_16x16_85
+  - first:
+      213: -3543445899458007900
+    second: All_Fire_Bullet_Pixel_16x16_86
+  - first:
+      213: -6912250791274372410
+    second: All_Fire_Bullet_Pixel_16x16_87
+  - first:
+      213: -3955375234101300636
+    second: All_Fire_Bullet_Pixel_16x16_88
+  - first:
+      213: -3488815307419795712
+    second: All_Fire_Bullet_Pixel_16x16_89
+  - first:
+      213: 484331995307068747
+    second: All_Fire_Bullet_Pixel_16x16_90
+  - first:
+      213: -4134033845311223909
+    second: All_Fire_Bullet_Pixel_16x16_91
+  - first:
+      213: 5235486228209998460
+    second: All_Fire_Bullet_Pixel_16x16_92
+  - first:
+      213: -8092823366141395319
+    second: All_Fire_Bullet_Pixel_16x16_93
+  - first:
+      213: -2465659585809975116
+    second: All_Fire_Bullet_Pixel_16x16_94
+  - first:
+      213: -6615578954000641674
+    second: All_Fire_Bullet_Pixel_16x16_95
+  - first:
+      213: 4902230418453573340
+    second: All_Fire_Bullet_Pixel_16x16_96
+  - first:
+      213: 965044123282580655
+    second: All_Fire_Bullet_Pixel_16x16_97
+  - first:
+      213: -2339974977123915972
+    second: All_Fire_Bullet_Pixel_16x16_98
+  - first:
+      213: -932112555905505512
+    second: All_Fire_Bullet_Pixel_16x16_99
+  - first:
+      213: -3474299866832124426
+    second: All_Fire_Bullet_Pixel_16x16_100
+  - first:
+      213: -2134215902779369997
+    second: All_Fire_Bullet_Pixel_16x16_101
+  - first:
+      213: 3242771026005189098
+    second: All_Fire_Bullet_Pixel_16x16_102
+  - first:
+      213: 6839799180445454676
+    second: All_Fire_Bullet_Pixel_16x16_103
+  - first:
+      213: -5093787388599997024
+    second: All_Fire_Bullet_Pixel_16x16_104
+  - first:
+      213: 82507286162269701
+    second: All_Fire_Bullet_Pixel_16x16_105
+  - first:
+      213: -836897657468928857
+    second: All_Fire_Bullet_Pixel_16x16_106
+  - first:
+      213: -3496909554168069347
+    second: All_Fire_Bullet_Pixel_16x16_107
+  - first:
+      213: -5954439203700732224
+    second: All_Fire_Bullet_Pixel_16x16_108
+  - first:
+      213: -1693793621555371832
+    second: All_Fire_Bullet_Pixel_16x16_109
+  - first:
+      213: -6023370365672604256
+    second: All_Fire_Bullet_Pixel_16x16_110
+  - first:
+      213: -6869495036755129765
+    second: All_Fire_Bullet_Pixel_16x16_111
+  - first:
+      213: -8549336202611215459
+    second: All_Fire_Bullet_Pixel_16x16_112
+  - first:
+      213: -5579633672865220595
+    second: All_Fire_Bullet_Pixel_16x16_113
+  - first:
+      213: -666725341247085124
+    second: All_Fire_Bullet_Pixel_16x16_114
+  - first:
+      213: -8955753957362320454
+    second: All_Fire_Bullet_Pixel_16x16_115
+  - first:
+      213: -5680733131903779764
+    second: All_Fire_Bullet_Pixel_16x16_116
+  - first:
+      213: -1107655176972698289
+    second: All_Fire_Bullet_Pixel_16x16_117
+  - first:
+      213: 5888531543508697550
+    second: All_Fire_Bullet_Pixel_16x16_118
+  - first:
+      213: 7452649369150262819
+    second: All_Fire_Bullet_Pixel_16x16_119
+  - first:
+      213: -5083799167857173004
+    second: All_Fire_Bullet_Pixel_16x16_120
+  - first:
+      213: 7239833362474100550
+    second: All_Fire_Bullet_Pixel_16x16_121
+  - first:
+      213: 2116909417395378883
+    second: All_Fire_Bullet_Pixel_16x16_122
+  - first:
+      213: -6414232955779897792
+    second: All_Fire_Bullet_Pixel_16x16_123
+  - first:
+      213: 3371718171827397904
+    second: All_Fire_Bullet_Pixel_16x16_124
+  - first:
+      213: 5414014103904108189
+    second: All_Fire_Bullet_Pixel_16x16_125
+  - first:
+      213: 5786269031050291226
+    second: All_Fire_Bullet_Pixel_16x16_126
+  - first:
+      213: 2973517276686495503
+    second: All_Fire_Bullet_Pixel_16x16_127
+  - first:
+      213: -7074526854245127352
+    second: All_Fire_Bullet_Pixel_16x16_128
+  - first:
+      213: 3398180499984997852
+    second: All_Fire_Bullet_Pixel_16x16_129
+  - first:
+      213: -8152084306567704341
+    second: All_Fire_Bullet_Pixel_16x16_130
+  - first:
+      213: 5059189626563146784
+    second: All_Fire_Bullet_Pixel_16x16_131
+  - first:
+      213: -4664246726739864164
+    second: All_Fire_Bullet_Pixel_16x16_132
+  - first:
+      213: 1799031575094864534
+    second: All_Fire_Bullet_Pixel_16x16_133
+  - first:
+      213: -7836313766861272403
+    second: All_Fire_Bullet_Pixel_16x16_134
+  - first:
+      213: 8242871602196230367
+    second: All_Fire_Bullet_Pixel_16x16_135
+  - first:
+      213: -6690918292830571757
+    second: All_Fire_Bullet_Pixel_16x16_136
+  - first:
+      213: -5052329669767196334
+    second: All_Fire_Bullet_Pixel_16x16_137
+  - first:
+      213: 7108221731570832128
+    second: All_Fire_Bullet_Pixel_16x16_138
+  - first:
+      213: 7619886116393862457
+    second: All_Fire_Bullet_Pixel_16x16_139
+  - first:
+      213: 8741909550847602493
+    second: All_Fire_Bullet_Pixel_16x16_140
+  - first:
+      213: 1571781703325112229
+    second: All_Fire_Bullet_Pixel_16x16_141
+  - first:
+      213: -5350279499649101270
+    second: All_Fire_Bullet_Pixel_16x16_142
+  - first:
+      213: 3347574178011152313
+    second: All_Fire_Bullet_Pixel_16x16_143
+  - first:
+      213: 1981312771628465124
+    second: All_Fire_Bullet_Pixel_16x16_144
+  - first:
+      213: -2212507522319332620
+    second: All_Fire_Bullet_Pixel_16x16_145
+  - first:
+      213: 6352461253788913326
+    second: All_Fire_Bullet_Pixel_16x16_146
+  - first:
+      213: 7611287361553171930
+    second: All_Fire_Bullet_Pixel_16x16_147
+  - first:
+      213: -7863063069376739285
+    second: All_Fire_Bullet_Pixel_16x16_148
+  - first:
+      213: 7858455016925663634
+    second: All_Fire_Bullet_Pixel_16x16_149
+  - first:
+      213: -8518594703946975664
+    second: All_Fire_Bullet_Pixel_16x16_150
+  - first:
+      213: 7869411437330166992
+    second: All_Fire_Bullet_Pixel_16x16_151
+  - first:
+      213: 6351478254998600689
+    second: All_Fire_Bullet_Pixel_16x16_152
+  - first:
+      213: -3457391660482157163
+    second: All_Fire_Bullet_Pixel_16x16_153
+  - first:
+      213: -2167252083708253399
+    second: All_Fire_Bullet_Pixel_16x16_154
+  - first:
+      213: 6295584477739214758
+    second: All_Fire_Bullet_Pixel_16x16_155
+  - first:
+      213: 4182717112282047577
+    second: All_Fire_Bullet_Pixel_16x16_156
+  - first:
+      213: -7863108226008951895
+    second: All_Fire_Bullet_Pixel_16x16_157
+  - first:
+      213: -3633760953871053892
+    second: All_Fire_Bullet_Pixel_16x16_158
+  - first:
+      213: -5253903097930124580
+    second: All_Fire_Bullet_Pixel_16x16_159
+  - first:
+      213: 4668036991632615128
+    second: All_Fire_Bullet_Pixel_16x16_160
+  - first:
+      213: 7819003545558773172
+    second: All_Fire_Bullet_Pixel_16x16_161
+  - first:
+      213: -438929656981596424
+    second: All_Fire_Bullet_Pixel_16x16_162
+  - first:
+      213: 8619736511857806595
+    second: All_Fire_Bullet_Pixel_16x16_163
+  - first:
+      213: 6719954760270468829
+    second: All_Fire_Bullet_Pixel_16x16_164
+  - first:
+      213: 1676189282276683515
+    second: All_Fire_Bullet_Pixel_16x16_165
+  - first:
+      213: -713140719929214061
+    second: All_Fire_Bullet_Pixel_16x16_166
+  - first:
+      213: -5938636880201003198
+    second: All_Fire_Bullet_Pixel_16x16_167
+  - first:
+      213: -7341996403903143202
+    second: All_Fire_Bullet_Pixel_16x16_168
+  - first:
+      213: -6603219855885888772
+    second: All_Fire_Bullet_Pixel_16x16_169
+  - first:
+      213: 9169846693984037500
+    second: All_Fire_Bullet_Pixel_16x16_170
+  - first:
+      213: 4683812419650032100
+    second: All_Fire_Bullet_Pixel_16x16_171
+  - first:
+      213: 7581158047816036828
+    second: All_Fire_Bullet_Pixel_16x16_172
+  - first:
+      213: 6685722334531635773
+    second: All_Fire_Bullet_Pixel_16x16_173
+  - first:
+      213: 1567919387487692063
+    second: All_Fire_Bullet_Pixel_16x16_174
+  - first:
+      213: 4134686282375572882
+    second: All_Fire_Bullet_Pixel_16x16_175
+  - first:
+      213: 5586411481478546814
+    second: All_Fire_Bullet_Pixel_16x16_176
+  - first:
+      213: -3018971115645838059
+    second: All_Fire_Bullet_Pixel_16x16_177
+  - first:
+      213: 1143575644823519478
+    second: All_Fire_Bullet_Pixel_16x16_178
+  - first:
+      213: 6427433502385089332
+    second: All_Fire_Bullet_Pixel_16x16_179
+  - first:
+      213: 1008427807255197313
+    second: All_Fire_Bullet_Pixel_16x16_180
+  - first:
+      213: 7206995255763832864
+    second: All_Fire_Bullet_Pixel_16x16_181
+  - first:
+      213: -1436657496281353923
+    second: All_Fire_Bullet_Pixel_16x16_182
+  - first:
+      213: -2344074307019995700
+    second: All_Fire_Bullet_Pixel_16x16_183
+  - first:
+      213: 4977255094578539359
+    second: All_Fire_Bullet_Pixel_16x16_184
+  - first:
+      213: -6583234416777645269
+    second: All_Fire_Bullet_Pixel_16x16_185
+  - first:
+      213: 8587512879370450189
+    second: All_Fire_Bullet_Pixel_16x16_186
+  - first:
+      213: -3247004124519338819
+    second: All_Fire_Bullet_Pixel_16x16_187
+  - first:
+      213: -5570420591379650964
+    second: All_Fire_Bullet_Pixel_16x16_188
+  - first:
+      213: -9184716655401097653
+    second: All_Fire_Bullet_Pixel_16x16_189
+  - first:
+      213: -5791644380149113096
+    second: All_Fire_Bullet_Pixel_16x16_190
+  - first:
+      213: 1725781193688308959
+    second: All_Fire_Bullet_Pixel_16x16_191
+  - first:
+      213: -1298627429811306696
+    second: All_Fire_Bullet_Pixel_16x16_192
+  - first:
+      213: -5937214198322728453
+    second: All_Fire_Bullet_Pixel_16x16_193
+  - first:
+      213: 8128443035159401685
+    second: All_Fire_Bullet_Pixel_16x16_194
+  - first:
+      213: 7467787643845279499
+    second: All_Fire_Bullet_Pixel_16x16_195
+  - first:
+      213: 8707759574553479849
+    second: All_Fire_Bullet_Pixel_16x16_196
+  - first:
+      213: 6623435016224453551
+    second: All_Fire_Bullet_Pixel_16x16_197
+  - first:
+      213: -2800015230619294031
+    second: All_Fire_Bullet_Pixel_16x16_198
+  - first:
+      213: 2113330768662177961
+    second: All_Fire_Bullet_Pixel_16x16_199
+  - first:
+      213: 5143055646470809226
+    second: All_Fire_Bullet_Pixel_16x16_200
+  - first:
+      213: 5973652635180870439
+    second: All_Fire_Bullet_Pixel_16x16_201
+  - first:
+      213: -8164138266252636508
+    second: All_Fire_Bullet_Pixel_16x16_202
+  - first:
+      213: -6106490170398440205
+    second: All_Fire_Bullet_Pixel_16x16_203
+  - first:
+      213: -5468255721426122743
+    second: All_Fire_Bullet_Pixel_16x16_204
+  - first:
+      213: 7208809592387782295
+    second: All_Fire_Bullet_Pixel_16x16_205
+  - first:
+      213: 3530648610862908739
+    second: All_Fire_Bullet_Pixel_16x16_206
+  - first:
+      213: 3090452998556371642
+    second: All_Fire_Bullet_Pixel_16x16_207
+  - first:
+      213: -6753096973675269434
+    second: All_Fire_Bullet_Pixel_16x16_208
+  - first:
+      213: -8050407140296430288
+    second: All_Fire_Bullet_Pixel_16x16_209
+  - first:
+      213: -6702147687688912070
+    second: All_Fire_Bullet_Pixel_16x16_210
+  - first:
+      213: -2842823043539721494
+    second: All_Fire_Bullet_Pixel_16x16_211
+  - first:
+      213: -6137636776313901208
+    second: All_Fire_Bullet_Pixel_16x16_212
+  - first:
+      213: -2208401035446374530
+    second: All_Fire_Bullet_Pixel_16x16_213
+  - first:
+      213: -3472105966047003954
+    second: All_Fire_Bullet_Pixel_16x16_214
+  - first:
+      213: -8808192870331387824
+    second: All_Fire_Bullet_Pixel_16x16_215
+  - first:
+      213: -5744757667135019518
+    second: All_Fire_Bullet_Pixel_16x16_216
+  - first:
+      213: -3110536512305688746
+    second: All_Fire_Bullet_Pixel_16x16_217
+  - first:
+      213: -7561373782001354149
+    second: All_Fire_Bullet_Pixel_16x16_218
+  - first:
+      213: 4103767443685720496
+    second: All_Fire_Bullet_Pixel_16x16_219
+  - first:
+      213: -617616023599718146
+    second: All_Fire_Bullet_Pixel_16x16_220
+  - first:
+      213: -5681368085791812301
+    second: All_Fire_Bullet_Pixel_16x16_221
+  - first:
+      213: 8512975940733619423
+    second: All_Fire_Bullet_Pixel_16x16_222
+  - first:
+      213: 7797354265823871363
+    second: All_Fire_Bullet_Pixel_16x16_223
+  - first:
+      213: -3177829732603706781
+    second: All_Fire_Bullet_Pixel_16x16_224
+  - first:
+      213: -2426866708776075329
+    second: All_Fire_Bullet_Pixel_16x16_225
+  - first:
+      213: -2574284357920768603
+    second: All_Fire_Bullet_Pixel_16x16_226
+  - first:
+      213: -4337485791410446216
+    second: All_Fire_Bullet_Pixel_16x16_227
+  - first:
+      213: -5956938252856957581
+    second: All_Fire_Bullet_Pixel_16x16_228
+  - first:
+      213: -5927653948188780088
+    second: All_Fire_Bullet_Pixel_16x16_229
+  - first:
+      213: -6959902353435940329
+    second: All_Fire_Bullet_Pixel_16x16_230
+  - first:
+      213: -6193874243426442695
+    second: All_Fire_Bullet_Pixel_16x16_231
+  - first:
+      213: 8478947062200175920
+    second: All_Fire_Bullet_Pixel_16x16_232
+  - first:
+      213: -1388252221814992612
+    second: All_Fire_Bullet_Pixel_16x16_233
+  - first:
+      213: 7995664915873652040
+    second: All_Fire_Bullet_Pixel_16x16_234
+  - first:
+      213: -8292125288938287652
+    second: All_Fire_Bullet_Pixel_16x16_235
+  - first:
+      213: -6804911379472599158
+    second: All_Fire_Bullet_Pixel_16x16_236
+  - first:
+      213: 4515872599124884379
+    second: All_Fire_Bullet_Pixel_16x16_237
+  - first:
+      213: -1984326875929551153
+    second: All_Fire_Bullet_Pixel_16x16_238
+  - first:
+      213: -437037247771648950
+    second: All_Fire_Bullet_Pixel_16x16_239
+  - first:
+      213: 190844601425087248
+    second: All_Fire_Bullet_Pixel_16x16_240
+  - first:
+      213: 6163575342635837599
+    second: All_Fire_Bullet_Pixel_16x16_241
+  - first:
+      213: 3124620290374994242
+    second: All_Fire_Bullet_Pixel_16x16_242
+  - first:
+      213: -3906288303278175560
+    second: All_Fire_Bullet_Pixel_16x16_243
+  - first:
+      213: 9051810501344085647
+    second: All_Fire_Bullet_Pixel_16x16_244
+  - first:
+      213: 1007046279210772833
+    second: All_Fire_Bullet_Pixel_16x16_245
+  - first:
+      213: -1898815755045084135
+    second: All_Fire_Bullet_Pixel_16x16_246
+  - first:
+      213: 2533006789521856051
+    second: All_Fire_Bullet_Pixel_16x16_247
+  - first:
+      213: -8353734581468410122
+    second: All_Fire_Bullet_Pixel_16x16_248
+  - first:
+      213: 1680673373051587387
+    second: All_Fire_Bullet_Pixel_16x16_249
+  - first:
+      213: 3768374410667284699
+    second: All_Fire_Bullet_Pixel_16x16_250
+  - first:
+      213: 1956600513384870598
+    second: All_Fire_Bullet_Pixel_16x16_251
+  - first:
+      213: 708178642768865088
+    second: All_Fire_Bullet_Pixel_16x16_252
+  - first:
+      213: 6462690803537799145
+    second: All_Fire_Bullet_Pixel_16x16_253
+  - first:
+      213: -8220365375542487885
+    second: All_Fire_Bullet_Pixel_16x16_254
+  - first:
+      213: -5092954151297820571
+    second: All_Fire_Bullet_Pixel_16x16_255
+  - first:
+      213: -1786140477378623997
+    second: All_Fire_Bullet_Pixel_16x16_256
+  - first:
+      213: 2345715084963026319
+    second: All_Fire_Bullet_Pixel_16x16_257
+  - first:
+      213: 3629272965340626977
+    second: All_Fire_Bullet_Pixel_16x16_258
+  - first:
+      213: -1193775824457348318
+    second: All_Fire_Bullet_Pixel_16x16_259
+  - first:
+      213: 6260265108641855671
+    second: All_Fire_Bullet_Pixel_16x16_260
+  - first:
+      213: 4177617736156408035
+    second: All_Fire_Bullet_Pixel_16x16_261
+  - first:
+      213: -6188170195185818679
+    second: All_Fire_Bullet_Pixel_16x16_262
+  - first:
+      213: -7403520351294005308
+    second: All_Fire_Bullet_Pixel_16x16_263
+  - first:
+      213: -1075332082527713139
+    second: All_Fire_Bullet_Pixel_16x16_264
+  - first:
+      213: 2331584431352076949
+    second: All_Fire_Bullet_Pixel_16x16_265
+  - first:
+      213: -2715548995362396781
+    second: All_Fire_Bullet_Pixel_16x16_266
+  - first:
+      213: 8828740328056625389
+    second: All_Fire_Bullet_Pixel_16x16_267
+  - first:
+      213: 4913573773357490117
+    second: All_Fire_Bullet_Pixel_16x16_268
+  - first:
+      213: -1105914038784658901
+    second: All_Fire_Bullet_Pixel_16x16_269
+  - first:
+      213: 2480205379496763684
+    second: All_Fire_Bullet_Pixel_16x16_270
+  - first:
+      213: 4822504899782902443
+    second: All_Fire_Bullet_Pixel_16x16_271
+  - first:
+      213: -4937094422528797773
+    second: All_Fire_Bullet_Pixel_16x16_272
+  - first:
+      213: 5353717788135031975
+    second: All_Fire_Bullet_Pixel_16x16_273
+  - first:
+      213: 3708957136500159268
+    second: All_Fire_Bullet_Pixel_16x16_274
+  - first:
+      213: 8907739277681781398
+    second: All_Fire_Bullet_Pixel_16x16_275
+  - first:
+      213: -8852091600405847699
+    second: All_Fire_Bullet_Pixel_16x16_276
+  - first:
+      213: -6039459629056699612
+    second: All_Fire_Bullet_Pixel_16x16_277
+  - first:
+      213: 8220155791640607010
+    second: All_Fire_Bullet_Pixel_16x16_278
+  - first:
+      213: 5177059070210217693
+    second: All_Fire_Bullet_Pixel_16x16_279
+  - first:
+      213: 7979200670909764242
+    second: All_Fire_Bullet_Pixel_16x16_280
+  - first:
+      213: -3431281627556738890
+    second: All_Fire_Bullet_Pixel_16x16_281
+  - first:
+      213: -2413908128764253386
+    second: All_Fire_Bullet_Pixel_16x16_282
+  - first:
+      213: 8332449002131501665
+    second: All_Fire_Bullet_Pixel_16x16_283
+  - first:
+      213: 607664610353612627
+    second: All_Fire_Bullet_Pixel_16x16_284
+  - first:
+      213: -3574022127412381585
+    second: All_Fire_Bullet_Pixel_16x16_285
+  - first:
+      213: 7007823431567690493
+    second: All_Fire_Bullet_Pixel_16x16_286
+  - first:
+      213: -1116729095031608465
+    second: All_Fire_Bullet_Pixel_16x16_287
+  - first:
+      213: 8212912315939620652
+    second: All_Fire_Bullet_Pixel_16x16_288
+  - first:
+      213: -3591294022215447220
+    second: All_Fire_Bullet_Pixel_16x16_289
+  - first:
+      213: -4211649658697298794
+    second: All_Fire_Bullet_Pixel_16x16_290
+  - first:
+      213: 6294411528678090611
+    second: All_Fire_Bullet_Pixel_16x16_291
+  - first:
+      213: 1433863886652938796
+    second: All_Fire_Bullet_Pixel_16x16_292
+  - first:
+      213: -221160810248556236
+    second: All_Fire_Bullet_Pixel_16x16_293
+  - first:
+      213: -991723935674835932
+    second: All_Fire_Bullet_Pixel_16x16_294
+  - first:
+      213: -1391221669515108374
+    second: All_Fire_Bullet_Pixel_16x16_295
+  - first:
+      213: 4846238406188071443
+    second: All_Fire_Bullet_Pixel_16x16_296
+  - first:
+      213: 782207121974687156
+    second: All_Fire_Bullet_Pixel_16x16_297
+  - first:
+      213: 323528792878617701
+    second: All_Fire_Bullet_Pixel_16x16_298
+  - first:
+      213: -2540387112151639540
+    second: All_Fire_Bullet_Pixel_16x16_299
+  - first:
+      213: -8190678397698510278
+    second: All_Fire_Bullet_Pixel_16x16_300
+  - first:
+      213: -4682871147279649984
+    second: All_Fire_Bullet_Pixel_16x16_301
+  - first:
+      213: 5735624656052087683
+    second: All_Fire_Bullet_Pixel_16x16_302
+  - first:
+      213: -2315775839609284648
+    second: All_Fire_Bullet_Pixel_16x16_303
+  - first:
+      213: 3472349601766034953
+    second: All_Fire_Bullet_Pixel_16x16_304
+  - first:
+      213: 1857539029734445786
+    second: All_Fire_Bullet_Pixel_16x16_305
+  - first:
+      213: 5465608874419643655
+    second: All_Fire_Bullet_Pixel_16x16_306
+  - first:
+      213: -1593496706100870727
+    second: All_Fire_Bullet_Pixel_16x16_307
+  - first:
+      213: 5761483498014555152
+    second: All_Fire_Bullet_Pixel_16x16_308
+  - first:
+      213: 8794905503525915150
+    second: All_Fire_Bullet_Pixel_16x16_309
+  - first:
+      213: 5968455428589402416
+    second: All_Fire_Bullet_Pixel_16x16_310
+  - first:
+      213: -533989765275534790
+    second: All_Fire_Bullet_Pixel_16x16_311
+  - first:
+      213: 1298061501688859645
+    second: All_Fire_Bullet_Pixel_16x16_312
+  - first:
+      213: 3499071096343574017
+    second: All_Fire_Bullet_Pixel_16x16_313
+  - first:
+      213: 3784793348127064781
+    second: All_Fire_Bullet_Pixel_16x16_314
+  - first:
+      213: -3775758086284961724
+    second: All_Fire_Bullet_Pixel_16x16_315
+  - first:
+      213: 2513051621816500768
+    second: All_Fire_Bullet_Pixel_16x16_316
+  - first:
+      213: 5520464581084718930
+    second: All_Fire_Bullet_Pixel_16x16_317
+  - first:
+      213: -5795404084258983017
+    second: All_Fire_Bullet_Pixel_16x16_318
+  - first:
+      213: -6744482420528496085
+    second: All_Fire_Bullet_Pixel_16x16_319
+  - first:
+      213: 5400805426823656612
+    second: All_Fire_Bullet_Pixel_16x16_320
+  - first:
+      213: -3652767711079613656
+    second: All_Fire_Bullet_Pixel_16x16_321
+  - first:
+      213: -8997570579172748241
+    second: All_Fire_Bullet_Pixel_16x16_322
+  - first:
+      213: 533670054000434385
+    second: All_Fire_Bullet_Pixel_16x16_323
+  - first:
+      213: -1983275552005643930
+    second: All_Fire_Bullet_Pixel_16x16_324
+  - first:
+      213: 5409284737577542880
+    second: All_Fire_Bullet_Pixel_16x16_325
+  - first:
+      213: 7983306525035068147
+    second: All_Fire_Bullet_Pixel_16x16_326
+  - first:
+      213: 1091158770769163799
+    second: All_Fire_Bullet_Pixel_16x16_327
+  - first:
+      213: 6730234877076120625
+    second: All_Fire_Bullet_Pixel_16x16_328
+  - first:
+      213: -7028060274650994372
+    second: All_Fire_Bullet_Pixel_16x16_329
+  - first:
+      213: -1149060722997837421
+    second: All_Fire_Bullet_Pixel_16x16_330
+  - first:
+      213: -536147924194922178
+    second: All_Fire_Bullet_Pixel_16x16_331
+  - first:
+      213: -4899224220729989439
+    second: All_Fire_Bullet_Pixel_16x16_332
+  - first:
+      213: -4253430999908048076
+    second: All_Fire_Bullet_Pixel_16x16_333
+  - first:
+      213: 4623370109506982825
+    second: All_Fire_Bullet_Pixel_16x16_334
+  - first:
+      213: 2787529162578988452
+    second: All_Fire_Bullet_Pixel_16x16_335
+  - first:
+      213: -1405376368233873349
+    second: All_Fire_Bullet_Pixel_16x16_336
+  - first:
+      213: -8244071585206692112
+    second: All_Fire_Bullet_Pixel_16x16_337
+  - first:
+      213: -1986363969303412205
+    second: All_Fire_Bullet_Pixel_16x16_338
+  - first:
+      213: -6175333381574013079
+    second: All_Fire_Bullet_Pixel_16x16_339
+  - first:
+      213: 1611598501722243454
+    second: All_Fire_Bullet_Pixel_16x16_340
+  - first:
+      213: 6715873825427989262
+    second: All_Fire_Bullet_Pixel_16x16_341
+  - first:
+      213: 7257568268865050244
+    second: All_Fire_Bullet_Pixel_16x16_342
+  - first:
+      213: -5020205064710803716
+    second: All_Fire_Bullet_Pixel_16x16_343
+  - first:
+      213: 562732613868722048
+    second: All_Fire_Bullet_Pixel_16x16_344
+  - first:
+      213: -3043822100685605855
+    second: All_Fire_Bullet_Pixel_16x16_345
+  - first:
+      213: -7398144369280651645
+    second: All_Fire_Bullet_Pixel_16x16_346
+  - first:
+      213: 1853167227222586397
+    second: All_Fire_Bullet_Pixel_16x16_347
+  - first:
+      213: -1264180878859804325
+    second: All_Fire_Bullet_Pixel_16x16_348
+  - first:
+      213: -8517751187036393273
+    second: All_Fire_Bullet_Pixel_16x16_349
+  - first:
+      213: 523814606599145841
+    second: All_Fire_Bullet_Pixel_16x16_350
+  - first:
+      213: 8985600147615596786
+    second: All_Fire_Bullet_Pixel_16x16_351
+  - first:
+      213: -1682938865495416637
+    second: All_Fire_Bullet_Pixel_16x16_352
+  - first:
+      213: -4711244308397732654
+    second: All_Fire_Bullet_Pixel_16x16_353
+  - first:
+      213: 7631674334311472832
+    second: All_Fire_Bullet_Pixel_16x16_354
+  - first:
+      213: -812782889856878115
+    second: All_Fire_Bullet_Pixel_16x16_355
+  - first:
+      213: 8929841533412123581
+    second: All_Fire_Bullet_Pixel_16x16_356
+  - first:
+      213: -6463954563210913995
+    second: All_Fire_Bullet_Pixel_16x16_357
+  - first:
+      213: 348055822632979926
+    second: All_Fire_Bullet_Pixel_16x16_358
+  - first:
+      213: 2049634020032818126
+    second: All_Fire_Bullet_Pixel_16x16_359
+  - first:
+      213: 9102570695778212626
+    second: All_Fire_Bullet_Pixel_16x16_360
+  - first:
+      213: 7400598364906868246
+    second: All_Fire_Bullet_Pixel_16x16_361
+  - first:
+      213: 6243969075429494551
+    second: All_Fire_Bullet_Pixel_16x16_362
+  - first:
+      213: 3439271737592226882
+    second: All_Fire_Bullet_Pixel_16x16_363
+  - first:
+      213: -8432672467021401979
+    second: All_Fire_Bullet_Pixel_16x16_364
+  - first:
+      213: -3091058386599740439
+    second: All_Fire_Bullet_Pixel_16x16_365
+  - first:
+      213: -5289815439081631214
+    second: All_Fire_Bullet_Pixel_16x16_366
+  - first:
+      213: -5081685144858349547
+    second: All_Fire_Bullet_Pixel_16x16_367
+  - first:
+      213: -4118854162559886764
+    second: All_Fire_Bullet_Pixel_16x16_368
+  - first:
+      213: -8582999251772817628
+    second: All_Fire_Bullet_Pixel_16x16_369
+  - first:
+      213: -3964644183986382377
+    second: All_Fire_Bullet_Pixel_16x16_370
+  - first:
+      213: -6438194071664622716
+    second: All_Fire_Bullet_Pixel_16x16_371
+  - first:
+      213: -8939905668114816921
+    second: All_Fire_Bullet_Pixel_16x16_372
+  - first:
+      213: 1789022626634088615
+    second: All_Fire_Bullet_Pixel_16x16_373
+  - first:
+      213: 2528621404326735149
+    second: All_Fire_Bullet_Pixel_16x16_374
+  - first:
+      213: -1914503638954281467
+    second: All_Fire_Bullet_Pixel_16x16_375
+  - first:
+      213: 2861080658726058340
+    second: All_Fire_Bullet_Pixel_16x16_376
+  - first:
+      213: -3962366531390549687
+    second: All_Fire_Bullet_Pixel_16x16_377
+  - first:
+      213: 1385847854259682984
+    second: All_Fire_Bullet_Pixel_16x16_378
+  - first:
+      213: 4971536924870727940
+    second: All_Fire_Bullet_Pixel_16x16_379
+  - first:
+      213: -6710576960369531914
+    second: All_Fire_Bullet_Pixel_16x16_380
+  - first:
+      213: -5228197323602969647
+    second: All_Fire_Bullet_Pixel_16x16_381
+  - first:
+      213: 5808339240056256976
+    second: All_Fire_Bullet_Pixel_16x16_382
+  - first:
+      213: 3774375632311729322
+    second: All_Fire_Bullet_Pixel_16x16_383
+  - first:
+      213: -3171210285193589205
+    second: All_Fire_Bullet_Pixel_16x16_384
+  - first:
+      213: 8548508764931331710
+    second: All_Fire_Bullet_Pixel_16x16_385
+  - first:
+      213: -8463409516145780895
+    second: All_Fire_Bullet_Pixel_16x16_386
+  - first:
+      213: -3426167482920697857
+    second: All_Fire_Bullet_Pixel_16x16_387
+  - first:
+      213: 6505157273244170789
+    second: All_Fire_Bullet_Pixel_16x16_388
+  - first:
+      213: 2601437419064610750
+    second: All_Fire_Bullet_Pixel_16x16_389
+  - first:
+      213: -1734746266358924423
+    second: All_Fire_Bullet_Pixel_16x16_390
+  - first:
+      213: 2667148494569038643
+    second: All_Fire_Bullet_Pixel_16x16_391
+  - first:
+      213: 30288743462144792
+    second: All_Fire_Bullet_Pixel_16x16_392
+  - first:
+      213: 5427898412600137329
+    second: All_Fire_Bullet_Pixel_16x16_393
+  - first:
+      213: -993860873444549295
+    second: All_Fire_Bullet_Pixel_16x16_394
+  - first:
+      213: 3774438885565763484
+    second: All_Fire_Bullet_Pixel_16x16_395
+  - first:
+      213: -7003472440203703404
+    second: All_Fire_Bullet_Pixel_16x16_396
+  - first:
+      213: 7931045160696208954
+    second: All_Fire_Bullet_Pixel_16x16_397
+  - first:
+      213: 6272892919080588365
+    second: All_Fire_Bullet_Pixel_16x16_398
+  - first:
+      213: 3298716382942348280
+    second: All_Fire_Bullet_Pixel_16x16_399
+  - first:
+      213: -3140099915673403228
+    second: All_Fire_Bullet_Pixel_16x16_400
+  - first:
+      213: -7703654132340969925
+    second: All_Fire_Bullet_Pixel_16x16_401
+  - first:
+      213: 7807700476533664831
+    second: All_Fire_Bullet_Pixel_16x16_402
+  - first:
+      213: -2303791976798327226
+    second: All_Fire_Bullet_Pixel_16x16_403
+  - first:
+      213: -5186184912366382933
+    second: All_Fire_Bullet_Pixel_16x16_404
+  - first:
+      213: -8433045193231150380
+    second: All_Fire_Bullet_Pixel_16x16_405
+  - first:
+      213: -5330363787662234774
+    second: All_Fire_Bullet_Pixel_16x16_406
+  - first:
+      213: 3224971977682953744
+    second: All_Fire_Bullet_Pixel_16x16_407
+  - first:
+      213: -1185454174511816796
+    second: All_Fire_Bullet_Pixel_16x16_408
+  - first:
+      213: 6768734664282282480
+    second: All_Fire_Bullet_Pixel_16x16_409
+  - first:
+      213: -4399691713298612937
+    second: All_Fire_Bullet_Pixel_16x16_410
+  - first:
+      213: 31148390048750565
+    second: All_Fire_Bullet_Pixel_16x16_411
+  - first:
+      213: -6864493679035715523
+    second: All_Fire_Bullet_Pixel_16x16_412
+  - first:
+      213: 8802650571704570223
+    second: All_Fire_Bullet_Pixel_16x16_413
+  - first:
+      213: -8822763934732185969
+    second: All_Fire_Bullet_Pixel_16x16_414
+  - first:
+      213: -2824727107730164243
+    second: All_Fire_Bullet_Pixel_16x16_415
+  - first:
+      213: 3946194168365765287
+    second: All_Fire_Bullet_Pixel_16x16_416
+  - first:
+      213: -3555533503949480771
+    second: All_Fire_Bullet_Pixel_16x16_417
+  - first:
+      213: -6541442637525226454
+    second: All_Fire_Bullet_Pixel_16x16_418
+  - first:
+      213: -1110372559236148497
+    second: All_Fire_Bullet_Pixel_16x16_419
+  - first:
+      213: 5382694502163832270
+    second: All_Fire_Bullet_Pixel_16x16_420
+  - first:
+      213: -3468752408369923870
+    second: All_Fire_Bullet_Pixel_16x16_421
+  - first:
+      213: 2392167797085558284
+    second: All_Fire_Bullet_Pixel_16x16_422
+  - first:
+      213: -4785053097321484308
+    second: All_Fire_Bullet_Pixel_16x16_423
+  - first:
+      213: 1902854172333153918
+    second: All_Fire_Bullet_Pixel_16x16_424
+  - first:
+      213: 4217120120354622288
+    second: All_Fire_Bullet_Pixel_16x16_425
+  - first:
+      213: 5184146900685442886
+    second: All_Fire_Bullet_Pixel_16x16_426
+  - first:
+      213: -9197073721941849622
+    second: All_Fire_Bullet_Pixel_16x16_427
+  - first:
+      213: 8105162511965096373
+    second: All_Fire_Bullet_Pixel_16x16_428
+  - first:
+      213: 4790290434725954935
+    second: All_Fire_Bullet_Pixel_16x16_429
+  - first:
+      213: -388463255407770998
+    second: All_Fire_Bullet_Pixel_16x16_430
+  - first:
+      213: 1939413697994787360
+    second: All_Fire_Bullet_Pixel_16x16_431
+  - first:
+      213: 3513732637969420551
+    second: All_Fire_Bullet_Pixel_16x16_432
+  - first:
+      213: -2127073197657170083
+    second: All_Fire_Bullet_Pixel_16x16_433
+  - first:
+      213: -7559920781207808251
+    second: All_Fire_Bullet_Pixel_16x16_434
+  - first:
+      213: -3188104880223569242
+    second: All_Fire_Bullet_Pixel_16x16_435
+  - first:
+      213: -2331044741896897978
+    second: All_Fire_Bullet_Pixel_16x16_436
+  - first:
+      213: -5105089604773430600
+    second: All_Fire_Bullet_Pixel_16x16_437
+  - first:
+      213: 3778681418495249670
+    second: All_Fire_Bullet_Pixel_16x16_438
+  - first:
+      213: 9212162674347949843
+    second: All_Fire_Bullet_Pixel_16x16_439
+  - first:
+      213: 4253364235744899439
+    second: All_Fire_Bullet_Pixel_16x16_440
+  - first:
+      213: 3725172195501387564
+    second: All_Fire_Bullet_Pixel_16x16_441
+  - first:
+      213: 2392684506889479977
+    second: All_Fire_Bullet_Pixel_16x16_442
+  - first:
+      213: 5308381061170699995
+    second: All_Fire_Bullet_Pixel_16x16_443
+  - first:
+      213: 4641482041856749106
+    second: All_Fire_Bullet_Pixel_16x16_444
+  - first:
+      213: 5507352322190024574
+    second: All_Fire_Bullet_Pixel_16x16_445
+  - first:
+      213: -3118989807577772423
+    second: All_Fire_Bullet_Pixel_16x16_446
+  - first:
+      213: 1331756943737231902
+    second: All_Fire_Bullet_Pixel_16x16_447
+  - first:
+      213: 2509199547701034046
+    second: All_Fire_Bullet_Pixel_16x16_448
+  - first:
+      213: -71840545055863829
+    second: All_Fire_Bullet_Pixel_16x16_449
+  - first:
+      213: -8336839678797388386
+    second: All_Fire_Bullet_Pixel_16x16_450
+  - first:
+      213: -3189350667833456137
+    second: All_Fire_Bullet_Pixel_16x16_451
+  - first:
+      213: 4896326954887971773
+    second: All_Fire_Bullet_Pixel_16x16_452
+  - first:
+      213: -8550067109002020669
+    second: All_Fire_Bullet_Pixel_16x16_453
+  - first:
+      213: -7434597680578875888
+    second: All_Fire_Bullet_Pixel_16x16_454
+  - first:
+      213: 5817207019350864601
+    second: All_Fire_Bullet_Pixel_16x16_455
+  - first:
+      213: -2209660189587088457
+    second: All_Fire_Bullet_Pixel_16x16_456
+  - first:
+      213: -8481118480091416052
+    second: All_Fire_Bullet_Pixel_16x16_457
+  - first:
+      213: 3808283979112056857
+    second: All_Fire_Bullet_Pixel_16x16_458
+  - first:
+      213: -3546959293694970466
+    second: All_Fire_Bullet_Pixel_16x16_459
+  - first:
+      213: -3503563854221048427
+    second: All_Fire_Bullet_Pixel_16x16_460
+  - first:
+      213: 1213885811085258785
+    second: All_Fire_Bullet_Pixel_16x16_461
+  - first:
+      213: -4813675915430743004
+    second: All_Fire_Bullet_Pixel_16x16_462
+  - first:
+      213: 8391978300624303678
+    second: All_Fire_Bullet_Pixel_16x16_463
+  - first:
+      213: -5318172694120505817
+    second: All_Fire_Bullet_Pixel_16x16_464
+  - first:
+      213: 6187849523863961544
+    second: All_Fire_Bullet_Pixel_16x16_465
+  - first:
+      213: -2020757416010219751
+    second: All_Fire_Bullet_Pixel_16x16_466
+  - first:
+      213: -2217322306652662572
+    second: All_Fire_Bullet_Pixel_16x16_467
+  - first:
+      213: -2070268434816898964
+    second: All_Fire_Bullet_Pixel_16x16_468
+  - first:
+      213: -7700322585431846192
+    second: All_Fire_Bullet_Pixel_16x16_469
+  - first:
+      213: 7828731706262586422
+    second: All_Fire_Bullet_Pixel_16x16_470
+  - first:
+      213: -1212350374150245144
+    second: All_Fire_Bullet_Pixel_16x16_471
+  - first:
+      213: -4032140977505396320
+    second: All_Fire_Bullet_Pixel_16x16_472
+  - first:
+      213: 3428849163452399014
+    second: All_Fire_Bullet_Pixel_16x16_473
+  - first:
+      213: -2247157232347406175
+    second: All_Fire_Bullet_Pixel_16x16_474
+  - first:
+      213: 3007180647584315204
+    second: All_Fire_Bullet_Pixel_16x16_475
+  - first:
+      213: -2716924812526983166
+    second: All_Fire_Bullet_Pixel_16x16_476
+  - first:
+      213: -8190422567898108257
+    second: All_Fire_Bullet_Pixel_16x16_477
+  - first:
+      213: -4284139866998061166
+    second: All_Fire_Bullet_Pixel_16x16_478
+  - first:
+      213: -8084855706445628123
+    second: All_Fire_Bullet_Pixel_16x16_479
+  - first:
+      213: 376405865972940820
+    second: All_Fire_Bullet_Pixel_16x16_480
+  - first:
+      213: -2196284718425726026
+    second: All_Fire_Bullet_Pixel_16x16_481
+  - first:
+      213: 3792975362611141999
+    second: All_Fire_Bullet_Pixel_16x16_482
+  - first:
+      213: -5541288369776734949
+    second: All_Fire_Bullet_Pixel_16x16_483
+  - first:
+      213: -577568337971517656
+    second: All_Fire_Bullet_Pixel_16x16_484
+  - first:
+      213: 6560942190186781421
+    second: All_Fire_Bullet_Pixel_16x16_485
+  - first:
+      213: -1433100563043868833
+    second: All_Fire_Bullet_Pixel_16x16_486
+  - first:
+      213: -4402406365872479501
+    second: All_Fire_Bullet_Pixel_16x16_487
+  - first:
+      213: 8615616941735825257
+    second: All_Fire_Bullet_Pixel_16x16_488
+  - first:
+      213: 6404084073338568158
+    second: All_Fire_Bullet_Pixel_16x16_489
+  - first:
+      213: 4907059723288471296
+    second: All_Fire_Bullet_Pixel_16x16_490
+  - first:
+      213: 5526805580352663835
+    second: All_Fire_Bullet_Pixel_16x16_491
+  - first:
+      213: 9107305232842403710
+    second: All_Fire_Bullet_Pixel_16x16_492
+  - first:
+      213: -8816080131991893385
+    second: All_Fire_Bullet_Pixel_16x16_493
+  - first:
+      213: -3255755973751453066
+    second: All_Fire_Bullet_Pixel_16x16_494
+  - first:
+      213: 5770225809505829786
+    second: All_Fire_Bullet_Pixel_16x16_495
+  - first:
+      213: -2646661203993129603
+    second: All_Fire_Bullet_Pixel_16x16_496
+  - first:
+      213: -6765724332418117743
+    second: All_Fire_Bullet_Pixel_16x16_497
+  - first:
+      213: 8005399772534297353
+    second: All_Fire_Bullet_Pixel_16x16_498
+  - first:
+      213: 4088542698856816147
+    second: All_Fire_Bullet_Pixel_16x16_499
+  - first:
+      213: -6299077343777732101
+    second: All_Fire_Bullet_Pixel_16x16_500
+  - first:
+      213: -4199649353103760314
+    second: All_Fire_Bullet_Pixel_16x16_501
+  - first:
+      213: 4544352685729718342
+    second: All_Fire_Bullet_Pixel_16x16_502
+  - first:
+      213: -402647850584964157
+    second: All_Fire_Bullet_Pixel_16x16_503
+  - first:
+      213: 4398887946487985025
+    second: All_Fire_Bullet_Pixel_16x16_504
+  - first:
+      213: -8805266527527566823
+    second: All_Fire_Bullet_Pixel_16x16_505
+  - first:
+      213: 7459788759649470143
+    second: All_Fire_Bullet_Pixel_16x16_506
+  - first:
+      213: 8883132001813094326
+    second: All_Fire_Bullet_Pixel_16x16_507
+  - first:
+      213: 1398353419911346109
+    second: All_Fire_Bullet_Pixel_16x16_508
+  - first:
+      213: 6166098170816204141
+    second: All_Fire_Bullet_Pixel_16x16_509
+  - first:
+      213: 2788896899768303487
+    second: All_Fire_Bullet_Pixel_16x16_510
+  - first:
+      213: 7705167975417251753
+    second: All_Fire_Bullet_Pixel_16x16_511
+  - first:
+      213: -2899701042352838121
+    second: All_Fire_Bullet_Pixel_16x16_512
+  - first:
+      213: 3395684267785483804
+    second: All_Fire_Bullet_Pixel_16x16_513
+  - first:
+      213: 1609049098426112671
+    second: All_Fire_Bullet_Pixel_16x16_514
+  - first:
+      213: 9145454751229267309
+    second: All_Fire_Bullet_Pixel_16x16_515
+  - first:
+      213: 2416010198964381187
+    second: All_Fire_Bullet_Pixel_16x16_516
+  - first:
+      213: -4518265731382334461
+    second: All_Fire_Bullet_Pixel_16x16_517
+  - first:
+      213: -8309853146084656826
+    second: All_Fire_Bullet_Pixel_16x16_518
+  - first:
+      213: -3974015986648963282
+    second: All_Fire_Bullet_Pixel_16x16_519
+  - first:
+      213: -3012541740532940937
+    second: All_Fire_Bullet_Pixel_16x16_520
+  - first:
+      213: -3106863748410384916
+    second: All_Fire_Bullet_Pixel_16x16_521
+  - first:
+      213: -1869544676843416354
+    second: All_Fire_Bullet_Pixel_16x16_522
+  - first:
+      213: 3951137172773550367
+    second: All_Fire_Bullet_Pixel_16x16_523
+  - first:
+      213: -2816973114475279784
+    second: All_Fire_Bullet_Pixel_16x16_524
+  - first:
+      213: -5336003544746883709
+    second: All_Fire_Bullet_Pixel_16x16_525
+  - first:
+      213: -7863088608301141616
+    second: All_Fire_Bullet_Pixel_16x16_526
+  - first:
+      213: 5699597414885561553
+    second: All_Fire_Bullet_Pixel_16x16_527
+  - first:
+      213: 1248817325700542034
+    second: All_Fire_Bullet_Pixel_16x16_528
+  - first:
+      213: 4999798353113079580
+    second: All_Fire_Bullet_Pixel_16x16_529
+  - first:
+      213: 4849746256304319956
+    second: All_Fire_Bullet_Pixel_16x16_530
+  - first:
+      213: 4227794092480208871
+    second: All_Fire_Bullet_Pixel_16x16_531
+  - first:
+      213: 8177630627330028580
+    second: All_Fire_Bullet_Pixel_16x16_532
+  - first:
+      213: -2198864111973927766
+    second: All_Fire_Bullet_Pixel_16x16_533
+  - first:
+      213: -4241813398442672082
+    second: All_Fire_Bullet_Pixel_16x16_534
+  - first:
+      213: -8088090173155932351
+    second: All_Fire_Bullet_Pixel_16x16_535
+  - first:
+      213: -8817483814910088779
+    second: All_Fire_Bullet_Pixel_16x16_536
+  - first:
+      213: -5224196889454125489
+    second: All_Fire_Bullet_Pixel_16x16_537
+  - first:
+      213: 7909812975754965414
+    second: All_Fire_Bullet_Pixel_16x16_538
+  - first:
+      213: -1437605062303642648
+    second: All_Fire_Bullet_Pixel_16x16_539
+  - first:
+      213: 2411351945879843017
+    second: All_Fire_Bullet_Pixel_16x16_540
+  - first:
+      213: -2532645918045905791
+    second: All_Fire_Bullet_Pixel_16x16_541
+  - first:
+      213: -2695221605439217809
+    second: All_Fire_Bullet_Pixel_16x16_542
+  - first:
+      213: 2052656722535038672
+    second: All_Fire_Bullet_Pixel_16x16_543
+  - first:
+      213: -2328606001773219037
+    second: All_Fire_Bullet_Pixel_16x16_544
+  - first:
+      213: 5692422484244395196
+    second: All_Fire_Bullet_Pixel_16x16_545
+  - first:
+      213: 3523596762647737811
+    second: All_Fire_Bullet_Pixel_16x16_546
+  - first:
+      213: -1305424711956970472
+    second: All_Fire_Bullet_Pixel_16x16_547
+  - first:
+      213: -3395539606004358807
+    second: All_Fire_Bullet_Pixel_16x16_548
+  - first:
+      213: -6701055008464593344
+    second: All_Fire_Bullet_Pixel_16x16_549
+  - first:
+      213: 5817298836179706462
+    second: All_Fire_Bullet_Pixel_16x16_550
+  - first:
+      213: -8080127670913687739
+    second: All_Fire_Bullet_Pixel_16x16_551
+  - first:
+      213: -1346379322886062896
+    second: All_Fire_Bullet_Pixel_16x16_552
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 48
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 50
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ForBoss_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4554c4dd59deb4aaf255128f339eef
+      internalID: 357433072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f150ac1054dc9408ac252c086d596c
+      internalID: 1687298793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21e8f8c2e357704889eb5ddc50f7b18
+      internalID: 32258599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0c76565653fde429d6774b53c9e9d4
+      internalID: 631503930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_4
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf07c4374dd7fd4fa618451ca5eefc6
+      internalID: 1122351562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667adc8e882646f47a7a24f15f809886
+      internalID: 187333184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b81cbb64f510354fa506b7d13f6041a
+      internalID: 1152279331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a60896e6c0156b4180e3c309be7b120
+      internalID: 1135089445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffefde78a7a00e4ba8851a83e426ab1
+      internalID: 1092666365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82aca2014f3ec0547af1945a1c71464c
+      internalID: 1752930350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_10
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691e589d0776fc04d9af1fb0f0a26655
+      internalID: -2000040320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_11
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0749892ad91c524a903938d9d330f46
+      internalID: -629201398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_12
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 350
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1acc73b624d6441970671bb038f25b
+      internalID: -1417627437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_13
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cd0147630f1114f97f098a3e54962c
+      internalID: 554258466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7268e0a76c0bad3459ed08ced44ea0f1
+      internalID: 1590815313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_15
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deaed899133e3b54f85f0558ca61686e
+      internalID: -637804089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_16
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbffc324b081384cbc3bd145bb5ddef
+      internalID: 850054305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5abede55268d1f94f8fe2b61a700cded
+      internalID: -721046798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_18
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb610931e8113a843a3e2864f9a6c050
+      internalID: -1476300880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_19
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04268f508dffa349afb1503d19272c7
+      internalID: 932233910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_20
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f183cc2a5f214642af3999ceb521bdd
+      internalID: 891001510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_21
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398cae18364659249a2ab93026da1fa0
+      internalID: -1782560085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_22
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c8a7e441d7cdf4ba22fbca58a82f39
+      internalID: 64241673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_23
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187029ff7e5eca04bb4a88c3ff4d1529
+      internalID: -460266758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_24
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3801a875e68eb0c4eb2eaa64c629c845
+      internalID: -1497011229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_25
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 300
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7b925f05263044bb7c8824408823b2
+      internalID: 2038439904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef8e601f271d2348885fff4dbc5d21f
+      internalID: -807436645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0bd56fda8e7ce46a079ff8b4cbdc4f
+      internalID: 51185398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_28
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62e66d0a12e0834fae04a83f114ce08
+      internalID: -1959509292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_29
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fee913892f2304e924b6ce6b6e0f36
+      internalID: 155760579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_30
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b451d03fa1ec214ab3421776c6f9f2d
+      internalID: 1153055454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_31
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd73d7b1a3697640a3e73f3c61c87cc
+      internalID: 819371200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_32
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b29474932199964ba4f25ebcccff168
+      internalID: -888876981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_33
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725bc6dfd2e6ef64d88a9d14fba5c195
+      internalID: -562617976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_34
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b6f99010f24c548bc7edadd26b2f8c
+      internalID: 723175727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_35
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3205f41b9d18164bad48685e82dc26d
+      internalID: 278626574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_36
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eab9e519d9b21a478c3583cf2ed4aa3
+      internalID: -547766723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_37
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91b4ffd8cd4e324799d58653d8d711d
+      internalID: 1074706996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_38
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 250
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d193f52f03951e14c90e6bd120a98a88
+      internalID: 1560537239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_39
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bc8b8a847c0234e924f4125b641f2e
+      internalID: -2127400524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa8e1efa4c40fd4e921d54be70b1924
+      internalID: -1878501255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_41
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3b49f9aaf77194fba1abcd9334512e
+      internalID: 1495305889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_42
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f5a4ab4740862418ab92c0a80a643d
+      internalID: -1603697980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_43
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f849490b6543fb14aa0846cce185e9a8
+      internalID: 2102043105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_44
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612054dc77c0c734fb0fd6951b1717f6
+      internalID: 1281650643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_45
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d808aa399fed0e46890839b1d698177
+      internalID: -168682618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_46
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb937fc812f53f4bab957c7b2028c57
+      internalID: -1044434589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_47
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff46bfa3fd6fac4bb9d150d2191b576
+      internalID: -887334465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_48
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fe7ed230bf8224aa2bb66b3f87e86d
+      internalID: -1251588538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_49
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdfa8aed54aa2c4299d26a59362c698
+      internalID: 15554417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_50
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6898f2d5292ee594d9d2b9c4028f11ce
+      internalID: -2047242019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_51
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 200
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36903873a6f10e41970c7d28535075b
+      internalID: -1310623470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_52
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f404eec383e959e48a114b24de5ac709
+      internalID: -224477434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_53
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d1963bcacdd1942bad0f09c44894fa
+      internalID: -222168658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_54
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d754f86a6d8781549954128e70413729
+      internalID: -1413236203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_55
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a435fed8c3af1a34395bc3cb15140c10
+      internalID: 514287392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_56
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2d537c6fc0dc746ba6f79d04cd0ed3
+      internalID: 1745233050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_57
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7788d95f1a3a05540923156ef5a4750b
+      internalID: -841520043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_58
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b0773519d917a4e871426394d474e8
+      internalID: 678046799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_59
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607ce32d784bcfd40aa13c99fd57f1b4
+      internalID: -647795634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_60
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4edda56a2526745b19b6d692f699af
+      internalID: -1602724784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_61
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dd353f36810c84a87b4d782d71e27b
+      internalID: 1867921925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_62
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78001e1d6604aa42b9b9089e33dc418
+      internalID: 311951878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_63
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a3652043eb8344f89a15345de2b875
+      internalID: 828247356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_64
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69230f066bacb0d4aae969d87f49fcf6
+      internalID: -863307827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_65
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8adc144023b969641bb12b9f4a3b5151
+      internalID: 1161452739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_66
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14246080c5016924bbac18554c6c8579
+      internalID: -1582486294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_67
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4daeb7355544a741943b7b31f71dde4
+      internalID: 1662473330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_68
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b259da3eada3c44ba9c746e94499a7
+      internalID: 103415707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_69
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 612a27ada5e281b4d805c52cb419b998
+      internalID: 616732782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_70
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4695d59b6b1acb44d817f654064bad7d
+      internalID: 1938814123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_71
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a85b1105a608e41a436705204f1a53
+      internalID: -1309806603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_72
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cbc0d373485e94fada7d29cb533d87
+      internalID: 1091148863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_73
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efd5c614dcf8a044a44a3d33c391ffd
+      internalID: 1427371863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_74
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc34f6e7869657a4c8a4ceb86531e113
+      internalID: -887157795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_75
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54e4b3123efb634dbbfe0d051b3d5d6
+      internalID: -793476623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_76
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00cabe840922b047a6053cdb6e280ef
+      internalID: 1358712061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_77
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 100
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8069d61596f3542a59124fc86d5c36
+      internalID: 2085502873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_78
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529195107b2189643ab816cb60ab3c71
+      internalID: 524003295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_79
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee93c54ee7322134f9c0c45c2a71e9bb
+      internalID: -579124023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_80
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d73b8b6bf4a1bb4ba8b5ceae0956864
+      internalID: -2105171636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_81
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe30dea863130ca419e81b2aca6e5c85
+      internalID: -1786587860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_82
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1d7f5d57f824e41b8ce1cdd6834061
+      internalID: -1136949052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_83
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e72fb0e93e6724ba321288e05c56a6
+      internalID: -1386276610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_84
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe7710973116ab4bb12ea489eec9dbf
+      internalID: 1238396179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_85
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2639ecd8fb9224ab97c367591efdce
+      internalID: -2058373981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_86
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0f2fdedfe4d8c48b012ae1c605e681
+      internalID: 1803062150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_87
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a61880d3ba1554087ca897d8348f4f
+      internalID: -833788393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_88
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56bc27066e27d04690ef682b03e3973
+      internalID: 593115189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_89
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7c6d531fc5a184785e89477ca1fca2
+      internalID: 657728809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_90
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 50
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6812372c00d4fd47bcf0abd4519f29d
+      internalID: 187941648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_91
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ce51df8e1fea6449c862a6b146badb
+      internalID: -714520097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_92
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82737c453d8e48d49a01e2bf225f651c
+      internalID: -901441892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_93
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060ad224ed932d94a919f109caf4ce98
+      internalID: -155610080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_94
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfa6dff14588c547abcb720d5b80554
+      internalID: 1238552583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_95
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a37120b3be8664fa1a739d8f99918d
+      internalID: -1651450205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_96
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a55d797ba18c904cb74e43202f5e318
+      internalID: -2007809761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_97
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b08acf4ad5e65a4c853a7afbda99472
+      internalID: 1859940294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_98
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef070f98ed8dad468d71f07c26ba0b1
+      internalID: -1304365202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_99
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37545115a29102c44b7b4b2421d2968e
+      internalID: -1935654885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_100
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1886eead2b01cef409a7cbd2e0bc07f5
+      internalID: 114683337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_101
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d043e03520eadf24cb0a3c576bb32c25
+      internalID: -945690943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_102
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d187aa23c153e241909034d15426c08
+      internalID: -432129511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForBoss_103
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3e54c4befb80c4998254de344c93b0
+      internalID: -1355154771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2acc09265aeffed42bdcc0a528b18299
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ForBoss_0: 357433072
+      ForBoss_1: 1687298793
+      ForBoss_10: -2000040320
+      ForBoss_100: 114683337
+      ForBoss_101: -945690943
+      ForBoss_102: -432129511
+      ForBoss_103: -1355154771
+      ForBoss_11: -629201398
+      ForBoss_12: -1417627437
+      ForBoss_13: 554258466
+      ForBoss_14: 1590815313
+      ForBoss_15: -637804089
+      ForBoss_16: 850054305
+      ForBoss_17: -721046798
+      ForBoss_18: -1476300880
+      ForBoss_19: 932233910
+      ForBoss_2: 32258599
+      ForBoss_20: 891001510
+      ForBoss_21: -1782560085
+      ForBoss_22: 64241673
+      ForBoss_23: -460266758
+      ForBoss_24: -1497011229
+      ForBoss_25: 2038439904
+      ForBoss_26: -807436645
+      ForBoss_27: 51185398
+      ForBoss_28: -1959509292
+      ForBoss_29: 155760579
+      ForBoss_3: 631503930
+      ForBoss_30: 1153055454
+      ForBoss_31: 819371200
+      ForBoss_32: -888876981
+      ForBoss_33: -562617976
+      ForBoss_34: 723175727
+      ForBoss_35: 278626574
+      ForBoss_36: -547766723
+      ForBoss_37: 1074706996
+      ForBoss_38: 1560537239
+      ForBoss_39: -2127400524
+      ForBoss_4: 1122351562
+      ForBoss_40: -1878501255
+      ForBoss_41: 1495305889
+      ForBoss_42: -1603697980
+      ForBoss_43: 2102043105
+      ForBoss_44: 1281650643
+      ForBoss_45: -168682618
+      ForBoss_46: -1044434589
+      ForBoss_47: -887334465
+      ForBoss_48: -1251588538
+      ForBoss_49: 15554417
+      ForBoss_5: 187333184
+      ForBoss_50: -2047242019
+      ForBoss_51: -1310623470
+      ForBoss_52: -224477434
+      ForBoss_53: -222168658
+      ForBoss_54: -1413236203
+      ForBoss_55: 514287392
+      ForBoss_56: 1745233050
+      ForBoss_57: -841520043
+      ForBoss_58: 678046799
+      ForBoss_59: -647795634
+      ForBoss_6: 1152279331
+      ForBoss_60: -1602724784
+      ForBoss_61: 1867921925
+      ForBoss_62: 311951878
+      ForBoss_63: 828247356
+      ForBoss_64: -863307827
+      ForBoss_65: 1161452739
+      ForBoss_66: -1582486294
+      ForBoss_67: 1662473330
+      ForBoss_68: 103415707
+      ForBoss_69: 616732782
+      ForBoss_7: 1135089445
+      ForBoss_70: 1938814123
+      ForBoss_71: -1309806603
+      ForBoss_72: 1091148863
+      ForBoss_73: 1427371863
+      ForBoss_74: -887157795
+      ForBoss_75: -793476623
+      ForBoss_76: 1358712061
+      ForBoss_77: 2085502873
+      ForBoss_78: 524003295
+      ForBoss_79: -579124023
+      ForBoss_8: 1092666365
+      ForBoss_80: -2105171636
+      ForBoss_81: -1786587860
+      ForBoss_82: -1136949052
+      ForBoss_83: -1386276610
+      ForBoss_84: 1238396179
+      ForBoss_85: -2058373981
+      ForBoss_86: 1803062150
+      ForBoss_87: -833788393
+      ForBoss_88: 593115189
+      ForBoss_89: 657728809
+      ForBoss_9: 1752930350
+      ForBoss_90: 187941648
+      ForBoss_91: -714520097
+      ForBoss_92: -901441892
+      ForBoss_93: -155610080
+      ForBoss_94: 1238552583
+      ForBoss_95: -1651450205
+      ForBoss_96: -2007809761
+      ForBoss_97: 1859940294
+      ForBoss_98: -1304365202
+      ForBoss_99: -1935654885
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
