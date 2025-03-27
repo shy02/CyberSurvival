@@ -6699,7 +6699,7 @@ MonoBehaviour:
   - Stage1
   - Stage2
   - Stage3
-  - Stage4
+  - Stage 4
 --- !u!4 &9129628289125811600
 Transform:
   m_ObjectHideFlags: 0
