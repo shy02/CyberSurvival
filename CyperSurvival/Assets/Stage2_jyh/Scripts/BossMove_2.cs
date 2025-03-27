@@ -3,10 +3,10 @@ using UnityEngine;
 public class BossMove_2 : MonoBehaviour
 {
     GameObject player = null;
-    SpriteRenderer spriteRenderer = null;
     //¿Ãµø
     [SerializeField] private float moveSpeed = 1;
     Vector3 moveDir = Vector3.zero;
+    SpriteRenderer spriteRenderer;
     Animator anim;
 
     void Start()

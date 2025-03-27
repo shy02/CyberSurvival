@@ -20,6 +20,7 @@ public class BossPattern_2 : MonoBehaviour
     [Header("보스 패턴 참조")]
     [Header("패턴 1 (기본 공격)")]
     [SerializeField] private GameObject bullet;
+    public Transform firePoint;
     [Header("패턴 2 (스나이퍼)")]
     [SerializeField] private GameObject sniper;
     [SerializeField] private GameObject sniperEffect;
@@ -30,7 +31,7 @@ public class BossPattern_2 : MonoBehaviour
     [SerializeField] private GameObject laser;
 
     //오디오
-    public AudioClip[] sounds;  //0번 기본공격, 1번 스나이퍼, 2번 레이저
+    public AudioClip[] sounds;  //0번 기본공격, 1번 스나이퍼, 2번 부메랑, 3번 레이저
 
 
     void Start()
@@ -58,7 +59,7 @@ public class BossPattern_2 : MonoBehaviour
     void Attack1()
     {
         SoundMgr_2.instance.OneShot(sounds[0]);    //기본공격
-        GameObject go = Instantiate(bullet, transform.position, Quaternion.identity);
+        GameObject go = Instantiate(bullet, firePoint.position, Quaternion.identity);
         BossBullet_2 bossbullet = go.GetComponent<BossBullet_2>();
         Invoke("Attack1", attackcool1);
     }
@@ -97,6 +98,8 @@ public class BossPattern_2 : MonoBehaviour
             bumerangScript.bossTransform = transform; // 보스의 Transform을 설정
             bumerangScript.SetInitialAngle(radian); // 초기 각도를 설정
         }
+
+        SoundMgr_2.instance.OneShot(sounds[2]); //부메랑 사운드
 
         Invoke("Attack3", attackcool3);
     }
@@ -145,7 +148,7 @@ public class BossPattern_2 : MonoBehaviour
         Vector3 dir = endPosition - startPosition;
 
         //오디오 스폰
-        SoundMgr_2.instance.OneShot(sounds[2]);    //레이저
+        SoundMgr_2.instance.OneShot(sounds[3]);    //레이저사운드
         //스폰
         GameObject go = Instantiate(laser, startPosition + dir.normalized, Quaternion.identity);
         //발사위치 설정
