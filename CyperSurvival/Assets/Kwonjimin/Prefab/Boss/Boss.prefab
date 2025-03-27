@@ -239,6 +239,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3017075769872502451}
     m_Modifications:
+    - target: {fileID: 27353860500129211, guid: cd17de983bbb4ed4eb4ecd2ad4b1fcdb, type: 3}
+      propertyPath: m_text
+      value: 'BOSS : FROZEN CREATURE'
+      objectReference: {fileID: 0}
     - target: {fileID: 326944219623623268, guid: cd17de983bbb4ed4eb4ecd2ad4b1fcdb, type: 3}
       propertyPath: m_Pivot.x
       value: 0

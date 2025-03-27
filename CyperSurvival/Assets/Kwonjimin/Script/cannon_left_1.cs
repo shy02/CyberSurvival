@@ -18,6 +18,14 @@ public class cannon_left_1 : MonoBehaviour
 
     void Update()
     {
+        // 🎯 보스가 죽으면 동작 중지
+        if (GameManager.Instance.nowNextStage)
+        {
+            if (animator != null)
+                animator.speed = 0f; // 애니메이션 정지
+            return;
+        }
+
         if (player == null)
         {
             player = GameObject.FindWithTag("Player");
@@ -26,7 +34,7 @@ public class cannon_left_1 : MonoBehaviour
 
         // 🎯 애니메이션 속도 조정
         if (animator != null)
-            animator.speed = 0.5f;
+            animator.speed = 0.3f;
 
         // 🎯 총알 발사 방향으로 회전
         RotateTowardsPlayer();
@@ -42,7 +50,9 @@ public class cannon_left_1 : MonoBehaviour
     // 🎯 플레이어 방향으로 회전
     void RotateTowardsPlayer()
     {
-        Vector3 direction = player.transform.position - transform.position; // 🔹 부모 오브젝트(cannon_right_1) 기준
+        if (GameManager.Instance.nowNextStage) return; // 보스가 죽으면 회전 중지
+
+        Vector3 direction = player.transform.position - transform.position; // 🔹 부모 오브젝트(cannon_left_1) 기준
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // 🔹 회전 보정 없이 플레이어 방향으로 자연스럽게 회전
@@ -53,6 +63,7 @@ public class cannon_left_1 : MonoBehaviour
     void FireBullet()
     {
         if (player == null) return;
+        if (GameManager.Instance.nowNextStage) return; // 보스가 죽으면 총알 발사 중지
 
         // 🔹 pos에서 플레이어 방향으로 총알 발사
         Vector3 direction = (player.transform.position - pos.position).normalized;
