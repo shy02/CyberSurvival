@@ -37,6 +37,8 @@ public class EnemyDamage_3 : MonoBehaviour
     public void GetDamage(int dmg) { Hp -= (float)dmg; }
     public void GetDamage(float dmg) { Hp -= dmg; }
 
+    public float GetHp() { return Hp; }
+
     bool death = false;
 
     private void Start()

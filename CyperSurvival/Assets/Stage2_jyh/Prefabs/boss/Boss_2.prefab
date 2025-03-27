@@ -230,7 +230,7 @@ MonoBehaviour:
   BossHP: {fileID: 6985914565763615193}
   Items: []
   ItemDropRate: 30
-  NextSceneUI: {fileID: 116443141034323046, guid: 4ff4233b37f9a2e45baa6e9dfe34e45b, type: 3}
+  NextSceneUI: {fileID: 116443141034323046, guid: 2996222b527961b4ebb380577393851e, type: 3}
   perfect: 
 --- !u!114 &6319893389521526803
 MonoBehaviour:

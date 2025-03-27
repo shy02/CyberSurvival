@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class NextSceneAnimation : MonoBehaviour
 {
     public TextMeshProUGUI nextText;
-
     public void StartAnime()
     {
         transform.GetComponent<AudioSource>().Play();
@@ -33,7 +32,6 @@ public class NextSceneAnimation : MonoBehaviour
         GameManager.Instance.nowNextStage = false;
         nextText.gameObject.SetActive(false);
 
-        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0f, 0f, 0f);
         ScenManager.instance.GoNextStage();
     }
 }
