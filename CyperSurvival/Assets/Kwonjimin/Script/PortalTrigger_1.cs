@@ -1,9 +1,9 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class PortalTrigger_1 : MonoBehaviour
 {
-    public AudioClip portalSound; // Æ÷Å» È¿°úÀ½
-    public float triggerDistance = 5f; // È¿°úÀ½ÀÌ µé¸®´Â ÃÖ´ë °Å¸®
+    public AudioClip portalSound; // í¬íƒˆ íš¨ê³¼ìŒ
+    public float triggerDistance = 5f; // íš¨ê³¼ìŒì´ ë“¤ë¦¬ëŠ” ìµœëŒ€ ê±°ë¦¬
     private Transform player;
     private AudioSource audioSource;
 
@@ -11,32 +11,40 @@ public class PortalTrigger_1 : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player")?.transform;
 
-        // AudioSource ¼³Á¤
+        // AudioSource ì„¤ì •
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.clip = portalSound;
-        audioSource.spatialBlend = 1f; // 3D È¿°ú Àû¿ë
-        audioSource.rolloffMode = AudioRolloffMode.Logarithmic; // °Å¸® °¨¼è ¹æ½ÄÀ» Logarithmic·Î ¼³Á¤ (¼Ò¸®°¡ Á¡Â÷ÀûÀ¸·Î ÀÛ¾ÆÁü)
+        audioSource.spatialBlend = 1f; // 3D íš¨ê³¼ ì ìš©
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic; // ê±°ë¦¬ ê°ì‡  ë°©ì‹ì„ Logarithmicë¡œ ì„¤ì • (ì†Œë¦¬ê°€ ì ì°¨ì ìœ¼ë¡œ ì‘ì•„ì§)
 
-        audioSource.minDistance = triggerDistance / 2f; // ¼Ò¸®°¡ 100% µé¸®´Â ¹üÀ§
-        audioSource.maxDistance = triggerDistance * 2f; // ¼Ò¸®°¡ Á¡Á¡ ÁÙ¾îµå´Â ÃÖ´ë °Å¸® (Á» ´õ ¸Ö¸® ¼³Á¤)
+        audioSource.minDistance = triggerDistance / 2f; // ì†Œë¦¬ê°€ 100% ë“¤ë¦¬ëŠ” ë²”ìœ„
+        audioSource.maxDistance = triggerDistance * 2f; // ì†Œë¦¬ê°€ ì ì  ì¤„ì–´ë“œëŠ” ìµœëŒ€ ê±°ë¦¬ (ì¢€ ë” ë©€ë¦¬ ì„¤ì •)
         audioSource.playOnAwake = false;
 
-        // ±âº» º¼·ıÀ» ´õ Å°¿ì±â (0.0f ~ 1.0f)
-        audioSource.volume = 1.0f; // ÃÖ´ë º¼·ı ¼³Á¤
+        // ê¸°ë³¸ ë³¼ë¥¨ì„ ë” í‚¤ìš°ê¸° (0.0f ~ 1.0f)
+        audioSource.volume = 1.0f; // ìµœëŒ€ ë³¼ë¥¨ ì„¤ì •
     }
 
     void Update()
     {
+        // ğŸ¯ ë³´ìŠ¤ê°€ ì£½ìœ¼ë©´ íš¨ê³¼ìŒ ì •ì§€ & ë” ì´ìƒ ì¬ìƒ ì•ˆ í•¨
+        if (GameManager.Instance.nowNextStage)
+        {
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+            return;
+        }
+
         if (player != null)
         {
             float distance = Vector2.Distance(transform.position, player.position);
 
-            // Æ÷Å»ÀÌ °¡±î¿öÁö¸é ¼Ò¸®°¡ Àç»ıµÇµµ·Ï
+            // í¬íƒˆì´ ê°€ê¹Œì›Œì§€ë©´ ì†Œë¦¬ê°€ ì¬ìƒë˜ë„ë¡
             if (distance <= audioSource.minDistance && !audioSource.isPlaying)
             {
                 audioSource.Play();
             }
-            // ³Ê¹« ¸Ö¾îÁö¸é ¼Ò¸®°¡ ¸ØÃßµµ·Ï
+            // ë„ˆë¬´ ë©€ì–´ì§€ë©´ ì†Œë¦¬ê°€ ë©ˆì¶”ë„ë¡
             else if (distance > audioSource.maxDistance && audioSource.isPlaying)
             {
                 audioSource.Stop();

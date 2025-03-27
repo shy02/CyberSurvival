@@ -24,9 +24,17 @@ public class cannon_right_1 : MonoBehaviour
             if (player == null) return;
         }
 
+        // 🎯 보스가 죽었으면 동작 중지
+        if (GameManager.Instance.nowNextStage)
+        {
+            if (animator != null)
+                animator.speed = 0f; // 애니메이션 정지
+            return;
+        }
+
         // 🎯 애니메이션 속도 조정
         if (animator != null)
-            animator.speed = 0.5f;
+            animator.speed = 0.3f;
 
         // 🎯 총알 발사 방향으로 회전
         RotateTowardsPlayer();
@@ -53,6 +61,9 @@ public class cannon_right_1 : MonoBehaviour
     void FireBullet()
     {
         if (player == null) return;
+
+        // 🔹 보스가 죽었으면 총알 발사 중지
+        if (GameManager.Instance.nowNextStage) return;
 
         // 🔹 pos에서 플레이어 방향으로 총알 발사
         Vector3 direction = (player.transform.position - pos.position).normalized;
