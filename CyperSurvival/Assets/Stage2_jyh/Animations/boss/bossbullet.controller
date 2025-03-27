@@ -28,7 +28,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: All_Fire_Bullet_Pixel_16x16_66
+  m_Name: bossbullet
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

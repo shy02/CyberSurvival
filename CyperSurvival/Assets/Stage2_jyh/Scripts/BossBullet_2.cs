@@ -10,16 +10,6 @@ public class BossBullet_2 : MonoBehaviour
     float moveSpeed = 7;
     int Damage = 10;
 
-    //풀링쓰면 변경
-    //private void OnEnable()
-    //{
-    //    player = GameObject.FindWithTag("Player");
-
-    //    Vector3 dir = player.transform.position - transform.position;
-
-    //    moveDir = dir.normalized;
-    //}
-
     private void Start()
     {
         player = GameObject.FindWithTag("Player");

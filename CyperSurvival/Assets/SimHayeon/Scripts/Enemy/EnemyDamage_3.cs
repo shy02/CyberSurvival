@@ -42,7 +42,7 @@ public class EnemyDamage_3 : MonoBehaviour
             }
         }//체력이 0보다 작은데 죽지 않았을때
 
-        if (transform.name == "Boss" && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
+        if (transform.name.Contains("Boss") && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
         else if(HpUI != null) HpUI.fillAmount = Hp / maxHP; //체력바 있어야 적용
 
     }
