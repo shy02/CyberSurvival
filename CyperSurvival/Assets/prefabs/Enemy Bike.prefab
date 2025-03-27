@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6528675438240609864}
   - component: {fileID: -1492426072797874684}
   - component: {fileID: 4424234311530564742}
+  - component: {fileID: -4685015533564534209}
   m_Layer: 0
   m_Name: Enemy Bike
   m_TagString: Enemy
@@ -187,3 +188,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-4685015533564534209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559540340127333326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 80
+  DeathEffect: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 

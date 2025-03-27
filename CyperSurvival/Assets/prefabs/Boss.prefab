@@ -19,7 +19,11 @@ GameObject:
   - component: {fileID: 1782727991140353757}
   - component: {fileID: 7041712582449581813}
   - component: {fileID: 840497992688915518}
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Boss.prefab
   - component: {fileID: 591531837734606087}
+=======
+  - component: {fileID: 6992991594941378646}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Boss.prefab
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -267,7 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RageHealth: 250
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Boss.prefab
 --- !u!114 &591531837734606087
+=======
+--- !u!114 &6992991594941378646
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Boss.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -276,7 +284,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 4064689012076378362}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Boss.prefab
   m_Script: {fileID: 11500000, guid: 3d853c2b70537f540a0ca4f868691447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Hp: 500
+=======
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 500
+  DeathEffect: {fileID: 2708598583397607911, guid: 6398d43fe79ea0140913dc5530c646af, type: 3}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Boss.prefab

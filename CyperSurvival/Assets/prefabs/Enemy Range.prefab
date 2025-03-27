@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1924272395842193325}
   - component: {fileID: 8690566395066750535}
   - component: {fileID: 2467700553173675470}
+  - component: {fileID: 8554676144497786183}
   m_Layer: 0
   m_Name: Enemy Range
   m_TagString: Enemy
@@ -107,6 +108,7 @@ MonoBehaviour:
   attackRange: 5
   attackMaxRange: 10
   attackInterval: 2
+  ischord: 0
   enemyType: 1
 --- !u!114 &1924272395842193325
 MonoBehaviour:
@@ -185,3 +187,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &8554676144497786183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988718806627482826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 30
+  DeathEffect: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+  HpUI: {fileID: 0}
+  BossHP: {fileID: 0}
+  Items: []
+  ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
