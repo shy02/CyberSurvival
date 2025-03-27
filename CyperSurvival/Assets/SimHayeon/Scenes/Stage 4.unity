@@ -14547,77 +14547,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1001 &664830363
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 823450828699915480, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2630284832659122242, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2630284832659122242, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: attackRange
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3559540340127333326, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: m_Name
-      value: Enemy Bike
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528675438240609864, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-      propertyPath: shootInterval
-      value: 0.1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6861198593427669208, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-    - {fileID: 2630284832659122242, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
 --- !u!1 &746747001
 GameObject:
   m_ObjectHideFlags: 0
@@ -14832,7 +14761,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1033470957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14855,6 +14784,7 @@ MonoBehaviour:
   - {fileID: 7988718806627482826, guid: ac090f0dd0877034d8412841d465914e, type: 3}
   enemyBike: {fileID: 3559540340127333326, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
   boss: {fileID: 4064689012076378362, guid: 2070b3784cea65841a96528bc79ecc78, type: 3}
+  count: 0
   spawnInterval: 15
 --- !u!4 &1033470958
 Transform:
@@ -15346,4 +15276,3 @@ SceneRoots:
   - {fileID: 1857706950}
   - {fileID: 746747003}
   - {fileID: 1033470958}
-  - {fileID: 664830363}

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8644417309868035717}
   - component: {fileID: 3568245443552865597}
   - component: {fileID: 6528675438240609864}
-  - component: {fileID: -1492426072797874684}
   - component: {fileID: 4424234311530564742}
   m_Layer: 0
   m_Name: Enemy Bike
@@ -147,19 +146,6 @@ MonoBehaviour:
   wanderSpeed: 2
   chaseSpeed: 3.5
   bulletPrefab: {fileID: 8067650518155624719, guid: c91ffab5e8522dc4ab837f88ce7e5d9c, type: 3}
---- !u!114 &-1492426072797874684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559540340127333326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d853c2b70537f540a0ca4f868691447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hp: 10
 --- !u!50 &4424234311530564742
 Rigidbody2D:
   serializedVersion: 5

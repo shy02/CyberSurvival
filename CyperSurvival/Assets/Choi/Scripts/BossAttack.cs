@@ -11,7 +11,7 @@ public class BossAttack : MonoBehaviour
     private MachineGunAttack machinegunAttack;
     private DashAttack dashAttack;
     private FallAttack fallAttack;
-    private int BossHealth;
+    private float BossHealth;
 
     private EnemyAI enemyAI; // EnemyAI 스크립트 참조
     private Rigidbody2D rb;
@@ -31,7 +31,7 @@ public class BossAttack : MonoBehaviour
 
     private void Update()
     {
-        BossHealth = GetComponent<EnemyDamage_3>().Hp;
+        BossHealth = GetComponent<EnemyDamage_3>().GetHp();
 
         // 보스가 광폭화 상태로 전환
         if (BossHealth <= RageHealth && !isEnraged)

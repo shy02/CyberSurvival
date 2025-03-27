@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 1782727991140353757}
   - component: {fileID: 7041712582449581813}
   - component: {fileID: 840497992688915518}
-  - component: {fileID: 591531837734606087}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Boss
@@ -267,16 +266,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RageHealth: 250
---- !u!114 &591531837734606087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4064689012076378362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d853c2b70537f540a0ca4f868691447, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hp: 500
