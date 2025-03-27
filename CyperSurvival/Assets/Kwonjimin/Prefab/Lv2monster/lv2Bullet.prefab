@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6025532860218288754}
   - component: {fileID: -9132264561840915632}
   - component: {fileID: 7588885827818479452}
+  - component: {fileID: 777972709191951689}
   m_Layer: 0
   m_Name: lv2Bullet
   m_TagString: Untagged
@@ -189,3 +190,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &777972709191951689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096455592682357609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3f86d45d12b6842a537f19b635460c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 5
