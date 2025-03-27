@@ -33,6 +33,8 @@ public class SpawnManager_s_3 : MonoBehaviour
 
     List<Transform> Spawnposes = new List<Transform>();
 
+    [SerializeField] Transform parent;//적들이 가질 부모
+    
 
     private void Start()
     {
@@ -44,6 +46,14 @@ public class SpawnManager_s_3 : MonoBehaviour
 
         StartCoroutine(StartTimerCount());
         StartCoroutine(StartMobSpawn());
+    }
+    private void Update()
+    {
+        if (GameManager.Instance.nowNextStage && parent != null)
+        {
+            StopAllCoroutines();
+            Destroy(parent.gameObject);
+        }
     }
     IEnumerator StartMobSpawn()
     {
@@ -58,7 +68,7 @@ public class SpawnManager_s_3 : MonoBehaviour
                 for (int i = 0; i < count; i++)
                 {
                     int point = Random.Range(1, transform.childCount);
-                    Instantiate(enemy3, Spawnposes[point].position, Quaternion.identity);
+                    Instantiate(enemy3, Spawnposes[point].position, Quaternion.identity, parent);
                 }
 
             }
@@ -71,7 +81,7 @@ public class SpawnManager_s_3 : MonoBehaviour
                 for (int i = 0; i < count; i++)
                 {
                     int point = Random.Range(1, transform.childCount);
-                    Instantiate(enemy2, Spawnposes[point].position, Quaternion.identity);
+                    Instantiate(enemy2, Spawnposes[point].position, Quaternion.identity,parent).GetComponent<Enemy2_Shot_3>().parent = this.parent;
                 }
                 yield return new WaitForSeconds(0.5f);
             }
@@ -79,7 +89,7 @@ public class SpawnManager_s_3 : MonoBehaviour
             //게임 초반
             for (int i = 0; i < transform.childCount; i++)
             {
-                Instantiate(enemy1, Spawnposes[i].position, Quaternion.identity);
+                Instantiate(enemy1, Spawnposes[i].position, Quaternion.identity,parent);
             }
         }
     }
