@@ -11,14 +11,12 @@ GameObject:
   - component: {fileID: 823450828699915480}
   - component: {fileID: 8644417309868035717}
   - component: {fileID: 3568245443552865597}
-  - component: {fileID: 2630284832659122242}
   - component: {fileID: 6528675438240609864}
-  - component: {fileID: 6861198593427669208}
   - component: {fileID: -1492426072797874684}
   - component: {fileID: 4424234311530564742}
   m_Layer: 0
   m_Name: Enemy Bike
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,23 +128,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 1
---- !u!114 &2630284832659122242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559540340127333326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8be36b56a0eb6742ba2b1adad677eea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  attackRange: 7
-  attackMaxRange: 11
-  attackInterval: 3
-  enemyType: 2
 --- !u!114 &6528675438240609864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,21 +140,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7b10ae4f3f8f29498dbbf576f9ef4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 13
-  shootInterval: 0.2
---- !u!114 &6861198593427669208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559540340127333326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6f659fbb7e96146a091996e7c1eb8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AttackEffect: {fileID: 8067650518155624719, guid: 47af5c33899d7c242801a20dbbfffee9, type: 3}
+  detectionRange: 7
+  dashSpeed: 8
+  dashDuration: 0.5
+  wanderTime: 3
+  wanderSpeed: 2
+  chaseSpeed: 3.5
+  bulletPrefab: {fileID: 8067650518155624719, guid: c91ffab5e8522dc4ab837f88ce7e5d9c, type: 3}
 --- !u!114 &-1492426072797874684
 MonoBehaviour:
   m_ObjectHideFlags: 0

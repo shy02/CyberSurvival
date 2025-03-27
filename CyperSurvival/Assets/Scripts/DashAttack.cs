@@ -3,8 +3,8 @@ using System.Collections;
 
 public class DashAttack : MonoBehaviour
 {
-    public float dashSpeed = 20f;   // ��� �ӵ�
-    public float dashDuration = 0.5f; // ��� ���� �ð�
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.5f;
     private Transform player;
     private Rigidbody2D rb;
     private bool isDashing = false;
@@ -26,16 +26,12 @@ public class DashAttack : MonoBehaviour
     {
         isDashing = true;
 
-        // �÷��̾� ���� ���
         Vector2 dashDirection = (player.position - transform.position).normalized;
 
-        // ��� ����
         rb.linearVelocity = dashDirection * dashSpeed;
 
-        // ��� ���� �ð� ���� ����
         yield return new WaitForSeconds(dashDuration);
 
-        // ��� ����
         rb.linearVelocity = Vector2.zero;
         isDashing = false;
     }

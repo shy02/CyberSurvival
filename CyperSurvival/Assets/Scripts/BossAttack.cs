@@ -40,7 +40,7 @@ public class BossAttack : MonoBehaviour
             fallAttackCount = 10;
             machinegunAttack.fireDuration = 3f;
             machinegunAttack.fireRate = 0.06f;
-            Debug.Log("보스가 광폭화 상태로 변경됨!");
+            Debug.Log("광폭화!");
         }
 
         if (isAttacking) return;
@@ -98,7 +98,7 @@ public class BossAttack : MonoBehaviour
             Debug.Log("광폭화 상태 - 연속 낙하 공격 수행!");
         }
         yield return new WaitForSeconds(2.4f);
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         yield return new WaitForSeconds(4.5f);
         rb.bodyType = RigidbodyType2D.Dynamic;

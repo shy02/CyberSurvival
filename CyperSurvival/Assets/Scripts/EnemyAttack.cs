@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public GameObject AttackEffect;
+
     public void ExecuteAttack(EnemyAI.EnemyType enemyType)
     {
         switch (enemyType)
@@ -13,12 +14,12 @@ public class EnemyAttack : MonoBehaviour
             case EnemyAI.EnemyType.Ranged:
                 RangedAttack();
                 break;
-            case EnemyAI.EnemyType.Bike:
+            /*case EnemyAI.EnemyType.Bike:
                 BikeAttack();
-                break;
-            case EnemyAI.EnemyType.Boss:
+                break;*/
+            /*case EnemyAI.EnemyType.Boss:
                 BossAttackPattern();
-                break;
+                break;*/
         }
     }
 
@@ -32,13 +33,14 @@ public class EnemyAttack : MonoBehaviour
         Instantiate(AttackEffect, transform.position, Quaternion.identity);
     }
 
-    public void BikeAttack()
+    /*public void BikeAttack()
     {
-        gameObject.GetComponent<ChordMovement>().StartMovement();
-    }
-    public void BossAttackPattern()
+        enemyAI.ischord = true;
+        gameObject.GetComponent<EnemyBike>().StartMovement();
+    }*/
+    /*public void BossAttackPattern()
     {
 
 
-    }
+    }*/
 }
