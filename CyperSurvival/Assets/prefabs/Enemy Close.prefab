@@ -177,7 +177,11 @@ GameObject:
   - component: {fileID: 4290352556310625456}
   - component: {fileID: -67784874060901817}
   - component: {fileID: 2500725741462513095}
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Close.prefab
   - component: {fileID: 8124961213396557205}
+=======
+  - component: {fileID: 3628202723188398884}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Close.prefab
   m_Layer: 0
   m_Name: Enemy Close
   m_TagString: Enemy
@@ -363,7 +367,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Close.prefab
 --- !u!114 &8124961213396557205
+=======
+--- !u!114 &3628202723188398884
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Close.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,8 +383,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Close.prefab
   maxHP: 20
   DeathEffect: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+=======
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Close.prefab
   HpUI: {fileID: 0}
   BossHP: {fileID: 0}
   Items: []

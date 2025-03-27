@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 6528675438240609864}
   - component: {fileID: -1492426072797874684}
   - component: {fileID: 4424234311530564742}
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Bike.prefab
   - component: {fileID: -4685015533564534209}
+=======
+  - component: {fileID: 6627643869300302676}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Bike.prefab
   m_Layer: 0
   m_Name: Enemy Bike
   m_TagString: Enemy
@@ -188,7 +192,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Bike.prefab
 --- !u!114 &-4685015533564534209
+=======
+--- !u!114 &6627643869300302676
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Bike.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,8 +208,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Bike.prefab
   maxHP: 80
   DeathEffect: {fileID: 8791802859087666345, guid: ae07f2a45f14a82428409cfe410e6002, type: 3}
+=======
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Bike.prefab
   HpUI: {fileID: 0}
   BossHP: {fileID: 0}
   Items: []

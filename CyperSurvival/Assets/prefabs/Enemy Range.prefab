@@ -14,7 +14,11 @@ GameObject:
   - component: {fileID: 1924272395842193325}
   - component: {fileID: 8690566395066750535}
   - component: {fileID: 2467700553173675470}
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Range.prefab
   - component: {fileID: 8554676144497786183}
+=======
+  - component: {fileID: -2824982575103422946}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Range.prefab
   m_Layer: 0
   m_Name: Enemy Range
   m_TagString: Enemy
@@ -187,7 +191,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Range.prefab
 --- !u!114 &8554676144497786183
+=======
+--- !u!114 &-2824982575103422946
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Range.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,8 +207,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:CyperSurvival/Assets/prefabs/Enemy Range.prefab
   maxHP: 30
   DeathEffect: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+=======
+  maxHP: 0
+  DeathEffect: {fileID: 0}
+>>>>>>> Stashed changes:CyperSurvival/Assets/Choi/prefabs/Enemy Range.prefab
   HpUI: {fileID: 0}
   BossHP: {fileID: 0}
   Items: []
