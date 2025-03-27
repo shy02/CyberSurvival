@@ -15,10 +15,14 @@ public class lv2enemy_1 : MonoBehaviour
     // 애니메이션 속도를 조정할 수 있는 변수
     public float animationSpeed = 1f; // 기본 애니메이션 속도
 
+    public float followSpeed = 2f; // 플레이어를 따라가는 속도
+    public float followDistance = 8f; // 플레이어가 이 범위 안에 들어오면 따라가기 시작
+
     private Transform player; // 플레이어의 Transform
     private Animator animator;
     private bool isIdle = true; // 현재 idle 상태인지
     private float lastAttackTime; // 마지막 공격 시간 기록
+    private bool isFlipped = false; // x축 플립 여부
 
     void Start()
     {
@@ -33,9 +37,16 @@ public class lv2enemy_1 : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
+        // 공격 범위 내에 있으면 공격
         if (distanceToPlayer <= fireDistance && Time.time >= lastAttackTime + postAttackDelay)
         {
             Attack();
+        }
+
+        // 플레이어가 일정 거리 이내에 있으면 따라가고, 그렇지 않으면 idle 상태로
+        if (distanceToPlayer <= followDistance)
+        {
+            FollowPlayer();
         }
         else if (!animator.GetBool("attack"))
         {
@@ -127,5 +138,31 @@ public class lv2enemy_1 : MonoBehaviour
         {
             bulletScript.SetDirection(direction);
         }
+    }
+
+    void FollowPlayer()
+    {
+        // 플레이어의 x축 위치가 적의 x축 위치보다 작을 때만 따라가도록
+        if (player.position.x < transform.position.x && !isFlipped)
+        {
+            Flip();
+        }
+        else if (player.position.x > transform.position.x && isFlipped)
+        {
+            Flip();
+        }
+
+        // 플레이어를 따라간다.
+        Vector3 moveDirection = (player.position - transform.position).normalized;
+        moveDirection.y = 0; // y축 이동은 없도록 설정
+        transform.position += moveDirection * followSpeed * Time.deltaTime;
+    }
+
+    void Flip()
+    {
+        isFlipped = !isFlipped;
+        Vector3 localScale = transform.localScale;
+        localScale.x = -localScale.x; // x축 반전
+        transform.localScale = localScale;
     }
 }

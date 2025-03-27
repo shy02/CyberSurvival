@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: -583950913342081534}
   - component: {fileID: -3094846191587296663}
   - component: {fileID: 2742026728476237395}
+  - component: {fileID: 4130727305085550793}
   m_Layer: 0
-  m_Name: CannonBullet
+  m_Name: cannonbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,3 +200,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &4130727305085550793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863194161914414082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3f86d45d12b6842a537f19b635460c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
