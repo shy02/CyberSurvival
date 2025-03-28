@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class ScenManager : MonoBehaviour
 {
     public List<string> SceneName = new List<string>();
-    int nowStage = 1; //0 = title
+    [SerializeField]int nowStage = 1; //0 = title
 
     public static ScenManager instance;
     [SerializeField] Transform player;
@@ -28,7 +28,13 @@ public class ScenManager : MonoBehaviour
     public void GoNextStage()//다음 스테이지로 가는 함수
     {
         nowStage++;
-        SceneManager.LoadScene(SceneName[nowStage]);
+        if(nowStage == 5)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
+        else {
+            SceneManager.LoadScene(SceneName[nowStage]);
+        }
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
