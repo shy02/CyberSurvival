@@ -18,24 +18,34 @@ public class Boss_1 : MonoBehaviour
     public int missileCount = 3;
 
     private Animator animator;
-
     private GameObject player;
     private Transform[] portalPositions;
 
+    // 🔹 사운드 관련 변수 추가
+    public AudioClip missileFireSound; // 일반 미사일 효과음
+    public AudioClip homingMissileFireSound; // 호밍 미사일 효과음
+    public float missileVolume = 1.0f; // 일반 미사일 볼륨
+    public float homingMissileVolume = 1.0f; // 호밍 미사일 볼륨
+    private AudioSource audioSource; // 오디오 소스
+
     void Start()
     {
-        // 애니메이터 컴포넌트 가져오기
         animator = bossObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
-        // 이 스크립트는 이제 받지 않음. BossSpawn_1에서 설정
-        // player와 portalPositions는 BossSpawn_1에서 할당될 것입니다.
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // 없으면 추가
+        }
+
+        audioSource.volume = 1.0f; // 기본 볼륨은 1.0f로 설정
     }
 
     void Update()
     {
         if (player == null || portalPositions == null || portalPositions.Length == 0)
         {
-            return; // 플레이어나 포탈이 없다면 더 이상 실행하지 않음
+            return;
         }
 
         FollowPlayer();
@@ -86,6 +96,9 @@ public class Boss_1 : MonoBehaviour
                 else
                     Debug.LogError("미사일 프리팹에 missile_1 스크립트가 없습니다!");
 
+                // 🔹 미사일 발사 효과음 (일반 미사일 소리만 두 배로 설정)
+                PlaySound(missileFireSound, missileVolume * 2);  // 여기서 볼륨을 두 배로 설정
+
                 yield return new WaitForSeconds(portalShotDelay);
             }
         }
@@ -94,43 +107,47 @@ public class Boss_1 : MonoBehaviour
 
     void LaunchHomingMissile()
     {
-        // 공격 애니메이션 실행
         animator.SetBool("attack", true);
 
-        // 호밍 미사일 발사
         GameObject missile = Instantiate(homingMissilePrefab, transform.position, Quaternion.identity);
         missile.GetComponent<HomingMissile>().SetTarget(player);
 
-        // 미사일 발사 후 attack 애니메이션을 종료
-        Invoke("StopAttackAnimation", 0.2f); // 공격 애니메이션이 0.2초 후에 종료되도록 설정
+        // 🔹 호밍 미사일 발사 효과음 (호밍 미사일 볼륨 적용)
+        PlaySound(homingMissileFireSound, homingMissileVolume);
+
+        Invoke("StopAttackAnimation", 0.2f);
     }
 
     void StopAttackAnimation()
     {
-        // attack 애니메이션 종료
         animator.SetBool("attack", false);
     }
 
     void FlipTowardsPlayer()
     {
-        // 보스의 x축이 플레이어의 x축보다 작으면 보스가 반전하도록 설정
         if (player != null)
         {
             Vector3 playerPos = player.transform.position;
 
-            // 보스의 위치와 플레이어의 위치를 비교하여 방향을 변경
             if (transform.position.x < playerPos.x)
             {
-                // 플레이어가 오른쪽에 있으면, 오른쪽으로 보스가 보이도록 설정
                 if (transform.localScale.x < 0)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                // 플레이어가 왼쪽에 있으면, 왼쪽으로 보스가 보이도록 설정
                 if (transform.localScale.x > 0)
                     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
+        }
+    }
+
+    // 🔹 사운드 재생 함수 (볼륨 조절 가능)
+    void PlaySound(AudioClip clip, float volume)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip, volume);
         }
     }
 }

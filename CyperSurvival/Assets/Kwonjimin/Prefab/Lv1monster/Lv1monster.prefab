@@ -127,10 +127,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441d6a103b48d4f42849c73dea2827ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  delay: 0.5
   pos: {fileID: 2695466130459250862}
   bulletPrefab: {fileID: 2599875446353123488, guid: ed49f949b2627ca4dbdebf984531200b, type: 3}
-  fireDistance: 5
+  fireDistance: 7
+  fireSound: {fileID: 8300000, guid: 279ef608900bc2b4cb8635339cb028e0, type: 3}
+  fireVolume: 0.5
 --- !u!61 &2461451449371726594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,6 +200,8 @@ MonoBehaviour:
   - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &4569945679846330368
 GameObject:
   m_ObjectHideFlags: 0

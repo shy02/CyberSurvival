@@ -1,34 +1,42 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections;
 
 public class lv2enemy_1 : MonoBehaviour
 {
-    public float delay = 1f; // Ã¹ °ø°İ ´ë±â ½Ã°£
-    public float fireDelay = 0.2f; // ¿¬¼Ó ¹ß»ç °£°İ
-    public Transform pos1; // Ã¹ ¹øÂ° ÃÑ¾Ë ¹ß»ç À§Ä¡
-    public Transform pos2; // µÎ ¹øÂ° ÃÑ¾Ë ¹ß»ç À§Ä¡
-    public GameObject bulletPrefab; // ¹Ì»çÀÏ ÇÁ¸®ÆÕ
-    public float fireDistance = 5f; // °ø°İ ¹üÀ§
-    public float spreadAngle = 15f; // Ãß°¡ ÃÑ¾ËÀÇ È®»ê °¢µµ
-    public float postAttackDelay = 5f; // °ø°İ ÈÄ ½¬´Â ½Ã°£
+    public float delay = 1f;
+    public float fireDelay = 0.2f;
+    public Transform pos1;
+    public Transform pos2;
+    public GameObject bulletPrefab;
+    public float fireDistance = 5f;
+    public float spreadAngle = 15f;
+    public float postAttackDelay = 5f;
+    public float animationSpeed = 1f;
+    public float followSpeed = 2f;
+    public float followDistance = 8f;
 
-    // ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ¸¦ Á¶Á¤ÇÒ ¼ö ÀÖ´Â º¯¼ö
-    public float animationSpeed = 1f; // ±âº» ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ
-
-    public float followSpeed = 2f; // ÇÃ·¹ÀÌ¾î¸¦ µû¶ó°¡´Â ¼Óµµ
-    public float followDistance = 8f; // ÇÃ·¹ÀÌ¾î°¡ ÀÌ ¹üÀ§ ¾È¿¡ µé¾î¿À¸é µû¶ó°¡±â ½ÃÀÛ
-
-    private Transform player; // ÇÃ·¹ÀÌ¾îÀÇ Transform
+    private Transform player;
     private Animator animator;
-    private bool isIdle = true; // ÇöÀç idle »óÅÂÀÎÁö
-    private float lastAttackTime; // ¸¶Áö¸· °ø°İ ½Ã°£ ±â·Ï
-    private bool isFlipped = false; // xÃà ÇÃ¸³ ¿©ºÎ
+    private bool isIdle = true;
+    private float lastAttackTime;
+    private bool isFlipped = false;
+
+    public AudioClip fireSound; // ğŸ”¹ ë°œì‚¬ íš¨ê³¼ìŒ ì¶”ê°€
+    private AudioSource audioSource; // ğŸ”¹ ì˜¤ë””ì˜¤ ì†ŒìŠ¤
+    public float fireVolume = 0.5f; // ğŸ”¹ ë³¼ë¥¨ ì¡°ì ˆ (ê¸°ë³¸ê°’ 0.5)
 
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         InvokeRepeating("TryAttack", delay, fireDelay);
+
+        audioSource = GetComponent<AudioSource>(); // ğŸ”¹ AudioSource ê°€ì ¸ì˜¤ê¸°
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // ğŸ”¹ ì—†ìœ¼ë©´ ì¶”ê°€
+        }
+        audioSource.playOnAwake = false; // ğŸ”¹ ìë™ ì¬ìƒ ë°©ì§€
     }
 
     void Update()
@@ -37,13 +45,11 @@ public class lv2enemy_1 : MonoBehaviour
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        // °ø°İ ¹üÀ§ ³»¿¡ ÀÖÀ¸¸é °ø°İ
         if (distanceToPlayer <= fireDistance && Time.time >= lastAttackTime + postAttackDelay)
         {
             Attack();
         }
 
-        // ÇÃ·¹ÀÌ¾î°¡ ÀÏÁ¤ °Å¸® ÀÌ³»¿¡ ÀÖÀ¸¸é µû¶ó°¡°í, ±×·¸Áö ¾ÊÀ¸¸é idle »óÅÂ·Î
         if (distanceToPlayer <= followDistance)
         {
             FollowPlayer();
@@ -59,32 +65,26 @@ public class lv2enemy_1 : MonoBehaviour
         if (!isIdle)
         {
             animator.SetBool("attack", false);
-            animator.speed = animationSpeed * 0.5f; // Idle ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ Á¶Àı
+            animator.speed = animationSpeed * 0.5f;
             isIdle = true;
         }
     }
 
     void Attack()
     {
-        if (animator.GetBool("attack")) return; // ÀÌ¹Ì °ø°İ ÁßÀÌ¸é ¸®ÅÏ
+        if (animator.GetBool("attack")) return;
 
         isIdle = false;
-        animator.SetBool("attack", true); // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç Áï½Ã ½ÃÀÛ
-        animator.speed = animationSpeed; // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ Á¶Àı
-
-        // ¾Ö´Ï¸ŞÀÌ¼ÇÀ» ¸ÕÀú ½ÇÇàÇÑ ÈÄ ¹Ì»çÀÏ ¹ß»ç
+        animator.SetBool("attack", true);
+        animator.speed = animationSpeed;
         StartCoroutine(AttackSequence());
     }
 
     IEnumerator AttackSequence()
     {
-        yield return StartCoroutine(FirePattern()); // ¹Ì»çÀÏ ¹ß»ç (¹ß»ç µ¿¾È ¾Ö´Ï¸ŞÀÌ¼Ç À¯Áö)
-
-        // ¹Ì»çÀÏ ¹ß»ç°¡ ³¡³ª¸é ¾Ö´Ï¸ŞÀÌ¼Ç Á¾·á
-        animator.SetBool("attack", false); // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç Á¾·á
-        lastAttackTime = Time.time; // ¸¶Áö¸· °ø°İ ½Ã°£ ±â·Ï
-
-        // ¹Ì»çÀÏ ¹ß»ç°¡ ³¡³­ ÈÄ idle »óÅÂ·Î µ¹¾Æ°¨
+        yield return StartCoroutine(FirePattern());
+        animator.SetBool("attack", false);
+        lastAttackTime = Time.time;
         Idle();
     }
 
@@ -92,7 +92,6 @@ public class lv2enemy_1 : MonoBehaviour
     {
         if (player == null) yield break;
 
-        // 3¹ø ¹ß»ç (pos1 -> pos2 -> pos1 -> pos2 ...)
         for (int i = 0; i < 3; i++)
         {
             FireBulletPattern(pos1);
@@ -100,7 +99,7 @@ public class lv2enemy_1 : MonoBehaviour
             yield return new WaitForSeconds(fireDelay);
         }
 
-        yield return new WaitForSeconds(postAttackDelay); // °ø°İ ÈÄ ½¬´Â ½Ã°£
+        yield return new WaitForSeconds(postAttackDelay);
     }
 
     void TryAttack()
@@ -120,10 +119,7 @@ public class lv2enemy_1 : MonoBehaviour
 
         Vector3 direction = (player.position - pos.position).normalized;
 
-        // ±âº» ÇÑ ¹ß
         FireBulletFromPosition(pos, direction);
-
-        // È®»êµÈ Ãß°¡ µÎ ¹ß
         FireBulletFromPosition(pos, Quaternion.Euler(0, 0, spreadAngle) * direction);
         FireBulletFromPosition(pos, Quaternion.Euler(0, 0, -spreadAngle) * direction);
     }
@@ -138,11 +134,16 @@ public class lv2enemy_1 : MonoBehaviour
         {
             bulletScript.SetDirection(direction);
         }
+
+        // ğŸ”¹ íš¨ê³¼ìŒ ì¬ìƒ (ë³¼ë¥¨ ì¡°ì ˆ ì ìš©)
+        if (fireSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireSound, fireVolume);
+        }
     }
 
     void FollowPlayer()
     {
-        // ÇÃ·¹ÀÌ¾îÀÇ xÃà À§Ä¡°¡ ÀûÀÇ xÃà À§Ä¡º¸´Ù ÀÛÀ» ¶§¸¸ µû¶ó°¡µµ·Ï
         if (player.position.x < transform.position.x && !isFlipped)
         {
             Flip();
@@ -152,9 +153,8 @@ public class lv2enemy_1 : MonoBehaviour
             Flip();
         }
 
-        // ÇÃ·¹ÀÌ¾î¸¦ µû¶ó°£´Ù.
         Vector3 moveDirection = (player.position - transform.position).normalized;
-        moveDirection.y = 0; // yÃà ÀÌµ¿Àº ¾øµµ·Ï ¼³Á¤
+        moveDirection.y = 0;
         transform.position += moveDirection * followSpeed * Time.deltaTime;
     }
 
@@ -162,7 +162,7 @@ public class lv2enemy_1 : MonoBehaviour
     {
         isFlipped = !isFlipped;
         Vector3 localScale = transform.localScale;
-        localScale.x = -localScale.x; // xÃà ¹İÀü
+        localScale.x = -localScale.x;
         transform.localScale = localScale;
     }
 }
