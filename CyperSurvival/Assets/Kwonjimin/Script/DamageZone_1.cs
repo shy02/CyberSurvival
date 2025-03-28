@@ -1,82 +1,145 @@
 using UnityEngine;
+using TMPro;
+using System.Collections; // 코루틴 사용을 위해 추가
 
 public class DamageZone : MonoBehaviour
 {
-    public float noDamageTime = 10f; // 데미지를 주지 않는 시간 (초)
-    public float damageInterval = 1f; // 데미지를 주는 시간 간격 (초)
-    public int damageAmount = 5; // 데미지 양
+    public float noDamageTime = 10f; // 데미지를 받지 않는 시간
+    public float damageInterval = 1f; // 데미지를 주는 간격
+    public int damageAmount = 5; // 데미지량
+
     private float damageTimer = 0f;
-    private float noDamageTimer = 0f; // 데미지를 주지 않는 타이머
-    private GameObject player;
+    private float noDamageTimer = 0f;
+    private bool playerInZone = false;
 
-    private AudioSource audioSource; // AudioSource 변수 추가
-    public AudioClip zoneSound; // 구역에 들어왔을 때 재생할 효과음
+    private AudioSource audioSource;
+    public AudioClip noDamageSound; // 10초 동안 재생될 효과음
+    public AudioClip loopingDamageSound; // 10초 이후 루프될 효과음
 
-    private BoxCollider2D zoneCollider;
+    // 인스펙터에서 TMP 오브젝트를 직접 할당할 수 있게 public으로 설정
+    public TextMeshProUGUI warningText; // TMP 오브젝트 참조 (TextMeshProUGUI로 수정)
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // AudioSource 컴포넌트 가져오기
-        zoneCollider = GetComponent<BoxCollider2D>(); // DamageZone의 콜라이더 가져오기
+        audioSource = GetComponent<AudioSource>();
+
+        // warningText가 할당되지 않았다면 경고 메시지 출력
+        if (warningText != null)
+        {
+            Debug.Log("Warning TMP 오브젝트를 찾았습니다!");
+            warningText.gameObject.SetActive(false); // 처음에는 비활성화 상태로 두기
+        }
+        else
+        {
+            Debug.LogWarning("Warning TMP 오브젝트를 찾을 수 없습니다.");
+        }
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // 플레이어 객체가 없으면 찾기 시작
-        if (player == null)
+        if (other.CompareTag("Player"))
         {
-            player = GameObject.FindWithTag("Player"); // 씬 내에서 "Player" 태그를 가진 객체 찾기
-            if (player != null)
-            {
-                Debug.Log("플레이어 객체 찾음!");
-                PlayZoneSound(); // 효과음 재생
-            }
+            Debug.Log("플레이어가 데미지 존에 진입!");
+            playerInZone = true;
+            noDamageTimer = 0f;
+            damageTimer = 0f; // 데미지 타이머 초기화
+
+            PlayNoDamageSound();
+            StartCoroutine(BlinkText(5f)); // TMP 깜빡이기 시작 (5초 동안)
         }
+    }
 
-        // 플레이어가 감지되면 Overlap 사용
-        if (player != null)
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            // Overlap을 사용하여 플레이어가 구역 안에 있는지 확인
-            Collider2D[] hitColliders = Physics2D.OverlapBoxAll(zoneCollider.bounds.center, zoneCollider.bounds.size, 0f, LayerMask.GetMask("Player"));
+            noDamageTimer += Time.deltaTime;
 
-            // hitColliders 배열에서 플레이어가 있는지 확인
-            foreach (Collider2D collider in hitColliders)
+            if (noDamageTimer >= noDamageTime)
             {
-                Debug.Log($"충돌한 객체: {collider.gameObject.name}"); // 어떤 객체가 충돌했는지 확인
-
-                if (collider.CompareTag("Player"))
+                if (!audioSource.isPlaying || audioSource.clip != loopingDamageSound)
                 {
-                    Debug.Log("플레이어가 구역 안에 있음"); // 플레이어가 구역 안에 있을 때 확인
-                    noDamageTimer += Time.deltaTime;
+                    PlayLoopingDamageSound();
+                }
 
-                    if (noDamageTimer >= noDamageTime)
-                    {
-                        damageTimer += Time.deltaTime;
+                damageTimer += Time.deltaTime;
 
-                        if (damageTimer >= damageInterval)
-                        {
-                            player.GetComponent<Player>().TakeDamage(damageAmount);
-                            damageTimer = 0f;
-                        }
-                    }
+                if (damageTimer >= damageInterval)
+                {
+                    other.GetComponent<Player>().TakeDamage(damageAmount);
+                    Debug.Log($"플레이어가 {damageAmount} 데미지를 받음!");
+                    damageTimer = 0f;
                 }
             }
+        }
+    }
 
-            // 구역에 플레이어가 없는 경우 디버그
-            if (hitColliders.Length == 0)
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("플레이어가 데미지 존을 벗어남.");
+            playerInZone = false;
+            damageTimer = 0f;
+            noDamageTimer = 0f;
+
+            StopSound();
+            StopCoroutine(BlinkText(2f)); // 깜빡이는 코루틴 정지
+            if (warningText != null)
             {
-                Debug.Log("플레이어가 구역에 없음");
+                warningText.gameObject.SetActive(false); // 문구 숨기기
             }
         }
     }
 
-    void PlayZoneSound()
+    void PlayNoDamageSound()
     {
-        if (audioSource != null && zoneSound != null)
+        if (audioSource != null && noDamageSound != null)
         {
-            audioSource.clip = zoneSound;
+            audioSource.clip = noDamageSound;
+            audioSource.loop = false;
             audioSource.Play();
-            Debug.Log("효과음 재생됨");
+            Debug.Log("10초 동안 효과음 재생");
         }
+    }
+
+    void PlayLoopingDamageSound()
+    {
+        if (audioSource != null && loopingDamageSound != null)
+        {
+            audioSource.clip = loopingDamageSound;
+            audioSource.loop = true;
+            audioSource.Play();
+            Debug.Log("데미지 루프 효과음 시작");
+        }
+    }
+
+    void StopSound()
+    {
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            Debug.Log("모든 효과음 정지");
+        }
+    }
+
+    IEnumerator BlinkText(float duration)
+    {
+        if (warningText == null) yield break;
+
+        warningText.gameObject.SetActive(true);
+        float elapsedTime = 0f;
+        bool isVisible = true;
+
+        while (elapsedTime < duration)
+        {
+            isVisible = !isVisible;
+            warningText.alpha = isVisible ? 1f : 0f; // alpha 값을 조절하여 깜빡임 효과
+            yield return new WaitForSeconds(0.5f); // 0.5초마다 깜빡임
+            elapsedTime += 0.5f; // 0.5초마다 증가
+        }
+
+        warningText.gameObject.SetActive(false); // 5초 후 문구 숨김
     }
 }
