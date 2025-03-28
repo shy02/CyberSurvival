@@ -11,9 +11,12 @@ public class SoundMgr_2 : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void OneShot(AudioClip audioClip)
+    public void OneShot(AudioClip audioClip, float volume)
     {
+        //사운드 조절
+        audioSource.volume = volume;
         audioSource.PlayOneShot(audioClip);
+        
     }
 
     private void Update()
@@ -21,7 +24,7 @@ public class SoundMgr_2 : MonoBehaviour
         //보스 잡으면 소리 끔
         if ((GameManager.Instance.nowNextStage == true))
         {
-            audioSource.Stop();
+            audioSource.volume = 0;
         }
     }
 

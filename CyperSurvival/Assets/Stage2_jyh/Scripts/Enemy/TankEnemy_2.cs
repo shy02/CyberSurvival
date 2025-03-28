@@ -76,7 +76,7 @@ public class TankEnemy_2 : MonoBehaviour
     //사운드 재생
     void playSound()
     {
-        SoundMgr_2.instance.OneShot(attackSound);
+        SoundMgr_2.instance.OneShot(attackSound, 0.8f);
     }
 
 }
