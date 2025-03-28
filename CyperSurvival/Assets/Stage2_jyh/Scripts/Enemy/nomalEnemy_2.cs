@@ -9,6 +9,8 @@ public class nomalEnemy_2 : MonoBehaviour
     [Header("공격 참조")]
     public GameObject bullet;
     public Transform firePos;
+    [Header("사운드")]
+    [SerializeField]private AudioClip attackSound;
     private EnemyMove_2 moveSc;
     GameObject player;
     Vector3 dir = Vector3.zero; //총알 방향
@@ -54,7 +56,7 @@ public class nomalEnemy_2 : MonoBehaviour
         dir = player.transform.position - transform.position;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        bulletCount = Random.Range(3,6);
+        bulletCount = Random.Range(bulletCount-1, bulletCount + 2);
 
         for (int i = 0; i < bulletCount; i++)
         {
@@ -62,7 +64,7 @@ public class nomalEnemy_2 : MonoBehaviour
             GameObject go = Instantiate(bullet, firePos.position, Quaternion.identity);
             go.GetComponent<EnemyBullet_2>().SetDir(bulletDir);
         }
-
+        SoundMgr_2.instance.OneShot(attackSound, 0.5f);
     }
 
     Vector3 CalculateBulletDirection(int index, int totalBullets, float baseAngle)
