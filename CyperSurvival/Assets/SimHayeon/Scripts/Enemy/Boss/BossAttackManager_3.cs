@@ -53,6 +53,7 @@ public class BossAttackManager_3 : MonoBehaviour
         if (count == cores.childCount && CanAttack)
         {
             StopAttack();
+            GetComponent<BoxCollider2D>().enabled = true;
         }
     }
     private void CheckGameStatus()
@@ -74,13 +75,13 @@ public class BossAttackManager_3 : MonoBehaviour
     }
     private void EnableComponent()
     {
-        GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
         GetComponent<Boss4Attack_3>().enabled = true;
     }
     private void ActiveCores()
     {
+        GetComponent<BoxCollider2D>().enabled = false;
         for (int i = 0; i < cores.childCount; i++)
         {
             cores.GetChild(i).gameObject.SetActive(true);
@@ -92,6 +93,7 @@ public class BossAttackManager_3 : MonoBehaviour
 
     private void StopAttack()
     {
+        Debug.Log("실행");
         CanAttack = false;
         DisableComponent();
         bossAttack.StopAllPattern();
@@ -134,7 +136,7 @@ public class BossAttackManager_3 : MonoBehaviour
                     bossAttack.Pattern4();
                     break;
             }
-            float dis = (Player.position - transform.position).sqrMagnitude; // 거리^2
+            float dis = (StageManager_3.instance.player.position - transform.position).sqrMagnitude; // 거리^2
             if (dis > DistanceToPlayer * DistanceToPlayer)
             {
                 bossAttack.Pattern2();

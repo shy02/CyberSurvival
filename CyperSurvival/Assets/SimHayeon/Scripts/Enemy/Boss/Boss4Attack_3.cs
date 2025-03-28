@@ -120,7 +120,6 @@ public class Boss4Attack_3 : MonoBehaviour
         while (Vector3.Distance(transform.position, Goalpos) > 0.5f)
         {
             if (Timer > rushMaxTime) break;
-            Debug.Log("½ÇÇà");
             transform.position = Vector3.MoveTowards(transform.position, Goalpos, rushMoveSpeed * Time.deltaTime);
             yield return new WaitForSeconds(rushMoveWaitTime);
             Timer += rushMoveWaitTime;
