@@ -38,10 +38,8 @@ public class EnemyMove_2 : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if (canMove == false)
-            return;
-
-        transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+        if (canMove == true)
+            transform.Translate(moveDir * moveSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

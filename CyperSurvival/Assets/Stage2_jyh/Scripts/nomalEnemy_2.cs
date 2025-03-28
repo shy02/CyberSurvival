@@ -10,14 +10,14 @@ public class nomalEnemy_2 : MonoBehaviour
     public GameObject bullet;
     public Transform firePos;
     private EnemyMove_2 moveSc;
-    Transform player;
-    Vector3 dir = Vector3.zero;
-    float angle = 0;
-    float delta = 0;
+    GameObject player;
+    Vector3 dir = Vector3.zero; //총알 방향
+    float angle = 0;    //총알 사이 각도
+    float delta = 0;    //쿨타임 변수
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player");
         moveSc = GetComponent<EnemyMove_2>();
     }
 
@@ -25,7 +25,7 @@ public class nomalEnemy_2 : MonoBehaviour
     {
         if (player == null) return;
 
-        float distance = Vector2.Distance(player.position, transform.position);
+        float distance = Vector2.Distance(player.transform.position, transform.position);
 
         if (distance <= attackRange)
         {
@@ -51,7 +51,7 @@ public class nomalEnemy_2 : MonoBehaviour
         if (moveSc.canMove == true)
             return;
 
-        dir = player.position - transform.position;
+        dir = player.transform.position - transform.position;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         bulletCount = Random.Range(3,6);

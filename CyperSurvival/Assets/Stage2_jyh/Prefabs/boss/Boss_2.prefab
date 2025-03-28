@@ -260,7 +260,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 6dd7024f00606b44eb5884197a66a893, type: 3}
   - {fileID: 8300000, guid: f9eb44b85c96be5429737d4dcadbfa3b, type: 3}
-  - {fileID: 8300000, guid: 52ca910a3f819754e91ee1709eb6051e, type: 3}
+  - {fileID: 8300000, guid: da2858ac81ed4f04dbb1395df673b30b, type: 3}
   - {fileID: 8300000, guid: 61bc89b8411f27845ab9895497cf7bc8, type: 3}
 --- !u!95 &4783373731196076726
 Animator:
