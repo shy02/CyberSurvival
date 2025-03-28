@@ -15,4 +15,14 @@ public class SoundMgr_2 : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClip);
     }
+
+    private void Update()
+    {
+        //보스 잡으면 소리 끔
+        if ((GameManager.Instance.nowNextStage == true))
+        {
+            audioSource.Stop();
+        }
+    }
+
 }

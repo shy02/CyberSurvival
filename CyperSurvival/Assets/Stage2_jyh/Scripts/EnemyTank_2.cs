@@ -18,9 +18,9 @@ public class EnemyTank_2 : MonoBehaviour
         moveDir = player.transform.position - transform.position;
         distance = moveDir.magnitude;   
 
-        if(distance < 5)
+        if(distance < 1)
         {
-
+            //АјАн
         }
     }
 

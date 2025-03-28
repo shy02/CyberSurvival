@@ -17,13 +17,16 @@ public class BossAttackManager_3 : MonoBehaviour
 
     private void Start()
     {
+        Initialize();
+    }
+    private void Initialize()
+    {
         GetComponent<EnemyMovement_3>().enabled = false;
         GetComponent<Enemy2_Shot_3>().enabled = false;
         bossAttack = GetComponent<Boss4Attack_3>();
-        Player = StageManager_3.instance.player;
-        if(Player == null)
+        if (Player == null)
         {
-            while(Player != null)
+            while (Player != null)
             {
                 Player = StageManager_3.instance.player;
             }
@@ -31,6 +34,12 @@ public class BossAttackManager_3 : MonoBehaviour
     }
 
     private void Update()
+    {
+        CheckCore();
+        CheckGameStatus();
+    }
+
+    private void CheckCore()
     {
         int count = 0;
         for (int i = 0; i < cores.childCount; i++)
@@ -44,51 +53,70 @@ public class BossAttackManager_3 : MonoBehaviour
         if (count == cores.childCount && CanAttack)
         {
             StopAttack();
+            GetComponent<BoxCollider2D>().enabled = true;
         }
-
+    }
+    private void CheckGameStatus()
+    {
         if (GameManager.Instance.nowGameOver || GameManager.Instance.nowNextStage)
         {
             StopAttack();
         }
     }
 
+
     public void StartAttack()
     {
         CanAttack = true;
         cores.gameObject.SetActive(true);
         ActiveCores();
-        GetComponent<BoxCollider2D>().enabled = true;
+        EnableComponent();
+        StartCoroutine(UseBossSkill());
+    }
+    private void EnableComponent()
+    {
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
         GetComponent<Boss4Attack_3>().enabled = true;
-        StartCoroutine(UseBossSkill());
     }
-
-    private void StopAttack()
-    {
-        CanAttack = false;
-        GetComponent<EnemyMovement_3>().enabled = false;
-        GetComponent<Enemy2_Shot_3>().enabled = false;
-        GetComponent<Boss4Attack_3>().StopAllPattern();
-        GetComponent<Boss4Attack_3>().enabled = false;
-        StopAllCoroutines();
-
-        foreach (Transform child in bullet)
-        {
-            Destroy(child.gameObject);
-        }
-
-        Invoke("StartAttack", DownTime);
-    }
-
     private void ActiveCores()
     {
-        for(int i = 0; i < cores.childCount; i++)
+        GetComponent<BoxCollider2D>().enabled = false;
+        for (int i = 0; i < cores.childCount; i++)
         {
             cores.GetChild(i).gameObject.SetActive(true);
             cores.GetChild(i).GetComponent<Boss3Core>().resetCore();
         }
     }
+
+
+
+    private void StopAttack()
+    {
+        Debug.Log("실행");
+        CanAttack = false;
+        DisableComponent();
+        bossAttack.StopAllPattern();
+        StopAllCoroutines();
+        DestroyAllBullet();
+
+        Invoke(nameof(StartAttack), DownTime);
+    }
+    private void DestroyAllBullet()
+    {
+        foreach (Transform child in bullet)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    private void DisableComponent()
+    {
+        GetComponent<EnemyMovement_3>().enabled = false;
+        GetComponent<Enemy2_Shot_3>().enabled = false;
+        GetComponent<Boss4Attack_3>().enabled = false;
+    }
+
+
 
     IEnumerator UseBossSkill()
     {
@@ -108,7 +136,7 @@ public class BossAttackManager_3 : MonoBehaviour
                     bossAttack.Pattern4();
                     break;
             }
-            float dis = (Player.position - transform.position).sqrMagnitude; // 거리^2
+            float dis = (StageManager_3.instance.player.position - transform.position).sqrMagnitude; // 거리^2
             if (dis > DistanceToPlayer * DistanceToPlayer)
             {
                 bossAttack.Pattern2();
