@@ -38,15 +38,20 @@ public class SpawnManager_s_3 : MonoBehaviour
 
     private void Start()
     {
-        LimitedTime_Max = LimitedTime;
-        for(int i = 0; i < transform.childCount; i++)
-        {
-            Spawnposes.Add(transform.GetChild(i));
-        }
-
+        InitializeSpawnPoints();
         StartCoroutine(StartTimerCount());
         StartCoroutine(StartMobSpawn());
     }
+
+    private void InitializeSpawnPoints()
+    {
+        LimitedTime_Max = LimitedTime;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Spawnposes.Add(transform.GetChild(i));
+        }
+    }
+
     private void Update()
     {
         if (GameManager.Instance.nowNextStage && parent != null)
@@ -55,6 +60,8 @@ public class SpawnManager_s_3 : MonoBehaviour
             Destroy(parent.gameObject);
         }
     }
+
+    #region 적 스폰관련 코루틴 & 메서드
     IEnumerator StartMobSpawn()
     {
         while (!GameManager.Instance.nowGameOver)
@@ -62,27 +69,14 @@ public class SpawnManager_s_3 : MonoBehaviour
             yield return new WaitForSeconds(MobSpawnDelay);
             if (LimitedTime <= LimitedTime_Max / 3)//게임 후반
             {
-                Debug.Log("게임 후반");
-                int count = Random.Range(1, transform.childCount - 3);
-
-                for (int i = 0; i < count; i++)
-                {
-                    int point = Random.Range(1, transform.childCount);
-                    Instantiate(enemy3, Spawnposes[point].position, Quaternion.identity, parent);
-                }
-
+                SpawnEnemies(enemy3);
             }
 
             if (LimitedTime <= LimitedTime_Max / 3 * 2)//게임 중반
             {
-                Debug.Log("게임 중반");
-                int count = Random.Range(1, transform.childCount - 3);
-
-                for (int i = 0; i < count; i++)
-                {
-                    int point = Random.Range(1, transform.childCount);
-                    Instantiate(enemy2, Spawnposes[point].position, Quaternion.identity,parent).GetComponent<Enemy2_Shot_3>().parent = this.parent;
-                }
+                GameObject obj = SpawnEnemies(enemy2);
+                BulletSetParent(obj.GetComponent<Enemy2_Shot_3>());
+                
                 yield return new WaitForSeconds(0.5f);
             }
 
@@ -94,15 +88,37 @@ public class SpawnManager_s_3 : MonoBehaviour
         }
     }
 
+    private GameObject SpawnEnemies(GameObject Kind)
+    {
+        GameObject obj = null;
+        int count = Random.Range(1, transform.childCount - 3);
+
+        for (int i = 0; i < count; i++)
+        {
+            int point = Random.Range(1, transform.childCount);
+            obj = Instantiate(Kind, Spawnposes[point].position, Quaternion.identity, parent);
+        }
+
+        return obj;
+    }
+    private void BulletSetParent(Enemy2_Shot_3 bulletparent)
+    {
+        if (bulletparent != null)
+        {
+            bulletparent.parent = this.parent;
+        }
+    }
+    #endregion
+
+
     IEnumerator StartTimerCount()
     {
-        if (LimitedTime > 0 && !GameManager.Instance.nowGameOver)
+        while(LimitedTime > 0 && !GameManager.Instance.nowGameOver)
         {
             yield return new WaitForSeconds(1f);
             LimitedTime--;
-            StartCoroutine(StartTimerCount());
         }
-        else
+
         {
             if (!GameManager.Instance.nowGameOver)
             {
@@ -113,10 +129,10 @@ public class SpawnManager_s_3 : MonoBehaviour
                 Boss.GetComponent<Animator>().SetBool("TurnOn", true);
             }
         }
-    }
+    } // 보스소환 시점을 계산하는 타이머 코루틴
 
     public void BossTime()
     {
         LimitedTime = 0f;
-    }
+    } // 인스펙터 버튼용 호출함수
 }

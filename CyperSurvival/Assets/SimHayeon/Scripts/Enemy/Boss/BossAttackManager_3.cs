@@ -17,13 +17,16 @@ public class BossAttackManager_3 : MonoBehaviour
 
     private void Start()
     {
+        Initialize();
+    }
+    private void Initialize()
+    {
         GetComponent<EnemyMovement_3>().enabled = false;
         GetComponent<Enemy2_Shot_3>().enabled = false;
         bossAttack = GetComponent<Boss4Attack_3>();
-        Player = StageManager_3.instance.player;
-        if(Player == null)
+        if (Player == null)
         {
-            while(Player != null)
+            while (Player != null)
             {
                 Player = StageManager_3.instance.player;
             }
@@ -31,6 +34,12 @@ public class BossAttackManager_3 : MonoBehaviour
     }
 
     private void Update()
+    {
+        CheckCore();
+        CheckGameStatus();
+    }
+
+    private void CheckCore()
     {
         int count = 0;
         for (int i = 0; i < cores.childCount; i++)
@@ -45,50 +54,67 @@ public class BossAttackManager_3 : MonoBehaviour
         {
             StopAttack();
         }
-
+    }
+    private void CheckGameStatus()
+    {
         if (GameManager.Instance.nowGameOver || GameManager.Instance.nowNextStage)
         {
             StopAttack();
         }
     }
 
+
     public void StartAttack()
     {
         CanAttack = true;
         cores.gameObject.SetActive(true);
         ActiveCores();
+        EnableComponent();
+        StartCoroutine(UseBossSkill());
+    }
+    private void EnableComponent()
+    {
         GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<EnemyMovement_3>().enabled = true;
         GetComponent<Enemy2_Shot_3>().enabled = true;
         GetComponent<Boss4Attack_3>().enabled = true;
-        StartCoroutine(UseBossSkill());
     }
-
-    private void StopAttack()
-    {
-        CanAttack = false;
-        GetComponent<EnemyMovement_3>().enabled = false;
-        GetComponent<Enemy2_Shot_3>().enabled = false;
-        GetComponent<Boss4Attack_3>().StopAllPattern();
-        GetComponent<Boss4Attack_3>().enabled = false;
-        StopAllCoroutines();
-
-        foreach (Transform child in bullet)
-        {
-            Destroy(child.gameObject);
-        }
-
-        Invoke("StartAttack", DownTime);
-    }
-
     private void ActiveCores()
     {
-        for(int i = 0; i < cores.childCount; i++)
+        for (int i = 0; i < cores.childCount; i++)
         {
             cores.GetChild(i).gameObject.SetActive(true);
             cores.GetChild(i).GetComponent<Boss3Core>().resetCore();
         }
     }
+
+
+
+    private void StopAttack()
+    {
+        CanAttack = false;
+        DisableComponent();
+        bossAttack.StopAllPattern();
+        StopAllCoroutines();
+        DestroyAllBullet();
+
+        Invoke(nameof(StartAttack), DownTime);
+    }
+    private void DestroyAllBullet()
+    {
+        foreach (Transform child in bullet)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    private void DisableComponent()
+    {
+        GetComponent<EnemyMovement_3>().enabled = false;
+        GetComponent<Enemy2_Shot_3>().enabled = false;
+        GetComponent<Boss4Attack_3>().enabled = false;
+    }
+
+
 
     IEnumerator UseBossSkill()
     {

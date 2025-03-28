@@ -11,6 +11,10 @@ public class ScenManager : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] Vector3 Startpos;
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -18,7 +22,6 @@ public class ScenManager : MonoBehaviour
     }
     private void Start()
     {
-
         SceneManager.LoadScene("TitleScene");
     }
 
@@ -26,6 +29,14 @@ public class ScenManager : MonoBehaviour
     {
         nowStage++;
         SceneManager.LoadScene(SceneName[nowStage]);
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         player.position = Startpos;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
