@@ -10,10 +10,22 @@ public class lv1enemy_1 : MonoBehaviour
     private Transform player; // 플레이어의 Transform
     private Animator animator;
 
+    public AudioClip fireSound; // 🔹 발사 효과음 추가
+    private AudioSource audioSource; // 🔹 오디오 소스
+    public float fireVolume = 0.5f; // 🔹 볼륨 조절 (기본값 0.5)
+
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        audioSource = GetComponent<AudioSource>(); // 🔹 AudioSource 가져오기
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // 🔹 없으면 추가
+        }
+        audioSource.playOnAwake = false; // 🔹 자동 재생 방지
+
         Invoke("CreateBullet", delay);
     }
 
@@ -58,6 +70,12 @@ public class lv1enemy_1 : MonoBehaviour
             if (bulletScript != null)
             {
                 bulletScript.SetDirection(direction);
+            }
+
+            // 🔹 효과음 재생 (볼륨 조절 적용)
+            if (fireSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(fireSound, fireVolume);
             }
         }
 

@@ -137,6 +137,10 @@ MonoBehaviour:
   spreadAngle: 15
   postAttackDelay: 3
   animationSpeed: 0.7
+  followSpeed: 2
+  followDistance: 8
+  fireSound: {fileID: 8300000, guid: d180b4e87b7420745a3b5eef44abdabd, type: 3}
+  fireVolume: 0.3
 --- !u!61 &1578112627937530487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,6 +208,8 @@ MonoBehaviour:
   - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
   - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
   ItemDropRate: 30
+  NextSceneUI: {fileID: 0}
+  perfect: 
 --- !u!1 &1773520776590478678
 GameObject:
   m_ObjectHideFlags: 0
