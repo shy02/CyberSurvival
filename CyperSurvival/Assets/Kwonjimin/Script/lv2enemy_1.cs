@@ -1,30 +1,47 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections;
 
 public class lv2enemy_1 : MonoBehaviour
 {
-    public float delay = 1f; // Ã¹ °ø°İ ´ë±â ½Ã°£
-    public float fireDelay = 0.2f; // ¿¬¼Ó ¹ß»ç °£°İ
-    public Transform pos1; // Ã¹ ¹øÂ° ÃÑ¾Ë ¹ß»ç À§Ä¡
-    public Transform pos2; // µÎ ¹øÂ° ÃÑ¾Ë ¹ß»ç À§Ä¡
-    public GameObject bulletPrefab; // ¹Ì»çÀÏ ÇÁ¸®ÆÕ
-    public float fireDistance = 5f; // °ø°İ ¹üÀ§
-    public float spreadAngle = 15f; // Ãß°¡ ÃÑ¾ËÀÇ È®»ê °¢µµ
-    public float postAttackDelay = 5f; // °ø°İ ÈÄ ½¬´Â ½Ã°£
+    public float delay = 1f;
+    public float fireDelay = 0.2f;
+    public Transform pos1;
+    public Transform pos2;
+    public GameObject bulletPrefab;
+    public float fireDistance = 5f;
+    public float spreadAngle = 15f;
+    public float postAttackDelay = 5f;
+    public float animationSpeed = 1f;
+    public float followSpeed = 2f;
+    public float followDistance = 8f; // ì´ ë³€ìˆ˜ëŠ” ë” ì´ìƒ í•„ìš”í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
 
-    // ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ¸¦ Á¶Á¤ÇÒ ¼ö ÀÖ´Â º¯¼ö
-    public float animationSpeed = 1f; // ±âº» ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ
-
-    private Transform player; // ÇÃ·¹ÀÌ¾îÀÇ Transform
+    private Transform player;
     private Animator animator;
-    private bool isIdle = true; // ÇöÀç idle »óÅÂÀÎÁö
-    private float lastAttackTime; // ¸¶Áö¸· °ø°İ ½Ã°£ ±â·Ï
+    private bool isIdle = true;
+    private float lastAttackTime;
+    private bool isFlipped = false;
+
+    private SpriteRenderer spriteRenderer; // SpriteRenderer ë³€ìˆ˜ ì¶”ê°€
+
+    public AudioClip fireSound; // ğŸ”¹ ë°œì‚¬ íš¨ê³¼ìŒ ì¶”ê°€
+    private AudioSource audioSource; // ğŸ”¹ ì˜¤ë””ì˜¤ ì†ŒìŠ¤
+    public float fireVolume = 0.5f; // ğŸ”¹ ë³¼ë¥¨ ì¡°ì ˆ (ê¸°ë³¸ê°’ 0.5)
 
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         InvokeRepeating("TryAttack", delay, fireDelay);
+
+        audioSource = GetComponent<AudioSource>(); // ğŸ”¹ AudioSource ê°€ì ¸ì˜¤ê¸°
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // ğŸ”¹ ì—†ìœ¼ë©´ ì¶”ê°€
+        }
+        audioSource.playOnAwake = false; // ğŸ”¹ ìë™ ì¬ìƒ ë°©ì§€
+
+        // SpriteRenderer ì»´í¬ë„ŒíŠ¸ë¥¼ ê°€ì ¸ì˜´
+        spriteRenderer = GetComponent<SpriteRenderer>(); // ì—¬ê¸°ì„œ spriteRendererì— SpriteRenderer ì»´í¬ë„ŒíŠ¸ë¥¼ í• ë‹¹í•©ë‹ˆë‹¤.
     }
 
     void Update()
@@ -37,7 +54,13 @@ public class lv2enemy_1 : MonoBehaviour
         {
             Attack();
         }
-        else if (!animator.GetBool("attack"))
+
+        if (!animator.GetBool("attack")) // ê³µê²© ì¤‘ì´ ì•„ë‹ ë•Œë§Œ ì«“ì•„ê°€ê²Œ í•¨
+        {
+            FollowPlayer(); // ê±°ë¦¬ì— ê´€ê³„ì—†ì´ í•­ìƒ í”Œë ˆì´ì–´ë¥¼ ì«“ì•„ê°€ê²Œ ìˆ˜ì •
+        }
+
+        if (!animator.GetBool("attack"))
         {
             Idle();
         }
@@ -48,32 +71,26 @@ public class lv2enemy_1 : MonoBehaviour
         if (!isIdle)
         {
             animator.SetBool("attack", false);
-            animator.speed = animationSpeed * 0.5f; // Idle ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ Á¶Àı
+            animator.speed = animationSpeed * 0.5f;
             isIdle = true;
         }
     }
 
     void Attack()
     {
-        if (animator.GetBool("attack")) return; // ÀÌ¹Ì °ø°İ ÁßÀÌ¸é ¸®ÅÏ
+        if (animator.GetBool("attack")) return;
 
         isIdle = false;
-        animator.SetBool("attack", true); // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç Áï½Ã ½ÃÀÛ
-        animator.speed = animationSpeed; // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç ¼Óµµ Á¶Àı
-
-        // ¾Ö´Ï¸ŞÀÌ¼ÇÀ» ¸ÕÀú ½ÇÇàÇÑ ÈÄ ¹Ì»çÀÏ ¹ß»ç
+        animator.SetBool("attack", true);
+        animator.speed = animationSpeed;
         StartCoroutine(AttackSequence());
     }
 
     IEnumerator AttackSequence()
     {
-        yield return StartCoroutine(FirePattern()); // ¹Ì»çÀÏ ¹ß»ç (¹ß»ç µ¿¾È ¾Ö´Ï¸ŞÀÌ¼Ç À¯Áö)
-
-        // ¹Ì»çÀÏ ¹ß»ç°¡ ³¡³ª¸é ¾Ö´Ï¸ŞÀÌ¼Ç Á¾·á
-        animator.SetBool("attack", false); // °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç Á¾·á
-        lastAttackTime = Time.time; // ¸¶Áö¸· °ø°İ ½Ã°£ ±â·Ï
-
-        // ¹Ì»çÀÏ ¹ß»ç°¡ ³¡³­ ÈÄ idle »óÅÂ·Î µ¹¾Æ°¨
+        yield return StartCoroutine(FirePattern());
+        animator.SetBool("attack", false);
+        lastAttackTime = Time.time;
         Idle();
     }
 
@@ -81,7 +98,6 @@ public class lv2enemy_1 : MonoBehaviour
     {
         if (player == null) yield break;
 
-        // 3¹ø ¹ß»ç (pos1 -> pos2 -> pos1 -> pos2 ...)
         for (int i = 0; i < 3; i++)
         {
             FireBulletPattern(pos1);
@@ -89,7 +105,7 @@ public class lv2enemy_1 : MonoBehaviour
             yield return new WaitForSeconds(fireDelay);
         }
 
-        yield return new WaitForSeconds(postAttackDelay); // °ø°İ ÈÄ ½¬´Â ½Ã°£
+        yield return new WaitForSeconds(postAttackDelay);
     }
 
     void TryAttack()
@@ -109,10 +125,7 @@ public class lv2enemy_1 : MonoBehaviour
 
         Vector3 direction = (player.position - pos.position).normalized;
 
-        // ±âº» ÇÑ ¹ß
         FireBulletFromPosition(pos, direction);
-
-        // È®»êµÈ Ãß°¡ µÎ ¹ß
         FireBulletFromPosition(pos, Quaternion.Euler(0, 0, spreadAngle) * direction);
         FireBulletFromPosition(pos, Quaternion.Euler(0, 0, -spreadAngle) * direction);
     }
@@ -126,6 +139,46 @@ public class lv2enemy_1 : MonoBehaviour
         if (bulletScript != null)
         {
             bulletScript.SetDirection(direction);
+        }
+
+        // ğŸ”¹ íš¨ê³¼ìŒ ì¬ìƒ (ë³¼ë¥¨ ì¡°ì ˆ ì ìš©)
+        if (fireSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireSound, fireVolume);
+        }
+    }
+
+    void FollowPlayer()
+    {
+        // ê±°ë¦¬ì— ê´€ê³„ì—†ì´ í”Œë ˆì´ì–´ë¥¼ í•­ìƒ ë”°ë¼ê°
+        if (player.position.x < transform.position.x && !isFlipped)
+        {
+            Flip();
+        }
+        else if (player.position.x > transform.position.x && isFlipped)
+        {
+            Flip();
+        }
+
+        // x, y ë°©í–¥ ëª¨ë‘ ì´ë™ ì†ë„ë¥¼ followSpeedë¡œ ì¡°ì •
+        Vector3 moveDirection = (player.position - transform.position).normalized;
+        moveDirection.x = player.position.x - transform.position.x; // xì¶• ì´ë™
+        moveDirection.y = player.position.y - transform.position.y; // yì¶• ì´ë™
+
+        // xì™€ y ì¶•ì— ëª¨ë‘ followSpeedë¥¼ ì ìš©í•˜ì—¬ ì´ë™ ì†ë„ ì¼ì¹˜ì‹œí‚´
+        Vector3 finalMoveDirection = new Vector3(moveDirection.x, moveDirection.y, 0).normalized;
+        transform.position += finalMoveDirection * followSpeed * Time.deltaTime;
+    }
+
+
+    void Flip()
+    {
+        isFlipped = !isFlipped;
+
+        // SpriteRendererì˜ flipX ì†ì„±ë§Œ ë°˜ì „
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
     }
 }

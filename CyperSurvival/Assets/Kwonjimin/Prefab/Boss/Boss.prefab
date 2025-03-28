@@ -181,6 +181,9 @@ MonoBehaviour:
   portalMissileCooldown: 3
   portalShotDelay: 0.3
   missileCount: 3
+  missileFireSound: {fileID: 8300000, guid: d4d5bf679bcfeeb40a28d4a283663598, type: 3}
+  homingMissileFireSound: {fileID: 8300000, guid: 7e900da1c4382ea4eaef7a4b3d4fa7a4, type: 3}
+  fireVolume: 1
 --- !u!114 &8992567668348307357
 MonoBehaviour:
   m_ObjectHideFlags: 0

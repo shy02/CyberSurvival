@@ -33,10 +33,7 @@ public class EnemyDamage_3 : MonoBehaviour
 
     public delegate void DeathDelegate(); // 사망 이벤트 델리게이트 선언
     public event DeathDelegate OnDeath; // 사망 이벤트
-
-    public void GetDamage(int dmg) { Hp -= (float)dmg; }
     public void GetDamage(float dmg) { Hp -= dmg; }
-
     public float GetHp() { return Hp; }
 
     bool death = false;
@@ -48,36 +45,50 @@ public class EnemyDamage_3 : MonoBehaviour
 
     private void Update()
     {
+        DeathCheck();
+        UpdateHealthUI();
+    }
+
+    #region Death와 관련있는 함수들
+    private void DeathCheck()
+    {
         if (Hp <= 0 && !death)
         {
             death = true;
-            Debug.Log(transform.name);
-            if (transform.CompareTag("Boss"))
+            if (transform.CompareTag("Boss")) // 보스가 죽음
             {
-                //여기에 이미지 애니메이션 추가
-                //ScenManager.instance.GoNextStage();
                 NextStageAnime();
             }
-            else
+            else // 기본 적이 죽음
             {
-                if (DeathEffect != null) Instantiate(DeathEffect, transform.position, Quaternion.identity); // 죽은 효과 있을때만 실행
-
-                if (Items.Count > 1) //아이템 리스트에 아이템 있어야 실행
-                {
-                    int rate = Random.Range(0, 100);
-                    if (rate <= ItemDropRate) CreateItem();
-                }
-
-                // OnDeath 이벤트 호출
-                if (OnDeath != null) OnDeath.Invoke();
-
-                Destroy(gameObject);
+                EnemyDeath();
             }
+        } //죽었는지 체크
+    }
+
+    private void EnemyDeath()
+    {
+        if (DeathEffect != null) Instantiate(DeathEffect, transform.position, Quaternion.identity); // 죽은 효과 있을때만 실행
+
+        if (Items.Count > 1) //아이템 리스트에 아이템 있어야 실행
+        {
+            int rate = Random.Range(0, 100);
+            if (rate <= ItemDropRate) CreateItem();
         }
 
+        // OnDeath 이벤트 호출
+        if (OnDeath != null) OnDeath.Invoke();
+
+        Destroy(gameObject);
+    }
+
+    private void UpdateHealthUI()
+    {
         if (transform.CompareTag("Boss") && BossHP != null) BossHP.value = Hp / maxHP; //슬라이더 있어야 적용
         else if (HpUI != null) HpUI.fillAmount = Hp / maxHP; //체력바 있어야 적용
     }
+
+    #endregion
 
     private void CreateItem()
     {
@@ -87,7 +98,7 @@ public class EnemyDamage_3 : MonoBehaviour
 
         int rand = Random.Range(0, Items.Count);
         Instantiate(Items[rand], transform.position, Quaternion.identity);
-    }
+    } //아이템 생성
 
     public void NextStageAnime()
     {
@@ -95,5 +106,5 @@ public class EnemyDamage_3 : MonoBehaviour
         GameObject ui = Instantiate(NextSceneUI);
         ui.GetComponent<NextSceneAnimation>().StartAnime();
         Destroy(gameObject);
-    }
+    } // 다음 스테이지로 넘어갈때 효과
 }

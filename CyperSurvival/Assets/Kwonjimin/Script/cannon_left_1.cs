@@ -10,19 +10,30 @@ public class cannon_left_1 : MonoBehaviour
     private GameObject player; // 플레이어 참조 변수
     private Animator animator; // 애니메이터
 
+    public AudioClip fireSound; // 🔹 발사 효과음 추가
+    private AudioSource audioSource; // 🔹 오디오 소스
+    public float fireVolume = 0.3f;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         animator = GetComponent<Animator>(); // 애니메이터 가져오기
+        audioSource = GetComponent<AudioSource>(); // 🔹 AudioSource 가져오기
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // 🔹 없으면 추가
+        }
+
+        audioSource.playOnAwake = false; // 🔹 자동 재생 방지
     }
 
     void Update()
     {
-        // 🎯 보스가 죽으면 동작 중지
         if (GameManager.Instance.nowNextStage)
         {
             if (animator != null)
-                animator.speed = 0f; // 애니메이션 정지
+                animator.speed = 0f;
             return;
         }
 
@@ -32,14 +43,11 @@ public class cannon_left_1 : MonoBehaviour
             if (player == null) return;
         }
 
-        // 🎯 애니메이션 속도 조정
         if (animator != null)
             animator.speed = 0.3f;
 
-        // 🎯 총알 발사 방향으로 회전
         RotateTowardsPlayer();
 
-        // 🎯 일정 간격마다 총알 발사
         if (Time.time >= nextFireTime)
         {
             FireBullet();
@@ -47,25 +55,26 @@ public class cannon_left_1 : MonoBehaviour
         }
     }
 
-    // 🎯 플레이어 방향으로 회전
     void RotateTowardsPlayer()
     {
-        if (GameManager.Instance.nowNextStage) return; // 보스가 죽으면 회전 중지
+        if (GameManager.Instance.nowNextStage) return;
 
-        Vector3 direction = player.transform.position - transform.position; // 🔹 부모 오브젝트(cannon_left_1) 기준
+        Vector3 direction = player.transform.position - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // 🔹 회전 보정 없이 플레이어 방향으로 자연스럽게 회전
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
-    // 🎯 총알 발사 함수
     void FireBullet()
     {
         if (player == null) return;
-        if (GameManager.Instance.nowNextStage) return; // 보스가 죽으면 총알 발사 중지
+        if (GameManager.Instance.nowNextStage) return;
 
-        // 🔹 pos에서 플레이어 방향으로 총알 발사
+        // 🔹 효과음 재생 (볼륨 조절 적용)
+        if (fireSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireSound, fireVolume);
+        }
+
         Vector3 direction = (player.transform.position - pos.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, pos.position, Quaternion.identity);
 
