@@ -11274,7 +11274,7 @@ MonoBehaviour:
   - {fileID: 869252813}
   - {fileID: 96663338}
   SpawnEffect: {fileID: 2685867240310389083, guid: e54e34c6097aeb34595c25b15fde8363, type: 3}
-  spawnTime: 10
+  spawnTime: 3
 --- !u!1 &329330324
 GameObject:
   m_ObjectHideFlags: 0
@@ -11412,7 +11412,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16291,7 +16291,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 6
+    OrthographicSize: 8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
