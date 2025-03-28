@@ -13,13 +13,15 @@ public class lv2enemy_1 : MonoBehaviour
     public float postAttackDelay = 5f;
     public float animationSpeed = 1f;
     public float followSpeed = 2f;
-    public float followDistance = 8f;
+    public float followDistance = 8f; // 이 변수는 더 이상 필요하지 않습니다.
 
     private Transform player;
     private Animator animator;
     private bool isIdle = true;
     private float lastAttackTime;
     private bool isFlipped = false;
+
+    private SpriteRenderer spriteRenderer; // SpriteRenderer 변수 추가
 
     public AudioClip fireSound; // 🔹 발사 효과음 추가
     private AudioSource audioSource; // 🔹 오디오 소스
@@ -37,6 +39,9 @@ public class lv2enemy_1 : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>(); // 🔹 없으면 추가
         }
         audioSource.playOnAwake = false; // 🔹 자동 재생 방지
+
+        // SpriteRenderer 컴포넌트를 가져옴
+        spriteRenderer = GetComponent<SpriteRenderer>(); // 여기서 spriteRenderer에 SpriteRenderer 컴포넌트를 할당합니다.
     }
 
     void Update()
@@ -50,11 +55,12 @@ public class lv2enemy_1 : MonoBehaviour
             Attack();
         }
 
-        if (distanceToPlayer <= followDistance)
+        if (!animator.GetBool("attack")) // 공격 중이 아닐 때만 쫓아가게 함
         {
-            FollowPlayer();
+            FollowPlayer(); // 거리에 관계없이 항상 플레이어를 쫓아가게 수정
         }
-        else if (!animator.GetBool("attack"))
+
+        if (!animator.GetBool("attack"))
         {
             Idle();
         }
@@ -144,6 +150,7 @@ public class lv2enemy_1 : MonoBehaviour
 
     void FollowPlayer()
     {
+        // 거리에 관계없이 플레이어를 항상 따라감
         if (player.position.x < transform.position.x && !isFlipped)
         {
             Flip();
@@ -153,16 +160,25 @@ public class lv2enemy_1 : MonoBehaviour
             Flip();
         }
 
+        // x, y 방향 모두 이동 속도를 followSpeed로 조정
         Vector3 moveDirection = (player.position - transform.position).normalized;
-        moveDirection.y = 0;
-        transform.position += moveDirection * followSpeed * Time.deltaTime;
+        moveDirection.x = player.position.x - transform.position.x; // x축 이동
+        moveDirection.y = player.position.y - transform.position.y; // y축 이동
+
+        // x와 y 축에 모두 followSpeed를 적용하여 이동 속도 일치시킴
+        Vector3 finalMoveDirection = new Vector3(moveDirection.x, moveDirection.y, 0).normalized;
+        transform.position += finalMoveDirection * followSpeed * Time.deltaTime;
     }
+
 
     void Flip()
     {
         isFlipped = !isFlipped;
-        Vector3 localScale = transform.localScale;
-        localScale.x = -localScale.x;
-        transform.localScale = localScale;
+
+        // SpriteRenderer의 flipX 속성만 반전
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
     }
 }
