@@ -35,7 +35,7 @@ public class DamageZone : MonoBehaviour
 
         // 플레이어가 감지되면 Overlap 사용
         if (player != null)
-        {
+        {/*
             // Overlap을 사용하여 플레이어가 구역 안에 있는지 확인
             Collider2D[] hitColliders = Physics2D.OverlapBoxAll(zoneCollider.bounds.center, zoneCollider.bounds.size, 0f, LayerMask.GetMask("Player"));
 
@@ -66,10 +66,39 @@ public class DamageZone : MonoBehaviour
             if (hitColliders.Length == 0)
             {
                 Debug.Log("플레이어가 구역에 없음");
+            }*/
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("플레이어 입장"); 
+            Debug.Log("플레이어가 구역 안에 있음"); // 플레이어가 구역 안에 있을 때 확인
+            PlayZoneSound(); // 효과음 재생
+            noDamageTimer += Time.deltaTime;
+
+            if (noDamageTimer >= noDamageTime)
+            {
+                damageTimer += Time.deltaTime;
+
+                if (damageTimer >= damageInterval)
+                {
+                    player.GetComponent<Player>().TakeDamage(damageAmount);
+                    damageTimer = 0f;
+                }
             }
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("플레이어 퇴장");
+        }
+    }
     void PlayZoneSound()
     {
         if (audioSource != null && zoneSound != null)
