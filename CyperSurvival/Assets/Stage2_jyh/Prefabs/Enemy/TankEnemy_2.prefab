@@ -125,6 +125,7 @@ MonoBehaviour:
   moveSpeed: 1
   damage: 20
   canMove: 1
+  deathSound: {fileID: 8300000, guid: dba5f560c9e75654c9d5a3ac8736769c, type: 3}
 --- !u!50 &2324327926183876261
 Rigidbody2D:
   serializedVersion: 5

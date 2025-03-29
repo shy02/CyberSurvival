@@ -11,8 +11,11 @@ public class nomalEnemy_2 : MonoBehaviour
     public Transform firePos;
     [Header("사운드")]
     [SerializeField]private AudioClip attackSound;
+    //참조
     private EnemyMove_2 moveSc;
     GameObject player;
+    Animator anim;
+    //공격 변수
     Vector3 dir = Vector3.zero; //총알 방향
     float angle = 0;    //총알 사이 각도
     float delta = 0;    //쿨타임 변수
@@ -20,6 +23,7 @@ public class nomalEnemy_2 : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        anim = GetComponent<Animator>();
         moveSc = GetComponent<EnemyMove_2>();
     }
 
@@ -31,22 +35,27 @@ public class nomalEnemy_2 : MonoBehaviour
 
         if (distance <= attackRange)
         {
+            //이동 멈춤
             moveSc.StopMove();
+            anim.SetBool("isMove", false);
 
             delta -= Time.deltaTime;
             if(delta <= 0)
             {
                 delta = attackCool;
-                Attack();
+                //isattack = true;
+                anim.SetTrigger("Attack");
             }
         }
-        else
+        else if(distance > attackRange)
         {
             moveSc.StartMove();
+            anim.SetBool("isMove", true);
         }
 
     }
 
+    //애니메이에서 호출
     void Attack()
     {
         //움직일때는 공격하지 않음
@@ -56,15 +65,15 @@ public class nomalEnemy_2 : MonoBehaviour
         dir = player.transform.position - transform.position;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        bulletCount = Random.Range(bulletCount-1, bulletCount + 2);
+        int bullets = Random.Range(bulletCount-1, bulletCount + 2); //총알 갯수랜덤
 
-        for (int i = 0; i < bulletCount; i++)
+        for (int i = 0; i < bullets; i++)
         {
-            Vector3 bulletDir = CalculateBulletDirection(i, bulletCount, angle);
+            Vector3 bulletDir = CalculateBulletDirection(i, bullets, angle);
             GameObject go = Instantiate(bullet, firePos.position, Quaternion.identity);
             go.GetComponent<EnemyBullet_2>().SetDir(bulletDir);
         }
-        SoundMgr_2.instance.OneShot(attackSound, 0.5f);
+        SoundMgr_2.instance.OneShot(attackSound, 1f);
     }
 
     Vector3 CalculateBulletDirection(int index, int totalBullets, float baseAngle)

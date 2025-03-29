@@ -359,6 +359,7 @@ MonoBehaviour:
   moveSpeed: 7
   damage: 5
   canMove: 1
+  deathSound: {fileID: 8300000, guid: dba5f560c9e75654c9d5a3ac8736769c, type: 3}
 --- !u!61 &1336626147062812404
 BoxCollider2D:
   m_ObjectHideFlags: 0

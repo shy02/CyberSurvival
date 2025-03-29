@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 88b1cbe3caa3fee4b8b103b5edd7aba9
-AssetOrigin:
-  serializedVersion: 1
-  productId: 227708
-  packageName: RPG Essentials Sound Effects - FREE!
-  packageVersion: 1.0
-  assetPath: Assets/Leohpaz/RPG_Essentials_Free/10_Battle_SFX/22_Slash_04.wav
-  uploadId: 516368
+guid: 9e7017e4e65ead94c90863f917f61591
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8
@@ -18,9 +11,9 @@ AudioImporter:
     compressionFormat: 1
     quality: 1
     conversionMode: 0
-    preloadAudioData: 1
+    preloadAudioData: 0
   platformSettingOverrides: {}
-  forceToMono: 1
+  forceToMono: 0
   normalize: 1
   loadInBackground: 0
   ambisonic: 0

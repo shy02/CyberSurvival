@@ -5,7 +5,7 @@ public class EnemyMove_2 : MonoBehaviour
     GameObject player = null;
 
     //이동
-    [SerializeField]private float moveSpeed = 1;
+    [SerializeField] private float moveSpeed = 1;
     Vector3 moveDir = Vector3.zero;
     private SpriteRenderer spriteRenderer;
 
@@ -13,7 +13,11 @@ public class EnemyMove_2 : MonoBehaviour
     [SerializeField] private int damage;
 
     //isMove
-    [HideInInspector]public bool canMove = true;
+    [HideInInspector] public bool canMove = true;
+
+    //죽을때 사운드 재생
+    [SerializeField] private AudioClip deathSound;
+    EnemyDamage_3 enemyDamage_3;
 
     void Start()
     {
@@ -21,10 +25,21 @@ public class EnemyMove_2 : MonoBehaviour
             player = GameObject.FindWithTag("Player");
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+        enemyDamage_3 = GetComponent<EnemyDamage_3>();
+
     }
 
     void Update()
     {
+        if ((deathSound != null))
+        {
+            if (enemyDamage_3.GetHp() <= 0)
+            {
+                SoundMgr_2.instance.OneShot(deathSound, 0.5f);
+                return;
+            }
+        }
+       
         Vector3 vec = player.transform.position - transform.position;
         moveDir = vec.normalized;
 

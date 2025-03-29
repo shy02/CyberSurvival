@@ -5,7 +5,7 @@ public class WarningText_2 : MonoBehaviour
 {
     Text text;
     float delta = 0f;
-
+    [SerializeField] private AudioClip spawnSound;
 
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class WarningText_2 : MonoBehaviour
 
     private void OnEnable()
     {
+        SoundMgr_2.instance.OneShot(spawnSound, 0.5f);
         delta = 0f;
         text.text = "Warning!\nWarning!";
     }
