@@ -151,4 +151,11 @@ public class GameManager : MonoBehaviour
         nowGameOver = true;
         IsGameRunning = false;
     }
+
+    public void ResetGame()
+    {
+        PlayerHp = MAX_HP;
+        PlayerPower = 0;
+        PlayerDefence = 0;
+    }
 }
