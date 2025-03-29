@@ -5,7 +5,7 @@ public class GameOverUI : MonoBehaviour
     Animator anime;
     AudioSource audio;
 
-    bool nowplay = false;
+    public bool nowplay = false;
 
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class GameOverUI : MonoBehaviour
 
     public void GameOver()//게임오버 됐을때 실행
     {
+        Debug.Log("실행 over");
         anime.SetBool("Fade", true);
         if (!nowplay)
         {
@@ -30,5 +31,13 @@ public class GameOverUI : MonoBehaviour
     public void ApearText()//텍스트 나타남
     {
         transform.GetChild(0).GetComponent<Animator>().SetBool("apear", true);
+    }
+    public void ApearTryAgain()
+    {
+        Invoke("Apear", 4.7f);
+    }
+    private void Apear()
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 }

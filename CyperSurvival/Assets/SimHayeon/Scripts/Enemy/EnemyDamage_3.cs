@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -37,6 +38,7 @@ public class EnemyDamage_3 : MonoBehaviour
     public float GetHp() { return Hp; }
 
     bool death = false;
+    bool AttachPlayer = false;
 
     private void Start()
     {
@@ -107,4 +109,40 @@ public class EnemyDamage_3 : MonoBehaviour
         ui.GetComponent<NextSceneAnimation>().StartAnime();
         Destroy(gameObject);
     } // 다음 스테이지로 넘어갈때 효과
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AttachPlayer = true;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {//부딫힌상태로 유지할 경우
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (AttachPlayer)
+            {
+                AttachPlayer = false;
+                collision.gameObject.GetComponent<Player>().TakeDamage(10);
+                StartCoroutine(attachCount());
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            StopAllCoroutines();
+            AttachPlayer = false;
+
+        }
+    }
+
+    IEnumerator attachCount()
+    {
+        yield return new WaitForSeconds(0.1f);
+        AttachPlayer = true;
+    }
 }
