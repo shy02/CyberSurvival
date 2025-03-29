@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BossMove_2 : MonoBehaviour
 {
@@ -9,12 +10,25 @@ public class BossMove_2 : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Animator anim;
 
-    void Start()
+    //네비게이션
+    NavMeshAgent agent;
+
+    void Awake()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+
         if (player == null)
             player = GameObject.FindWithTag("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+    }
+
+    void Start()
+    {
+       
     }
 
     void Update()
@@ -36,11 +50,12 @@ public class BossMove_2 : MonoBehaviour
         if(vec.magnitude > 5f)  //5f보다 멀면 이동
         {
             anim.SetBool("isMove", true);
-            transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+            agent.destination = player.transform.position;
         }
         else
         {
             anim.SetBool("isMove", false);
+            agent.destination = transform.position;
         }
 
         

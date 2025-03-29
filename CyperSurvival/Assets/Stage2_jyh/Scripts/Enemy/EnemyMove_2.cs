@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMove_2 : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class EnemyMove_2 : MonoBehaviour
     //죽을때 사운드 재생
     [SerializeField] private AudioClip deathSound;
     EnemyDamage_3 enemyDamage_3;
+
+    //네비게이션
+    NavMeshAgent agent;
+
+    void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+    }
 
     void Start()
     {
@@ -53,8 +64,12 @@ public class EnemyMove_2 : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
+        //이동
         if (canMove == true)
-            transform.Translate(moveDir * moveSpeed * Time.deltaTime);
+            agent.SetDestination(player.transform.position);
+        //멈춤
+        else
+            agent.SetDestination(transform.position);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
