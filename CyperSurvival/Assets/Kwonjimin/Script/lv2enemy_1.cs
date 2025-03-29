@@ -13,19 +13,19 @@ public class lv2enemy_1 : MonoBehaviour
     public float postAttackDelay = 5f;
     public float animationSpeed = 1f;
     public float followSpeed = 2f;
-    public float followDistance = 8f; // 이 변수는 더 이상 필요하지 않습니다.
+    public float followDistance = 8f;
 
     private Transform player;
     private Animator animator;
     private bool isIdle = true;
     private float lastAttackTime;
     private bool isFlipped = false;
+    private bool isGameOver = false;
 
-    private SpriteRenderer spriteRenderer; // SpriteRenderer 변수 추가
-
-    public AudioClip fireSound; // 🔹 발사 효과음 추가
-    private AudioSource audioSource; // 🔹 오디오 소스
-    public float fireVolume = 0.5f; // 🔹 볼륨 조절 (기본값 0.5)
+    private SpriteRenderer spriteRenderer;
+    public AudioClip fireSound;
+    private AudioSource audioSource;
+    public float fireVolume = 0.5f;
 
     void Start()
     {
@@ -33,20 +33,27 @@ public class lv2enemy_1 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         InvokeRepeating("TryAttack", delay, fireDelay);
 
-        audioSource = GetComponent<AudioSource>(); // 🔹 AudioSource 가져오기
+        audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>(); // 🔹 없으면 추가
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
-        audioSource.playOnAwake = false; // 🔹 자동 재생 방지
+        audioSource.playOnAwake = false;
 
-        // SpriteRenderer 컴포넌트를 가져옴
-        spriteRenderer = GetComponent<SpriteRenderer>(); // 여기서 spriteRenderer에 SpriteRenderer 컴포넌트를 할당합니다.
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
         if (player == null) return;
+
+        // 보스가 죽었거나 게임 오버 상태라면 발사 중지
+        if (GameManager.Instance.PlayerHp <= 0 || GameManager.Instance.nowNextStage)
+        {
+            audioSource.Stop();
+            StopAttack();  // 미사일 발사 중지
+            return; // 미사일 발사 조건이 아닐 경우, 나머지 업데이트 코드 실행하지 않음
+        }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -55,9 +62,9 @@ public class lv2enemy_1 : MonoBehaviour
             Attack();
         }
 
-        if (!animator.GetBool("attack")) // 공격 중이 아닐 때만 쫓아가게 함
+        if (!animator.GetBool("attack"))
         {
-            FollowPlayer(); // 거리에 관계없이 항상 플레이어를 쫓아가게 수정
+            FollowPlayer();
         }
 
         if (!animator.GetBool("attack"))
@@ -141,7 +148,6 @@ public class lv2enemy_1 : MonoBehaviour
             bulletScript.SetDirection(direction);
         }
 
-        // 🔹 효과음 재생 (볼륨 조절 적용)
         if (fireSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(fireSound, fireVolume);
@@ -150,7 +156,6 @@ public class lv2enemy_1 : MonoBehaviour
 
     void FollowPlayer()
     {
-        // 거리에 관계없이 플레이어를 항상 따라감
         if (player.position.x < transform.position.x && !isFlipped)
         {
             Flip();
@@ -160,25 +165,28 @@ public class lv2enemy_1 : MonoBehaviour
             Flip();
         }
 
-        // x, y 방향 모두 이동 속도를 followSpeed로 조정
         Vector3 moveDirection = (player.position - transform.position).normalized;
-        moveDirection.x = player.position.x - transform.position.x; // x축 이동
-        moveDirection.y = player.position.y - transform.position.y; // y축 이동
+        moveDirection.x = player.position.x - transform.position.x;
+        moveDirection.y = player.position.y - transform.position.y;
 
-        // x와 y 축에 모두 followSpeed를 적용하여 이동 속도 일치시킴
         Vector3 finalMoveDirection = new Vector3(moveDirection.x, moveDirection.y, 0).normalized;
         transform.position += finalMoveDirection * followSpeed * Time.deltaTime;
     }
-
 
     void Flip()
     {
         isFlipped = !isFlipped;
 
-        // SpriteRenderer의 flipX 속성만 반전
         if (spriteRenderer != null)
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
+    }
+
+    // 게임 오버 또는 보스가 죽으면 미사일 발사 중지
+    void StopAttack()
+    {
+        StopCoroutine("FirePattern"); // 공격 패턴 중지
+        animator.SetBool("attack", false); // 애니메이션 중지
     }
 }

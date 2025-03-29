@@ -1,8 +1,8 @@
 using UnityEngine;
 using TMPro;
-using System.Collections; // 코루틴 사용을 위해 추가
+using System.Collections;
 
-public class DamageZone : MonoBehaviour
+public class DamageZone_1 : MonoBehaviour
 {
     public float noDamageTime = 10f; // 데미지를 받지 않는 시간
     public float damageInterval = 1f; // 데미지를 주는 간격
@@ -35,6 +35,16 @@ public class DamageZone : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        // 게임 오버나 스테이지 변경 중일 때 데미지와 오디오를 중지합니다.
+        if ((GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver))
+        {
+            audioSource.Stop();
+            damageTimer = 0f;  // 데미지 타이머 초기화 (데미지 중지)
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -49,11 +59,14 @@ public class DamageZone : MonoBehaviour
         }
     }
 
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            // 게임이 진행 중일 때만 데미지를 주도록 합니다.
+            if (GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver)
+                return;
+
             noDamageTimer += Time.deltaTime;
 
             if (noDamageTimer >= noDamageTime)
