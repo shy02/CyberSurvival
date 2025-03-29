@@ -14,6 +14,8 @@ public class lv1enemy_1 : MonoBehaviour
     private AudioSource audioSource; // 🔹 오디오 소스
     public float fireVolume = 0.5f; // 🔹 볼륨 조절 (기본값 0.5)
 
+    private bool isAttacking = false; // 공격 중인지 여부 확인
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -32,6 +34,13 @@ public class lv1enemy_1 : MonoBehaviour
     void Update()
     {
         if (player == null) return;
+
+        // 보스가 죽었거나 게임 오버일 경우 미사일 발사 멈추기
+        if (GameManager.Instance.PlayerHp <= 0 || GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver)
+        {
+            StopAttack(); // 공격 중지
+            return; // 그 외 로직을 실행하지 않음
+        }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -52,12 +61,26 @@ public class lv1enemy_1 : MonoBehaviour
 
     void Attack()
     {
-        animator.SetBool("attack", true);
+        if (!isAttacking) // 공격 중이지 않으면 공격 시작
+        {
+            isAttacking = true;
+            animator.SetBool("attack", true);
+            Invoke("CreateBullet", delay); // 미사일 발사 시작
+        }
+    }
+
+    void StopAttack()
+    {
+        // 미사일 발사 멈추기
+        isAttacking = false;
+        animator.SetBool("attack", false);
+        CancelInvoke("CreateBullet"); // `CreateBullet` 호출 중지
+        audioSource.Stop(); // 발사 효과음 멈추기
     }
 
     void CreateBullet()
     {
-        if (player == null) return;
+        if (player == null || !isAttacking) return; // 플레이어나 공격 상태가 아니면 총알 생성 안함
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if (distanceToPlayer < fireDistance)
@@ -79,6 +102,10 @@ public class lv1enemy_1 : MonoBehaviour
             }
         }
 
-        Invoke("CreateBullet", delay);
+        // 계속해서 발사하려면 `Invoke`로 반복 호출
+        if (isAttacking)
+        {
+            Invoke("CreateBullet", delay);
+        }
     }
 }

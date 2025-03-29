@@ -16,8 +16,7 @@ public class BGMMAnager_1 : MonoBehaviour
 
     void Update()
     {
-        // 보스가 죽으면 배경음악 정지
-        if (GameManager.Instance.nowNextStage && audioSource.isPlaying)
+        if ((GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver))
         {
             audioSource.Stop();
         }

@@ -21,12 +21,13 @@ public class Boss_1 : MonoBehaviour
     private GameObject player;
     private Transform[] portalPositions;
 
-    // 🔹 사운드 관련 변수 추가
-    public AudioClip missileFireSound; // 일반 미사일 효과음
-    public AudioClip homingMissileFireSound; // 호밍 미사일 효과음
-    public float missileVolume = 1.0f; // 일반 미사일 볼륨
-    public float homingMissileVolume = 1.0f; // 호밍 미사일 볼륨
-    private AudioSource audioSource; // 오디오 소스
+    public AudioClip missileFireSound;
+    public AudioClip homingMissileFireSound;
+    public float missileVolume = 1.0f;
+    public float homingMissileVolume = 1.0f;
+    private AudioSource audioSource;
+
+    private bool stopFiring = false;
 
     void Start()
     {
@@ -35,15 +36,21 @@ public class Boss_1 : MonoBehaviour
 
         if (audioSource == null)
         {
-            audioSource = gameObject.AddComponent<AudioSource>(); // 없으면 추가
+            audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        audioSource.volume = 1.0f; // 기본 볼륨은 1.0f로 설정
+        audioSource.volume = 1.0f;
     }
 
     void Update()
     {
-        if (player == null || portalPositions == null || portalPositions.Length == 0)
+        if ((GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver))
+        {
+            audioSource.Stop();
+            stopFiring = true;
+        }
+
+        if (stopFiring || player == null || portalPositions == null || portalPositions.Length == 0)
         {
             return;
         }
@@ -82,6 +89,8 @@ public class Boss_1 : MonoBehaviour
 
     IEnumerator FirePortalMissiles()
     {
+        if (stopFiring) yield break;
+
         for (int i = 0; i < missileCount; i++)
         {
             foreach (Transform portal in portalPositions)
@@ -96,8 +105,7 @@ public class Boss_1 : MonoBehaviour
                 else
                     Debug.LogError("미사일 프리팹에 missile_1 스크립트가 없습니다!");
 
-                // 🔹 미사일 발사 효과음 (일반 미사일 소리만 두 배로 설정)
-                PlaySound(missileFireSound, missileVolume * 2);  // 여기서 볼륨을 두 배로 설정
+                PlaySound(missileFireSound, missileVolume * 2);
 
                 yield return new WaitForSeconds(portalShotDelay);
             }
@@ -107,12 +115,13 @@ public class Boss_1 : MonoBehaviour
 
     void LaunchHomingMissile()
     {
+        if (stopFiring) return;
+
         animator.SetBool("attack", true);
 
         GameObject missile = Instantiate(homingMissilePrefab, transform.position, Quaternion.identity);
         missile.GetComponent<HomingMissile>().SetTarget(player);
 
-        // 🔹 호밍 미사일 발사 효과음 (호밍 미사일 볼륨 적용)
         PlaySound(homingMissileFireSound, homingMissileVolume);
 
         Invoke("StopAttackAnimation", 0.2f);
@@ -142,12 +151,16 @@ public class Boss_1 : MonoBehaviour
         }
     }
 
-    // 🔹 사운드 재생 함수 (볼륨 조절 가능)
     void PlaySound(AudioClip clip, float volume)
     {
         if (clip != null && audioSource != null)
         {
             audioSource.PlayOneShot(clip, volume);
         }
+    }
+
+    public void StopFiring()
+    {
+        stopFiring = true;
     }
 }

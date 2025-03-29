@@ -14,6 +14,8 @@ public class cannon_left_1 : MonoBehaviour
     private AudioSource audioSource; // 🔹 오디오 소스
     public float fireVolume = 0.3f;
 
+    private bool isGameOver = false;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -30,10 +32,17 @@ public class cannon_left_1 : MonoBehaviour
 
     void Update()
     {
+        // 게임이 "다음 스테이지" 또는 "게임 오버" 상태일 때 발사 중지
+        if (GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver)
+        {
+            audioSource.Stop(); // 발사 소리 중지
+            return; // 발사 중지
+        }
+
         if (GameManager.Instance.nowNextStage)
         {
             if (animator != null)
-                animator.speed = 0f;
+                animator.speed = 0f; // 애니메이션 정지
             return;
         }
 
@@ -67,7 +76,8 @@ public class cannon_left_1 : MonoBehaviour
     void FireBullet()
     {
         if (player == null) return;
-        if (GameManager.Instance.nowNextStage) return;
+        // 게임이 "다음 스테이지" 또는 "게임 오버" 상태일 때 발사 안 함
+        if (GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver) return;
 
         // 🔹 효과음 재생 (볼륨 조절 적용)
         if (fireSound != null && audioSource != null)
