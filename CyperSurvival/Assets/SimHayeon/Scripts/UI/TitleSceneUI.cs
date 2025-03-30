@@ -5,7 +5,7 @@ public class TitleSceneUI : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Stage 4");
+        SceneManager.LoadScene("Stage1");
     }
 
     public void ExitGame()
