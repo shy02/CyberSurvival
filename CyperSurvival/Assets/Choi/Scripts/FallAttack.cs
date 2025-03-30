@@ -15,12 +15,7 @@ public class FallAttack : MonoBehaviour
     private Vector3 shadowTargetPosition;
     private GameObject shadowObject;
     private bool isFalling = false;
-    private Animator animator;
 
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
     public void FallingAttack()
     {
         StartCoroutine(PerformFallAttack(shadowFollowDuration));
@@ -33,7 +28,6 @@ public class FallAttack : MonoBehaviour
 
     private IEnumerator PerformFallAttack(float duration)
     {
-        animator.SetBool("isJump", true);
         // 1. 위로 솟구치기
         originalPosition = transform.position;
         Vector3 riseTarget = originalPosition + Vector3.up * riseHeight;
@@ -61,16 +55,11 @@ public class FallAttack : MonoBehaviour
         }
 
         isFalling = true;
-        animator.SetBool("isLand", true);
-
-        if (duration == 1) animator.SetBool("isStun", false);
-        else animator.SetBool("isStun", true);
-
-            while (Vector3.Distance(transform.position, shadowTargetPosition) > 0.1f)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, shadowTargetPosition, fallSpeed * Time.deltaTime);
-                yield return null;
-            }
+        while (Vector3.Distance(transform.position, shadowTargetPosition) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, shadowTargetPosition, fallSpeed * Time.deltaTime);
+            yield return null;
+        }
 
         Destroy(shadowObject);
 
@@ -83,8 +72,6 @@ public class FallAttack : MonoBehaviour
         {
             cameraShake.Shake(0.1f, 0.3f);
         }
-        animator.SetBool("isJump", false);
-        animator.SetBool("isLand", false);
     }
 
     private IEnumerator FollowPlayer(GameObject shadow, float duration)

@@ -7,20 +7,14 @@ public class ShotgunAttack : MonoBehaviour
     public float spreadAngle = 20f;  
 
     private Transform player;
-    private Animator animator;
-    [SerializeField] Transform firePosition;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
     }
-
     public void FireShotgun()
     {
         if (player == null) return;
-
-        animator.SetTrigger("isShotGun");
 
         float angleStep = spreadAngle / (numberOfBullets - 1);
         float startAngle = -spreadAngle / 2f;
@@ -52,7 +46,7 @@ public class ShotgunAttack : MonoBehaviour
     private void ShootBullet(Vector2 direction)
     {
         
-        GameObject bullet = Instantiate(bulletPrefab, firePosition.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = direction * bullet.GetComponent<EnemyBullet>().speed;
     }
 }
