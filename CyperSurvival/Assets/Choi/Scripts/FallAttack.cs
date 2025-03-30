@@ -71,9 +71,6 @@ public class FallAttack : MonoBehaviour
         if (duration == 1) animator.SetBool("isStun", false);
         else animator.SetBool("isStun", true);
 
-        // 카메라 흔들림 효과 시작
-        CameraShake cameraShake = FindObjectOfType<CameraShake>();
-
         while (Vector3.Distance(transform.position, shadowTargetPosition) > 0.1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, shadowTargetPosition, fallSpeed * Time.deltaTime);
@@ -86,8 +83,6 @@ public class FallAttack : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
         ApplyDamageAndKnockback();
         SoundManager_S4.instace.land();
-
-        cameraShake.Shake();
 
         bossAttack.isDash = false;
         animator.SetBool("isJump", false);

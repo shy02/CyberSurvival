@@ -3,6 +3,13 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public GameObject AttackEffect;
+    private Animator animator;
+    [SerializeField] private Transform firePosition;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void ExecuteAttack(EnemyAI.EnemyType enemyType)
     {
@@ -25,12 +32,14 @@ public class EnemyAttack : MonoBehaviour
 
     public void MeleeAttack()
     {
+        animator.SetTrigger("isAttack");
         AttackEffect.gameObject.SetActive(true);
     }
 
     public void RangedAttack()
     {
-        Instantiate(AttackEffect, transform.position, Quaternion.identity);
+        animator.SetTrigger("isAttack");
+        Instantiate(AttackEffect, firePosition.position, Quaternion.identity);
     }
 
     /*public void BikeAttack()

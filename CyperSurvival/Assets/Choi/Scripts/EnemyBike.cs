@@ -14,13 +14,18 @@ public class EnemyBike : MonoBehaviour
     public GameObject bulletPrefab;
     private Transform firePoint;
 
+    private bool isFaceRight = true;
+    private GameObject playerObject;
     private Rigidbody2D rb;
     private bool isDashing = false;
     private bool isWandering = false;
     private bool chasePlayer = true;
+    private Animator animator;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        playerObject = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
         firePoint = transform;
@@ -28,6 +33,8 @@ public class EnemyBike : MonoBehaviour
 
     private void Update()
     {
+        Flip();
+
         if (player == null || isDashing || isWandering) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
@@ -71,8 +78,8 @@ public class EnemyBike : MonoBehaviour
         isDashing = true;
         chasePlayer = false;
         rb.linearVelocity = dashDirection * dashSpeed;
+        animator.SetTrigger("isDash");
 
-        // 🔥 대시 중 여러 개의 총알 생성
         StartCoroutine(SpawnBulletDuringDash(dashDirection));
 
         yield return new WaitForSeconds(dashDuration);
@@ -124,5 +131,28 @@ public class EnemyBike : MonoBehaviour
         {
             Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         }
+    }
+
+    private void Flip()
+    {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObject.transform.position.x < transform.position.x && isFaceRight)
+        {
+            isFaceRight = false;
+            FlipCharacter();
+        }
+        else if (playerObject.transform.position.x > transform.position.x && !isFaceRight)
+        {
+            isFaceRight = true;
+            FlipCharacter();
+        }
+
+    }
+    private void FlipCharacter()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
     }
 }

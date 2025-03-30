@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,19 +130,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -150,12 +137,12 @@ TextureImporter:
       name: Enemy_Range_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 69
         y: 510
-        width: 391
+        width: 334
         height: 513
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -176,8 +163,8 @@ TextureImporter:
         y: 11
         width: 367
         height: 481
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5651914, y: 0.5773742}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,10 +183,10 @@ TextureImporter:
         serializedVersion: 2
         x: 395
         y: 24
-        width: 291
+        width: 293
         height: 465
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.48185402, y: 0.54001826}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,7 +208,7 @@ TextureImporter:
         width: 307
         height: 514
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +225,12 @@ TextureImporter:
       name: Enemy_Range_4
       rect:
         serializedVersion: 2
-        x: 688
+        x: 687
         y: 42
-        width: 306
+        width: 310
         height: 448
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.49142456, y: 0.51780146}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -261,11 +248,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 714
-        y: 500
+        y: 497
         width: 336
         height: 518
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -286,8 +273,8 @@ TextureImporter:
         y: 0
         width: 517
         height: 486
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.27889833, y: 0.6039276}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,12 +291,12 @@ TextureImporter:
       name: Enemy_Range_7
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 411
-        width: 485
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1046
+        y: 500
+        width: 480
+        height: 501
+      alignment: 9
+      pivot: {x: 0.27846986, y: 0.4893878}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 147cf44432831284fb012fb4151a64b7
     internalID: 0
     vertices: []
     indices: 
@@ -335,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Enemy_Range_0: -580854506863916875
+      Enemy_Range_1: 3896064018610327881
+      Enemy_Range_2: -9060087644837253518
+      Enemy_Range_3: -8414189988566158337
+      Enemy_Range_4: -2340801518431379664
+      Enemy_Range_5: 2846491484205549350
+      Enemy_Range_6: 1459080276723885125
+      Enemy_Range_7: 2827580549905987062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
