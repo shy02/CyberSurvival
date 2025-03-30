@@ -28,6 +28,7 @@ public class DashAttack : MonoBehaviour
 
     private IEnumerator DashCoroutine()
     {
+        SoundManager_S4.instace.Dash();
         bossAttack.isDash = true;
         isDashing = true;
         animator.SetBool("isDash", true);

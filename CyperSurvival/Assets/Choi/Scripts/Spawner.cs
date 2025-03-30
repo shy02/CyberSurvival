@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
 
     public float spawnInterval = 15f;
 
-    private int a = 10, b = 15;
+    private int a = 17, b = 23;
     private bool bikeSpawn = false;
     private bool bossSpawn = false;
 
@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
     }
     private void Update()
     {
-        if (count >= 3) { bikeSpawn = true; a = 8; b = 10; }
+        if (count >= 3) { bikeSpawn = true; a = 12; b = 17; }
         if (count >= 6) bossSpawn = true;
     }
 

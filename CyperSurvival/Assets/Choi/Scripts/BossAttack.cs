@@ -24,7 +24,6 @@ public class BossAttack : MonoBehaviour
     [SerializeField] private float afterImageInterval = 0.07f;
     [SerializeField] private GameObject AfterImagePrefab;
     private bool isLeft;
-    SoundManager_S4 sound;
 
     private void Start()
     {
@@ -35,7 +34,6 @@ public class BossAttack : MonoBehaviour
         enemyAI = GetComponent<EnemyAI>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        sound = new SoundManager_S4();
     }
 
     private void Update()

@@ -51,7 +51,7 @@ public class ShotgunAttack : MonoBehaviour
 
     private void ShootBullet(Vector2 direction)
     {
-        
+        SoundManager_S4.instace.fire();
         GameObject bullet = Instantiate(bulletPrefab, firePosition.position, Quaternion.identity);
         bullet.GetComponent<Rigidbody2D>().linearVelocity = direction * bullet.GetComponent<EnemyBullet>().speed;
     }
