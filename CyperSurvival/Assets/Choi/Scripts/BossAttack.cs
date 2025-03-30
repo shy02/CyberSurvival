@@ -18,6 +18,12 @@ public class BossAttack : MonoBehaviour
     private bool isAttacking = false; // 공격 중인지 여부를 추적하는 변수
     private float attackCooldown = 0f; // 공격 쿨타임 관리
     private int fallAttackCount = 6;
+    private Animator animator;
+    public bool isDash = false;
+    private float afterImageTimer;
+    [SerializeField] private float afterImageInterval = 0.07f;
+    [SerializeField] private GameObject AfterImagePrefab;
+    private bool isLeft;
 
     private void Start()
     {
@@ -27,11 +33,24 @@ public class BossAttack : MonoBehaviour
         fallAttack = GetComponent<FallAttack>();
         enemyAI = GetComponent<EnemyAI>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        isLeft = transform.localScale.x < 0;
         BossHealth = GetComponent<EnemyDamage_3>().GetHp();
+        Debug.Log(BossHealth);
+
+        if (isDash)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0)
+            {
+                CreateAfterImage();
+                afterImageTimer = afterImageInterval;
+            }
+        }
 
         // 보스가 광폭화 상태로 전환
         if (BossHealth <= RageHealth && !isEnraged)
@@ -94,7 +113,7 @@ public class BossAttack : MonoBehaviour
         {
             fallAttack.FallingAttack(1f);
             yield return new WaitForSeconds(2.44f);
-            fallAttack.FallingAttack(1f);
+            fallAttack.FallingAttack(0.8f);
             Debug.Log("광폭화 상태 - 연속 낙하 공격 수행!");
         }
         yield return new WaitForSeconds(2.4f);
@@ -187,5 +206,16 @@ public class BossAttack : MonoBehaviour
         Debug.Log($"대시 공격 완료 - attackCount 증가: {attackCount}");
 
         isAttacking = false;
+    }
+
+    private void CreateAfterImage()
+    {
+        GameObject afterimage = Instantiate(AfterImagePrefab);
+        afterimage.GetComponent<AfterImage>().Initialize(
+        GetComponent<SpriteRenderer>().sprite, transform.position);
+
+        Vector3 scale = afterimage.transform.localScale;
+        scale.x = isLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+        afterimage.transform.localScale = scale;
     }
 }

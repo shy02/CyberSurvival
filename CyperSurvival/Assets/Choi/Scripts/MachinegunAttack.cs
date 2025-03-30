@@ -8,6 +8,15 @@ public class MachineGunAttack : MonoBehaviour
     public float fireRate = 0.1f;
 
     private bool isFiring = false;
+    private Animator animator;
+    [SerializeField] Transform firePosition;
+    private Rigidbody2D rb;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     public void StartFiring()
     {
@@ -19,6 +28,8 @@ public class MachineGunAttack : MonoBehaviour
 
     private IEnumerator FireMachineGun()
     {
+        animator.SetBool("isMachineGun", true);
+        rb.bodyType = RigidbodyType2D.Kinematic;
         isFiring = true;
         float elapsedTime = 0f;
 
@@ -30,10 +41,14 @@ public class MachineGunAttack : MonoBehaviour
         }
 
         isFiring = false;
+        animator.SetBool("isMachineGun", false);
+
+        rb.bodyType = RigidbodyType2D.Dynamic;
     }
 
     private void FireBullet()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        SoundManager_S4.instace.fire();
+        GameObject bullet = Instantiate(bulletPrefab, firePosition.position, Quaternion.identity);
     }
 }

@@ -19,7 +19,7 @@ public class EnemySlash : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerDamage>().GetDamage(damage);
+            collision.GetComponent<Player_2>().GetDamage(damage);
         }
     }
 }
