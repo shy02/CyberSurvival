@@ -87,6 +87,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Cursor.lockState = CursorLockMode.Confined;
+
         SetUI();
         SetHpBarImage();
         SetPowerBarImage();
@@ -157,5 +159,8 @@ public class GameManager : MonoBehaviour
         PlayerHp = MAX_HP;
         PlayerPower = 0;
         PlayerDefence = 0;
+        IsGameRunning = true;
+        nowGameOver = false;
+        transform.parent.GetChild(2).GetComponent<Player>().WeaponHand.SetActive(true);
     }
 }

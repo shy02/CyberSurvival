@@ -7,4 +7,9 @@ public class TitleSceneUI : MonoBehaviour
     {
         SceneManager.LoadScene("Stage1");
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

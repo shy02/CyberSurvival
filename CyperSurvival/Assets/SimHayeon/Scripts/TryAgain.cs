@@ -1,4 +1,3 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +7,7 @@ public class TryAgain : MonoBehaviour
     {
         GameManager.Instance.ResetGame();
         SceneManager.LoadScene("TitleScene");
+        
         if (SceneManager.GetActiveScene().name != "EndScene")
         {
             transform.parent.parent.parent.GetComponent<AudioSource>().Stop();
@@ -17,6 +17,7 @@ public class TryAgain : MonoBehaviour
             transform.parent.parent.GetComponent<Animator>().SetBool("rotate", false);
             transform.parent.GetComponent<Animator>().SetBool("apear", false);
             gameObject.SetActive(false);
+            ScenManager.instance.Reset();
         }
     }
 }

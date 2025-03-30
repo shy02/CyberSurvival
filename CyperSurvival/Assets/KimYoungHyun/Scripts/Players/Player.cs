@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public float afterImageInterval = 0.1f;
     private float afterImageTimer;
 
+    bool dead = false;
+
     void Start()
     {
         MyAnimator = GetComponent<Animator>();
@@ -203,7 +205,11 @@ public class Player : MonoBehaviour
 
         if (GameManager.Instance.PlayerHp <= 0)
         {
-            MyAnimator.SetTrigger(Strings.Dead);
+            if (!dead)
+            {
+                MyAnimator.SetTrigger(Strings.Dead);
+                dead = true;
+            }
             WeaponHand.SetActive(false);
             GameManager.Instance.FinishGame();
         }
