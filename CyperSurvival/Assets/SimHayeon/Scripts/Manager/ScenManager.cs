@@ -28,7 +28,7 @@ public class ScenManager : MonoBehaviour
     public void GoNextStage()//다음 스테이지로 가는 함수
     {
         nowStage++;
-        if(nowStage == 5)
+        if(nowStage == 4)
         {
             SceneManager.LoadScene("EndScene");
         }
@@ -44,5 +44,9 @@ public class ScenManager : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void Reset()
+    {
+        nowStage = 1;
     }
 }

@@ -5,7 +5,7 @@ public class GameOverUI : MonoBehaviour
     Animator anime;
     AudioSource audio;
 
-    bool nowplay = false;
+    public bool nowplay = false;
 
     private void Awake()
     {
@@ -30,5 +30,10 @@ public class GameOverUI : MonoBehaviour
     public void ApearText()//텍스트 나타남
     {
         transform.GetChild(0).GetComponent<Animator>().SetBool("apear", true);
+        Invoke(nameof(ApearTryAgain), 5.5f);
+    }
+    void ApearTryAgain()//텍스트 나타남
+    {
+        transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
     }
 }
