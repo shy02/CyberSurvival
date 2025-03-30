@@ -8,6 +8,7 @@ public class TryAgain : MonoBehaviour
     {
         GameManager.Instance.ResetGame();
         SceneManager.LoadScene("TitleScene");
+        ScenManager.instance.Reset();
         if(SceneManager.GetActiveScene().name != "EndScene")
         {
             transform.parent.parent.parent.GetComponent<AudioSource>().Stop();
