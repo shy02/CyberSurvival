@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SimHayeon/Scenes/Stage3.unity
     guid: 4718de3068fc1bd4391a5d9460076a7f
-  - enabled: 1
+  - enabled: 0
     path: Assets/SimHayeon/Scenes/Stage 4.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Choi/Stage4.unity
+    guid: a0b66ff0b2260024d99f134cb67303e2
   - enabled: 1
     path: Assets/SimHayeon/Scenes/EndScene.unity
     guid: c27f8dd72fc92174c8ceab61bf312daa
