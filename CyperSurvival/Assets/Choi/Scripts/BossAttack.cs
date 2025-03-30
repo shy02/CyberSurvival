@@ -18,6 +18,7 @@ public class BossAttack : MonoBehaviour
     private bool isAttacking = false; // 공격 중인지 여부를 추적하는 변수
     private float attackCooldown = 0f; // 공격 쿨타임 관리
     private int fallAttackCount = 6;
+    private Animator animator;
 
     private void Start()
     {
@@ -27,11 +28,13 @@ public class BossAttack : MonoBehaviour
         fallAttack = GetComponent<FallAttack>();
         enemyAI = GetComponent<EnemyAI>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         BossHealth = GetComponent<EnemyDamage_3>().GetHp();
+        Debug.Log(BossHealth);
 
         // 보스가 광폭화 상태로 전환
         if (BossHealth <= RageHealth && !isEnraged)
@@ -94,7 +97,7 @@ public class BossAttack : MonoBehaviour
         {
             fallAttack.FallingAttack(1f);
             yield return new WaitForSeconds(2.44f);
-            fallAttack.FallingAttack(1f);
+            fallAttack.FallingAttack(0.8f);
             Debug.Log("광폭화 상태 - 연속 낙하 공격 수행!");
         }
         yield return new WaitForSeconds(2.4f);

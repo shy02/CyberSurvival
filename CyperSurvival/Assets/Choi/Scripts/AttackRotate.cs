@@ -27,6 +27,6 @@ public class RotateTowardsPlayer : MonoBehaviour
         Vector3 directionToParent = parentTransform.position - transform.position;
 
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, -directionToParent);
-        transform.rotation = targetRotation;
+        transform.rotation = targetRotation * Quaternion.Euler(0, 0, -90); ;
     }
 }

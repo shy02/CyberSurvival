@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -8,24 +9,29 @@ public class EnemyAI : MonoBehaviour
     public float attackMaxRange = 7.0f;
     public float attackInterval = 2.0f; 
 
+    private GameObject playerObject;
     private Transform player;
     private bool isAttacking = false; 
     private EnemyAttack enemyAttack;
     private Rigidbody2D rb;
     public bool ischord = false;
 
+    private bool isFaceRight = true;
     public enum EnemyType { Melee, Ranged, Bike, Boss } 
     public EnemyType enemyType;
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.transform;
         enemyAttack = GetComponent<EnemyAttack>();
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
+        Flip();
+
         if (player == null || rb.bodyType == RigidbodyType2D.Kinematic) return;
 
         float distance = Vector2.Distance(transform.position, player.position);
@@ -74,5 +80,27 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         isAttacking = false;
+    }
+
+    private void Flip()
+    {
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObject.transform.position.x < transform.position.x && isFaceRight) 
+        {
+            isFaceRight = false;
+            FlipCharacter();
+        } else if (playerObject.transform.position.x > transform.position.x && !isFaceRight)
+        {
+            isFaceRight = true;
+            FlipCharacter();
+        }
+
+    }
+    private void FlipCharacter()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
     }
 }
