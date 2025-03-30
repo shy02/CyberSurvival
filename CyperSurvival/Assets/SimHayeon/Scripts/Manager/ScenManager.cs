@@ -41,6 +41,10 @@ public class ScenManager : MonoBehaviour
         player.position = Startpos;
     }
 
+    public void Reset()
+    {
+        nowStage = 1;
+    }
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
