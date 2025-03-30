@@ -21,10 +21,10 @@ public class SpeedEnemy_2 : MonoBehaviour
         dir = player.transform.position - transform.position;
         distance = dir.magnitude;
 
-        //0.5f보다 가까우면 플레이어 반대로 이동 계속 박치기
-        if (distance <= 1.05f)
+        //1.1f보다 가까우면 플레이어 반대로 이동 계속 박치기
+        if (distance <= 1.2f)
         {
-            transform.position += -dir * 2f;
+            transform.position += -dir * 2.5f;
         }
     }
 }

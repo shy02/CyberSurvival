@@ -293,8 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCool: 1
-  attackRange: 6
-  bulletCount: 4
+  attackRange: 7
+  bulletCount: 5
   bullet: {fileID: 148968589738641500, guid: 1964be87a7aec3f4798d91247ad0e246, type: 3}
   firePos: {fileID: 4374853821470645087}
   attackSound: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
@@ -341,7 +341,7 @@ NavMeshAgent:
   m_Height: 1.64
   m_BaseOffset: 0.82
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &1091517692385767472
 GameObject:
   m_ObjectHideFlags: 0

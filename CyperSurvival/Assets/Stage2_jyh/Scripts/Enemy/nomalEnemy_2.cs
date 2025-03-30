@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class nomalEnemy_2 : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class nomalEnemy_2 : MonoBehaviour
     Vector3 dir = Vector3.zero; //총알 방향
     float angle = 0;    //총알 사이 각도
     float delta = 0;    //쿨타임 변수
+    bool isAttack = false;  //공격중인지
 
     void Start()
     {
@@ -31,32 +33,44 @@ public class nomalEnemy_2 : MonoBehaviour
     {
         if (player == null) return;
 
+        Debug.Log("공격중인지: " + isAttack);
+
         float distance = Vector2.Distance(player.transform.position, transform.position);
 
-        if (distance <= attackRange)
+        if (distance <= attackRange && isAttack == false)
         {
             //이동 멈춤
             moveSc.StopMove();
             anim.SetBool("isMove", false);
 
             delta -= Time.deltaTime;
-            if(delta <= 0)
+            if (delta <= 0)
             {
-                delta = attackCool;
-                //isattack = true;
                 anim.SetTrigger("Attack");
+                delta = attackCool;
             }
         }
-        else if(distance > attackRange)
+        else if (distance > attackRange && isAttack == false)
         {
+            delta = 0;
+
             moveSc.StartMove();
             anim.SetBool("isMove", true);
+        }
+        else if (isAttack == true)
+        {
+            moveSc.StopMove();
         }
 
     }
 
-    //애니메이에서 호출
-    void Attack()
+    void AttackOnOff()
+    {
+        isAttack = !isAttack;
+    }
+
+    //애니메이션에서 호출
+    void Attack1()
     {
         //움직일때는 공격하지 않음
         if (moveSc.canMove == true)
@@ -65,21 +79,62 @@ public class nomalEnemy_2 : MonoBehaviour
         dir = player.transform.position - transform.position;
         angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        int bullets = Random.Range(bulletCount-1, bulletCount + 2); //총알 갯수랜덤
-
-        for (int i = 0; i < bullets; i++)
+        for (int i = 0; i < bulletCount; i++)
         {
-            Vector3 bulletDir = CalculateBulletDirection(i, bullets, angle);
+            Vector3 bulletDir = CalculateBulletDirection(i, bulletCount, angle);
             GameObject go = Instantiate(bullet, firePos.position, Quaternion.identity);
             go.GetComponent<EnemyBullet_2>().SetDir(bulletDir);
         }
         SoundMgr_2.instance.OneShot(attackSound, 1f);
     }
 
+    void Attack2()
+    {
+        //움직일때는 공격하지 않음
+        if (moveSc.canMove == true)
+            return;
+
+        //좌우반전
+        if (dir.x < 0)
+            angle += 30;
+        else
+            angle -= 30;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            Vector3 bulletDir = CalculateBulletDirection(i, bulletCount, angle);
+            GameObject go = Instantiate(bullet, firePos.position, Quaternion.identity);
+            go.GetComponent<EnemyBullet_2>().SetDir(bulletDir);
+        }
+        SoundMgr_2.instance.OneShot(attackSound, 1f);
+    }
+
+    void Attack3()
+    {
+        //움직일때는 공격하지 않음
+        if (moveSc.canMove == true)
+            return;
+
+        //좌우반전
+        if (dir.x < 0)
+            angle -= 60;
+        else
+            angle += 60;
+
+        for (int i = 0; i < bulletCount; i++)
+        {
+            Vector3 bulletDir = CalculateBulletDirection(i, bulletCount, angle);
+            GameObject go = Instantiate(bullet, firePos.position, Quaternion.identity);
+            go.GetComponent<EnemyBullet_2>().SetDir(bulletDir);
+        }
+        SoundMgr_2.instance.OneShot(attackSound, 1f);
+    }
+
+
     Vector3 CalculateBulletDirection(int index, int totalBullets, float baseAngle)
     {
-        float angleStep = 5f;
-        float angleOffset = (totalBullets % 2 == 0) ? 2.5f : 0f;   //갯수가 짝수면 2.5도씩 오프셋
+        float angleStep = 4f;
+        float angleOffset = (totalBullets % 2 == 0) ? 2f : 0f;   //갯수가 짝수면 2.5도씩 오프셋
         float currentAngle = baseAngle + angleOffset + angleStep * (index - totalBullets / 2);
 
         float dirX = Mathf.Cos(currentAngle * Mathf.Deg2Rad);
