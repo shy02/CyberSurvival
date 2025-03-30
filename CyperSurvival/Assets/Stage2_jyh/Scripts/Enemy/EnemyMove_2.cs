@@ -33,7 +33,10 @@ public class EnemyMove_2 : MonoBehaviour
     void Start()
     {
         if (player == null)
+        {
             player = GameObject.FindWithTag("Player");
+        }
+
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyDamage_3 = GetComponent<EnemyDamage_3>();
@@ -50,7 +53,7 @@ public class EnemyMove_2 : MonoBehaviour
                 return;
             }
         }
-       
+
         Vector3 vec = player.transform.position - transform.position;
         moveDir = vec.normalized;
 
@@ -70,6 +73,13 @@ public class EnemyMove_2 : MonoBehaviour
         //¸ØÃã
         else
             agent.SetDestination(transform.position);
+
+        //º¸½ºÀâ°Å³ª ÇÃ·¹ÀÌ¾î°¡ Á×À¸¸é »ç¶óÁü
+        if(GameManager.Instance.nowNextStage == true || GameManager.Instance.PlayerHp <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

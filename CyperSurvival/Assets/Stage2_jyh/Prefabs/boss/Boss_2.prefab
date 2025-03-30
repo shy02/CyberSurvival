@@ -246,11 +246,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  attackcool1: 1
+  attackcool1: 0.5
   attackcool2: 3
   sniperzoom: 2
   attackcool3: 5
-  attackcool4: 10
+  attackcool4: 8
   bullet: {fileID: 8463077970449754266, guid: f84d49f0099fbd84a8ec36c6f7236288, type: 3}
   firePoint: {fileID: 4181822602999555798}
   sniper: {fileID: 7859892351083881486, guid: 6f86b96425ab36c46ad1254c423b71ad, type: 3}

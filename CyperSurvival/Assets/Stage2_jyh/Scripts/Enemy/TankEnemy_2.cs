@@ -28,10 +28,12 @@ public class TankEnemy_2 : MonoBehaviour
 
     void Update()
     {
+        if (player == null) return;
+
         Vector3 moveDir = player.transform.position - transform.position;
         float distance = moveDir.magnitude;   
 
-        if(distance < attackRange && isAttack == false)
+        if(distance <= attackRange && isAttack == false)
         {
             //ÀÌµ¿ ¸ØÃã
             moveSc.StopMove();

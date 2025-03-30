@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  damage: 5
+  damage: 10
   canMove: 1
   deathSound: {fileID: 8300000, guid: dba5f560c9e75654c9d5a3ac8736769c, type: 3}
 --- !u!61 &1336626147062812404
@@ -512,4 +512,4 @@ NavMeshAgent:
   m_Height: 1.0876923
   m_BaseOffset: 0.54384613
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 0

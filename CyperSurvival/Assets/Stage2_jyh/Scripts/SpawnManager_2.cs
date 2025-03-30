@@ -32,6 +32,9 @@ public class SpawnManager_2 : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.nowNextStage == true || GameManager.Instance.PlayerHp <= 0)
+            return;
+
         if (isBossSpawn == false)
         {
             deltaTime += Time.deltaTime;
