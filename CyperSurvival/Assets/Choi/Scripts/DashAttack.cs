@@ -9,12 +9,14 @@ public class DashAttack : MonoBehaviour
     private Rigidbody2D rb;
     private bool isDashing = false;
     private Animator animator;
+    private BossAttack bossAttack;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        bossAttack = GetComponent<BossAttack>();
     }
 
     public void Dash()
@@ -26,6 +28,7 @@ public class DashAttack : MonoBehaviour
 
     private IEnumerator DashCoroutine()
     {
+        bossAttack.isDash = true;
         isDashing = true;
         animator.SetBool("isDash", true);
         Vector2 dashDirection = (player.position - transform.position).normalized;
@@ -35,7 +38,7 @@ public class DashAttack : MonoBehaviour
         yield return new WaitForSeconds(dashDuration);
 
         rb.linearVelocity = Vector2.zero;
-        isDashing = false;
+        bossAttack.isDash = false;
         animator.SetBool("isDash", false);
     }
 }

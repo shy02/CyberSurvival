@@ -48,6 +48,7 @@ public class MachineGunAttack : MonoBehaviour
 
     private void FireBullet()
     {
+        SoundManager_S4.instace.fire();
         GameObject bullet = Instantiate(bulletPrefab, firePosition.position, Quaternion.identity);
     }
 }

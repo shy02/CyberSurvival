@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player_2 : MonoBehaviour
+public class Player_2j : MonoBehaviour
 {
     float x;
     float y;

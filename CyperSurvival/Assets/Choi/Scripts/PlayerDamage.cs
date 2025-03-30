@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerDamage : MonoBehaviour
+public class Player_2 : MonoBehaviour
 {
     [SerializeField] int Hp;
 

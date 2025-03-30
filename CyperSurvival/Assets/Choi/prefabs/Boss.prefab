@@ -179,6 +179,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8067650518155624719, guid: 78ba4462984170e44946b366b0e66f5a, type: 3}
   numberOfBullets: 9
   spreadAngle: 10
+  firePosition: {fileID: 7326030602498308506}
 --- !u!114 &6963427181358219180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8067650518155624719, guid: 9aae54dc93b2a4442bbfae011d0104ce, type: 3}
   fireDuration: 4
   fireRate: 0.1
+  firePosition: {fileID: 4687971292101632056}
 --- !u!114 &5269160812110999959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackEffect: {fileID: 8067650518155624719, guid: 47af5c33899d7c242801a20dbbfffee9, type: 3}
+  firePosition: {fileID: 0}
 --- !u!114 &1403363563459791800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RageHealth: 500
+  isDash: 0
+  afterImageInterval: 0.07
+  AfterImagePrefab: {fileID: 4599168912685560370, guid: 893af1c726d292949b9309df40665b9e, type: 3}
 --- !u!114 &1250039374519952168
 MonoBehaviour:
   m_ObjectHideFlags: 0

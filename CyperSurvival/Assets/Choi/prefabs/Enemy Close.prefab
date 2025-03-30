@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf825a34b80bd9d4ca755fe91921bc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
-  DeathEffect: {fileID: 0}
+  maxHP: 50
+  DeathEffect: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
   HpUI: {fileID: 6045936561059657699}
   BossHP: {fileID: 0}
   Items: []

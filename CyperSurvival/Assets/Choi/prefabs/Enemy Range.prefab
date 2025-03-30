@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 30
-  DeathEffect: {fileID: 0}
+  DeathEffect: {fileID: 6823200998282874702, guid: 8f8fe12323625f5499b2853dd2ad3e58, type: 3}
   HpUI: {fileID: 4281987293839012261}
   BossHP: {fileID: 0}
   Items: []

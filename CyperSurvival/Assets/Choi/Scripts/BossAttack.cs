@@ -19,6 +19,12 @@ public class BossAttack : MonoBehaviour
     private float attackCooldown = 0f; // 공격 쿨타임 관리
     private int fallAttackCount = 6;
     private Animator animator;
+    public bool isDash = false;
+    private float afterImageTimer;
+    [SerializeField] private float afterImageInterval = 0.07f;
+    [SerializeField] private GameObject AfterImagePrefab;
+    private bool isLeft;
+    SoundManager_S4 sound;
 
     private void Start()
     {
@@ -29,12 +35,24 @@ public class BossAttack : MonoBehaviour
         enemyAI = GetComponent<EnemyAI>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sound = new SoundManager_S4();
     }
 
     private void Update()
     {
+        isLeft = transform.localScale.x < 0;
         BossHealth = GetComponent<EnemyDamage_3>().GetHp();
         Debug.Log(BossHealth);
+
+        if (isDash)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0)
+            {
+                CreateAfterImage();
+                afterImageTimer = afterImageInterval;
+            }
+        }
 
         // 보스가 광폭화 상태로 전환
         if (BossHealth <= RageHealth && !isEnraged)
@@ -190,5 +208,16 @@ public class BossAttack : MonoBehaviour
         Debug.Log($"대시 공격 완료 - attackCount 증가: {attackCount}");
 
         isAttacking = false;
+    }
+
+    private void CreateAfterImage()
+    {
+        GameObject afterimage = Instantiate(AfterImagePrefab);
+        afterimage.GetComponent<AfterImage>().Initialize(
+        GetComponent<SpriteRenderer>().sprite, transform.position);
+
+        Vector3 scale = afterimage.transform.localScale;
+        scale.x = isLeft ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+        afterimage.transform.localScale = scale;
     }
 }
