@@ -15156,7 +15156,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1033470957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15178,7 +15178,7 @@ MonoBehaviour:
   - {fileID: 2400431566823244026, guid: 0dd716b502b789f43bf27d5f476230e2, type: 3}
   - {fileID: 7988718806627482826, guid: ac090f0dd0877034d8412841d465914e, type: 3}
   enemyBike: {fileID: 3559540340127333326, guid: 62163121be4440848bdcdd803d9a3182, type: 3}
-  boss: {fileID: 4064689012076378362, guid: 2070b3784cea65841a96528bc79ecc78, type: 3}
+  boss: {fileID: 1921166101795372008, guid: e94d9bf5f9c015147a14ca7587295f73, type: 3}
   count: 0
   spawnInterval: 15
 --- !u!4 &1033470958
@@ -15247,7 +15247,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

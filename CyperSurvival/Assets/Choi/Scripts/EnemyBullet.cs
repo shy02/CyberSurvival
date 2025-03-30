@@ -26,7 +26,8 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Player_2>().GetDamage(damage);
+            //collision.GetComponent<Player_2>().GetDamage(damage);
+            collision.GetComponent<Player>().TakeDamage(damage);
             Destroy(gameObject);
         } else if (collision.CompareTag("Wall")) { Destroy(gameObject); }
     }
