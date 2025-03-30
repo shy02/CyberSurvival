@@ -162,7 +162,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.175, y: 1.775}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -267,8 +267,9 @@ MonoBehaviour:
   DeathEffect: {fileID: 8771972552311404799, guid: bbf9e36a48d6c5648a13889afab076fd, type: 3}
   HpUI: {fileID: 3386947746491001489}
   BossHP: {fileID: 0}
-  Items: []
-  ItemDropRate: 30
+  Items:
+  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
+  ItemDropRate: 100
   NextSceneUI: {fileID: 0}
   perfect: 
 --- !u!95 &7421868419327465845

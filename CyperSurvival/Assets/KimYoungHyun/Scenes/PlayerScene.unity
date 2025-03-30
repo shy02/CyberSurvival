@@ -6994,7 +6994,7 @@ MonoBehaviour:
   - Stage1
   - Stage2
   - Stage3
-  - Stage 4
+  - Stage4
   nowStage: 3
   player: {fileID: 7668066205392224677}
   Startpos: {x: 0, y: 0, z: 0}
