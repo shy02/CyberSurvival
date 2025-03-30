@@ -12,15 +12,16 @@ public class BGMSound_2 : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
         //보스 잡으면 소리 끔
-        if ((GameManager.Instance.nowNextStage == true))
+        if (GameManager.Instance.nowNextStage == true || GameManager.Instance.PlayerHp <= 0)
         {
             audioSource.Stop();
         }
+
     }
 }
