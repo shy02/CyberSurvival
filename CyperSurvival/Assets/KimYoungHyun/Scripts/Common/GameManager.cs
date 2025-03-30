@@ -162,5 +162,6 @@ public class GameManager : MonoBehaviour
         IsGameRunning = true;
         nowGameOver = false;
         transform.parent.GetChild(2).GetComponent<Player>().WeaponHand.SetActive(true);
+        transform.parent.GetChild(2).GetComponent<Player>().MyAnimator.SetTrigger("reset");
     }
 }
