@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCool: 1
-  attackRange: 8
+  attackRange: 7
   bulletCount: 5
   bullet: {fileID: 148968589738641500, guid: 1964be87a7aec3f4798d91247ad0e246, type: 3}
   firePos: {fileID: 4374853821470645087}
