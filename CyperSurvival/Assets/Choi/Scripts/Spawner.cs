@@ -29,7 +29,6 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
         StartCoroutine("SpawnEnemy");
-        if (GameObject.FindGameObjectWithTag("Boss") != null) gameObject.SetActive(false);
     }
 
     private IEnumerator SpawnEnemy()
@@ -55,6 +54,8 @@ public class Spawner : MonoBehaviour
                     if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
                     {
                         Instantiate(boss, spawnPosition[0].position, Quaternion.identity);
+
+                        gameObject.SetActive(false);
                     }
                 }
                 else

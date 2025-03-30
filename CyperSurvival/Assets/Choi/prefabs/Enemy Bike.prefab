@@ -268,7 +268,7 @@ MonoBehaviour:
   HpUI: {fileID: 3386947746491001489}
   BossHP: {fileID: 0}
   Items:
-  - {fileID: 3224082719943606387, guid: ff18a5462e83b0e4d9afdea97f63dd3e, type: 3}
+  - {fileID: 1054226366106044421, guid: 327a287c6cddcd04b88b22a50e104eb6, type: 3}
   ItemDropRate: 100
   NextSceneUI: {fileID: 0}
   perfect: 
