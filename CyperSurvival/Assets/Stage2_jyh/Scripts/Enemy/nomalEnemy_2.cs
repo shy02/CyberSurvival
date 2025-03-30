@@ -33,8 +33,6 @@ public class nomalEnemy_2 : MonoBehaviour
     {
         if (player == null) return;
 
-        Debug.Log("공격중인지: " + isAttack);
-
         float distance = Vector2.Distance(player.transform.position, transform.position);
 
         if (distance <= attackRange && isAttack == false)
