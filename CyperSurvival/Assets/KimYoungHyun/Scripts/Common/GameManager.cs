@@ -146,6 +146,7 @@ public class GameManager : MonoBehaviour
 
     public void FinishGame()
     {
+        //GameOver.SetActive(true);
         GameOver.GetComponent<GameOverUI>().GameOver();
         nowGameOver = true;
         IsGameRunning = false;
@@ -156,10 +157,5 @@ public class GameManager : MonoBehaviour
         PlayerHp = MAX_HP;
         PlayerPower = 0;
         PlayerDefence = 0;
-        IsGameRunning = true;
-        nowGameOver = false;
-        nowNextStage = false;
-        transform.parent.GetChild(2).GetComponent<Animator>().SetTrigger("Reset");
-        transform.parent.GetChild(2).GetComponent<Player>().WeaponHand.SetActive(true);
     }
 }
