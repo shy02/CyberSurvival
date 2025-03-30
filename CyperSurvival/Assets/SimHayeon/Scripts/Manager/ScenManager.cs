@@ -28,7 +28,7 @@ public class ScenManager : MonoBehaviour
     public void GoNextStage()//다음 스테이지로 가는 함수
     {
         nowStage++;
-        if(nowStage == 4)
+        if(nowStage == 5)
         {
             SceneManager.LoadScene("EndScene");
         }
