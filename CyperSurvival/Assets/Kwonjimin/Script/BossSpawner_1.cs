@@ -9,6 +9,8 @@ public class BossSpawner_1 : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private bool isGameOver = false;
+
     void Start()
     {
         // 플레이어 태그로 자동으로 플레이어 오브젝트를 찾음
@@ -75,6 +77,14 @@ public class BossSpawner_1 : MonoBehaviour
         else
         {
             Debug.LogError("필수 변수들(bossPrefab, player, portalPositions)이 설정되지 않았습니다.");
+        }
+    }
+
+    void Update()
+    {
+        if (GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver)
+        {
+            audioSource.Stop();
         }
     }
 }

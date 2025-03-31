@@ -23,6 +23,11 @@ public class PlayerBullet : MonoBehaviour
         {
             Attack(collision);
         }
+        
+        if (collision.CompareTag(Strings.tagWall) || collision.CompareTag(Strings.tagEdge))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Attack(Collider2D collision)

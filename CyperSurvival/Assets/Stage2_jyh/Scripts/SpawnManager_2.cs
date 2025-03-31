@@ -8,11 +8,14 @@ public class SpawnManager_2 : MonoBehaviour
     public Transform Bosspos;
     public GameObject BossPrefab;
     public Text WarningText;
+    [Header("스포너 갯수 세기")]
+    public Text spawnerText;
 
     [Header("기본몬스터 스폰")]
     public GameObject[] EnemyPrefab;
     public Transform[] Spawners;
     public GameObject SpawnEffect;
+    public AudioClip SpawnSound;
 
     //기본 적 소환
     public float spawnTime = 0.2f;
@@ -38,6 +41,9 @@ public class SpawnManager_2 : MonoBehaviour
                 deltaTime = 0f;
             }
         }
+
+        //스포너 갯수 세기 + 텍스트 
+        SpawnerText();
     }
 
     void SpawnEnemy()
@@ -51,6 +57,7 @@ public class SpawnManager_2 : MonoBehaviour
                 Instantiate(EnemyPrefab[random], Spawners[randomSpawner].position, Quaternion.identity);
                 GameObject effect = Instantiate(SpawnEffect, Spawners[randomSpawner].position, Quaternion.identity);
                 Destroy(effect, 0.5f);
+                SoundMgr_2.instance.OneShot(SpawnSound, 0.3f);
                 break;
             }
 
@@ -91,6 +98,7 @@ public class SpawnManager_2 : MonoBehaviour
     //소환전 텍스트
     void TextWarning()
     {
+        spawnerText.gameObject.SetActive(false);
         WarningText.gameObject.SetActive(true);
         Invoke("TextWarningOff", 5f);
 
@@ -100,5 +108,21 @@ public class SpawnManager_2 : MonoBehaviour
         WarningText.gameObject.SetActive(false);
     }
 
+    int SpawnerCount()
+    {
+        int count = 0;
+        
+        for(int i = 0; i< Spawners.Length; i++)
+        {
+            if (Spawners[i] == null)
+                count++;
+        }
+        return count;
+    }
+
+    void SpawnerText()
+    {
+        spawnerText.text = SpawnerCount().ToString() + " / " + Spawners.Length.ToString();
+    }
 
 }

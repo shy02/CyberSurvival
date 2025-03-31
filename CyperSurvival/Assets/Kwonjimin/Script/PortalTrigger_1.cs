@@ -27,12 +27,9 @@ public class PortalTrigger_1 : MonoBehaviour
 
     void Update()
     {
-        // 🎯 보스가 죽으면 효과음 정지 & 더 이상 재생 안 함
-        if (GameManager.Instance.nowNextStage)
+        if ((GameManager.Instance.nowNextStage || GameManager.Instance.nowGameOver))
         {
-            if (audioSource.isPlaying)
-                audioSource.Stop();
-            return;
+            audioSource.Stop();
         }
 
         if (player != null)

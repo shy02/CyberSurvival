@@ -13,4 +13,6 @@ public class Strings
     public static string tagMonster = "Monster";
     public static string tagBoss = "Boss";
     public static string tagEnemy = "Enemy";
+    public static string tagWall = "Wall";
+    public static string tagEdge = "Edge";
 }
