@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 
     public float moveSpeed = 5f;
     private bool isLeft = false;
-    private bool isRolling = false;
+    public bool isRolling = false;
 
     public GameObject Muzzle;
     public GameObject WeaponHand;
