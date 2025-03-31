@@ -27,14 +27,15 @@ public class ScenManager : MonoBehaviour
 
     public void GoNextStage()//다음 스테이지로 가는 함수
     {
-        nowStage++;
-        if(nowStage == 5)
+        nowStage++; 
+        SceneManager.LoadScene("EndScene");
+        /*if(nowStage == 5)
         {
             SceneManager.LoadScene("EndScene");
         }
         else {
             SceneManager.LoadScene(SceneName[nowStage]);
-        }
+        }*/
     }
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

@@ -53896,6 +53896,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4258156035021634068, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
+      propertyPath: maxHP
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258156035021634068, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
       propertyPath: BossHP
       value: 
       objectReference: {fileID: 713586896}
@@ -53911,6 +53915,10 @@ PrefabInstance:
       propertyPath: bullet
       value: 
       objectReference: {fileID: 984614019}
+    - target: {fileID: 4936707509843217192, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
+      propertyPath: DistanceToPlayer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5318739954808962974, guid: 73b75ccb43cfd3f4ba1f2d2f1b053833, type: 3}
       propertyPath: bombCount
       value: 10
